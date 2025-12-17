@@ -1,0 +1,186 @@
+@use "@styles/settings" as *;
+
+.bl_nd {
+  @include breakpoint-up(md) {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}
+
+.bl_nd_left {
+  @include breakpoint-up(md) {
+    flex: 1;
+    padding-bottom: 8px;
+  }
+}
+
+.bl_nd_title {
+  font-size: rem(14);
+  font-weight: 500;
+
+  @include breakpoint-up(md) {
+    font-size: rem(16);
+  }
+
+  &::after {
+    content: "：";
+  }
+}
+
+.bl_nd_container {
+  position: relative;
+  margin-top: 10px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    inset: 0 -30px 0 auto;
+    width: 40px;
+    height: 100%;
+    background-image: linear-gradient(
+      to right,
+      transparent 0, var(--color-bg) 100%
+    );
+    pointer-events: none;
+    transition: opacity 0.2s $linear, visibility 0.2s;
+
+    @include breakpoint-up(md) {
+      content: none;
+    }
+  }
+}
+
+.bl_nd_list {
+  position: relative;
+  z-index: 1;
+  margin-right: -30px;
+  overflow: scroll;
+
+  @include breakpoint-up(md) {
+    margin-right: 0;
+  }
+
+  > ul {
+    display: flex;
+    gap: 10px;
+
+    @include breakpoint-up(md) {
+      flex-wrap: wrap;
+    }
+
+    > li {
+      flex: 0 0 auto;
+      white-space: nowrap;
+
+      @include breakpoint-up(md) {
+        white-space: inherit;
+      }
+
+      &:last-child {
+        padding-right: 30px;
+
+        @include breakpoint-up(md) {
+          padding-right: 0;
+        }
+      }
+
+      > button {
+        display: block;
+        padding: 6px 10px;
+        font-size: rem(13);
+        line-height: 1.4;
+        color: var(--color-white);
+        background-color: var(--color-narrow-down);
+        border-radius: 10px;
+        transition: background-color 0.2s $linear;
+
+        @include breakpoint-up(md) {
+          padding: 7px 10px 5px;
+          font-size: rem(16);
+        }
+
+        @include hover {
+          background-color: var(--color-hover);
+        }
+      }
+    }
+  }
+}
+
+.bl_nd_years {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+
+  @include breakpoint-up(md) {
+    flex: 0;
+    align-self: flex-end;
+    display: block;
+    margin-top: 0;
+  }
+}
+
+.bl_nd_form {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 14px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    background-image: url('/icon/icon_select.svg');
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+
+    @include breakpoint-up(md) {
+      top: 18px;
+      left: 20px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background-image: url('/icon/icon_arw_select.svg');
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+
+    @include breakpoint-up(md) {
+      top: 14px;
+      right: 20px;
+    }
+  }
+}
+
+.bl_nd_select {
+  position: relative;
+  z-index: 1;
+  padding: 10px 34px 10px 34px;
+  width: 105px;
+  height: 44px;
+  border-radius: 4px;
+  background-color: var(--color-white);
+  border-color: transparent;
+
+  @include breakpoint-up(md) {
+    padding: 11px 50px 10px 46px;
+    width: 222px;
+    height: 52px;
+  }
+}
+
+.bl_nd_select::picker(select) {
+  border-radius: 4px;
+  background-color: var(--color-white);
+  border-color: transparent;
+}

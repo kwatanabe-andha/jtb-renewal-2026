@@ -1,0 +1,208 @@
+@use "@styles/settings" as *;
+
+// nav
+.bl_ftNav {
+  padding: 40px 20px 30px;
+  background-color: var(--color-footer-nav);
+
+  @include breakpoint-up(md) {
+    padding: 80px lq(80);
+  }
+}
+
+.bl_ftNav_container {
+  @include breakpoint-up(md) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 96px;
+  }
+}
+
+.bl_ftNav_top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding-bottom: 15px;
+
+  @include breakpoint-up(md) {
+    grid-template-columns: inherit;
+    gap: 16px;
+    padding-bottom: 0;
+  }
+
+  > li {
+    > a {
+      display: inline-block;
+      font-size: rem(14);
+      font-weight: 600;
+      line-height: lh(14,24);
+      color: var(--color-light-black);
+
+      @include breakpoint-up(md) {
+        font-size: rem(15);
+        line-height: lh(15,25);
+      }
+    }
+  }
+}
+
+.bl_ftNav_body {
+  @include breakpoint-up(md) {
+    display: flex;
+    gap: lq(70);
+  }
+}
+
+.bl_ftNav_body_col {
+
+  @include breakpoint-down(sm) {
+    &:last-child {
+      border-bottom: solid 1px var(--color-footer-border);
+    }
+  }
+}
+
+.bl_ftNav_title {
+  padding: 20px 0;
+  font-size: rem(14);
+  font-weight: 600;
+  line-height: 1;
+  border-top: solid 1px var(--color-footer-border);
+
+  @include breakpoint-up(md) {
+    padding: 0;
+    font-size: rem(15);
+    line-height: lh(15,25);
+    color: var(--color-gray);
+    border-top: none;
+
+    .bl_ftNav_listWrap + & {
+      margin-top: 16px;
+    }
+  }
+
+  > button {
+    position: relative;
+
+    @include breakpoint-down(sm) {
+      transition: color 0.2s $linear;
+  
+      &::after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        right: -22px;
+        display: block;
+        width: 9px;
+        height: 9px;
+        border-right: solid 1px var(--color-black);
+        border-bottom: solid 1px var(--color-black);
+        rotate: 45deg;
+      }
+
+      &.is_opened {
+        color: var(--color-gray);
+      
+        &::after {
+          top: 8px;
+          rotate: -135deg;
+          border-color: var(--color-gray);
+        }
+      }
+    }
+  }
+
+  > a {
+    @include breakpoint-up(md) {
+      color: var(--color-black);
+    }
+  }
+}
+
+.bl_ftNav_listWrap {
+  &.is_sp {
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+
+    &[open="true"] {
+      pointer-events: auto;
+    }
+  }
+
+  @include breakpoint-up(md) {
+    margin-top: 16px;
+  }
+}
+
+.bl_ftNav_list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 20px;
+  padding-bottom: 20px;
+
+  @include breakpoint-up(md) {
+    grid-template-columns: inherit;
+    gap: 12px;
+    padding-bottom: 0;
+  }
+
+  > li {
+    position: relative;
+    padding-left: 26px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: rem(10);
+      left: 0;
+      margin-block: auto;
+      width: 16px;
+      height: 1px;
+      background-color: var(--color-black);
+    }
+
+    > a {
+      display: inline-block;
+      font-size: rem(13);
+      font-weight: 600;
+      line-height: lh(13,23);
+
+      @include breakpoint-up(md) {
+        font-size: rem(14);
+        line-height: lh(14,24);
+      }
+    }
+  }
+}
+
+
+// botttom
+.bl_ftBtm {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px 20px;
+  font-size: rem(12);
+  line-height: 1;
+  color: var(--color-white);
+  background-color: var(--color-footer-bottom);
+
+  @include breakpoint-up(md) {
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 26px 45px;
+  }
+}
+
+.bl_ftBtm_list {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 20px;
+
+  @include breakpoint-up(md) {
+    display: flex;
+    gap: 30px;
+  }
+}

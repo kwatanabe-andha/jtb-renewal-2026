@@ -1,0 +1,82 @@
+@use "global" as *;
+
+/* ------------------------
+  utilities Classes
+------------------------ */
+// hidden ----------
+.hp_hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+@each $name, $value in $breakpoints {
+  .hp_hidden-#{$name} {
+    @include breakpoint-only($name) {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
+
+  .hp_hidden_up-#{$name} {
+    @include breakpoint-up($name) {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
+
+  .hp_hidden_down-#{$name} {
+    @include breakpoint-down($name) {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
+}
+
+
+// visuallyhide ----------
+.hp_visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  border: 0;
+  margin: -1px;
+  padding: 0;
+  height: 1px;
+  width: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.hp_visuallyhidden.focusable:active,
+.hp_visuallyhidden.focusable:focus {
+  position: static;
+  overflow: visible;
+  margin: 0;
+  width: auto;
+  height: auto;
+  clip: auto;
+}
+
+.hp_invisible {
+  visibility: hidden;
+}
+
+
+// clearfix ----------
+.clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+
+// text-indent
+.hp_indent {
+  display: block;
+  padding-left: 1.0em;
+  text-indent: -1.0em;
+}
+
+.hp_font_en {
+  font-family: var(--font-en);
+}

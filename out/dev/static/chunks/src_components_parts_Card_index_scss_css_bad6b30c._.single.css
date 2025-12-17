@@ -1,0 +1,161 @@
+/* [project]/src/components/parts/Card/index.scss.css [app-client] (css) */
+.bl_cardList {
+  gap: 44px clamp(19.7333px, 2.56944vw, 37px);
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  .bl_cardList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1150px) {
+  .bl_cardList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.bl_card_body {
+  display: block;
+}
+
+.bl_card_img {
+  position: relative;
+}
+
+.bl_card_thumb {
+  z-index: 1;
+  position: relative;
+}
+
+.bl_card_logo {
+  z-index: 2;
+  aspect-ratio: 1;
+  border-radius: 2px;
+  width: 100px;
+  position: absolute;
+  bottom: -27px;
+  right: 10px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .bl_card_logo {
+    width: 34%;
+    max-width: 100px;
+  }
+}
+
+.bl_card_category {
+  color: var(--color-02);
+  margin-top: 18px;
+  font-size: .9375rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.bl_card_shoulderSeries {
+  align-items: center;
+  gap: 4px;
+  margin-top: 18px;
+  display: flex;
+}
+
+.bl_card_shoulderTitle {
+  background-color: var(--color-white);
+  border-radius: 4px;
+  place-items: center;
+  width: fit-content;
+  padding: 2px 8px 0;
+  font-size: .875rem;
+  font-weight: 500;
+  display: grid;
+}
+
+.bl_card_shoulderAnd {
+  font-size: .875rem;
+  font-weight: 500;
+}
+
+.bl_card_title {
+  margin-top: 10px;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.bl_card_summary {
+  margin-top: 18px;
+  font-size: .875rem;
+}
+
+.bl_card_author {
+  color: var(--color-light-black);
+  background-color: var(--color-white);
+  margin-top: 8px;
+  padding: 20px;
+}
+
+.bl_card_author > dt {
+  letter-spacing: .04em;
+  font-size: .9375rem;
+  line-height: 1.4;
+}
+
+.bl_card_author > dd {
+  margin-top: 2px;
+  font-size: .8125rem;
+}
+
+.bl_card_btm {
+  justify-content: space-between;
+  min-height: 26px;
+  margin-top: 20px;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .bl_card_btm {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+.bl_card_download {
+  letter-spacing: .04em;
+  background-color: var(--color-white);
+  align-items: center;
+  gap: 3px;
+  width: fit-content;
+  height: 26px;
+  padding: 4px;
+  font-size: .75rem;
+  font-weight: 700;
+  display: flex;
+}
+
+.bl_card_download:before {
+  content: "";
+  background-image: url("/icon/icon_csv.svg");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.bl_card_time {
+  opacity: .5;
+  align-self: flex-end;
+  font-size: .8125rem;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .bl_card_time {
+    margin-left: auto;
+    font-size: .875rem;
+  }
+}
+
+/*# sourceMappingURL=src_components_parts_Card_index_scss_css_bad6b30c._.single.css.map*/

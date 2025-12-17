@@ -1,0 +1,121 @@
+@use "config" as *;
+@use "sass:map";
+@use "sass:math";
+@use 'sass:list';
+@use 'sass:meta';
+@use "sass:string";
+
+@function palette($palette-group, $palette-type) {
+  @return map.get(map.get($palettes, $palette-group), $palette-type);
+}
+
+@function breakpoint-next($name, $breakpoint-names: map.keys($breakpoints)) {
+  $n: list.index($breakpoint-names, $name);
+  @return if($n < list.length($breakpoint-names), list.nth($breakpoint-names, $n+1), null);
+}
+
+@function breakpoint-min($name) {
+  $min: map.get($breakpoints, $name);
+  @return if($min !=0, $min, null);
+}
+
+// 現在（2018/5/13）のSafariのバグにより0.01pxではなく0.02pxを使用する。
+// https://bugs.webkit.org/show_bug.cgi?id=178261
+@function breakpoint-max($name) {
+  $next: breakpoint-next($name);
+  @return if($next, breakpoint-min($next) - 0.02px, null);
+}
+
+// vwの指定
+// 1. $viewportにはPSD（スマホ）のカンバスサイズを指定
+// 2. スマホサイトのデザインが750pxの場合は `$viewport:750` と指定
+// 3. PSDと同じ値を `$size` に入力。※二分の一は不要。
+// @example
+// .xxxx {
+//  font-size: vw(24);
+//  margin: vw(50) auto vw(20) ;
+// }
+@function vw($size, $viewport: 360) {
+  $rate: math.div(100, $viewport);
+  @return $rate * $size * 1vw;
+}
+
+// line-heightの指定
+// 1. $fontsizeには「フォントサイズを設定」の値を指定。（pxは省略）
+// 2. $lineFeedにはPSDの「行送りを設定」の値を指定（pxは省略）
+// @example
+// .xxxx {
+//  line-height: lh(13, 22);
+// }
+@function lh($fontsize: 16, $lineFeed: 24) {
+  $lineheight: math.div($lineFeed, $fontsize);
+  @return $lineheight;
+}
+
+// 指定した画面サイズまでリキッドレイアウトしそれ以降は最大値で固定
+// $limitは固定になる画面サイズを入れる。
+// $viewportはPSDのベースの値を入れる。
+// どちらもデフォルトの引数はlgのサイズ。適宜変えてください。
+// 省略の挙動はPSDのベースサイズがlgで画面がlgまでリキッド。lgより大きくなったら最大値で固定になる
+@function lq($size, $limit: trimUnit(map.get($breakpoints, lg)), $viewport: trimUnit(map.get($breakpoints, lg)), ) {
+  $recommend: math.div(100, $viewport) * $size * 1vw;
+  $min: $size * math.div(trimUnit(map.get($breakpoints, md)), $viewport);
+  $max: $size * math.div($viewport, trimUnit($limit));
+
+  @if $size ==0 {
+    @return 0;
+  }
+
+  @if $size >0 {
+    @return string.unquote("clamp(#{$min}px, #{$recommend}, #{$max}px)");
+  }
+
+  @if $size < 0 {
+    @return string.unquote("clamp(#{$max}px, #{$recommend}, #{$min}px)");
+  }
+}
+
+// letter-spacingの指定
+// $valueにはPSDの「選択した文字のトラッキング（VAというアイコン）」の値を指定
+// @example
+// .xxxx {
+//  letter-spacing: ls(100);
+// }
+@function ls($value: 100) {
+  $tracking: math.div($value, 1000);
+  @return $tracking * 1em;
+}
+
+// 数値だけ返す
+@function trimUnit($number) {
+  @if meta.type-of($number)=='number' and not math.is-unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+// pxを省略する為のもの
+@function px($size) {
+  @return $size * 1px;
+}
+
+// デザインがretinaサイズの場合の変換用
+@function re($size) {
+  @return math.div($size, 2) * 1px;
+}
+
+// 割り算
+@function div($size, $size2) {
+  @return math.div($size, $size2);
+}
+
+// パーセント
+@function per($top, $bottom) {
+  @return math.div($top, $bottom) * 100%;
+}
+
+// rem
+@function rem($size, $base-font-size: 16) {
+  @return math.div($size, $base-font-size) * 1rem;
+}

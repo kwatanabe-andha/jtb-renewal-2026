@@ -1,0 +1,73 @@
+@use "@styles/settings" as *;
+
+.bl_pager {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  margin-top: 90px;
+
+  @include breakpoint-up(md) {
+    gap: 14px;
+  }
+}
+
+.bl_pager_prev,
+.bl_pager_next {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+
+  > button {
+    display: block;
+    width: 18px;
+    height: 18px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+  }
+}
+
+.bl_pager_prev {
+  justify-content: flex-start;
+}
+
+.bl_pager_next {
+  justify-content: flex-end;
+}
+
+.bl_pager_item {
+  > button {
+    display: block;
+    padding: 8px 10px;
+    font-size: rem(14);
+    line-height: 1;
+    border-radius: 10px;
+    transition: color 0.2s $linear, background-color 0.2s $linear;
+
+    @include hover {
+      color: var(--color-white);
+      background-color: var(--color-hover);
+    }
+  }
+
+  &.is_current {
+    > button {
+      min-width: 34px;
+      color: var(--color-white);
+      background-color: var(--color-hover);
+    }
+  }
+}
+
+.bl_pager_dash {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 30px;
+}

@@ -1,0 +1,37 @@
+@use "@styles/settings" as *;
+
+.bl_hd_level2 {
+  position: relative;
+  padding-left: 27px;
+
+  @include breakpoint-up(md) {
+    padding-left: 33px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 17px;
+    aspect-ratio: 1/1;
+    border-radius: 4px;
+    background-color: var(--color-03);
+
+    @include breakpoint-up(md) {
+      top: 1px;
+      width: 23px;
+    }
+  }
+
+  > span {
+    display: block;
+    font-size: rem(18);
+    line-height: lh(18,23);
+
+    @include breakpoint-up(md) {
+      font-size: rem(24);
+      line-height: lh(24,29);
+    }
+  }
+}

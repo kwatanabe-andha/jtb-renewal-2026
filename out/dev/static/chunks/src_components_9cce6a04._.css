@@ -1,0 +1,113 @@
+@import "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;400;500;600&display=swap";
+/* [project]/src/components/parts/pageHead/regionTop.scss.css [app-client] (css) */
+.bl_regionTop {
+  text-align: center;
+  background-color: var(--color-white);
+  padding: 80px 10px 60px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .bl_regionTop {
+    padding: 90px 20px;
+  }
+}
+
+.bl_regionTop:before {
+  content: "";
+  background-image: linear-gradient(#4591cb99 0 8px, #4591cb33 8px 15px, #4591cb 15px 23px, #4591cbcc 23px 30px);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+  margin-inline: auto;
+  position: absolute;
+  inset: 37px 0 auto;
+}
+
+.bl_regionTop_heading h1 {
+  letter-spacing: -.04em;
+  color: var(--color-02);
+  font-size: 2.375rem;
+  font-weight: 100;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .bl_regionTop_heading h1 {
+    font-size: 4rem;
+  }
+}
+
+.bl_regionTop_heading p {
+  color: var(--color-01);
+  margin-top: 10px;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .bl_regionTop_heading p {
+    font-size: 1.875rem;
+  }
+}
+
+.bl_regionTop_text {
+  white-space: pre-line;
+  margin-top: 10px;
+  font-size: .875rem;
+}
+
+@media (min-width: 768px) {
+  .bl_regionTop_text {
+    font-size: 1rem;
+  }
+}
+
+/* [project]/src/components/pages/research-reports/Recently/index.scss.css [app-client] (css) */
+
+
+/* [project]/src/components/parts/heading/level2.scss.css [app-client] (css) */
+.bl_hd_level2 {
+  padding-left: 27px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .bl_hd_level2 {
+    padding-left: 33px;
+  }
+}
+
+.bl_hd_level2:before {
+  content: "";
+  aspect-ratio: 1;
+  background-color: var(--color-03);
+  border-radius: 4px;
+  width: 17px;
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .bl_hd_level2:before {
+    width: 23px;
+    top: 1px;
+  }
+}
+
+.bl_hd_level2 > span {
+  font-size: 1.125rem;
+  line-height: 1.27778;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .bl_hd_level2 > span {
+    font-size: 1.5rem;
+    line-height: 1.20833;
+  }
+}
+
+/*# sourceMappingURL=src_components_9cce6a04._.css.map*/

@@ -1,0 +1,65 @@
+@use "@styles/settings" as *;
+
+.ly_breadcrumb {
+  padding: 0 20px 10px;
+
+  @include breakpoint-up(md) {
+    padding: 0 45px 20px;
+  }
+
+  &.is_footer {
+    padding: 60px 20px 20px;
+  
+    @include breakpoint-up(md) {
+      padding: 40px 45px 20px;
+    }
+  }
+}
+
+.bl_breadcrumb_list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: rem(12);
+  letter-spacing: 0.04em;
+  line-height: 2;
+
+  @include breakpoint-up(md) {
+    font-size: rem(14);
+    line-height: lh(14,24);
+  }
+
+  > li {
+    position: relative;
+    
+    &:not(:last-child) {
+      padding-right: 24px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 0 auto;
+        width: 24px;
+        height: 100%;
+        background-image: url('/icon/icon_arw_breadcrumb.svg');
+        background-size: 6px 11px;
+        background-repeat: no-repeat;
+        background-position: 9px 7px;
+      }
+    }
+  }
+}
+
+.bl_breadcrumb_home {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2px;
+  width: 10px;
+  height: 2.0em;
+  
+  > span {
+    display: block;
+    width: 10px;
+    height: 12px;
+  }
+}

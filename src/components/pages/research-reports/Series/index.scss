@@ -1,0 +1,99 @@
+@use "@styles/settings" as *;
+
+.un_series {
+  background-color: var(--color-white);
+}
+
+.un_series_inner {
+  padding-block: 60px 90px;
+}
+
+.un_series_heading {
+  @include breakpoint-up(md) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.un_series_wrap {
+  position: relative;
+  margin-top: 30px;
+
+  @include breakpoint-up(md) {
+    margin-top: 78px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    inset: 0 -2px 0 auto;
+    width: 60px;
+    height: 100%;
+    background-image: linear-gradient(
+      to right,
+      transparent 0, var(--color-white) 96%, var(--color-white) 100%
+    );
+    pointer-events: none;
+    transition: opacity 0.2s $linear, visibility 0.2s;
+
+    @include breakpoint-up(md) {
+      right: lq(60);
+      width: 100px;
+    }
+  }
+
+  &.is_scrolled {
+    &::before {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+.un_series_container {
+  position: relative;
+  z-index: 1;
+  
+  @include breakpoint-down(sm) {
+    overflow: scroll;
+  } 
+
+  @include breakpoint-up(md) {
+    padding-inline: lq(40) lq(65);
+    
+    .swiper-slide {
+      width: 195px;
+    }
+  }
+}
+
+.un_series_list {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--slide-length), 140px);
+  gap: 30px 20px;
+}
+
+.un_series_title {
+  margin-top: 18px;
+  font-size: rem(13);
+  font-weight: 500;
+
+  @include breakpoint-up(md) {
+    margin-top: 20px;
+    font-size: rem(18);
+  }
+}
+
+.un_series_date {
+  margin-top: 8px;
+  font-size: rem(13);
+  line-height: 1.5;
+  color: #555;
+
+  @include breakpoint-up(md) {
+    font-size: rem(14);
+  }
+}

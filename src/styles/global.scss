@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@use "sass:meta";
+
+/*
+* global.css
+*
+*/
+
+// Common Settings
+@use "_partials/reset";
+@use "_partials/base";
+@use "_partials/splideCore";
+@use "_partials/helper";
+@use "_partials/elements";
+@use "_partials/variables";
+@use "_partials/anim";

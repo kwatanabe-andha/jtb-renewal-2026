@@ -1,0 +1,150 @@
+@use "@styles/settings" as *;
+
+.bl_cardList {
+  display: grid;
+  gap: 44px lq(37);
+  
+  @include breakpoint-up(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1150px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.bl_card_body {
+  display: block;
+}
+
+.bl_card_img {
+  position: relative;
+}
+
+.bl_card_thumb {
+  position: relative;
+  z-index: 1;
+}
+
+.bl_card_logo {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  bottom: -27px;
+  width: 100px;
+  aspect-ratio: 1/1;
+  border-radius: 2px;
+  overflow: hidden;
+
+  @include breakpoint-up(md) {
+    width: 34%;
+    max-width: 100px;
+  }
+}
+
+.bl_card_category {
+  margin-top: 18px;
+  font-size: rem(15);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-02);
+}
+
+.bl_card_shoulderSeries {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 18px;
+}
+
+.bl_card_shoulderTitle {
+  display: grid;
+  place-items: center;
+  padding: 2px 8px 0;
+  width: fit-content;
+  font-size: rem(14);
+  font-weight: 500;
+  background-color: var(--color-white);
+  border-radius: 4px;
+}
+
+.bl_card_shoulderAnd {
+  font-size: rem(14);
+  font-weight: 500;
+}
+
+.bl_card_title {
+  margin-top: 10px;
+  font-size: rem(18);
+  font-weight: 500;
+}
+
+.bl_card_summary {
+  margin-top: 18px;
+  font-size: rem(14);
+}
+
+.bl_card_author {
+  margin-top: 8px;
+  padding: 20px;
+  color: var(--color-light-black);
+  background-color: var(--color-white);
+
+  > dt {
+    font-size: rem(15);
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+  }
+
+  > dd {
+    margin-top: 2px;
+    font-size: rem(13);
+  }
+}
+
+.bl_card_btm {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  min-height: 26px;
+
+  @include breakpoint-up(md) {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+.bl_card_download {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  gap: 3px;
+  width: fit-content;
+  height: 26px;
+  font-size: rem(12);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background-color: var(--color-white);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-image: url('/icon/icon_csv.svg');
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+  }
+}
+
+.bl_card_time {
+  align-self: flex-end;
+  font-size: rem(13);
+  line-height: 1;
+  opacity: 0.5;
+
+  @include breakpoint-up(md) {
+    margin-left: auto;
+    font-size: rem(14);
+  }
+}

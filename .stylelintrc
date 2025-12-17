@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "stylelint-config-recommended"
+  ],
+  "customSyntax": "postcss-scss",
+  "ignoreFiles": [
+    "src/styles/_partials/**/*.scss",
+    "out/*"
+  ],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "function-no-unknown": null,
+    "no-descending-specificity": null,
+    "no-duplicate-selectors": null,
+    "color-hex-length": "short",
+    "length-zero-no-unit": true,
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": ["lower-font-range", "upper-font-range"]
+      }
+    ],
+    "rule-empty-line-before": [
+      "always-multi-line",
+      {
+        "ignore": ["after-comment", "first-nested"]
+      }
+    ],
+    "selector-pseudo-element-colon-notation": "double"
+  }
+}

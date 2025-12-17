@@ -1,0 +1,10 @@
+@use "@styles/settings" as *;
+
+.bl_inner {
+  padding-inline: 30px;
+
+  @include breakpoint-up(md) {
+    padding-inline: lq(80);
+    max-width: calc(100% - (260px + lq(45)));
+  }
+}

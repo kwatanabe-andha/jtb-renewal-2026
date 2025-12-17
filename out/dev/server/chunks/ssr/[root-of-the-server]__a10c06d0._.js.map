@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///Users/kouichiwatanabe/myworks/andha_projects/jtb/jtb-renewal-2026/src/app/insights/page.tsx"],"sourcesContent":["import regionTop from \"@/components/parts/pageHead/regionTop\"\n\nexport default async function Page() {\n\n  return (\n    <>\n      <regionTop en='Reports' jp='調査・レポート'>\n        オリジナルの調査・研究結果を公開しています。\n      </regionTop>\n    </>\n  )\n}"],"names":[],"mappings":";;;;;;AAEe,eAAe;IAE5B,qBACE;kBACE,cAAA,8OAAC;YAAU,IAAG;YAAU,IAAG;sBAAU;;;;;;;AAK3C"}}]
-}

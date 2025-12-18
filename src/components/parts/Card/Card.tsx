@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from "next/link"
 import './index.scss'
 
 type Tag = {
@@ -38,7 +39,7 @@ const toDateTimeFormat = (dateText: string) => {
 export default function Card( { card }: Props ) {
   return (
     <div className='bl_card'>
-      <a href="" className='bl_card_body'>
+      <Link href="" className='bl_card_body'>
         <div className='bl_card_img'>
           <div className='bl_card_thumb'><Image src={ card.thumb } alt='' width={300} height={200} /></div>
           { card.logo && <div className='bl_card_logo'><Image src={ card.logo } alt='' width={100} height={100} /></div> }
@@ -68,7 +69,7 @@ export default function Card( { card }: Props ) {
             </dl>
           )
         }
-      </a>
+      </Link>
 
       {
         card.tag && (

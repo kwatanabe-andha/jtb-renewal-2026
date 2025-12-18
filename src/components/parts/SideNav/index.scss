@@ -6,8 +6,6 @@
 
 // コンテンツ部分
 .bl_sideNav_content {
-  margin-top: 80px;
-
   @include breakpoint-up(md) {
     position: absolute;
     top: 50px;

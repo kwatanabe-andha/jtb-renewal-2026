@@ -41,7 +41,8 @@ export default function SideNav({ children }: Props) {
         start: 'top-=50px top',
         endTrigger,
         end: () => {
-          return '+=' + String(endTrigger?.clientHeight - nav?.clientHeight - 50)
+          // return '+=' + String(endTrigger?.clientHeight - nav?.clientHeight - 50)
+          return '+=' + String(endTrigger?.clientHeight - nav?.clientHeight - 100)
         },
         pin: true
       })

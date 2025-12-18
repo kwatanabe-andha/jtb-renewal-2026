@@ -50,13 +50,13 @@ const cardList = [
 
 export default function ColumnsList() {
   return (
-    <section className='un_reportList'>
-      <Inner className='un_reportList_inner'>
-        <div className='un_reportList_nd'>
+    <section className='un_columnsList'>
+      <Inner className='un_columnsList_inner'>
+        <div className='un_columnsList_nd'>
           <NarrowDown title='注目キーワードで絞り込み' list={keywords} years={years} />
         </div>
 
-        <div className='un_reportList_list'>
+        <div className='un_columnsList_list'>
           <CardList list={cardList} />
         </div>
       </Inner>

@@ -16,8 +16,8 @@ export default function Recently() {
 
         <div className='un_recentlyCard'>
           <a href='' className='un_recentlyCard_img'>
-            <div className='un_recentlyCard_thumb'><Image src='thumb.jpg' alt='' width={474} height={316} /></div>
-            <div className='un_recentlyCard_logo'><Image src='series_logo.png' alt='' width={150} height={150} /></div>
+            <div className='un_recentlyCard_thumb'><Image src='/thumb.jpg' alt='' width={474} height={316} /></div>
+            <div className='un_recentlyCard_logo'><Image src='/series_logo.png' alt='' width={150} height={150} /></div>
           </a>
           <div className='un_recentlyCard_body'>
             <a href="" className='un_recentlyCard_content'>

@@ -62,7 +62,7 @@ export default function SideNav({ children }: Props) {
           <div className='bl_sideNav_sec'>
             <div className='bl_sideNav_title'>関連情報</div>
             <a href="" className='bl_sideNav_relCard'>
-              <div className='bl_sideNav_relCard_img'><Image src='thumb.jpg' alt='' width={197} height={120} /></div>
+              <div className='bl_sideNav_relCard_img'><Image src='/thumb.jpg' alt='' width={197} height={120} /></div>
               <p className='bl_sideNav_relCard_text'>テキストテキストテキスト</p>
             </a>
             <div className='bl_sideNav_relInfo_container'>
@@ -104,7 +104,7 @@ export default function SideNav({ children }: Props) {
                 <li>
                   <a href="">
                     <div className='bl_sideNav_pickup_img'>
-                      <Image src='pickup_01.jpg' alt='' width={300} height={168} />
+                      <Image src='/pickup_01.jpg' alt='' width={300} height={168} />
                     </div>
                     <p className='bl_sideNav_pickup_text'>｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る</p>
                     <div className='bl_sideNav_pickup_cat'>調査・レポート</div>
@@ -113,7 +113,7 @@ export default function SideNav({ children }: Props) {
                 <li>
                   <a href="">
                     <div className='bl_sideNav_pickup_img'>
-                      <Image src='pickup_01.jpg' alt='' width={300} height={168} />
+                      <Image src='/pickup_01.jpg' alt='' width={300} height={168} />
                     </div>
                     <p className='bl_sideNav_pickup_text'>｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る</p>
                     <div className='bl_sideNav_pickup_cat'>調査・レポート</div>

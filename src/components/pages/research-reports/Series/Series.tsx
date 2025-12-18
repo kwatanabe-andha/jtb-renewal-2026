@@ -9,37 +9,37 @@ import { useRef } from 'react'
 const data = [
   {
     id: 1,
-    logo: 'series_logo_01.jpg',
+    logo: '/series_logo_01.jpg',
     title: '1988年以来発行、日本における海外旅行市場の実態と今後の展望を分析',
     date: '年1回'
   },
   {
     id: 2,
-    logo: 'series_logo_02.jpg',
+    logo: '/series_logo_02.jpg',
     title: '1981年から続く動向見通し、各種指標・JTBグループのアンケート等から需要予測',
     date: '年4回（年間・GW・夏休み・年末年始）'
   },
   {
     id: 3,
-    logo: 'series_logo_03.jpg',
+    logo: '/series_logo_03.jpg',
     title: 'スマホの利用実態を継続的に調べ、生活や旅行行動の変化の兆しをとらえる',
     date: '年1回（2013-2025年）'
   },
   {
     id: 4,
-    logo: 'series_logo_01.jpg',
+    logo: '/series_logo_01.jpg',
     title: '1988年以来発行、日本における海外旅行市場の実態と今後の展望を分析',
     date: '年1回'
   },
   {
     id: 5,
-    logo: 'series_logo_02.jpg',
+    logo: '/series_logo_02.jpg',
     title: '1981年から続く動向見通し、各種指標・JTBグループのアンケート等から需要予測',
     date: '年4回（年間・GW・夏休み・年末年始）'
   },
   {
     id: 6,
-    logo: 'series_logo_03.jpg',
+    logo: '/series_logo_03.jpg',
     title: 'スマホの利用実態を継続的に調べ、生活や旅行行動の変化の兆しをとらえる',
     date: '年1回（2013-2025年）'
   }

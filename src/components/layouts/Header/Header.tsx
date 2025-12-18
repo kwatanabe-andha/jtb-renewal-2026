@@ -6,7 +6,7 @@ import Image from "next/image"
 import { useEffect, useState } from 'react'
 import HeaderNav from './_block/HeaderNav';
 
-export default function Header() {
+export default  function Header() {
   const [isPc, setIsPc] = useState(false)
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function Header() {
         <div className='bl_hd_inner'>
           <div className='bl_hdHead'>
             <h1 className='bl_hdHead_logo'>
-              <Link href='/'><Image src='logo.svg' alt='株式会社JTB総合研究所' width={293} height={27} /></Link>
+              <Link href='/'><Image src='/common/logo.svg'alt='株式会社JTB総合研究所' width={293} height={27} /></Link>
             </h1>
 
             <div className='bl_hdHead_nav'>
@@ -51,7 +51,7 @@ export default function Header() {
       <div className='bl_hd_inner'>
         <div className='bl_hdHead'>
           <h1 className='bl_hdHead_logo'>
-            <Link href='/'><Image src='logo.svg' alt='株式会社JTB総合研究所' width={293} height={27} /></Link>
+            <Link href='/'><Image src='/common/logo.svg' alt='株式会社JTB総合研究所' width={293} height={27} /></Link>
           </h1>
 
           <div className='bl_hdHead_nav'>

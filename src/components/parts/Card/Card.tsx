@@ -7,10 +7,19 @@ type Tag = {
   slag: string
 }
 
+type Img = {
+  desc: string
+  url: string
+}
+
+type Download = {
+  url?: string
+}
+
 export type CardType = {
-  id: number
-  thumb: string
-  logo?: string
+  topics_id: number
+  thumb: Img
+  logo?: Img
   category?: string
   shoulderSeries?: string
   shoulderAnd?: string
@@ -21,9 +30,8 @@ export type CardType = {
   author?: string
   authorTitle?: string
   tag?: Array<Tag>
-  download?: boolean
-  downloadFile?: string
-  date: string
+  download?: Download
+  ymd: string
 };
 
 type Props = {
@@ -31,18 +39,17 @@ type Props = {
 }
 
 const toDateTimeFormat = (dateText: string) => {
-  const [year, month, day] = dateText.split('.')
-  return `${year}-${month}-${day}`
+  const [year, month, day] = dateText.split('-')
+  return `${year}.${month}.${day}`
 }
-
 
 export default function Card( { card }: Props ) {
   return (
     <div className='bl_card'>
       <Link href="" className='bl_card_body'>
         <div className='bl_card_img'>
-          <div className='bl_card_thumb'><Image src={ card.thumb } alt='' width={300} height={200} /></div>
-          { card.logo && <div className='bl_card_logo'><Image src={ card.logo } alt='' width={100} height={100} /></div> }
+          <div className='bl_card_thumb'><Image src={ card.thumb.url } alt={ card.thumb.desc } width={300} height={200} /></div>
+          { card.logo?.url && <div className='bl_card_logo'><Image src={ card.logo.url } alt={ card.logo.desc } width={100} height={100} /></div> }
         </div>
         { card.category && <div className='bl_card_category'>{ card.category }</div> }
         {
@@ -51,7 +58,7 @@ export default function Card( { card }: Props ) {
               <div className='bl_card_shoulderTitle'>{ card.shoulderSeries }</div>
               {
                 card.shoulderAnd && (
-                  <div className='bl_card_shoulderAnd'>{ card.shoulderAnd }</div>
+                  <div className='bl_card_shoulderAnd'>× { card.shoulderAnd }</div>
                 )
               }
             </div>
@@ -89,12 +96,12 @@ export default function Card( { card }: Props ) {
 
       <div className='bl_card_btm'>
         {
-          card.download && (
-            <a href={card.downloadFile} download className='bl_card_download'>CSVダウンロード</a>
+          card.download?.url && (
+            <a href={card.download.url} download className='bl_card_download'>PDFダウンロード</a>
           )
         }
 
-        <time dateTime={toDateTimeFormat(card.date)} className='bl_card_time'>{ card.date }</time>
+        <time dateTime={toDateTimeFormat(card.ymd)} className='bl_card_time'>{ toDateTimeFormat(card.ymd) }</time>
       </div>
     </div>
   )

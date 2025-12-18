@@ -14,7 +14,7 @@ export default function CardList({ list }: Props) {
         {
           list.map((card: CardType) => {
             return (
-              <li key={card.id}>
+              <li key={card.topics_id}>
                 <Card
                   card={card}
                 />

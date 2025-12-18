@@ -47,7 +47,6 @@ export default function Series() {
     const button = e.currentTarget as HTMLButtonElement
     setViewMore(!viewMore)
     button.dataset.open = `${!viewMore}`
-    console.log(viewMore)
   }
 
   return (

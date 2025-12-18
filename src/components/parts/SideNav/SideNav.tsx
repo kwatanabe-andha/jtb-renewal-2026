@@ -14,6 +14,7 @@ type Props = {
 };
 
 export default function SideNav({ children }: Props) {
+  const wrapRef = useRef<HTMLDivElement>(null)
   const pickupRef = useRef<HTMLUListElement>(null)
   const scrollWrapRef = useRef<HTMLDivElement | null>(null)
   const scrollBarRef = useRef<HTMLDivElement | null>(null)
@@ -47,14 +48,16 @@ export default function SideNav({ children }: Props) {
         pin: true
       })
     })
-
-    window.addEventListener('resize', () => {
+    
+    if (!wrapRef.current) return
+    const observer = new ResizeObserver(() => {
       ScrollTrigger.refresh()
     })
+    observer.observe(wrapRef.current)
   }, [])
 
   return (
-    <div className='bl_sideNav_wrap'>
+    <div className='bl_sideNav_wrap' ref={wrapRef}>
       <div className='bl_sideNav_body'>{children}</div>
       <div className='bl_sideNav_content'>
         <nav className='bl_sideNav_nav'>

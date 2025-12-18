@@ -61,6 +61,11 @@
 .bl_sideNav_relCard_img {
   border-radius: 4px;
   overflow: hidden;
+  
+  img {
+    aspect-ratio: 197/120;
+    object-fit: cover;
+  }
 }
 
 .bl_sideNav_relCard_text {
@@ -183,6 +188,11 @@
 
 .bl_sideNav_pickup_img {
   position: relative;
+
+  img {
+    aspect-ratio: 197/120;
+    object-fit: cover;
+  }
 
   &::before {
     content: "";

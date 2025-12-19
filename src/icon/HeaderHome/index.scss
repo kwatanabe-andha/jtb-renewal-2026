@@ -1,0 +1,8 @@
+@use "@styles/settings" as *;
+
+.icon_header_home {
+  path {
+    stroke: var(--color-black);
+    transition: stroke 0.2s $linear;
+  }
+}

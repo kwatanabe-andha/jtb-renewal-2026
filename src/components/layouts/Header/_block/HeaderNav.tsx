@@ -1,7 +1,9 @@
 import './index.scss'
 import Link from "next/link"
-import Image from "next/image"
+// import Image from "next/image"
 import { useRef } from 'react'
+import HeaderHomeIcon from '@/icon/HeaderHome/HeaderHome'
+import ToggleIcon from "@/icon/Toggle/Toggle"
 
 const toggle = (button: HTMLButtonElement) => {
   const expanded = button.getAttribute('aria-expanded')
@@ -34,7 +36,7 @@ export default function HeaderNav() {
     <div className='bl_hdNav'>
       <div className='bl_hdNav_body'>
         <ul className='bl_hdNav_list'>
-          <li><Link href='' className='bl_hdNav_home'><Image src='/icon/icon_header_home.svg' alt='ホーム' width={16} height={16} /></Link></li>
+          <li><Link href='' className='bl_hdNav_home'><HeaderHomeIcon /></Link></li>
           <li>
             <div className='bl_hdNav_item'>
               <Link href='' className='is_current'>調査・レポート</Link>
@@ -48,14 +50,20 @@ export default function HeaderNav() {
             </div>
           </li>
           <li>
-            <button ref={menu01Ref} onClick={handleClick01} type='button' className='bl_hdNav_toggle' aria-expanded="false" aria-controls='nav_menu_01'>専門領域</button>
+            <button ref={menu01Ref} onClick={handleClick01} type='button' className='bl_hdNav_toggle' aria-expanded="false" aria-controls='nav_menu_01'>
+              専門領域
+              <ToggleIcon />
+            </button>
             <div className='bl_hdNav_menu menu_01' id='nav_menu_01' aria-hidden="true">
               <Link href=''>専門分野</Link>
               <Link href=''>コンサルタント</Link>
             </div>
           </li>
           <li>
-            <button ref={menu02Ref} onClick={handleClick02} type='button' className='bl_hdNav_toggle' aria-expanded="false" aria-controls='nav_menu_01'>実績・事例</button>
+            <button ref={menu02Ref} onClick={handleClick02} type='button' className='bl_hdNav_toggle' aria-expanded="false" aria-controls='nav_menu_01'>
+              実績・事例
+              <ToggleIcon />
+            </button>
             <div className='bl_hdNav_menu menu_02' id='nav_menu_02' aria-hidden="true">
               <Link href=''>実績一覧</Link>
               <Link href=''>事例</Link>

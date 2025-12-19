@@ -5,6 +5,7 @@ import Link from "next/link"
 import Image from 'next/image'
 import Level2 from "@/components/parts/Heading/Level2"
 import Inner from "@/components/parts/Inner/Inner"
+import Accordion from "@/components/parts/Accordion/Accordion"
 import { useState } from 'react'
 
 const data = [
@@ -41,12 +42,12 @@ const data = [
 ]
 
 export default function Series() {
-  const [viewMore, setViewMore] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const button = e.currentTarget as HTMLButtonElement
-    setViewMore(!viewMore)
-    button.dataset.open = `${!viewMore}`
+    setIsOpen(!isOpen)
+    button.dataset.open = `${!isOpen}`
   }
 
   return (
@@ -72,7 +73,7 @@ export default function Series() {
         </section>
 
         {
-          viewMore && (
+          isOpen && (
             <section className='un_series_sec'>
               <div className='un_series_heading'><Level2>連載が終了したシリーズ</Level2></div>
               <ul className='un_series_list'>
@@ -94,12 +95,13 @@ export default function Series() {
           )
         }
 
-        <div className='bl_viewMore un_series_btn'>
-          <button type='button' data-open="false" onClick={handleClick}>
-            { viewMore && '連載が終了したシリーズを閉じる' }
-            { !viewMore && '連載が終了したシリーズをみる' }
-          </button>
-        </div>
+        <Accordion
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          openedText='連載が終了したシリーズを閉じる'
+          closedText='連載が終了したシリーズをみる'
+          className='un_series_btn'
+        />
       </Inner>
     </div>
   )

@@ -1,4 +1,5 @@
 import './index.scss'
+import ToggleIcon from "@/icon/Toggle/Toggle"
 
 type Item = {
   name: string
@@ -15,7 +16,7 @@ export default function NarrowDown({ title, list, years }:Props) {
   return (
     <div className='bl_nd'>
       <div className='bl_nd_left'>
-        <div className='bl_nd_title'>注目キーワードで絞り込み</div>
+        <div className='bl_nd_title'>{title}</div>
         <div className='bl_nd_container'>
           <div className='bl_nd_list'>
             <ul>
@@ -35,7 +36,7 @@ export default function NarrowDown({ title, list, years }:Props) {
 
       <div className='bl_nd_years'>
         <div className='bl_nd_form'>
-          <select className='bl_nd_select' defaultValue='年度'>
+          <select className='bl_nd_select' defaultValue='年度' name="year">
             <option value="年度" disabled>年度</option>
             {
               years.map((year: number) => {

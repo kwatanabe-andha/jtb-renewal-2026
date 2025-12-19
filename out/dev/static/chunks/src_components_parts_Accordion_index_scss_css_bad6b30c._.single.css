@@ -1,0 +1,39 @@
+/* [project]/src/components/parts/Accordion/index.scss.css [app-client] (css) */
+.bl_viewMore {
+  justify-content: center;
+  display: flex;
+}
+
+.bl_viewMore > button {
+  letter-spacing: .04em;
+  color: #222;
+  border: solid 1px var(--color-black);
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 19px 20px 17px 50px;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1;
+  display: flex;
+  position: relative;
+}
+
+.bl_viewMore > button:before {
+  content: "";
+  z-index: 2;
+  background-image: url("/icon/icon_arw_select.svg");
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 14px;
+  left: 20px;
+}
+
+.bl_viewMore > button[data-open="true"]:before {
+  rotate: 180deg;
+}
+
+/*# sourceMappingURL=src_components_parts_Accordion_index_scss_css_bad6b30c._.single.css.map*/

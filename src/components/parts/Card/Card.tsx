@@ -48,7 +48,7 @@ export default function Card( { card }: Props ) {
     <div className='bl_card'>
       <Link href="" className='bl_card_body'>
         <div className='bl_card_img'>
-          <div className='bl_card_thumb'><Image src={`${card.thumb.url}?auto=webp`} alt={ card.thumb.desc } width={300} height={200} /></div>
+          <div className='bl_card_thumb'><Image src={`${card.thumb.url}`} alt={ card.thumb.desc } width={300} height={200} /></div>
           { card.logo?.url && <div className='bl_card_logo'><Image src={ card.logo.url } alt={ card.logo.desc } width={100} height={100} /></div> }
         </div>
         { card.category && <div className='bl_card_category'>{ card.category }</div> }

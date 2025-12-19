@@ -1,0 +1,46 @@
+@use "@styles/settings" as *;
+
+.un_columnsList {
+  padding-block: 100px 80px;
+
+  @include breakpoint-up(md) {
+    padding-block: 60px 120px;
+  }
+}
+
+.un_columnsList_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.un_columnsList_heading {
+  font-size: rem(24);
+  font-weight: 500;
+  line-height: 1;
+
+  @include breakpoint-up(md) {
+    font-size: rem(30);
+  }
+}
+
+.un_columnsList_state {
+  position: relative;
+  bottom: 4px;
+  font-size: rem(10);
+  font-weight: 500;
+  line-height: 1;
+
+  @include breakpoint-up(md) {
+    bottom: 0;
+    font-size: rem(18);
+  }
+}
+
+.un_columnsList_list {
+  margin-top: 24px;
+
+  @include breakpoint-up(md) {
+    margin-top: 48px;
+  }
+}

@@ -39,7 +39,7 @@ export default function SideNav({ children }: Props) {
       ScrollTrigger.create({
         trigger: nav,
         // start: 'top-=' + String(header?.clientHeight) + 'px top',
-        start: 'top-=50px top',
+        start: 'top-=50 top',
         endTrigger,
         end: () => {
           // return '+=' + String(endTrigger?.clientHeight - nav?.clientHeight - 50)

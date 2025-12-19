@@ -312,7 +312,7 @@
 .bl_breadcrumb_list > li:not(:last-child):before {
   content: "";
   background-image: url("/icon/icon_arw_breadcrumb.svg");
-  background-position: 9px 7px;
+  background-position: 9px 6px;
   background-repeat: no-repeat;
   background-size: 6px 11px;
   width: 24px;
@@ -324,7 +324,7 @@
 .bl_breadcrumb_home {
   align-items: center;
   width: 10px;
-  height: 2em;
+  height: 24px;
   padding-bottom: 2px;
   display: flex;
 }

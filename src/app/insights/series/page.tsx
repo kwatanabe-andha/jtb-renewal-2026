@@ -1,6 +1,5 @@
-// import RegionTop from "@/components/parts/PageHead/RegionTop"
-// import ColumnsList from "@/components/pages/insights/ColumnsList/ColumnsList"
-// import Series from "@/components/pages/insights/Series/Series"
+import Summary from "@/components/pages/insightsSeries/Summary/Summary"
+import ColumnsList from "@/components/pages/insightsSeries/ColumnsList/ColumnsList"
 import SideNav from "@/components/parts/SideNav/SideNav"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
 
@@ -20,8 +19,8 @@ export default async function Page() {
       <Breadcrumb data={breadcrumb} />
 
       <SideNav>
-        <div>
-        </div>
+        <Summary />
+        <ColumnsList />
       </SideNav>
       <Breadcrumb data={breadcrumb} footer />
     </>

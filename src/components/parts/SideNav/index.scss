@@ -8,7 +8,7 @@
 .bl_sideNav_content {
   @include breakpoint-up(md) {
     position: absolute;
-    top: 50px;
+    top: 0;
     right: 45px;
     margin-top: 0;
     width: 260px;

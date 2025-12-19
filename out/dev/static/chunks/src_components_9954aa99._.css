@@ -73,7 +73,7 @@
 
 /* [project]/src/components/pages/insights/ColumnsList/index.scss.css [app-client] (css) */
 .un_columnsList {
-  padding-top: 50px;
+  margin-top: 50px;
   padding-bottom: 80px;
 }
 
@@ -743,7 +743,7 @@
     width: 260px;
     margin-top: 0;
     position: absolute;
-    top: 50px;
+    top: 0;
     right: 45px;
   }
 }
@@ -1046,7 +1046,7 @@
 .bl_breadcrumb_list > li:not(:last-child):before {
   content: "";
   background-image: url("/icon/icon_arw_breadcrumb.svg");
-  background-position: 9px 7px;
+  background-position: 9px 6px;
   background-repeat: no-repeat;
   background-size: 6px 11px;
   width: 24px;
@@ -1058,7 +1058,7 @@
 .bl_breadcrumb_home {
   align-items: center;
   width: 10px;
-  height: 2em;
+  height: 24px;
   padding-bottom: 2px;
   display: flex;
 }

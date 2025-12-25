@@ -38,12 +38,13 @@
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 78px;
-    padding-left: 40px;
+    padding-left: clamp(21.3333px, 2.77778vw, 40px);
     display: flex;
   }
 
   .un_series_list > li {
-    width: 195px;
+    width: calc(50% - 15px);
+    max-width: 195px;
   }
 }
 

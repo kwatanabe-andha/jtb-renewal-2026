@@ -5,7 +5,7 @@ import Link from "next/link"
 import Image from 'next/image'
 import Level2 from "@/components/parts/Heading/Level2"
 import Inner from "@/components/parts/Inner/Inner"
-import Accordion from "@/components/parts/Accordion/Accordion"
+import ViewMore from "@/components/parts/ViewMore/ViewMore"
 import { useState } from 'react'
 
 const data = [
@@ -95,7 +95,7 @@ export default function Series() {
           )
         }
 
-        <Accordion
+        <ViewMore
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           openedText='連載が終了したシリーズを閉じる'

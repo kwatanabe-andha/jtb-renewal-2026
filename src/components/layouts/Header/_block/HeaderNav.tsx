@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useRef } from 'react'
 import HeaderHomeIcon from '@/icon/HeaderHome/HeaderHome'
 import ToggleIcon from "@/icon/Toggle/Toggle"
+import ContactIcon from "@/icon/Contact/Contact"
 
 const toggle = (button: HTMLButtonElement) => {
   const expanded = button.getAttribute('aria-expanded')
@@ -73,7 +74,10 @@ export default function HeaderNav() {
       </div>
 
       <div className='bl_hdNav_contact'>
-        <Link href=''>お問い合わせ</Link>
+        <Link href=''>
+          <span className='bl_hdNav_contact_icon'><ContactIcon /></span>
+          お問い合わせ
+        </Link>
       </div>
     </div>
   )

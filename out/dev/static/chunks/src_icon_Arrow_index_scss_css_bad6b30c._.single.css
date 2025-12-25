@@ -1,0 +1,7 @@
+/* [project]/src/icon/Arrow/index.scss.css [app-client] (css) */
+.icon_arrow path {
+  stroke: var(--icon-color);
+  transition: stroke .2s cubic-bezier(.25, .25, .75, .75);
+}
+
+/*# sourceMappingURL=src_icon_Arrow_index_scss_css_bad6b30c._.single.css.map*/

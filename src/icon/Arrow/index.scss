@@ -1,0 +1,10 @@
+@use "@styles/settings" as *;
+
+@use "@styles/settings" as *;
+
+.icon_arrow {
+  path {
+    stroke: var(--icon-color);
+    transition: stroke 0.2s $linear;
+  }
+}

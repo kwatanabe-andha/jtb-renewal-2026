@@ -23,16 +23,13 @@
     color: var(--color-white);
     background-color: var(--color-02);
     border-radius: 8px;
-
-    &::before {
-      content: "";
-      width: 22px;
-      height: 22px;
-      background-image: url('/icon/icon_contact.svg');
-      background-size: 22px 22px;
-      background-repeat: no-repeat;
-    }
   }
+}
+
+.bl_hdNav_contact_icon {
+  display: block;
+  width: 22px;
+  height: 22px;
 }
 
 .bl_hdNav_body {

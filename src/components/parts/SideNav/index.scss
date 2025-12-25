@@ -155,35 +155,15 @@
 }
 
 .bl_sideNav_pickup {
-  display: flex;
-  gap: 30px;
-  padding-top: 25px;
-  overflow-x: scroll;
-
-  @include breakpoint-up(md) {
-    display: grid;
-    overflow-x: inherit;
+  .bl_scrollBar_body {
+    padding-top: 25px;
   }
+}
 
-  > li {
-    flex: 0 0 auto;
-    width: 300px;
-
-    @include breakpoint-up(md) {
-      flex: inherit;
-      width: 100%;
-    }
-
-    > a {
-      display: block;
-    }
+.bl_sideNav_pickup_item {
+  > a {
+    display: block;
   }
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .bl_sideNav_pickup_img {

@@ -2,5 +2,5 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///turbopack:///[project]/src/styles/_partials/global/_fonts.scss","turbopack:///turbopack:///[project]/src/icon/HeaderHome/index.scss"],"sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;400;500;600&display=swap');","@use \"@styles/settings\" as *;\n\n.icon_header_home {\n  path {\n    stroke: var(--color-black);\n    transition: stroke 0.2s $linear;\n  }\n}"],"names":[],"mappings":"AAGE"}}]
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///turbopack:///[project]/src/styles/_partials/global/_fonts.scss","turbopack:///turbopack:///[project]/src/icon/HeaderHome/index.scss"],"sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;300;400;500;600&display=swap');","@use \"@styles/settings\" as *;\n\n.icon_header_home {\n  path {\n    stroke: var(--color-black);\n    transition: stroke 0.2s $linear;\n  }\n}"],"names":[],"mappings":"AAGE"}}]
 }

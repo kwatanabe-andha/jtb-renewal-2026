@@ -48,7 +48,7 @@ function SideNav({ children }) {
                     __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$ScrollTrigger$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ScrollTrigger"].create({
                         trigger: nav,
                         // start: 'top-=' + String(header?.clientHeight) + 'px top',
-                        start: 'top-=50px top',
+                        start: 'top-=50 top',
                         endTrigger,
                         end: {
                             "SideNav.useGSAP": ()=>{

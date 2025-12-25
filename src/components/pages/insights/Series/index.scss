@@ -38,12 +38,13 @@
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 78px;
-    padding-left: 40px;
+    padding-left: lq(40);
   }
 
   > li {
     @include breakpoint-up(md) {
-      width: 195px;
+      max-width: 195px;
+      width: calc(50% - 15px);
     }
 
     > a {

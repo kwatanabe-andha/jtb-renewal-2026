@@ -3,11 +3,11 @@ import Card from './Card'
 import { CardType } from './Card'
 import Pager from '../Pager/Pager'
 
-type Props = {
+export type CardListType = {
   list: CardType[]
 }
 
-export default function CardList({ list }: Props) {
+export default function CardList({ list }: CardListType) {
   return (
     <>
       <ul className='bl_cardList'>

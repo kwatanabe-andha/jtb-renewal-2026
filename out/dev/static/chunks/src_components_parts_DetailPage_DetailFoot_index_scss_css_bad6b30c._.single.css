@@ -1,0 +1,133 @@
+/* [project]/src/components/parts/DetailPage/DetailFoot/index.scss.css [app-client] (css) */
+.bl_detailFoot_inner {
+  padding-block: 120px;
+}
+
+@media (min-width: 768px) {
+  .bl_detailFoot_inner {
+    padding-block: 120px 90px;
+  }
+
+  .bl_detailFoot_head {
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
+  }
+}
+
+.bl_detailFoot_title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .bl_detailFoot_title {
+    font-size: 2.125rem;
+  }
+}
+
+.bl_detailFoot_title > span {
+  margin-top: 8px;
+  font-size: 1.125rem;
+  font-weight: 300;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .bl_detailFoot_title > span {
+    margin: 0 0 0 10px;
+    font-size: 1.25rem;
+    display: inline-block;
+  }
+}
+
+.bl_detailFoot_more {
+  justify-content: flex-end;
+  margin-top: 30px;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .bl_detailFoot_more {
+    margin-top: 0;
+  }
+}
+
+:where(.bl_detailFoot_more) .bl_linkBtn {
+  background-color: #0000;
+  min-height: 40px;
+  padding: 6px 14px;
+  font-size: .8125rem;
+}
+
+@media (min-width: 768px) {
+  :where(.bl_detailFoot_more) .bl_linkBtn {
+    background-color: var(--color-white);
+    min-height: 58px;
+    padding: 8px 20px;
+    font-size: .875rem;
+  }
+}
+
+:where(.bl_detailFoot_more) .bl_linkBtn_title {
+  transform: translateY(1px);
+}
+
+.bl_detailFoot_body {
+  margin-top: 40px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .bl_detailFoot_body {
+    margin-top: 60px;
+  }
+}
+
+:where(.bl_detailFoot_body) .swiper:before {
+  content: "";
+  z-index: 2;
+  pointer-events: none;
+  background-image: linear-gradient(to left, #f3f3f3 0 3px, #0000 100%);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 203px;
+  position: absolute;
+  inset: 0 -2px 0 auto;
+}
+
+:where(.bl_detailFoot_body) .swiper-slide {
+  width: 298px;
+}
+
+.bl_detailFoot_arrows {
+  z-index: 2;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+.bl_detailFoot_prev, .bl_detailFoot_next {
+  pointer-events: auto;
+  background-image: url("/common/slide_arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  width: 60px;
+  height: 60px;
+  margin-block: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.bl_detailFoot_prev {
+  left: -24px;
+  rotate: 180deg;
+}
+
+.bl_detailFoot_next {
+  right: -24px;
+}
+
+/*# sourceMappingURL=src_components_parts_DetailPage_DetailFoot_index_scss_css_bad6b30c._.single.css.map*/

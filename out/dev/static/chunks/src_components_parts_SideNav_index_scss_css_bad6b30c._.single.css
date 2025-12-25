@@ -152,43 +152,12 @@
   }
 }
 
-.bl_sideNav_pickup {
-  gap: 30px;
+.bl_sideNav_pickup .bl_scrollBar_body {
   padding-top: 25px;
-  display: flex;
-  overflow-x: scroll;
 }
 
-@media (min-width: 768px) {
-  .bl_sideNav_pickup {
-    overflow-x: inherit;
-    display: grid;
-  }
-}
-
-.bl_sideNav_pickup > li {
-  flex: none;
-  width: 300px;
-}
-
-@media (min-width: 768px) {
-  .bl_sideNav_pickup > li {
-    flex: inherit;
-    width: 100%;
-  }
-}
-
-.bl_sideNav_pickup > li > a {
+.bl_sideNav_pickup_item > a {
   display: block;
-}
-
-.bl_sideNav_pickup::-webkit-scrollbar {
-  display: none;
-}
-
-.bl_sideNav_pickup {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .bl_sideNav_pickup_img {

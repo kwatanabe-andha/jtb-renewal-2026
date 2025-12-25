@@ -1,0 +1,49 @@
+/* [project]/src/components/pages/insightsDetail/BackNumber/index.scss.css [app-client] (css) */
+.un_backNumber {
+  background-color: var(--color-white);
+}
+
+.un_backNumber_inner {
+  padding-block: 100px;
+}
+
+@media (min-width: 768px) {
+  .un_backNumber_container {
+    max-width: 720px;
+    margin-left: auto;
+  }
+
+  .un_backNumber_top {
+    grid-template-columns: 195px 1fr;
+    gap: 30px;
+    display: grid;
+  }
+}
+
+.un_backNumber_top_img {
+  border-radius: 4px;
+}
+
+.un_backNumber_top_title {
+  padding-left: 14px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  position: relative;
+}
+
+.un_backNumber_top_title:before {
+  content: "";
+  background-color: #024270;
+  width: 4px;
+  position: absolute;
+  inset: .1em auto .3em 0;
+}
+
+.un_backNumber_top_text {
+  margin-top: 20px;
+  font-size: .875rem;
+  line-height: 1.8;
+}
+
+/*# sourceMappingURL=src_components_pages_insightsDetail_BackNumber_index_scss_css_bad6b30c._.single.css.map*/

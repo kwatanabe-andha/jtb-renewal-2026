@@ -143,3 +143,9 @@
     );
   }
 }
+
+.bl_hdHead_register_title {
+  @include breakpoint-up(md) {
+    flex: 1;
+  }
+}

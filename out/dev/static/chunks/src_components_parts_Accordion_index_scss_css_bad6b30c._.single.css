@@ -1,12 +1,14 @@
 /* [project]/src/components/parts/Accordion/index.scss.css [app-client] (css) */
-.bl_viewMore {
+.bl_accordion {
   justify-content: center;
+  margin-top: 10px;
   display: flex;
 }
 
-.bl_viewMore > button {
+.bl_accordion > button {
   letter-spacing: .04em;
   color: #222;
+  background-color: var(--color-white);
   border: solid 1px var(--color-black);
   justify-content: center;
   align-items: center;
@@ -19,7 +21,7 @@
   position: relative;
 }
 
-.bl_viewMore > button:before {
+.bl_accordion > button:before {
   content: "";
   z-index: 2;
   background-image: url("/icon/icon_arw_select.svg");
@@ -32,8 +34,40 @@
   left: 20px;
 }
 
-.bl_viewMore > button[data-open="true"]:before {
+.bl_accordion > button[data-open="true"]:before {
   rotate: 180deg;
+}
+
+.bl_accordion_target {
+  position: relative;
+  overflow: hidden;
+}
+
+.bl_accordion_target:before {
+  pointer-events: none;
+  background-image: linear-gradient(to top, #fff 0 3px, #0000 100%);
+  position: absolute;
+  inset: 100px 0 -3px;
+}
+
+@media (min-width: 768px) {
+  .bl_accordion_target:before {
+    top: 50px;
+  }
+}
+
+.bl_accordion_target[data-hidden="true"] {
+  max-height: 400px;
+}
+
+@media (min-width: 768px) {
+  .bl_accordion_target[data-hidden="true"] {
+    max-height: 240px;
+  }
+}
+
+.bl_accordion_target[data-hidden="true"]:before {
+  content: "";
 }
 
 /*# sourceMappingURL=src_components_parts_Accordion_index_scss_css_bad6b30c._.single.css.map*/

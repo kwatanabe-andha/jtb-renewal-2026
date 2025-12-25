@@ -13,7 +13,7 @@
 
   @include breakpoint-up(md) {
     display: grid;
-    grid-template-columns: lq(474) 1fr;
+    grid-template-columns: lq(474) minmax(0, 1fr);
     gap: 18px;
   }
 }

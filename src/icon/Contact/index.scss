@@ -1,0 +1,9 @@
+@use "@styles/settings" as *;
+
+.icon_contact {
+  path {
+    stroke: var(--icon-color);
+    transition: stroke 0.2s $linear;
+    // transform: translateY(-1px);
+  }
+}

@@ -1,0 +1,45 @@
+@use "@styles/settings" as *;
+
+// .bl_relArticles {
+//   background-color: #E5E5E5;
+// }
+
+.bl_relArticles_inner {
+  padding-block: 60px;
+}
+
+.bl_relArticles_container {
+  @include breakpoint-up(md) {
+    margin-left: auto;
+    max-width: 720px;
+  }
+}
+
+.bl_relArticles_heading {
+  font-size: rem(26);
+  font-weight: 500;
+  text-align: center;
+  line-height: 1;
+
+  @include breakpoint-up(md) {
+    font-size: rem(30);
+  }
+}
+
+.bl_relArticles_body {
+  margin-top: 30px;
+
+  @include breakpoint-up(md) {
+    margin-top: 50px;
+  }
+}
+
+.bl_relArticles_btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  @include breakpoint-up(md) {
+    justify-content: flex-end;
+  }
+}

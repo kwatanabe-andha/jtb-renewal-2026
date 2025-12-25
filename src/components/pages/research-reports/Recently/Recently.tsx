@@ -2,11 +2,7 @@ import Image from 'next/image'
 import './index.scss'
 import Level2 from "@/components/parts/Heading/Level2"
 import Inner from "@/components/parts/Inner/Inner"
-
-const toDateTimeFormat = (dateText: string) => {
-  const [year, month, day] = dateText.split('.')
-  return `${year}-${month}-${day}`
-}
+import toDateTimeFormat from '@/lib/toDateTimeFormat'
 
 export default function Recently() {
   return (

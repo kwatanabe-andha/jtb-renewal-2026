@@ -1,0 +1,32 @@
+@use "@styles/settings" as *;
+
+.bl_download {
+  display: flex;
+  align-items: center;
+  padding: 4px 4px 3px;
+  gap: 3px;
+  width: fit-content;
+  height: 26px;
+  font-size: rem(12);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background-color: var(--color-white);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-image: url('/icon/icon_file.svg');
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+  }
+
+  &[href$=".pdf"]::before {
+    background-image: url('/icon/icon_pdf.svg');
+  }
+
+  &[href$=".csv"]::before {
+    background-image: url('/icon/icon_csv.svg');
+  }
+}

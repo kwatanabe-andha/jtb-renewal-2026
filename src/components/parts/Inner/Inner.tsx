@@ -5,10 +5,11 @@ import './index.scss'
 type Props = {
   children: ReactNode;
   className?: string
+  pcOnly?: boolean
 };
 
-export default function Inner({ children, className }: Props) {
+export default function Inner({ children, className, pcOnly = false }: Props) {
   return (
-    <div className={clsx('bl_inner', className !== undefined && className)}>{children}</div>
+    <div className={clsx(className !== undefined && className, pcOnly ? 'bl_inner_pc' : 'bl_inner')}>{children}</div>
   )
 }

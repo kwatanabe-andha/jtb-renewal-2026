@@ -148,41 +148,13 @@
 }
 
 .un_summary_content {
-  position: relative;
   margin-top: 30px;
   padding-inline: 10px;
   text-align: center;
-  overflow: hidden;
 
   @include breakpoint-up(md) {
     margin-top: 80px;
     padding-inline: 0;
-  }
-
-  &::before {
-    position: absolute;
-    inset: 100px 0 -3px;
-    pointer-events: none;
-    background-image: linear-gradient(
-      to top,
-      #fff 0, #fff 3px, transparent 100%
-    );
-
-    @include breakpoint-up(md) {
-      top: 50px;
-    }
-  }
-
-  &[data-hidden="true"] {
-    max-height: 400px;
-
-    @include breakpoint-up(md) {
-      max-height: 240px;
-    }
-
-    &::before {
-      content: "";
-    }
   }
 
   :first-child {

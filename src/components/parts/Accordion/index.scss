@@ -1,8 +1,9 @@
 @use "@styles/settings" as *;
 
-.bl_viewMore {
+.bl_accordion {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 
   > button {
     position: relative;
@@ -16,6 +17,7 @@
     line-height: 1;
     letter-spacing: 0.04em;
     color: #222;
+    background-color: var(--color-white);
     border: solid 1px var(--color-black);
 
     &::before {
@@ -35,6 +37,37 @@
       &::before {
         rotate: 180deg
       }
+    }
+  }
+}
+
+.bl_accordion_target {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    inset: 100px 0 -3px;
+    pointer-events: none;
+    background-image: linear-gradient(
+      to top,
+      #fff 0, #fff 3px, transparent 100%
+    );
+
+    @include breakpoint-up(md) {
+      top: 50px;
+    }
+  }
+
+  &[data-hidden="true"] {
+    max-height: 400px;
+
+    @include breakpoint-up(md) {
+      max-height: 240px;
+    }
+
+    &::before {
+      content: "";
     }
   }
 }

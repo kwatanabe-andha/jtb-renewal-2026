@@ -1,0 +1,88 @@
+@use "@styles/settings" as *;
+
+.un_authorProfile {
+  margin-top: 60px;
+
+  // @include breakpoint-up(md) {
+
+  // }
+}
+
+.un_authorProfile_container {
+  padding: 80px 40px 60px;
+  background-color: var(--color-white);
+  border: solid 1px #dadada;
+
+  @include breakpoint-up(md) {
+    display: flex;
+    gap: 40px;
+    margin-left: auto;
+    max-width: 720px;
+  }
+}
+
+.un_authorProfile_head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+
+  @include breakpoint-up(md) {
+    width: 184px;
+  }
+}
+
+.un_authorProfile_label {
+  padding: 16px 20px;
+  width: fit-content;
+  font-size: rem(14);
+  font-weight: 500;
+  line-height: 1.2;
+  background-color: #EDE7D2;
+  border-radius: 4px;
+}
+
+.un_authorProfile_img {
+  width: 162px;
+}
+
+.un_authorProfile_body {
+  @include breakpoint-up(md) {
+    flex: 1;
+  }
+}
+
+.un_authorProfile_name {
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+
+  @include breakpoint-up(md) {
+    font-size: rem(30);
+  }
+
+  > span {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: rem(15);
+  }
+}
+
+.un_authorProfile_position {
+  margin-top: 4px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  @include breakpoint-up(md) {
+    font-size: rem(16);
+  }
+}
+
+.un_authorProfile_text {
+  margin-top: 26px;
+  
+  > p {
+    font-size: rem(16);
+    line-height: 1.8;
+  }
+}

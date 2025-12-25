@@ -136,4 +136,10 @@
   inset: 0 auto 0 -16px;
 }
 
+@media (min-width: 768px) {
+  .bl_hdHead_register_title {
+    flex: 1;
+  }
+}
+
 /*# sourceMappingURL=src_components_layouts_Header_index_scss_css_bad6b30c._.single.css.map*/

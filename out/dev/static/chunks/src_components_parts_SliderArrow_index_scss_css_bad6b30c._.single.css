@@ -1,0 +1,32 @@
+/* [project]/src/components/parts/SliderArrow/index.scss.css [app-client] (css) */
+.bl_sliderArrow {
+  z-index: 2;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+.bl_sliderArrow_prev, .bl_sliderArrow_next {
+  pointer-events: auto;
+  background-image: url("/common/slide_arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  width: 60px;
+  height: 60px;
+  margin-block: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.bl_sliderArrow_prev {
+  left: -24px;
+  rotate: 180deg;
+}
+
+.bl_sliderArrow_next {
+  right: -24px;
+}
+
+/*# sourceMappingURL=src_components_parts_SliderArrow_index_scss_css_bad6b30c._.single.css.map*/

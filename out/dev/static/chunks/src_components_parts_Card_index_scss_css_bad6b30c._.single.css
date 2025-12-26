@@ -31,7 +31,9 @@
 
 .bl_card_thumb {
   z-index: 1;
+  border-radius: 4px;
   position: relative;
+  overflow: hidden;
 }
 
 .bl_card_thumb img {

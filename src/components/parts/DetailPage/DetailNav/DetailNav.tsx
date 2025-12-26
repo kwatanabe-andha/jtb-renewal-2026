@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import './index.scss'
+import { SITE_URL } from '@/config/site'
 
 type Keyword = {
   name: string,
@@ -21,7 +22,7 @@ export function DetailNav({ sections, keywords }: DetailNavType) {
     <div className='bl_detailNav'>
       <div className='bl_detailNav_inner'>
         <div className='bl_detailNav_member'>
-          <p>この記事の全文を読むには<br /><Link href="">ログイン</Link>が必要です</p>
+          <p>この記事の全文を読むには<br /><Link href={SITE_URL.login}>ログイン</Link>が必要です</p>
         </div>
         
         <nav className='bl_detailNav_nav'>
@@ -33,7 +34,7 @@ export function DetailNav({ sections, keywords }: DetailNavType) {
                 return (
                   <li key={index}>
                     { index === 0 && (current = true) }
-                    <Link href="" className='bl_detailNav_list_item' data-current={`${current}`}>
+                    <Link href={`#section${index}`} className='bl_detailNav_list_item' data-current={`${current}`}>
                       { section.number && <div className='bl_detailNav_list_number'>{section.number}</div> }
                       <p className='bl_detailNav_list_text'>{section.title}</p>
                     </Link>

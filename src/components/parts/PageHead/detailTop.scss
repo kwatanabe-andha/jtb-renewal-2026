@@ -2,6 +2,8 @@
 
 .bl_detailTop {
   position: relative;
+  display: flex;
+  align-items: center;
   padding-block: 20px;
   min-height: 140px;
   background-color: var(--color-white);

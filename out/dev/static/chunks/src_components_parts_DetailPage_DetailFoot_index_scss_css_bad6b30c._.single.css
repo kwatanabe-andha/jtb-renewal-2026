@@ -85,49 +85,11 @@
 }
 
 :where(.bl_detailFoot_body) .swiper:before {
-  content: "";
-  z-index: 2;
-  pointer-events: none;
   background-image: linear-gradient(to left, #f3f3f3 0 3px, #0000 100%);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 203px;
-  position: absolute;
-  inset: 0 -2px 0 auto;
 }
 
 :where(.bl_detailFoot_body) .swiper-slide {
   width: 298px;
-}
-
-.bl_detailFoot_arrows {
-  z-index: 2;
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-}
-
-.bl_detailFoot_prev, .bl_detailFoot_next {
-  pointer-events: auto;
-  background-image: url("/common/slide_arrow.svg");
-  background-repeat: no-repeat;
-  background-size: 60px 60px;
-  width: 60px;
-  height: 60px;
-  margin-block: auto;
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-
-.bl_detailFoot_prev {
-  left: -24px;
-  rotate: 180deg;
-}
-
-.bl_detailFoot_next {
-  right: -24px;
 }
 
 /*# sourceMappingURL=src_components_parts_DetailPage_DetailFoot_index_scss_css_bad6b30c._.single.css.map*/

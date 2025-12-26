@@ -31,12 +31,12 @@ export default function Accordion(
       setIsOpen(!isOver)
       setShowAccordion(isOver)
     }
+    setAccordion()
 
-    if (!targetRef.current) return
-    const observer = new ResizeObserver(() => {
+    // いるかどうか
+    window.addEventListener('resize', () => {
       setAccordion()
     })
-    observer.observe(targetRef.current)
   }, [])
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {

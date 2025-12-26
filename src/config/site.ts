@@ -3,6 +3,7 @@ export const KEYWORD_TAG_CATEGORY_ID = 10
 
 export const SITE_URL = {
   login: '/login/',
+  signup: '/signup/',
   contact: '/contact/',
 }
 

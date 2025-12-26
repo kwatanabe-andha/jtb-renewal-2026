@@ -1,7 +1,7 @@
 "use client";
 
 import './index.scss'
-import { ReactNode, useRef } from 'react'
+import { ReactNode, useRef, CSSProperties } from 'react'
 import Image from 'next/image'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -12,9 +12,10 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 type Props = {
   children: ReactNode;
+  offset?: number
 };
 
-export default function SideNav({ children }: Props) {
+export default function SideNav({ children, offset = 0 }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
@@ -46,7 +47,7 @@ export default function SideNav({ children }: Props) {
   return (
     <div className='bl_sideNav_wrap' ref={wrapRef}>
       <div className='bl_sideNav_body'>{children}</div>
-      <div className='bl_sideNav_content'>
+      <div className='bl_sideNav_content'  style={{ '--sidenav-offset': `${offset}px` } as CSSProperties}>
         <nav className='bl_sideNav_nav'>
           {/* sec */}
           <div className='bl_sideNav_sec'>

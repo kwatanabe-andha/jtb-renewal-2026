@@ -21,11 +21,57 @@
   }
 }
 
+.bl_detailHead_author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #F8F8F8;
+}
+
+.bl_detailHead_author_img {
+  width: 76px;
+}
+
+.bl_detailHead_author_content {
+  flex: 1;
+  display: grid;
+  gap: 6px;
+}
+
+.bl_detailHead_author_tag {
+  padding: 3px 10px;
+  width: fit-content;
+  font-size: rem(12);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border-radius: 8px;
+}
+
+.bl_detailHead_author_name {
+  font-size: rem(18);
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+}
+
+.bl_detailHead_author_text {
+  font-size: rem(14);
+}
+
 .bl_detailHead_download {
   margin-block: 20px;
 
   @include breakpoint-up(md) {
     margin-block: 40px 20px;
+  }
+
+  .bl_detailHead_author + & {
+    @include breakpoint-up(md) {
+      margin-block: 20px;
+    }
   }
 }
 

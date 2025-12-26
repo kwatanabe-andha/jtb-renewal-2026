@@ -1,8 +1,10 @@
 /* [project]/src/components/parts/PageHead/detailTop.scss.css [app-client] (css) */
 .bl_detailTop {
   background-color: var(--color-white);
+  align-items: center;
   min-height: 140px;
   padding-block: 20px;
+  display: flex;
   position: relative;
 }
 

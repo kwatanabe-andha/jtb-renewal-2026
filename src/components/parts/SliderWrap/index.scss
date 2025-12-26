@@ -1,0 +1,63 @@
+@use "@styles/settings" as *;
+
+.bl_sliderWrap {
+  position: relative;
+
+  .swiper {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      inset: 0 -2px 0 auto;
+      width: 203px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      pointer-events: none;
+    }
+
+    &.is_scrolled {
+      &::before {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+.bl_sliderWrap_arrows {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  pointer-events: none;
+}
+
+.bl_sliderWrap_prev,
+.bl_sliderWrap_next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  margin-block: auto;
+  width: 60px;
+  height: 60px;
+  background-image: url('/common/slide_arrow.svg');
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  pointer-events: auto;
+
+  // &[aria-disabled="true"] {
+  //   display: none;
+  // }
+}
+
+.bl_sliderWrap_prev {
+  left: -24px;
+  rotate: 180deg;
+}
+
+.bl_sliderWrap_next {
+  right: -24px;
+}

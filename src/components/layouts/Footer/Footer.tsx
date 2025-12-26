@@ -4,6 +4,7 @@ import './index.scss'
 import Link from "next/link"
 import { useEffect, useState } from 'react'
 import { gsap } from 'gsap'
+import { SITE_URL } from '@/config/site'
 
 const IS_OPENED_CLASS = 'is_opened'
 
@@ -163,8 +164,8 @@ export default function Footer() {
                     <div className='bl_ftNav_title'>JTB総研メンバー</div>
                     <div className='bl_ftNav_listWrap'>
                       <ul className='bl_ftNav_list'>
-                        <li><Link href="/">ログイン</Link></li>
-                        <li><Link href="/">新規登録</Link></li>
+                        <li><Link href={SITE_URL.login}>ログイン</Link></li>
+                        <li><Link href={SITE_URL.signup}>新規登録</Link></li>
                       </ul>
                     </div>
                   </>
@@ -175,8 +176,8 @@ export default function Footer() {
                     <div className='bl_ftNav_title'><button type='button' onClick={handleClick}>JTB総研メンバー</button></div>
                     <div className='bl_ftNav_listWrap is_sp'>
                       <ul className='bl_ftNav_list'>
-                        <li><Link href="/">ログイン</Link></li>
-                        <li><Link href="/">新規登録</Link></li>
+                        <li><Link href={SITE_URL.login}>ログイン</Link></li>
+                        <li><Link href={SITE_URL.signup}>新規登録</Link></li>
                       </ul>
                     </div>
                   </>

@@ -23,14 +23,19 @@ const head = {
   release: "2024-12-27",
   update: "2025-01-10",
   download: 'https://tourism.g.kuroco-img.app/v=1766049351/files/topics/4_ext_8_0.pdf',
-  member: true
+  member: true,
+  author: {
+    name: '佐治 晴夫',
+    img: '/dummy_sazi.png',
+    text: '北海道美宙（MISORA）天文台名誉台長、鈴鹿短期大学名誉学長、大阪音楽大学客員教授'
+  }
 }
 
 const sections = [
-  { title: '兵庫県でユニバーサルツーリズム推進条例が施行された理由' },
-  { title: '条例が描く「誰もが旅を楽しめる社会」' },
-  { title: '兵庫県で進むユニバーサルツーリズムの実践' },
-  { title: '広がるネットワーク、深まる取り組み―ユニバーサルツーリズムの未来形' }
+  { title: 'H2H2H2H2H2H2H2H2-3階層' },
+  { title: 'H3H3H3H3H3H3H3H3H3-3階層' },
+  { title: 'H4兵庫県でユニバーサルツーリズム推進条例が施行された理由' },
+  { title: 'H5兵庫県でユニバーサルツーリズム推進条例が施行された理由' }
 ]
 
 const keywords = [
@@ -49,18 +54,14 @@ const relArticles = [
 
 const nav = {sections, keywords}
 
-export default async function Page() {
+export default function Page() {
   return (
     <>
       <Breadcrumb data={breadcrumb} />
 
-      <SideNav>
+      <SideNav offset={50}>
         <DetailTop
           title="スマートフォンの利用と旅行消費に関する調査"
-          pressRelease
-          logo='/series_logo.png'
-          category='定点調査'
-          facility='愛知県東三河総局'
         />
         <Article head={head} nav={nav} />
         <AuthorProfile />

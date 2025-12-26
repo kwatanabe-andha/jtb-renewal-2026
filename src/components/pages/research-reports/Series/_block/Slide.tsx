@@ -1,7 +1,10 @@
 import "swiper/css";
+import { Navigation, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect, useState, CSSProperties } from 'react'
+import SliderWrap from "@/components/parts/SliderWrap/SliderWrap";
 
 type Item = {
   id: number
@@ -38,11 +41,11 @@ export default function Slide({ items }: Props) {
           items.map((item: Item) => {
             return (
               <li key={item.id}>
-                <a href="">
+                <Link href="">
                   <div className="un_series_img"><Image src={item.logo} alt='' width={195} height={195} /></div>
                   <p className="un_series_title">{item.title}</p>
                   <div className="un_series_date">{item.date}</div>
-                </a>
+                </Link>
               </li>
             )
           })
@@ -53,22 +56,31 @@ export default function Slide({ items }: Props) {
 
   // PC：Swiper
   return (
-    <Swiper
-      spaceBetween={30}
-      slidesPerView={'auto'}
-      onSlideChange={() => console.log("slide change")}
-    >
-      {
-        items.map((item: Item) => {
-          return (
-            <SwiperSlide key={item.id}>
-              <div className="un_series_img"><Image src={item.logo} alt='' width={195} height={195} /></div>
-              <p className="un_series_title">{item.title}</p>
-              <div className="un_series_date">{item.date}</div>
-            </SwiperSlide>
-          )
-        })
-      }
-    </Swiper>
+    <>
+      <SliderWrap className="un_series_slider">
+        <Swiper
+          modules={[Navigation, A11y]}
+          spaceBetween={30}
+          slidesPerView={'auto'}
+          onSlideChange={() => console.log("slide change")}
+          navigation={{ nextEl: ".bl_sliderWrap_next", prevEl: ".bl_sliderWrap_prev" }}
+        >
+          {
+            items.map((item: Item) => {
+              return (
+                <SwiperSlide key={item.id}>
+                  <Link href="" className="un_series_link">
+                    <div className="un_series_img"><Image src={item.logo} alt='' width={195} height={195} /></div>
+                    <p className="un_series_title">{item.title}</p>
+                    <div className="un_series_date">{item.date}</div>
+                  </Link>
+                </SwiperSlide>
+                
+              )
+            })
+          }
+        </Swiper>
+      </SliderWrap>
+    </>
   )
 }

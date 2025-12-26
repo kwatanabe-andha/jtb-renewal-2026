@@ -1,5 +1,5 @@
 {
-  "/insights/detail/page": "app/insights/detail/page.js",
   "/insights/page": "app/insights/page.js",
+  "/insights/series/page": "app/insights/series/page.js",
   "/research-reports/page": "app/research-reports/page.js"
 }

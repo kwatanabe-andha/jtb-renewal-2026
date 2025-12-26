@@ -153,6 +153,7 @@ fieldset {
 
 html {
   font-size: inherit;
+  scroll-behavior: smooth;
 }
 
 body {

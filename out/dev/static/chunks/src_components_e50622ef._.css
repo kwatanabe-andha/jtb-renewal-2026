@@ -392,7 +392,9 @@
 
 .bl_card_thumb {
   z-index: 1;
+  border-radius: 4px;
   position: relative;
+  overflow: hidden;
 }
 
 .bl_card_thumb img {
@@ -674,10 +676,10 @@
 
 @media (min-width: 768px) {
   .bl_sideNav_content {
+    top: var(--sidenav-offset);
     width: 260px;
     margin-top: 0;
     position: absolute;
-    top: 0;
     right: 45px;
   }
 }
@@ -913,7 +915,8 @@
 }
 
 .bl_scrollBar_body {
-  overflow-x: scroll;
+  overscroll-behavior: none;
+  overflow: scroll hidden;
 }
 
 @media (min-width: 768px) {
@@ -963,7 +966,8 @@
 
 .bl_scrollBar {
   margin-top: 30px;
-  padding-right: 30px;
+  margin-right: 30px;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {

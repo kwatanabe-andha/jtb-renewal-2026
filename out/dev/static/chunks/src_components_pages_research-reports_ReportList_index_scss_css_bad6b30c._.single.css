@@ -1,0 +1,20 @@
+/* [project]/src/components/pages/research-reports/ReportList/index.scss.css [app-client] (css) */
+.un_reportList {
+  padding-block: 70px 80px;
+}
+
+@media (min-width: 768px) {
+  .un_reportList {
+    padding-block: 140px 80px;
+  }
+}
+
+.un_reportList_nd {
+  margin-top: 20px;
+}
+
+.un_reportList_list {
+  margin-top: 30px;
+}
+
+/*# sourceMappingURL=src_components_pages_research-reports_ReportList_index_scss_css_bad6b30c._.single.css.map*/

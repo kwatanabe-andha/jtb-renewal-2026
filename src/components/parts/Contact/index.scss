@@ -15,12 +15,16 @@
 
   @include breakpoint-up(md) {
     flex-direction: row;
-    justify-content: space-between;
+    // justify-content: space-between;
     gap: 40px;
   }
 }
 
 .bl_contact_head {
+  @include breakpoint-up(md) {
+    width: lq(285);
+  }
+
   > h2 {
     font-size: rem(20);
     font-weight: 500;

@@ -6,11 +6,17 @@
 
 .un_series_inner {
   padding-block: 100px;
+
+  &.bl_inner {
+    @include breakpoint-up(md) {
+      padding-left: 255px;
+    }
+  }
 }
 
 .un_series_container {
   @include breakpoint-up(md) {
-    margin-left: auto;
+    margin-inline: auto;
     max-width: 720px;
   }
 }

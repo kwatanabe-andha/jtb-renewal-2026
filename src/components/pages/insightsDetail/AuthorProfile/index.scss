@@ -3,9 +3,11 @@
 .un_authorProfile {
   margin-top: 60px;
 
-  // @include breakpoint-up(md) {
-
-  // }
+  &.bl_inner {
+    @include breakpoint-up(md) {
+      padding-left: 255px;
+    }
+  }
 }
 
 .un_authorProfile_container {
@@ -16,7 +18,7 @@
   @include breakpoint-up(md) {
     display: flex;
     gap: 40px;
-    margin-left: auto;
+    margin-inline: auto;
     max-width: 720px;
   }
 }

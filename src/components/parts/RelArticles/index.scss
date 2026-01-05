@@ -6,11 +6,17 @@
 
 .bl_relArticles_inner {
   padding-block: 60px;
+
+  &.bl_inner {
+    @include breakpoint-up(md) {
+      padding-left: 255px;
+    }
+  }
 }
 
 .bl_relArticles_container {
   @include breakpoint-up(md) {
-    margin-left: auto;
+    margin-inline: auto;
     max-width: 720px;
   }
 }

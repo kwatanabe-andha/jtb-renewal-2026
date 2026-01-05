@@ -109,16 +109,6 @@
   font-weight: 700;
   line-height: 1;
   color: var(--color-pink);
-
-  &::before {
-    content: "";
-    display: block;
-    width: 28px;
-    height: 28px;
-    background-image: url('/icon/icon_lock.svg');
-    background-repeat: no-repeat;
-    background-size: 28px 28px;
-  }
 }
 
 .bl_detailHead_memberText {

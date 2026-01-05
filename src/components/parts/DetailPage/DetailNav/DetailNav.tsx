@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import './index.scss'
 import { SITE_URL } from '@/config/site'
+import LockIcon from '@/icon/Lock/Lock'
+import { Hash01 } from "@untitledui/icons"
 
 type Keyword = {
   name: string,
@@ -22,11 +24,12 @@ export function DetailNav({ sections, keywords }: DetailNavType) {
     <div className='bl_detailNav'>
       <div className='bl_detailNav_inner'>
         <div className='bl_detailNav_member'>
+          <LockIcon />
           <p>この記事の全文を読むには<br /><Link href={SITE_URL.login}>ログイン</Link>が必要です</p>
         </div>
         
         <nav className='bl_detailNav_nav'>
-          <div className='bl_detailNav_title'>目次</div>
+          <h2 className='bl_detailNav_title'>目次</h2>
           <ul className='bl_detailNav_list'>
             {
               sections.map((section: Section, index: number) => {
@@ -52,7 +55,10 @@ export function DetailNav({ sections, keywords }: DetailNavType) {
               keywords?.map((keyword: Keyword, index: number) => {
                 return (
                   <li key={index}>
-                    <Link href={keyword.url}>{keyword.name}</Link>
+                    <Link href={keyword.url}>
+                      <Hash01 width={10} height={10} />
+                      {keyword.name}
+                    </Link>
                   </li>
                 )
               })

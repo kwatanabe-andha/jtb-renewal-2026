@@ -12,8 +12,8 @@ export default function regionTop({ en, jp, page, children }: Props) {
   return (
     <div className='bl_regionTop' data-page={page}>
       <hgroup className='bl_regionTop_heading'>
-        <h1>{en}</h1>
-        <p>{jp}</p>
+        <p>{en}</p>
+        <h1>{jp}</h1>
       </hgroup>
       <p className='bl_regionTop_text'>{children}</p>
     </div>

@@ -37,7 +37,7 @@ const cardList = [
     thumb: { url: '/thumb.jpg', desc: '' },
     logo: { url: '/series_logo_01.jpg', desc: '' },
     category: '定点調査',
-    title: 'スマートフォンの利用と旅行消費に関する調査 2024',
+    subject: 'スマートフォンの利用と旅行消費に関する調査 2024',
     summary: '｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る' ,
     download: { url: 'https://tourism.g.kuroco-img.app/v=1766049351/files/topics/4_ext_8_0.pdf' },
     ymd: '2025-01-10'
@@ -47,7 +47,7 @@ const cardList = [
     thumb: { url: '/thumb.jpg', desc: '' },
     logo: { url: '/series_logo_02.jpg', desc: '' },
     category: '調査白書',
-    title: 'スマートフォンの利用と旅行消費に関する調査 2024',
+    subject: 'スマートフォンの利用と旅行消費に関する調査 2024',
     summary: '｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る' ,
     download: { url: 'https://tourism.g.kuroco-img.app/v=1766049351/files/topics/4_ext_8_0.pdf' },
     ymd: '2025-01-10'
@@ -57,7 +57,7 @@ const cardList = [
     thumb: { url: '/thumb.jpg', desc: '' },
     logo: { url: '/series_logo_03.jpg', desc: '' },
     category: 'ホワイトペーパー',
-    title: 'スマートフォンの利用と旅行消費に関する調査 2024',
+    subject: 'スマートフォンの利用と旅行消費に関する調査 2024',
     summary: '｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る',
     ymd: '2025-01-10'
   }

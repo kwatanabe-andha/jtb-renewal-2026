@@ -48,10 +48,11 @@ export default function SideNav({ children, offset = 0 }: Props) {
     <div className='bl_sideNav_wrap' ref={wrapRef}>
       <div className='bl_sideNav_body'>{children}</div>
       <div className='bl_sideNav_content'  style={{ '--sidenav-offset': `${offset}px` } as CSSProperties}>
-        <nav className='bl_sideNav_nav'>
+        <aside className='bl_sideNav_nav'>
           {/* sec */}
-          <div className='bl_sideNav_sec'>
-            <div className='bl_sideNav_title'>関連情報</div>
+          <h2 className='el_hidden'>サイドバー</h2>
+          <section className='bl_sideNav_sec'>
+            <h3 className='bl_sideNav_title'>関連情報</h3>
             <a href="" className='bl_sideNav_relCard'>
               <div className='bl_sideNav_relCard_img'><Image src='/thumb.jpg' alt='' width={197} height={120} /></div>
               <p className='bl_sideNav_relCard_text'>テキストテキストテキスト</p>
@@ -66,11 +67,11 @@ export default function SideNav({ children, offset = 0 }: Props) {
                 <div className='bl_sideNav_relInfo_cat'>ニュース</div>
               </a>
             </div>
-          </div>
+          </section>
 
           {/* sec */}
-          <div className='bl_sideNav_sec'>
-            <div className='bl_sideNav_title'>最新調査・レポート</div>
+          <section className='bl_sideNav_sec'>
+            <h3 className='bl_sideNav_title'>最新調査・レポート</h3>
             <ul className='bl_sideNav_report'>
               <li>
                 <a href="">
@@ -85,17 +86,20 @@ export default function SideNav({ children, offset = 0 }: Props) {
                 </a>
               </li>
             </ul>
-          </div>
+          </section>
 
           {/* sec */}
-          <div className='bl_sideNav_sec'>
-            <div className='bl_sideNav_title'>ピックアップ</div>
+          <section className='bl_sideNav_sec'>
+            <h3 className='bl_sideNav_title'>ピックアップ</h3>
             <div className='bl_sideNav_pickup'>
               <ScrollBar>
                 <li className='bl_sideNav_pickup_item'>
                   <a href="">
                     <div className='bl_sideNav_pickup_img'>
-                      <Image src='/pickup_01.jpg' alt='' width={300} height={168} />
+                      <div className='bl_sideNav_pickup_thumb'>
+                        <Image src='/pickup_01.jpg' alt='' width={300} height={168} />
+                      </div>
+                      <div className='bl_sideNav_pickup_featured'>featured</div>
                     </div>
                     <p className='bl_sideNav_pickup_text'>｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る</p>
                     <div className='bl_sideNav_pickup_cat'>調査・レポート</div>
@@ -104,7 +108,10 @@ export default function SideNav({ children, offset = 0 }: Props) {
                 <li>
                   <a href="">
                     <div className='bl_sideNav_pickup_img'>
-                      <Image src='/pickup_01.jpg' alt='' width={300} height={168} />
+                      <div className='bl_sideNav_pickup_thumb'>
+                        <Image src='/pickup_01.jpg' alt='' width={300} height={168} />
+                      </div>
+                      <div className='bl_sideNav_pickup_featured'>featured</div>
                     </div>
                     <p className='bl_sideNav_pickup_text'>｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る</p>
                     <div className='bl_sideNav_pickup_cat'>調査・レポート</div>
@@ -112,8 +119,8 @@ export default function SideNav({ children, offset = 0 }: Props) {
                 </li>
               </ScrollBar>
             </div>
-          </div>
-        </nav>
+          </section>
+        </aside>
       </div>
     </div>
   )

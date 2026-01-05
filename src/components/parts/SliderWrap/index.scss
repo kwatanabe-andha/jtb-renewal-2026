@@ -39,23 +39,23 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  display: block;
+  display: grid;
+  place-items: center;
   margin-block: auto;
   width: 60px;
   height: 60px;
-  background-image: url('/common/slide_arrow.svg');
-  background-size: 60px 60px;
-  background-repeat: no-repeat;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  border: solid 1px var(--color-black);
   pointer-events: auto;
 
-  // &[aria-disabled="true"] {
-  //   display: none;
-  // }
+  svg {
+    pointer-events: none;
+  }
 }
 
 .bl_sliderWrap_prev {
   left: -24px;
-  rotate: 180deg;
 }
 
 .bl_sliderWrap_next {

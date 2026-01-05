@@ -22,11 +22,11 @@
     background-size: 18px 18px;
   }
 
-  &[href$=".pdf"]::before {
+  &[data-file="PDF"]::before {
     background-image: url('/icon/icon_pdf.svg');
   }
 
-  &[href$=".csv"]::before {
+  &[data-file="CSV"]::before {
     background-image: url('/icon/icon_csv.svg');
   }
 }

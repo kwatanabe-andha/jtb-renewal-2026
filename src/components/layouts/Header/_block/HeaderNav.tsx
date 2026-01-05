@@ -1,10 +1,7 @@
 import './index.scss'
 import Link from "next/link"
-// import Image from "next/image"
 import { useRef } from 'react'
-import HeaderHomeIcon from '@/icon/HeaderHome/HeaderHome'
-import ToggleIcon from "@/icon/Toggle/Toggle"
-import ContactIcon from "@/icon/Contact/Contact"
+import { Home05, ChevronDown, MessageSquare01 } from "@untitledui/icons"
 
 const toggle = (button: HTMLButtonElement) => {
   const expanded = button.getAttribute('aria-expanded')
@@ -37,7 +34,7 @@ export default function HeaderNav() {
     <div className='bl_hdNav'>
       <div className='bl_hdNav_body'>
         <ul className='bl_hdNav_list'>
-          <li><Link href='' className='bl_hdNav_home'><HeaderHomeIcon /></Link></li>
+          <li><Link href='' className='bl_hdNav_home'><Home05 /></Link></li>
           <li>
             <div className='bl_hdNav_item'>
               <Link href='' className='is_current'>調査・レポート</Link>
@@ -53,7 +50,7 @@ export default function HeaderNav() {
           <li>
             <button ref={menu01Ref} onClick={handleClick01} type='button' className='bl_hdNav_toggle' aria-expanded="false" aria-controls='nav_menu_01'>
               専門領域
-              <ToggleIcon />
+              <ChevronDown className='icon_chevronDown' />
             </button>
             <div className='bl_hdNav_menu menu_01' id='nav_menu_01' aria-hidden="true">
               <Link href=''>専門分野</Link>
@@ -63,7 +60,7 @@ export default function HeaderNav() {
           <li>
             <button ref={menu02Ref} onClick={handleClick02} type='button' className='bl_hdNav_toggle' aria-expanded="false" aria-controls='nav_menu_01'>
               実績・事例
-              <ToggleIcon />
+              <ChevronDown className='icon_chevronDown' />
             </button>
             <div className='bl_hdNav_menu menu_02' id='nav_menu_02' aria-hidden="true">
               <Link href=''>実績一覧</Link>
@@ -75,7 +72,7 @@ export default function HeaderNav() {
 
       <div className='bl_hdNav_contact'>
         <Link href=''>
-          <span className='bl_hdNav_contact_icon'><ContactIcon /></span>
+          <span className='bl_hdNav_contact_icon'><MessageSquare01 /></span>
           お問い合わせ
         </Link>
       </div>

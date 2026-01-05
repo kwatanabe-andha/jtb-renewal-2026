@@ -25,9 +25,10 @@
   }
 }
 
+
 .bl_sideNav_sec {
 
-  &:not(:first-child) {
+  & + & {
     margin-top: 50px;
     padding-top: 50px;
     border-top: solid 1px var(--color-white);
@@ -169,24 +170,36 @@
 
 .bl_sideNav_pickup_img {
   position: relative;
+}
+
+.bl_sideNav_pickup_thumb {
+  position: relative;
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
 
   img {
     aspect-ratio: 197/120;
     object-fit: cover;
   }
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    top: -20px;
-    right: -20px;
-    width: 78px;
-    aspect-ratio: 1/1;
-    background-image: url('/pickup_featured.png');
-    background-size: 78px 78px;
-    background-repeat: no-repeat;
-  }
+.bl_sideNav_pickup_featured {
+  position: absolute;
+  z-index: 2;
+  top: -20px;
+  right: -20px;
+  display: grid;
+  place-items: center;
+  width: 78px;
+  font-size: rem(12);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  aspect-ratio: 1/1;
+  background-image: url('/icon/icon_pickup_featured.svg');
+  background-size: 78px 78px;
+  background-repeat: no-repeat;
 }
 
 .bl_sideNav_pickup_text {

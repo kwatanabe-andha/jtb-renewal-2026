@@ -3,6 +3,7 @@
 import './index.scss'
 import { ReactNode, useState, useEffect, useRef } from 'react'
 import clsx from 'clsx';
+import { ChevronDown } from "@untitledui/icons"
 
 type Props = {
   openedText: string
@@ -56,6 +57,7 @@ export default function Accordion(
           <div className={clsx('bl_accordion', className !== undefined && className)}>
             <button type='button' data-open="false" onClick={handleClick}>
               { isOpen ? openedText : closedText }
+              <ChevronDown className='icon_chevronDown' />
             </button>
           </div>
         )

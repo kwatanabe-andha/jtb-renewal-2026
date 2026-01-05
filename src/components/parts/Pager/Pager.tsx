@@ -1,24 +1,25 @@
 import './index.scss'
-import Image from 'next/image'
+import Link from 'next/link'
+import { ArrowNarrowRight, ArrowNarrowLeft } from "@untitledui/icons"
 
 export default function Pager() {
   return (
     <ul className='bl_pager'>
       <li className='bl_pager_prev'>
-        <button type='button'>
-          <Image src='/icon/icon_pager_prev.svg' alt='prev' width={18} height={18} />
-        </button>
+        <Link href="">
+          <ArrowNarrowLeft width={18} height={18} />
+        </Link>
       </li>
-      <li className='bl_pager_item is_current'><button type='button'>1</button></li>
-      <li className='bl_pager_item'><button type='button'>2</button></li>
-      <li className='bl_pager_item hp_hidden_down-sm'><button type='button'>3</button></li>
+      <li className='bl_pager_item is_current'><Link href="" aria-current="page">1</Link></li>
+      <li className='bl_pager_item'><Link href="">2</Link></li>
+      <li className='bl_pager_item hp_hidden_down-sm'><Link href="">3</Link></li>
       <li className='bl_pager_dash'>…</li>
-      <li className='bl_pager_item hp_hidden_down-sm'><button type='button'>67</button></li>
-      <li className='bl_pager_item'><button type='button'>68</button></li>
+      <li className='bl_pager_item hp_hidden_down-sm'><Link href="">67</Link></li>
+      <li className='bl_pager_item'><Link href="">68</Link></li>
       <li className='bl_pager_next'>
-        <button type='button'>
-          <Image src='/icon/icon_pager_next.svg' alt='prev' width={18} height={18} />
-        </button>
+        <Link href="">
+          <ArrowNarrowRight width={18} height={18} />
+        </Link>
       </li>
     </ul>
   )

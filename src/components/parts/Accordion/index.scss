@@ -20,21 +20,18 @@
     background-color: var(--color-white);
     border: solid 1px var(--color-black);
 
-    &::before {
-      content: "";
+    .icon_chevronDown {
       position: absolute;
       z-index: 2;
       top: 14px;
       left: 20px;
+      display: block;
       width: 24px;
       height: 24px;
-      background-image: url('/icon/icon_arw_select.svg');
-      background-size: 24px 24px;
-      background-repeat: no-repeat;
     }
 
     &[data-open="true"] {
-      &::before {
+      .icon_chevronDown {
         rotate: 180deg
       }
     }

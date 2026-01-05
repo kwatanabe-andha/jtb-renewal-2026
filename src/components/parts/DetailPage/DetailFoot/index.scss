@@ -17,6 +17,8 @@
 }
 
 .bl_detailFoot_title {
+  display: flex;
+  align-items: baseline;
   font-size: rem(24);
   font-weight: 500;
 
@@ -31,7 +33,6 @@
     font-weight: 300;
 
     @include breakpoint-up(md) {
-      display: inline-block;
       margin: 0 0 0 10px;
       font-size: rem(20);
     }

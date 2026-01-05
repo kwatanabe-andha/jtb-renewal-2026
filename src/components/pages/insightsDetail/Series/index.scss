@@ -25,6 +25,11 @@
 
 .un_series_top_img {
   border-radius: 4px;
+  overflow: hidden;
+
+  @include breakpoint-up(md) {
+    align-self: flex-start;
+  }
 }
 
 .un_series_top_content {

@@ -90,7 +90,7 @@
       &::after {
         content: '';
         position: absolute;
-        top: 3px;
+        top: 0;
         right: -22px;
         display: block;
         width: 9px;
@@ -100,11 +100,11 @@
         rotate: 45deg;
       }
 
-      &.is_opened {
+      &[aria-expanded="true"] {
         color: var(--color-gray);
       
         &::after {
-          top: 8px;
+          top: 4px;
           rotate: -135deg;
           border-color: var(--color-gray);
         }
@@ -125,7 +125,7 @@
     opacity: 0;
     pointer-events: none;
 
-    &[open="true"] {
+    &[aria-hidden="false"] {
       pointer-events: auto;
     }
   }

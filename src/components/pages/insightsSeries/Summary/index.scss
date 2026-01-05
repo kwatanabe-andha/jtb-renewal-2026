@@ -35,7 +35,6 @@
 
 .un_summaryHead_logo {
   width: 114px;
-  border-radius: 4px;
 
   @include breakpoint-up(md) {
     position: relative;
@@ -49,6 +48,10 @@
       height: 100%;
       background-color: var(--color-black);
     }
+  }
+
+  img {
+    border-radius: 4px;
   }
 }
 
@@ -132,6 +135,7 @@
 
   img {
     object-fit: cover;
+    border-radius: 4px;
 
     @include breakpoint-down(sm) {
       position: absolute;

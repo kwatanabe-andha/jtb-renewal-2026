@@ -41,6 +41,22 @@
   }
 }
 
+.bl_card_contribution {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  padding-top: 2px;
+  width: 50px;
+  height: 26px;
+  font-size: rem(14);
+  color: var(--color-white);
+  background-color: #22C11F;
+  border-radius: 8px;
+}
+
 .bl_card_logo {
   position: absolute;
   z-index: 2;
@@ -116,20 +132,20 @@
   padding: 20px;
   color: var(--color-light-black);
   background-color: var(--color-white);
+}
 
-  > dt {
-    font-size: rem(15);
-    line-height: 1.4;
-    letter-spacing: 0.04em;
+.bl_card_author_name {
+  font-size: rem(15);
+  line-height: 1.4;
+  letter-spacing: 0.04em;
 
-    & + dd {
-      margin-top: 2px;
-    }
+  & + .bl_card_author_pos {
+    margin-top: 2px;
   }
+}
 
-  > dd {
-    font-size: rem(13);
-  }
+.bl_card_author_pos {
+  font-size: rem(13);
 }
 
 .bl_card_btm {

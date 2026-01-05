@@ -69,7 +69,7 @@
     &::before {
       content: "";
       position: absolute;
-      inset: auto 0 -20px;
+      inset: auto 0 -23px;
       height: 6px;
       background-color: var(--color-02);
     }
@@ -110,22 +110,20 @@
   padding-right: 28px;
   transition: color 0.2s $linear;
 
-  .icon_toggle {
+  .icon_chevronDown {
     z-index: 2;
     position: absolute;
     top: -4px;
     right: 0;
+    display: block;
     width: 24px;
     height: 24px;
-    background-image: url('/icon/icon_arw_select.svg');
-    background-size: 24px 24px;
-    background-repeat: no-repeat;
   }
 
   @include hover {
     color: var(--color-02);
 
-    .icon_toggle {
+    .icon_chevronDown {
       path {
         stroke: var(--color-02);
       }
@@ -135,7 +133,7 @@
   &[aria-expanded="true"] {
     color: #aaa;
 
-    .icon_toggle {
+    .icon_chevronDown {
       rotate: 180deg;
 
       path {

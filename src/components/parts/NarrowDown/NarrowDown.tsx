@@ -1,5 +1,5 @@
 import './index.scss'
-import ToggleIcon from "@/icon/Toggle/Toggle"
+import { Calendar, ChevronDown } from "@untitledui/icons"
 
 type Item = {
   name: string
@@ -14,7 +14,7 @@ type Props = {
 
 export default function NarrowDown({ title, list, years }:Props) {
   return (
-    <div className='bl_nd'>
+    <form method='get' className='bl_nd'>
       <div className='bl_nd_left'>
         <div className='bl_nd_title'>{title}</div>
         <div className='bl_nd_container'>
@@ -24,7 +24,8 @@ export default function NarrowDown({ title, list, years }:Props) {
                 list.map((item: Item) => {
                   return (
                     <li key={item.slug}>
-                      <button type='button'>{ item.name }</button>
+                      <input type="checkbox" name={item.name} value={item.name} id={item.slug} className='el_hidden' />
+                      <label htmlFor={item.slug} tabIndex={0}>{item.name}</label>
                     </li>
                   )
                 })
@@ -36,7 +37,7 @@ export default function NarrowDown({ title, list, years }:Props) {
 
       <div className='bl_nd_years'>
         <div className='bl_nd_form'>
-          <select className='bl_nd_select' defaultValue='年度' name="year">
+          <select className='bl_nd_select' defaultValue='年度' name="year" aria-label='年度を選択してください'>
             <option value="年度" disabled>年度</option>
             {
               years.map((year: number) => {
@@ -46,8 +47,11 @@ export default function NarrowDown({ title, list, years }:Props) {
               })
             }
           </select>
+
+          <Calendar className='icon_calendar' />
+          <ChevronDown className='icon_chevronDown' />
         </div>
       </div>
-    </div>
+    </form>
   )
 }

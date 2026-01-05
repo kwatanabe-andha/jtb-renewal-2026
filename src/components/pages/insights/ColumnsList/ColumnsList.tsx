@@ -36,7 +36,8 @@ export default async function ColumnsList() {
   const { list, pageInfo } = await getColumns()
 
   return (
-    <div className='un_columnsList'>
+    <section className='un_columnsList'>
+      <h2 className='el_hidden'>コラム一覧</h2>
       <Inner className='un_columnsList_inner'>
         <div className='un_columnsList_nd'>
           <NarrowDown title='注目キーワードで絞り込み' list={keywords} years={years} />
@@ -46,6 +47,6 @@ export default async function ColumnsList() {
           <CardList list={list} />
         </div>
       </Inner>
-    </div>
+    </section>
   )
 }

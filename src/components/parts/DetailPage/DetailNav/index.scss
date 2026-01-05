@@ -47,17 +47,10 @@
     }
   }
 
-  &::before {
-    content: "";
+  .icon_lock {
     position: absolute;
     inset: 20px 0 auto;
-    display: block;
     margin-inline: auto;
-    width: 28px;
-    height: 28px;
-    background-image: url('/icon/icon_lock.svg');
-    background-repeat: no-repeat;
-    background-size: 28px 28px;
   }
 }
 
@@ -166,15 +159,9 @@
       line-height: 1.8;
       color: var(--color-03);
 
-      &::before {
-        content: "";
+      > svg {
         display: inline-block;
         margin-right: 2px;
-        width: 10px;
-        height: 10px;
-        background-image: url('/icon/icon_hash.svg');
-        background-repeat: no-repeat;
-        background-size: 10px 10px;
         vertical-align: inherit;
       }
     }

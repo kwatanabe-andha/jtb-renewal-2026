@@ -22,11 +22,12 @@ export type CardType = {
   topics_id: number
   thumb: Img
   logo?: Img
+  contribution?: boolean
   category?: string
   shoulderSeries?: string
   shoulderAnd?: string
   shoulder?: string
-  title: string
+  subject: string
   auxiliary?: string
   summary?: string
   author?: string
@@ -45,7 +46,10 @@ export default function Card( { card }: Props ) {
     <div className='bl_card'>
       <div className='bl_card_container'>
         <Link href={'/'} className='bl_card_img'>
-          <div className='bl_card_thumb'><Image src={`${card.thumb.url}`} alt={ card.thumb.desc } width={300} height={200} /></div>
+          <div className='bl_card_thumb'>
+            <Image src={`${card.thumb.url}`} alt={ card.thumb.desc } width={300} height={200} />
+            { card.contribution && <span className='bl_card_contribution'>寄稿</span> }
+          </div>
           { card.logo?.url && <div className='bl_card_logo'><Image src={ card.logo.url } alt={ card.logo.desc } width={100} height={100} /></div> }
         </Link>
         <div className='bl_card_content'>
@@ -64,15 +68,15 @@ export default function Card( { card }: Props ) {
               )
             }
             { card.shoulder && <div className='bl_card_shoulder'>{ card.shoulder }</div> }
-            <p className='bl_card_title'>{ card.title }</p>
+            <h3 className='bl_card_title'>{ card.subject }</h3>
             { card.auxiliary && <p className='bl_card_auxiliary'>{ card.auxiliary }</p> }
             { card.summary && <p className='bl_card_summary'>{ card.summary }</p> }
             {
               card.author && (
-                <dl className='bl_card_author'>
-                  <dt>{ card.author }</dt>
-                  <dd>{ card.authorTitle }</dd>
-                </dl>
+                <div className='bl_card_author'>
+                  <p className='bl_card_author_name'>{ card.author }</p>
+                  <p className='bl_card_author_pos'>{ card.authorTitle }</p>
+                </div>
               )
             }
           </Link>
@@ -100,7 +104,7 @@ export default function Card( { card }: Props ) {
               )
             }
 
-            <time dateTime={toDateTimeFormat(card.ymd)} className='bl_card_time'>{ toDateTimeFormat(card.ymd) }</time>
+            <time dateTime={card.ymd} className='bl_card_time'>{ toDateTimeFormat(card.ymd) }</time>
           </div>
         </div>
       </div>

@@ -14,7 +14,7 @@
   overscroll-behavior: none;
 
   @include breakpoint-up(md) {
-    overflow-x: inherit;
+    overflow: inherit;
   }
 
   &::-webkit-scrollbar {

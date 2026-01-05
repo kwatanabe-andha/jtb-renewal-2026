@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState, CSSProperties } from 'react'
-import SliderWrap from "@/components/parts/SliderWrap/SliderWrap";
+import SliderWrap from "@/components/parts/SliderWrap/SliderWrap"
 
 type Item = {
   id: number

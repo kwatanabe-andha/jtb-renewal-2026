@@ -23,7 +23,7 @@ export default function Recently() {
             </a>
             <div className='un_recentlyCard_btm'>
               <a href={''} download className='un_recentlyCard_download'>PDFダウンロード</a>
-              <time dateTime={toDateTimeFormat('2025.01.10')} className='un_recentlyCard_time'>2025.01.10</time>
+              <time dateTime={'2025-01-10'} className='un_recentlyCard_time'>2025.01.10</time>
             </div>
           </div>
         </div>

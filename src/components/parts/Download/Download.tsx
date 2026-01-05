@@ -17,6 +17,6 @@ export default function Download({ url }: Props) {
   const fileType = detectFileType(url)
 
   return (
-    <Link href={url} download className="bl_download">{fileType}ダウンロード</Link>
+    <div className="bl_download" data-file={fileType}>{fileType}ダウンロード</div>
   )
 }

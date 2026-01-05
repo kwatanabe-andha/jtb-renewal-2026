@@ -41,7 +41,7 @@ export default function Series() {
                 dummy.map((item: Item, index: number) => {
                   return (
                     <li className='un_series_item' key={index}>
-                      <div className='un_series_item_date'><time dateTime={toDateTimeFormat(item.ymd)}>{ toDateTimeFormat(item.ymd) }</time></div>
+                      <div className='un_series_item_date'><time dateTime={item.ymd}>{ toDateTimeFormat(item.ymd) }</time></div>
                       <p className='un_series_item_title'><Link href={item.url}>{item.title}</Link></p>
                     </li>
                   )

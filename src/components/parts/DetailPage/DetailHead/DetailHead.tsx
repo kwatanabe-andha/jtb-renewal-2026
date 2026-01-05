@@ -4,6 +4,7 @@ import './index.scss'
 import Download from '@/components/parts/Download/Download'
 import toDateTimeFormat from '@/lib/toDateTimeFormat'
 import { SITE_URL } from '@/config/site'
+import LockIcon from '@/icon/Lock/Lock'
 
 // type Img = {
 //   url: string
@@ -49,14 +50,14 @@ export function DetailHead(
           member && (
             <div className='bl_detailHead_btm'>
               <div className='bl_detailHead_member'>
-                <div className='bl_detailHead_memberLock'>メンバー限定</div>
+                <div className='bl_detailHead_memberLock'><LockIcon />メンバー限定</div>
                 <p className='bl_detailHead_memberText'>この記事の全文を読むには<Link href={SITE_URL.login}>ログイン</Link>が必要です</p>
               </div>
               <div className='bl_detailHead_date'>
                 <div className='bl_detailHead_release'>
-                  公開日<time dateTime={toDateTimeFormat(release)}>{ toDateTimeFormat(release) }</time>
+                  公開日<time dateTime={release}>{ toDateTimeFormat(release) }</time>
                 </div>
-                { update && <div className='bl_detailHead_update'>（更新日<time dateTime={toDateTimeFormat(update)}>{ toDateTimeFormat(update) }</time>）</div> }
+                { update && <div className='bl_detailHead_update'>（更新日<time dateTime={update}>{ toDateTimeFormat(update) }</time>）</div> }
               </div>
             </div>
           )
@@ -65,9 +66,9 @@ export function DetailHead(
           !member && (
             <div className='bl_detailHead_date'>
               <div className='bl_detailHead_release'>
-                公開日<time dateTime={toDateTimeFormat(release)}>{ toDateTimeFormat(release) }</time>
+                公開日<time dateTime={release}>{ toDateTimeFormat(release) }</time>
               </div>
-              { update && <div className='bl_detailHead_update'>（更新日<time dateTime={toDateTimeFormat(update)}>{ toDateTimeFormat(update) }</time>）</div> }
+              { update && <div className='bl_detailHead_update'>（更新日<time dateTime={update}>{ toDateTimeFormat(update) }</time>）</div> }
             </div>
           )
         }

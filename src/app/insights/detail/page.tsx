@@ -46,10 +46,10 @@ const keywords = [
 ]
 
 const relArticles = [
-  { topics_id: 1, thumb: { url: '/thumb.jpg', desc: '' }, category: '研究員コラム', title: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
-  { topics_id: 2, thumb: { url: '/thumb.jpg', desc: '' }, category: '研究員コラム', title: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
-  { topics_id: 3, thumb: { url: '/thumb.jpg', desc: '' }, category: '研究員コラム', title: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
-  { topics_id: 4, thumb: { url: '/thumb.jpg', desc: '' }, category: '研究員コラム', title: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' }
+  { topics_id: 1, thumb: { url: '/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
+  { topics_id: 2, thumb: { url: '/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
+  { topics_id: 3, thumb: { url: '/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
+  { topics_id: 4, thumb: { url: '/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' }
 ]
 
 const nav = {sections, keywords}

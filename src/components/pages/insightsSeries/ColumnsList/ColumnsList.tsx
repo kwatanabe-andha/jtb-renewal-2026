@@ -7,7 +7,7 @@ export default async function ColumnsList() {
   const { list, pageInfo } = await getColumns()
 
   return (
-    <div className='un_columnsList'>
+    <section className='un_columnsList'>
       <Inner className='un_columnsList_inner'>
         <div className='un_columnsList_head'>
           <h2 className='un_columnsList_heading'>最新の記事</h2>
@@ -18,6 +18,6 @@ export default async function ColumnsList() {
           <CardList list={list} />
         </div>
       </Inner>
-    </div>
+    </section>
   )
 }

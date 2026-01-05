@@ -1,0 +1,14 @@
+@use "@styles/settings" as *;
+
+.icon_lock {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  background-color: #FC948D;
+  border-radius: 50%;
+
+  > svg {
+    display: block;
+  }
+}

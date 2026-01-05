@@ -41,9 +41,6 @@
 }
 
 .bl_hdHead_member {
-  width: 24px;
-  aspect-ratio: 1/1;
-
   @include breakpoint-up(md) {
     position: relative;
     top: -1px;

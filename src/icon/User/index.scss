@@ -1,0 +1,14 @@
+@use "@styles/settings" as *;
+
+.icon_user {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: #FC948D;
+  border-radius: 50%;
+
+  > svg {
+    display: block;
+  }
+}

@@ -15,9 +15,11 @@ export default function CardList({ list }: CardListType) {
           list.map((card: CardType) => {
             return (
               <li key={card.topics_id}>
-                <Card
-                  card={card}
-                />
+                <article>
+                  <Card
+                    card={card}
+                  />
+                </article>
               </li>
             )
           })

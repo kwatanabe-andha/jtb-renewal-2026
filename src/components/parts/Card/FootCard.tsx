@@ -12,7 +12,7 @@ export type FootCardType = {
   thumb: Img
   logo?: Img
   category?: string
-  title: string
+  subject: string
   auxiliary?: string
   summary?: string
 };
@@ -31,7 +31,7 @@ export default function FootCard( { card }: Props ) {
         </div>
         <div className='bl_card_content'>
           { card.category && <div className='bl_card_category'>{ card.category }</div> }
-          <p className='bl_card_title'>{ card.title }</p>
+          <h3 className='bl_card_title'>{ card.subject }</h3>
           { card.auxiliary && <p className='bl_card_auxiliary'>{ card.auxiliary }</p> }
           { card.summary && <p className='bl_card_summary'>{ card.summary }</p> }
         </div>

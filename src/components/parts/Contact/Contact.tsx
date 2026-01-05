@@ -2,7 +2,7 @@ import './index.scss'
 import Link from 'next/link'
 import Inner from "@/components/parts/Inner/Inner"
 import { SITE_URL, COLORS } from "@/config/site"
-import ContactIcon from "@/icon/Contact/Contact"
+import { MessageSquare01 } from "@untitledui/icons"
 
 // type Props = {
 //   className?: string
@@ -28,7 +28,7 @@ export default function Contact() {
             <div className='bl_contact_info'>
               <p>執筆、講演等のご依頼は<br /><Link href={SITE_URL.contact}>お問い合わせ</Link>よりご連絡ください。</p>
               <Link href={SITE_URL.contact} className='bl_contact_btn'>
-                <ContactIcon color={COLORS.c02} />
+                <MessageSquare01 stroke={COLORS.c02} />
                 お問い合わせ
               </Link>
             </div>

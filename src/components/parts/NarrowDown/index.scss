@@ -57,6 +57,11 @@
   z-index: 1;
   margin-right: -30px;
   overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 
   @include breakpoint-up(md) {
     margin-right: 0;
@@ -86,7 +91,7 @@
         }
       }
 
-      > button {
+      > label {
         display: block;
         padding: 6px 10px;
         font-size: rem(13);
@@ -95,6 +100,7 @@
         background-color: var(--color-narrow-down);
         border-radius: 10px;
         transition: background-color 0.2s $linear;
+        cursor: pointer;
 
         @include breakpoint-up(md) {
           padding: 7px 10px 5px;
@@ -125,18 +131,14 @@
 .bl_nd_form {
   position: relative;
 
-  &::before {
-    content: "";
+  .icon_calendar {
     position: absolute;
     z-index: 2;
     top: 14px;
     left: 10px;
     width: 16px;
     height: 16px;
-    background-image: url('/icon/icon_select.svg');
-    background-size: 16px 16px;
-    background-repeat: no-repeat;
-    pointer-events: none;
+    stroke: var(--color-03);
 
     @include breakpoint-up(md) {
       top: 18px;
@@ -144,17 +146,13 @@
     }
   }
 
-  &::after {
-    content: "";
+  .icon_chevronDown {
     position: absolute;
     z-index: 2;
     top: 10px;
     right: 10px;
     width: 24px;
     height: 24px;
-    background-image: url('/icon/icon_arw_select.svg');
-    background-size: 24px 24px;
-    background-repeat: no-repeat;
     pointer-events: none;
 
     @include breakpoint-up(md) {
@@ -170,6 +168,7 @@
   padding: 10px 34px 10px 34px;
   width: 105px;
   height: 44px;
+  font-weight: 500;
   border-radius: 4px;
   background-color: var(--color-white);
   border-color: transparent;

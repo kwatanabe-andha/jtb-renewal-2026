@@ -27,7 +27,7 @@ export default function Series() {
       <Inner className='un_series_inner'>
         <div className='un_series_container'>
           <div className='un_series_top'>
-            <div className='un_series_top_img'><Image src='/series_logo_04.jpg' alt='' width={195} height={195} /></div>
+            <div className='un_series_top_img'><Image src='/assets/series_logo_04.jpg' alt='' width={195} height={195} /></div>
             <div className='un_series_top_content'>
               <p className='un_series_top_title'>新しい観光の芽 探検隊🔍～5年先の旅のカタチを探る～</p>
               <p className='un_series_top_text'>これからの観光や旅行がどうなっていくのか・・・今後のトレンドの把握と変化の兆しをとらえることを目的に、「新しい観光の芽 探検隊」を結成しました。旅行分野にとどまらない様々な分野における第一人者への「探検（＝インタビュー）」を通して、それぞれの方が考える「5年先の旅」とはどのようなものかを考えます。本コラムでは、探検隊による探検記（＝インタビューの様子）をお届けします。</p>

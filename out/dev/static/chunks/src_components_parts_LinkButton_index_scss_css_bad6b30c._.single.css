@@ -1,0 +1,20 @@
+/* [project]/src/components/parts/LinkButton/index.scss.css [app-client] (css) */
+.bl_linkBtn {
+  background-color: var(--color-white);
+  border: solid 1px var(--color-black);
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  min-height: 52px;
+  padding: 10px 20px;
+  display: flex;
+}
+
+.bl_linkBtn_title {
+  letter-spacing: .04em;
+  font-size: .875rem;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=src_components_parts_LinkButton_index_scss_css_bad6b30c._.single.css.map*/

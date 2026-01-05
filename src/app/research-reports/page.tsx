@@ -1,7 +1,7 @@
 import RegionTop from "@/components/parts/PageHead/RegionTop"
-import Recently from "@/components/pages/research-reports/Recently/Recently"
-import Series from "@/components/pages/research-reports/Series/Series"
-import ReportList from "@/components/pages/research-reports/ReportList/ReportList"
+import Recently from "@/components/pages/research/Recently/Recently"
+import Series from "@/components/pages/research/Series/Series"
+import ReportList from "@/components/pages/research/ReportList/ReportList"
 import SideNav from "@/components/parts/SideNav/SideNav"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
 

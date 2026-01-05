@@ -1,0 +1,13 @@
+/* [project]/src/components/parts/Inner/index.scss.css [app-client] (css) */
+.bl_inner {
+  padding-inline: 30px;
+}
+
+@media (min-width: 768px) {
+  .bl_inner, .bl_inner_pc {
+    max-width: calc(100% - 305px);
+    padding-inline: clamp(42.6667px, 5.55556vw, 80px);
+  }
+}
+
+/*# sourceMappingURL=src_components_parts_Inner_index_scss_css_bad6b30c._.single.css.map*/

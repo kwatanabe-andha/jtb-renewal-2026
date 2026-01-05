@@ -12,31 +12,31 @@ import toDateTimeFormat from '@/lib/toDateTimeFormat'
 const data = [
   {
     id: 1,
-    logo: '/series_logo_01.jpg',
+    logo: '/assets/series_logo_01.jpg',
     title: 'ツーリズム×○。観光に様々な概念をクロスさせ、新しい価値や仕組みを考えます',
     date: '2025-01-10'
   },
   {
     id: 2,
-    logo: '/series_logo_02.jpg',
+    logo: '/assets/series_logo_02.jpg',
     title: '旅行者の日常と非日常の間にある "線" に着目し、"旅" への捉え方や視点を考えます',
     date: '2025-01-10'
   },
   {
     id: 3,
-    logo: '/series_logo_03.jpg',
+    logo: '/assets/series_logo_03.jpg',
     title: '"5年先の旅のカタチ" を探るために、異業種の第一人者へ取材、変化の"芽" を捉えます',
     date: '2025-01-10'
   },
   {
     id: 4,
-    logo: '/series_logo_01.jpg',
+    logo: '/assets/series_logo_01.jpg',
     title: 'JTB総研に在籍する各観光分野のエキスパートによるインサイト＆コラム',
     date: '2025-01-10'
   },
   {
     id: 5,
-    logo: '/series_logo_02.jpg',
+    logo: '/assets/series_logo_02.jpg',
     title: 'JTB総研の研究員が、日々のリサーチや現場での気づき、小さな "観光のヒント" をラフに綴ります',
     date: '2025-01-10'
   },

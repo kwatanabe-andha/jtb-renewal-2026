@@ -26,7 +26,7 @@ const head = {
   member: true,
   author: {
     name: '佐治 晴夫',
-    img: '/dummy_sazi.png',
+    img: '/assets/dummy_sazi.png',
     text: '北海道美宙（MISORA）天文台名誉台長、鈴鹿短期大学名誉学長、大阪音楽大学客員教授'
   }
 }
@@ -46,10 +46,10 @@ const keywords = [
 ]
 
 const relArticles = [
-  { topics_id: 1, thumb: { url: '/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
-  { topics_id: 2, thumb: { url: '/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
-  { topics_id: 3, thumb: { url: '/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
-  { topics_id: 4, thumb: { url: '/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' }
+  { topics_id: 1, thumb: { url: '/assets/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
+  { topics_id: 2, thumb: { url: '/assets/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
+  { topics_id: 3, thumb: { url: '/assets/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
+  { topics_id: 4, thumb: { url: '/assets/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' }
 ]
 
 const nav = {sections, keywords}

@@ -2,7 +2,7 @@
 
 import './index.scss'
 import { ReactNode, useState, useEffect, useRef } from 'react'
-import clsx from 'clsx';
+import clsx from 'clsx'
 import { ChevronDown } from "@untitledui/icons"
 
 type Props = {

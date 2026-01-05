@@ -21,11 +21,9 @@ export default function RelArticles({ list }: Props) {
                 list.map((card: CardType) => {
                   return (
                     <li key={card.topics_id}>
-                      <article>
-                        <Card
-                          card={card}
-                        />
-                      </article>
+                      <Card
+                        card={card}
+                      />
                     </li>
                   )
                 })

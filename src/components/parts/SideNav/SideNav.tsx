@@ -54,7 +54,7 @@ export default function SideNav({ children, offset = 0 }: Props) {
           <section className='bl_sideNav_sec'>
             <h3 className='bl_sideNav_title'>関連情報</h3>
             <a href="" className='bl_sideNav_relCard'>
-              <div className='bl_sideNav_relCard_img'><Image src='/thumb.jpg' alt='' width={197} height={120} /></div>
+              <div className='bl_sideNav_relCard_img'><Image src='/assets/thumb.jpg' alt='' width={197} height={120} /></div>
               <p className='bl_sideNav_relCard_text'>テキストテキストテキスト</p>
             </a>
             <div className='bl_sideNav_relInfo_container'>
@@ -97,7 +97,7 @@ export default function SideNav({ children, offset = 0 }: Props) {
                   <a href="">
                     <div className='bl_sideNav_pickup_img'>
                       <div className='bl_sideNav_pickup_thumb'>
-                        <Image src='/pickup_01.jpg' alt='' width={300} height={168} />
+                        <Image src='/assets/pickup_01.jpg' alt='' width={300} height={168} />
                       </div>
                       <div className='bl_sideNav_pickup_featured'>featured</div>
                     </div>
@@ -109,7 +109,7 @@ export default function SideNav({ children, offset = 0 }: Props) {
                   <a href="">
                     <div className='bl_sideNav_pickup_img'>
                       <div className='bl_sideNav_pickup_thumb'>
-                        <Image src='/pickup_01.jpg' alt='' width={300} height={168} />
+                        <Image src='/assets/pickup_01.jpg' alt='' width={300} height={168} />
                       </div>
                       <div className='bl_sideNav_pickup_featured'>featured</div>
                     </div>

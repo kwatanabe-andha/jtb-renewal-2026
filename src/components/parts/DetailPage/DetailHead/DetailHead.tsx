@@ -44,7 +44,7 @@ export function DetailHead(
             </div>
           )
         }
-        { download && <div className='bl_detailHead_download'><Download url={'/dummy_data_1766714548119.csv'} /></div> }
+        { download && <div className='bl_detailHead_download'><Download url={'/assets/dummy_data_1766714548119.csv'} /></div> }
 
         {
           member && (

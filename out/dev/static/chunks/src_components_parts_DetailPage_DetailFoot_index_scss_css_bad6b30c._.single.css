@@ -1,0 +1,96 @@
+/* [project]/src/components/parts/DetailPage/DetailFoot/index.scss.css [app-client] (css) */
+.bl_detailFoot_inner {
+  padding-block: 120px;
+}
+
+@media (min-width: 768px) {
+  .bl_detailFoot_inner {
+    padding-block: 120px 90px;
+  }
+
+  .bl_detailFoot_head {
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
+  }
+}
+
+.bl_detailFoot_title {
+  align-items: baseline;
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .bl_detailFoot_title {
+    font-size: 2.125rem;
+  }
+}
+
+.bl_detailFoot_title > span {
+  margin-top: 8px;
+  font-size: 1.125rem;
+  font-weight: 300;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .bl_detailFoot_title > span {
+    margin: 0 0 0 10px;
+    font-size: 1.25rem;
+  }
+}
+
+.bl_detailFoot_more {
+  justify-content: flex-end;
+  margin-top: 30px;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .bl_detailFoot_more {
+    margin-top: 0;
+  }
+}
+
+:where(.bl_detailFoot_more) .bl_linkBtn {
+  background-color: #0000;
+  min-height: 40px;
+  padding: 6px 14px;
+  font-size: .8125rem;
+}
+
+@media (min-width: 768px) {
+  :where(.bl_detailFoot_more) .bl_linkBtn {
+    background-color: var(--color-white);
+    min-height: 58px;
+    padding: 8px 20px;
+    font-size: .875rem;
+  }
+}
+
+:where(.bl_detailFoot_more) .bl_linkBtn_title {
+  transform: translateY(1px);
+}
+
+.bl_detailFoot_body {
+  margin-top: 40px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .bl_detailFoot_body {
+    margin-top: 60px;
+  }
+}
+
+:where(.bl_detailFoot_body) .swiper:before {
+  background-image: linear-gradient(to left, #f3f3f3 0 3px, #0000 100%);
+}
+
+:where(.bl_detailFoot_body) .swiper-slide {
+  width: 298px;
+}
+
+/*# sourceMappingURL=src_components_parts_DetailPage_DetailFoot_index_scss_css_bad6b30c._.single.css.map*/

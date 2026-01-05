@@ -86,6 +86,8 @@
   padding: 10px 0 10px 20px;
 
   @include breakpoint-up(md) {
+    max-width: 201px;
+
     &[data-current="true"] {
       &::before {
         content: "";

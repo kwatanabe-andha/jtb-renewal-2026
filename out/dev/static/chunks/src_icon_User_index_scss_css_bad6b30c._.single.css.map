@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///turbopack:///[project]/src/styles/_partials/global/_fonts.scss","turbopack:///turbopack:///[project]/src/icon/User/index.scss"],"sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;300;400;500;600&display=swap');","@use \"@styles/settings\" as *;\n\n.icon_user {\n  display: grid;\n  place-items: center;\n  width: 24px;\n  height: 24px;\n  background-color: #FC948D;\n  border-radius: 50%;\n\n  > svg {\n    display: block;\n  }\n}"],"names":[],"mappings":"AAEA;;;;;;;;;AAQE"}}]
+}

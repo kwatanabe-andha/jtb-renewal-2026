@@ -10,7 +10,7 @@ export default function Summary() {
       <div className='un_summary_inner'>
         <div className='un_summaryHead'>
           <div className='un_summaryHead_logo'>
-            <Image src='/series_logo_01.jpg' alt='' width={195} height={195} />
+            <Image src='/assets/series_logo_01.jpg' alt='' width={195} height={195} />
           </div>
           <div className='un_summaryHead_shoulder'>
             <div className='un_summaryHead_shoulder_series'>✘ Tourism</div>
@@ -20,7 +20,7 @@ export default function Summary() {
         </div>
         <h1 className='un_summary_heading'>「選」と出会う旅への視点</h1>
         <p className='un_summary_text'>「観光と他分野を掛け合わせて新たな価値を考える」をテーマに、各分野の有識者がさまざまな専門的視点から、観光産業の現状と未来へ提言</p>
-        <div className='un_summary_img'><Image src='/dummy_thumb_01.jpg' alt='' width={974} height={593} /></div>
+        <div className='un_summary_img'><Image src='/assets/dummy_thumb_01.jpg' alt='' width={974} height={593} /></div>
 
         <Accordion
           openedText='閉じる'

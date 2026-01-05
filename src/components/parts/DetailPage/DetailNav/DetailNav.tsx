@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import clsx from 'clsx';
 import './index.scss'
 import { SITE_URL } from '@/config/site'
 import LockIcon from '@/icon/Lock/Lock'
@@ -17,11 +18,12 @@ type Section = {
 export type DetailNavType = {
   sections : Section[]
   keywords?: Keyword[]
+  className?: string
 }
 
-export function DetailNav({ sections, keywords }: DetailNavType) {
+export function DetailNav({ sections, keywords, className }: DetailNavType) {
   return (
-    <div className='bl_detailNav'>
+    <div className={clsx('bl_detailNav', className !== undefined && className)}>
       <div className='bl_detailNav_inner'>
         <div className='bl_detailNav_member'>
           <LockIcon />

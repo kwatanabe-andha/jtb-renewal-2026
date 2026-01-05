@@ -1,0 +1,15 @@
+/* [project]/src/icon/Lock/index.scss.css [app-client] (css) */
+.icon_lock {
+  background-color: #fc948d;
+  border-radius: 50%;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  display: grid;
+}
+
+.icon_lock > svg {
+  display: block;
+}
+
+/*# sourceMappingURL=src_icon_Lock_index_scss_css_bad6b30c._.single.css.map*/

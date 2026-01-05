@@ -43,43 +43,41 @@ type Props = {
 
 export default function Card( { card }: Props ) {
   return (
-    <div className='bl_card'>
-      <div className='bl_card_container'>
-        <Link href={'/'} className='bl_card_img'>
+    <article className='bl_card'>
+      <Link href={'/'} className='bl_card_container'>
+        <div className='bl_card_img'>
           <div className='bl_card_thumb'>
             <Image src={`${card.thumb.url}`} alt={ card.thumb.desc } width={300} height={200} />
             { card.contribution && <span className='bl_card_contribution'>寄稿</span> }
           </div>
           { card.logo?.url && <div className='bl_card_logo'><Image src={ card.logo.url } alt={ card.logo.desc } width={100} height={100} /></div> }
-        </Link>
+        </div>
         <div className='bl_card_content'>
-          <Link href={'/'}>
-            { card.category && <div className='bl_card_category'>{ card.category }</div> }
-            {
-              card.shoulderSeries && (
-                <div className='bl_card_shoulderSeries'>
-                  <div className='bl_card_shoulderTitle'>{ card.shoulderSeries }</div>
-                  {
-                    card.shoulderAnd && (
-                      <div className='bl_card_shoulderAnd'>× { card.shoulderAnd }</div>
-                    )
-                  }
-                </div>
-              )
-            }
-            { card.shoulder && <div className='bl_card_shoulder'>{ card.shoulder }</div> }
-            <h3 className='bl_card_title'>{ card.subject }</h3>
-            { card.auxiliary && <p className='bl_card_auxiliary'>{ card.auxiliary }</p> }
-            { card.summary && <p className='bl_card_summary'>{ card.summary }</p> }
-            {
-              card.author && (
-                <div className='bl_card_author'>
-                  <p className='bl_card_author_name'>{ card.author }</p>
-                  <p className='bl_card_author_pos'>{ card.authorTitle }</p>
-                </div>
-              )
-            }
-          </Link>
+          { card.category && <div className='bl_card_category'>{ card.category }</div> }
+          {
+            card.shoulderSeries && (
+              <div className='bl_card_shoulderSeries'>
+                <div className='bl_card_shoulderTitle'>{ card.shoulderSeries }</div>
+                {
+                  card.shoulderAnd && (
+                    <div className='bl_card_shoulderAnd'>× { card.shoulderAnd }</div>
+                  )
+                }
+              </div>
+            )
+          }
+          { card.shoulder && <div className='bl_card_shoulder'>{ card.shoulder }</div> }
+          <h3 className='bl_card_title'>{ card.subject }</h3>
+          { card.auxiliary && <p className='bl_card_auxiliary'>{ card.auxiliary }</p> }
+          { card.summary && <p className='bl_card_summary'>{ card.summary }</p> }
+          {
+            card.author && (
+              <div className='bl_card_author'>
+                <p className='bl_card_author_name'>{ card.author }</p>
+                <p className='bl_card_author_pos'>{ card.authorTitle }</p>
+              </div>
+            )
+          }
 
           {
             card.tag && (
@@ -107,7 +105,7 @@ export default function Card( { card }: Props ) {
             <time dateTime={card.ymd} className='bl_card_time'>{ toDateTimeFormat(card.ymd) }</time>
           </div>
         </div>
-      </div>
-    </div>
+      </Link>
+    </article>
   )
 }

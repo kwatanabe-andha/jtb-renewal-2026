@@ -23,7 +23,7 @@ type Props = {
 
 export default function FootCard( { card }: Props ) {
   return (
-    <div className='bl_card'>
+    <article className='bl_card'>
       <Link href={'/'} className='bl_card_container'>
         <div className='bl_card_img'>
           <div className='bl_card_thumb'><Image src={`${card.thumb.url}`} alt={ card.thumb.desc } width={300} height={200} /></div>
@@ -36,6 +36,6 @@ export default function FootCard( { card }: Props ) {
           { card.summary && <p className='bl_card_summary'>{ card.summary }</p> }
         </div>
       </Link>
-    </div>
+    </article>
   )
 }

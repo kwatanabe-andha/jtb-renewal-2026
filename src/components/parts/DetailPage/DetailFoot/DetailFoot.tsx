@@ -12,11 +12,11 @@ import FootCard, { FootCardType } from '@components/parts/Card/FootCard'
 import SliderWrap from "@/components/parts/SliderWrap/SliderWrap";
 
 const dummy = [
-  { topics_id: 1, thumb: { url: '/thumb.jpg', desc: '' }, logo: { url: '/series_logo_01.jpg', desc: '' }, category: 'コラム', subject: '｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る', auxiliary: '2024年度/東三河振興ビジョン2030重点プロジェクトにおける森林サービス産業創出調査業務' },
-  { topics_id: 2, thumb: { url: '/thumb.jpg', desc: '' }, logo: { url: '/series_logo_02.jpg', desc: '' }, category: 'コラム', subject: '｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る', auxiliary: '2024年度/東三河振興ビジョン2030重点プロジェクトにおける森林サービス産業創出調査業務' },
-  { topics_id: 3, thumb: { url: '/thumb.jpg', desc: '' }, logo: { url: '/series_logo_03.jpg', desc: '' }, category: 'コラム', subject: '｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る', auxiliary: '2024年度/東三河振興ビジョン2030重点プロジェクトにおける森林サービス産業創出調査業務' },
-  { topics_id: 4, thumb: { url: '/thumb.jpg', desc: '' }, logo: { url: '/series_logo_01.jpg', desc: '' }, category: 'コラム', subject: '｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る', auxiliary: '2024年度/東三河振興ビジョン2030重点プロジェクトにおける森林サービス産業創出調査業務' },
-  { topics_id: 5, thumb: { url: '/thumb.jpg', desc: '' }, logo: { url: '/series_logo_02.jpg', desc: '' }, category: 'コラム', subject: '｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る', auxiliary: '2024年度/東三河振興ビジョン2030重点プロジェクトにおける森林サービス産業創出調査業務' },
+  { topics_id: 1, thumb: { url: '/assets/thumb.jpg', desc: '' }, logo: { url: '/assets/series_logo_01.jpg', desc: '' }, category: 'コラム', subject: '｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る', auxiliary: '2024年度/東三河振興ビジョン2030重点プロジェクトにおける森林サービス産業創出調査業務' },
+  { topics_id: 2, thumb: { url: '/assets/thumb.jpg', desc: '' }, logo: { url: '/assets/series_logo_02.jpg', desc: '' }, category: 'コラム', subject: '｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る', auxiliary: '2024年度/東三河振興ビジョン2030重点プロジェクトにおける森林サービス産業創出調査業務' },
+  { topics_id: 3, thumb: { url: '/assets/thumb.jpg', desc: '' }, logo: { url: '/assets/series_logo_03.jpg', desc: '' }, category: 'コラム', subject: '｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る', auxiliary: '2024年度/東三河振興ビジョン2030重点プロジェクトにおける森林サービス産業創出調査業務' },
+  { topics_id: 4, thumb: { url: '/assets/thumb.jpg', desc: '' }, logo: { url: '/assets/series_logo_01.jpg', desc: '' }, category: 'コラム', subject: '｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る', auxiliary: '2024年度/東三河振興ビジョン2030重点プロジェクトにおける森林サービス産業創出調査業務' },
+  { topics_id: 5, thumb: { url: '/assets/thumb.jpg', desc: '' }, logo: { url: '/assets/series_logo_02.jpg', desc: '' }, category: 'コラム', subject: '｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る', auxiliary: '2024年度/東三河振興ビジョン2030重点プロジェクトにおける森林サービス産業創出調査業務' },
 ]
 
 export default function DetailFoot() {
@@ -57,11 +57,9 @@ export default function DetailFoot() {
                     dummy.map((card: FootCardType) => {
                       return (
                         <li key={card.topics_id}>
-                          <article>
-                            <FootCard
-                              card={card}
-                            />
-                          </article>
+                          <FootCard
+                            card={card}
+                          />
                         </li>
                       )
                     })
@@ -78,8 +76,8 @@ export default function DetailFoot() {
                   modules={[Navigation, A11y]}
                   spaceBetween={40}
                   slidesPerView={'auto'}
-                  onReachEnd={() => { console.log('end') }}
-                  onSlideChange={(self) => console.log(self.activeIndex)}
+                  // onReachEnd={() => { console.log('end') }}
+                  // onSlideChange={(self) => console.log(self.activeIndex)}
                   navigation={{ nextEl: ".bl_sliderWrap_next", prevEl: ".bl_sliderWrap_prev" }}
                 >
                   {

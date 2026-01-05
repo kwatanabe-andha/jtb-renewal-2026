@@ -12,7 +12,7 @@ export default function AuthorProfile() {
         <div className='un_authorProfile_head'>
           <p className='un_authorProfile_label'>著者プロフィール</p>
           <div className='un_authorProfile_img'>
-            <Image src='/dummy_yamashita.jpg' alt='' width={162} height={160} />
+            <Image src='/assets/dummy_yamashita.jpg' alt='' width={162} height={160} />
           </div>
         </div>
         <div className='un_authorProfile_body'>

@@ -3,7 +3,7 @@
 import "swiper/css";
 import { Navigation, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import './index.scss'
 import Inner from '@components/parts/Inner/Inner'
 import LinkButton from '@components/parts/LinkButton/LinkButton'
@@ -19,11 +19,8 @@ const dummy = [
   { topics_id: 5, thumb: { url: '/assets/thumb.jpg', desc: '' }, logo: { url: '/assets/series_logo_02.jpg', desc: '' }, category: 'コラム', subject: '｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る', auxiliary: '2024年度/東三河振興ビジョン2030重点プロジェクトにおける森林サービス産業創出調査業務' },
 ]
 
-export default function DetailFoot() {
+export default function FootSlider() {
   const [isPc, setIsPc] = useState(false)
-  // const prevRef = useRef<HTMLButtonElement>(null)
-  // const nextRef = useRef<HTMLButtonElement>(null)
-  // const swiper = useSwiper()
 
   useEffect(() => {
     const mq = window.matchMedia('(min-width: 768px)')

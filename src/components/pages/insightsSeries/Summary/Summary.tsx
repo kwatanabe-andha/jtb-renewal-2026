@@ -6,7 +6,7 @@ import Accordion from "@/components/parts/Accordion/Accordion"
 
 export default function Summary() {
   return (
-    <div className='un_summary'>
+    <section className='un_summary'>
       <div className='un_summary_inner'>
         <div className='un_summaryHead'>
           <div className='un_summaryHead_logo'>
@@ -27,6 +27,7 @@ export default function Summary() {
           closedText='もっと見る'
           className='un_summary_btn'
           targetClassName='un_summary_content'
+          section
         >
           <h2>「𝑥 Tourism（クロス・ツーリズム）」とは？</h2>
           <p>
@@ -35,6 +36,6 @@ export default function Summary() {
           </p>
         </Accordion>
       </div>
-    </div>
+    </section>
   )
 }

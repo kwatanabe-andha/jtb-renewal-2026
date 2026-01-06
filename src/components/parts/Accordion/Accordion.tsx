@@ -11,10 +11,11 @@ type Props = {
   className?: string
   children: ReactNode
   targetClassName?: string
+  section?: boolean 
 }
 
 export default function Accordion(
-  { openedText, closedText, className, children, targetClassName } : Props
+  { openedText, closedText, className, children, targetClassName, section } : Props
 ) {
   const [isOpen, setIsOpen] = useState(false)
   const [showAccordion, setShowAccordion] = useState(false)
@@ -48,9 +49,20 @@ export default function Accordion(
 
   return (
     <>
-      <div className={clsx('bl_accordion_target', targetClassName !== undefined && targetClassName)} ref={targetRef}  data-hidden={ String(!isOpen) }>
-        {children}
-      </div>
+      {
+        section && (
+          <section className={clsx('bl_accordion_target', targetClassName !== undefined && targetClassName)} ref={targetRef}  data-hidden={ String(!isOpen) }>
+            {children}
+          </section>
+        )
+      }
+      {
+        !section && (
+          <div className={clsx('bl_accordion_target', targetClassName !== undefined && targetClassName)} ref={targetRef}  data-hidden={ String(!isOpen) }>
+            {children}
+          </div>
+        )
+      }
 
       {
         showAccordion && (

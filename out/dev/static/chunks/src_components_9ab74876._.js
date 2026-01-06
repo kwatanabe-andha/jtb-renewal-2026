@@ -17,7 +17,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-function Accordion({ openedText, closedText, className, children, targetClassName }) {
+function Accordion({ openedText, closedText, className, children, targetClassName, section }) {
     _s();
     const [isOpen, setIsOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [showAccordion, setShowAccordion] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -53,15 +53,25 @@ function Accordion({ openedText, closedText, className, children, targetClassNam
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            section && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])('bl_accordion_target', targetClassName !== undefined && targetClassName),
                 ref: targetRef,
                 "data-hidden": String(!isOpen),
                 children: children
             }, void 0, false, {
                 fileName: "[project]/src/components/parts/Accordion/Accordion.tsx",
-                lineNumber: 51,
-                columnNumber: 7
+                lineNumber: 54,
+                columnNumber: 11
+            }, this),
+            !section && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])('bl_accordion_target', targetClassName !== undefined && targetClassName),
+                ref: targetRef,
+                "data-hidden": String(!isOpen),
+                children: children
+            }, void 0, false, {
+                fileName: "[project]/src/components/parts/Accordion/Accordion.tsx",
+                lineNumber: 61,
+                columnNumber: 11
             }, this),
             showAccordion && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])('bl_accordion', className !== undefined && className),
@@ -75,18 +85,18 @@ function Accordion({ openedText, closedText, className, children, targetClassNam
                             className: "icon_chevronDown"
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/Accordion/Accordion.tsx",
-                            lineNumber: 60,
+                            lineNumber: 72,
                             columnNumber: 15
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/parts/Accordion/Accordion.tsx",
-                    lineNumber: 58,
+                    lineNumber: 70,
                     columnNumber: 13
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/parts/Accordion/Accordion.tsx",
-                lineNumber: 57,
+                lineNumber: 69,
                 columnNumber: 11
             }, this)
         ]
@@ -116,7 +126,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$parts$2
 ;
 ;
 function Summary() {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         className: "un_summary",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "un_summary_inner",
@@ -210,12 +220,13 @@ function Summary() {
                     closedText: "もっと見る",
                     className: "un_summary_btn",
                     targetClassName: "un_summary_content",
+                    section: true,
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                             children: "「𝑥 Tourism（クロス・ツーリズム）」とは？"
                         }, void 0, false, {
                             fileName: "[project]/src/components/pages/insightsSeries/Summary/Summary.tsx",
-                            lineNumber: 31,
+                            lineNumber: 32,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -223,19 +234,19 @@ function Summary() {
                                 "「𝑥 Tourism（クロス・ツーリズム）」とは、ツーリズムに様々な概念をクロスさせることで、新しい価値や仕組みを考える試みです。日本のツーリズムは、グローバル化やデジタルの進化、社会構造の変化や個人の価値観の多様化を背景に、様々なプレイヤーの参画によって進化、領域を拡大しています。本サイトでは、“Tourism ×（キーワード）”をコンセプトに、変化の激しい時代の、未来志向のツーリズムを考える場として、時には歴史を振り返り、普遍的な価値から最先端の動きまで、各専門家の意見を随時アップしていきます",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                     fileName: "[project]/src/components/pages/insightsSeries/Summary/Summary.tsx",
-                                    lineNumber: 33,
+                                    lineNumber: 34,
                                     columnNumber: 265
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                     fileName: "[project]/src/components/pages/insightsSeries/Summary/Summary.tsx",
-                                    lineNumber: 33,
+                                    lineNumber: 34,
                                     columnNumber: 271
                                 }, this),
                                 "「𝑥 Tourism（クロス・ツーリズム）」とは、ツーリズムに様々な概念をクロスさせることで、新しい価値や仕組みを考える試みです。日本のツーリズムは、グローバル化やデジタルの進化、社会構造の変化や個人の価値観の多様化を背景に、様々なプレイヤーの参画によって進化、領域を拡大しています。本サイトでは、“Tourism ×（キーワード）”をコンセプトに、変化の激しい時代の、未来志向のツーリズムを考える場として、時には歴史を振り返り、普遍的な価値から最先端の動きまで、各専門家の意見を随時アップしていきます"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/pages/insightsSeries/Summary/Summary.tsx",
-                            lineNumber: 32,
+                            lineNumber: 33,
                             columnNumber: 11
                         }, this)
                     ]

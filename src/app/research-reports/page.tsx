@@ -15,15 +15,17 @@ export default async function Page() {
   return (
     <>
       <Breadcrumb data={breadcrumb} />
-      <RegionTop en='Reports' jp='調査・レポート' page="reports">
-        {'オリジナルの調査・研究結果を公開しています。'}
-      </RegionTop>
+      <section>
+        <RegionTop en='Reports' jp='調査・レポート' page="reports">
+          {'オリジナルの調査・研究結果を公開しています。'}
+        </RegionTop>
 
-      <SideNav>
-        <Recently />
-        <Series />
-        <ReportList />
-      </SideNav>
+        <SideNav>
+          <Recently />
+          <Series />
+          <ReportList />
+        </SideNav>
+      </section>
       <Breadcrumb data={breadcrumb} footer />
     </>
   )

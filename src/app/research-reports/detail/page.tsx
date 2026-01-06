@@ -4,7 +4,7 @@ import RelArticles from "@/components/parts/RelArticles/RelArticles"
 import Contact from "@/components/parts/Contact/Contact"
 import DetailTop from "@/components/parts/PageHead/DetailTop"
 import Article from "@/components/pages/researchDetail/Article/Article"
-import DetailFoot from "@/components/parts/DetailPage/DetailFoot/DetailFoot"
+import FootSlider from "@/components/parts/FootSlider/FootSlider"
 
 const breadcrumb = [
   {
@@ -61,7 +61,7 @@ export default function Page() {
         <Article head={head} nav={nav} />
         <RelArticles list={relArticles} />
         <Contact />
-        <DetailFoot />
+        <FootSlider />
       </SideNav>
       <Breadcrumb data={breadcrumb} footer />
     </>

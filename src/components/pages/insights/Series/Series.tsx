@@ -52,9 +52,9 @@ export default function Series() {
   }
 
   return (
-    <div className='un_series'>
+    <section className='un_series'>
       <Inner className='un_series_inner'>
-        <section className='un_series_sec'>
+        <div className='un_series_sec'>
           <div className='un_series_heading'><Level2>現在連載中のシリーズ</Level2></div>
           <ul className='un_series_list'>
             {
@@ -71,7 +71,7 @@ export default function Series() {
               })
             }
           </ul>
-        </section>
+        </div>
 
         {
           isOpen && (
@@ -104,6 +104,6 @@ export default function Series() {
           className='un_series_btn'
         />
       </Inner>
-    </div>
+    </section>
   )
 }

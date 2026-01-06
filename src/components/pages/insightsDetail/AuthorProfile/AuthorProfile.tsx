@@ -8,9 +8,9 @@ import Accordion from "@/components/parts/Accordion/Accordion"
 export default function AuthorProfile() {
   return (
     <Inner className='un_authorProfile'>
-      <div className='un_authorProfile_container'>
+      <section className='un_authorProfile_container'>
         <div className='un_authorProfile_head'>
-          <p className='un_authorProfile_label'>著者プロフィール</p>
+          <h2 className='un_authorProfile_label'>著者プロフィール</h2>
           <div className='un_authorProfile_img'>
             <Image src='/assets/dummy_yamashita.jpg' alt='' width={162} height={160} />
           </div>
@@ -29,7 +29,7 @@ export default function AuthorProfile() {
             <p>観光による地域活性化のための計画・戦略の策定、人材育成、旅行商品開発を専門とする。近年はスポーツツーリズム、アドベンチャーツーリズム分野の調査研究も手掛ける。内閣府地域活性化伝道師として全国の観光振興政策を支援。観光による地域活性化のための計画・戦略の策定、人材育成、旅行商品開発を専門とする。近年はスポーツツーリズム、アドベンチャーツーリズム分野の調査研究も手掛ける。内閣府地域活性化伝道師として全国の観光振興政策を支援。</p>
           </Accordion>
         </div>
-      </div>
+      </section>
     </Inner>
   )
 }

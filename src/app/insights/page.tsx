@@ -14,14 +14,16 @@ export default async function Page() {
   return (
     <>
       <Breadcrumb data={breadcrumb} />
-      <RegionTop en='COLUMNS' jp='コラム' page="columns">
-        {'旬な話題をコラムとしてお届けします'}
-      </RegionTop>
+      <section>
+        <RegionTop en='COLUMNS' jp='コラム' page="columns">
+          {'旬な話題をコラムとしてお届けします'}
+        </RegionTop>
 
-      <SideNav>
-        <ColumnsList />
-        <Series />
-      </SideNav>
+        <SideNav>
+          <ColumnsList />
+          <Series />
+        </SideNav>
+      </section>
       <Breadcrumb data={breadcrumb} footer />
     </>
   )

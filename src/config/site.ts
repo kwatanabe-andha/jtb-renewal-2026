@@ -2,6 +2,7 @@ export const AREA_TAG_CATEGORY_ID = 9
 export const KEYWORD_TAG_CATEGORY_ID = 10
 
 export const SITE_URL = {
+  home: 'https://www.tourism.jp/',
   login: '/login/',
   signup: '/signup/',
   contact: '/contact/',

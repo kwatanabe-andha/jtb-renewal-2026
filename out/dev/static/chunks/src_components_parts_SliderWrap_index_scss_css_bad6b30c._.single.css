@@ -1,0 +1,61 @@
+/* [project]/src/components/parts/SliderWrap/index.scss.css [app-client] (css) */
+.bl_sliderWrap {
+  position: relative;
+}
+
+.bl_sliderWrap .swiper {
+  z-index: 1;
+  position: relative;
+}
+
+.bl_sliderWrap .swiper:before {
+  content: "";
+  z-index: 2;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 203px;
+  position: absolute;
+  inset: 0 -2px 0 auto;
+}
+
+.bl_sliderWrap .swiper.is_scrolled:before {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.bl_sliderWrap_arrows {
+  z-index: 3;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+.bl_sliderWrap_prev, .bl_sliderWrap_next {
+  background-color: var(--color-white);
+  border: solid 1px var(--color-black);
+  pointer-events: auto;
+  border-radius: 50%;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  margin-block: auto;
+  display: grid;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.bl_sliderWrap_prev svg, .bl_sliderWrap_next svg {
+  pointer-events: none;
+}
+
+.bl_sliderWrap_prev {
+  left: -24px;
+}
+
+.bl_sliderWrap_next {
+  right: -24px;
+}
+
+/*# sourceMappingURL=src_components_parts_SliderWrap_index_scss_css_bad6b30c._.single.css.map*/

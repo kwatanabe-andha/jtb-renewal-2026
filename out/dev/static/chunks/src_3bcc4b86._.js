@@ -760,6 +760,7 @@ __turbopack_context__.s([
 const AREA_TAG_CATEGORY_ID = 9;
 const KEYWORD_TAG_CATEGORY_ID = 10;
 const SITE_URL = {
+    home: 'https://www.tourism.jp/',
     login: '/login/',
     signup: '/signup/',
     contact: '/contact/'

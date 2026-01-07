@@ -6,8 +6,9 @@ import Image from 'next/image'
 import Level2 from "@/components/parts/Heading/Level2"
 import Inner from "@/components/parts/Inner/Inner"
 import ViewMore from "@/components/parts/ViewMore/ViewMore"
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import toDateTimeFormat from '@/lib/toDateTimeFormat'
+import { opening, closing } from '@/lib/heightAnim'
 
 const data = [
   {
@@ -44,17 +45,17 @@ const data = [
 
 export default function Series() {
   const [isOpen, setIsOpen] = useState(false)
+  const hiddenRef = useRef<HTMLElement>(null)
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const button = e.currentTarget as HTMLButtonElement
-    setIsOpen(!isOpen)
-    button.dataset.open = `${!isOpen}`
+  const handleClick = () => {
+    const hiddenDom = hiddenRef.current as HTMLElement
+    if (isOpen) { closing(hiddenDom) } else { opening(hiddenDom) }
   }
 
   return (
-    <section className='un_series'>
+    <div className='un_series'>
       <Inner className='un_series_inner'>
-        <div className='un_series_sec'>
+        <section className='un_series_sec'>
           <div className='un_series_heading'><Level2>現在連載中のシリーズ</Level2></div>
           <ul className='un_series_list'>
             {
@@ -71,30 +72,26 @@ export default function Series() {
               })
             }
           </ul>
-        </div>
+        </section>
 
-        {
-          isOpen && (
-            <section className='un_series_sec'>
-              <div className='un_series_heading'><Level2>連載が終了したシリーズ</Level2></div>
-              <ul className='un_series_list'>
-                {
-                  data.map(item => {
-                    return (
-                      <li key={item.id}>
-                        <Link href=''>
-                          <div className="un_series_img"><Image src={item.logo} alt='' width={195} height={195} /></div>
-                          <p className='un_series_title'>{item.title}</p>
-                          <div className='un_series_date'><time dateTime={item.date}>{ toDateTimeFormat(item.date) }</time></div>
-                        </Link>
-                      </li>
-                    )
-                  })
-                }
-              </ul>
-            </section>
-          )
-        }
+        <section className='un_series_sec' ref={hiddenRef} aria-hidden='true'>
+          <div className='un_series_heading'><Level2>連載が終了したシリーズ</Level2></div>
+          <ul className='un_series_list'>
+            {
+              data.map(item => {
+                return (
+                  <li key={item.id}>
+                    <Link href=''>
+                      <div className="un_series_img"><Image src={item.logo} alt='' width={195} height={195} /></div>
+                      <p className='un_series_title'>{item.title}</p>
+                      <div className='un_series_date'><time dateTime={item.date}>{ toDateTimeFormat(item.date) }</time></div>
+                    </Link>
+                  </li>
+                )
+              })
+            }
+          </ul>
+        </section>
 
         <ViewMore
           isOpen={isOpen}
@@ -102,8 +99,9 @@ export default function Series() {
           openedText='連載が終了したシリーズを閉じる'
           closedText='連載が終了したシリーズをみる'
           className='un_series_btn'
+          callback={handleClick}
         />
       </Inner>
-    </section>
+    </div>
   )
 }

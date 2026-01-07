@@ -1,0 +1,182 @@
+/* [project]/src/components/layouts/Header/_block/index.scss.css [app-client] (css) */
+.bl_hdNav {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px 40px;
+  margin-top: 28px;
+  display: flex;
+}
+
+.bl_hdNav_contact > a {
+  width: 216px;
+  height: 62px;
+  color: var(--color-white);
+  background-color: var(--color-02);
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding-top: 2px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  display: flex;
+}
+
+.bl_hdNav_contact_icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.bl_hdNav_body {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 20px 30px;
+}
+
+.bl_hdNav_list {
+  align-items: center;
+  gap: 56px;
+  padding-top: 1px;
+  display: flex;
+}
+
+.bl_hdNav_list > li {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1;
+  position: relative;
+}
+
+.bl_hdNav_list > li:not(:first-child):before {
+  content: "";
+  background-color: var(--color-01);
+  width: 2px;
+  height: 22px;
+  margin-block: auto;
+  position: absolute;
+  inset: -1px auto 0 -28px;
+}
+
+.bl_hdNav_list .is_current {
+  color: var(--color-02);
+}
+
+.bl_hdNav_list .is_current:before {
+  content: "";
+  background-color: var(--color-02);
+  height: 6px;
+  position: absolute;
+  inset: auto 0 -23px;
+}
+
+.bl_hdNav_home {
+  align-items: center;
+  width: 16px;
+  display: flex;
+  position: relative;
+}
+
+@media (any-hover: hover) {
+  .bl_hdNav_home:hover path {
+    stroke: var(--color-02);
+  }
+}
+
+.bl_hdNav_item {
+  gap: 28px;
+  display: flex;
+}
+
+.bl_hdNav_item > a {
+  transition: color .2s cubic-bezier(.25, .25, .75, .75);
+  display: block;
+  position: relative;
+}
+
+@media (any-hover: hover) {
+  .bl_hdNav_item > a:hover {
+    color: var(--color-02);
+  }
+}
+
+.bl_hdNav_toggle {
+  padding-right: 28px;
+  transition: color .2s cubic-bezier(.25, .25, .75, .75);
+  display: block;
+  position: relative;
+}
+
+.bl_hdNav_toggle .icon_chevronDown {
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+  display: block;
+  position: absolute;
+  top: -4px;
+  right: 0;
+}
+
+@media (any-hover: hover) {
+  .bl_hdNav_toggle:hover {
+    color: var(--color-02);
+  }
+
+  .bl_hdNav_toggle:hover .icon_chevronDown path {
+    stroke: var(--color-02);
+  }
+}
+
+.bl_hdNav_toggle[aria-expanded="true"] {
+  color: #aaa;
+}
+
+.bl_hdNav_toggle[aria-expanded="true"] .icon_chevronDown {
+  rotate: 180deg;
+}
+
+.bl_hdNav_toggle[aria-expanded="true"] .icon_chevronDown path {
+  stroke: #aaa;
+}
+
+.bl_hdNav_menu {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  height: 90px;
+  padding: 20px 20px 17px 30px;
+  transition: opacity .2s cubic-bezier(.25, .25, .75, .75), visibility .2s, pointer-events .2s;
+  display: flex;
+  position: absolute;
+  bottom: -102px;
+  box-shadow: 4px 4px 4px #00000026;
+}
+
+.bl_hdNav_menu > a {
+  width: fit-content;
+  font-size: .9375rem;
+  font-weight: 600;
+  line-height: 1.66667;
+  display: block;
+}
+
+.bl_hdNav_menu.menu_01 {
+  width: 165px;
+  left: -32px;
+}
+
+.bl_hdNav_menu.menu_02 {
+  width: 120px;
+  left: -15px;
+}
+
+.bl_hdNav_menu[aria-hidden="true"] {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=src_components_layouts_Header__block_index_scss_css_bad6b30c._.single.css.map*/

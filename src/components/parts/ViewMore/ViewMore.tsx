@@ -9,15 +9,17 @@ type Props = {
   openedText: string
   closedText: string
   className?: string
+  callback?: () => void
 }
 
 export default function ViewMore(
-  { isOpen, setIsOpen, openedText, closedText, className } : Props
+  { isOpen, setIsOpen, openedText, closedText, className, callback } : Props
 ) {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const button = e.currentTarget as HTMLButtonElement
     setIsOpen(!isOpen)
     button.dataset.open = `${!isOpen}`
+    if (callback) callback()
   }
 
   return (

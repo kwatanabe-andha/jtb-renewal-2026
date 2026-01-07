@@ -30,7 +30,7 @@
       height: 24px;
     }
 
-    &[data-open="true"] {
+    &[data-expanded="true"] {
       .icon_chevronDown {
         rotate: 180deg
       }
@@ -43,6 +43,7 @@
   overflow: hidden;
 
   &::before {
+    content: "";
     position: absolute;
     inset: 100px 0 -3px;
     pointer-events: none;
@@ -50,6 +51,8 @@
       to top,
       #fff 0, #fff 3px, transparent 100%
     );
+    opacity: 1;
+    transition: opacity 0.3s $linear;
 
     @include breakpoint-up(md) {
       top: 50px;
@@ -57,14 +60,9 @@
   }
 
   &[data-hidden="true"] {
-    max-height: 400px;
-
-    @include breakpoint-up(md) {
-      max-height: 240px;
-    }
 
     &::before {
-      content: "";
+      opacity: 1;
     }
   }
 }

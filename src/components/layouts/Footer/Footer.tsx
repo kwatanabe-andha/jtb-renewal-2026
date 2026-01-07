@@ -3,7 +3,7 @@
 import './index.scss'
 import Link from "next/link"
 import { useEffect, useState } from 'react'
-import { gsap } from 'gsap'
+import { closing, opening } from '@/lib/heightAnim'
 import { SITE_URL } from '@/config/site'
 
 const toggle = (button: HTMLButtonElement) => {
@@ -33,29 +33,6 @@ export default function Footer() {
 
     return () => mq.removeEventListener('change', handler)
   }, [])
-
-  const closing = (content: HTMLElement) => gsap.to(content, {
-    height: 0,
-    opacity: 0,
-    duration: 0.54,
-    ease: 'power3.out',
-    overwrite: true,
-  })
-
-  const opening = (content: HTMLElement) => gsap.fromTo(
-    content,
-    {
-      height: 0,
-      opacity: 0
-    },
-    {
-      height: 'auto',
-      opacity: 1,
-      duration: 0.78,
-      ease: 'power3.out',
-      overwrite: true,
-    }
-  )
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const target = event.target as HTMLButtonElement

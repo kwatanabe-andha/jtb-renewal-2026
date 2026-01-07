@@ -14,7 +14,6 @@ const breadcrumb = [
   }
 ]
 
-
 export default async function Page() {
   return (
     <>

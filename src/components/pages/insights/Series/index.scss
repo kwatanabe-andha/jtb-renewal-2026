@@ -13,8 +13,16 @@
 }
 
 .un_series_sec {
-  & + & {
-    margin-top: 100px;
+  overflow: hidden;
+    
+  &[aria-hidden] {
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+
+    .un_series_heading {
+      padding-top: 100px;
+    }
   }
 }
 

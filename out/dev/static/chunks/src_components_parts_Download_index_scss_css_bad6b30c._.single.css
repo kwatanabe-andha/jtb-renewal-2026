@@ -1,0 +1,33 @@
+/* [project]/src/components/parts/Download/index.scss.css [app-client] (css) */
+.bl_download {
+  letter-spacing: .04em;
+  background-color: var(--color-white);
+  align-items: center;
+  gap: 3px;
+  width: fit-content;
+  height: 26px;
+  padding: 4px 4px 3px;
+  font-size: .75rem;
+  font-weight: 700;
+  display: flex;
+}
+
+.bl_download:before {
+  content: "";
+  background-image: url("/assets/icon/icon_file.svg");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.bl_download[data-file="PDF"]:before {
+  background-image: url("/assets/icon/icon_pdf.svg");
+}
+
+.bl_download[data-file="CSV"]:before {
+  background-image: url("/assets/icon/icon_csv.svg");
+}
+
+/*# sourceMappingURL=src_components_parts_Download_index_scss_css_bad6b30c._.single.css.map*/

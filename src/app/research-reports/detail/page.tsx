@@ -21,6 +21,7 @@ const breadcrumb = [
 
 const head = {
   title: "スマートフォンの利用と旅行消費に関する調査 2024",
+  text: "｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る",
   release: "2024-12-27",
   update: "2025-01-10",
   download: 'https://tourism.g.kuroco-img.app/v=1766049351/files/topics/4_ext_8_0.pdf',

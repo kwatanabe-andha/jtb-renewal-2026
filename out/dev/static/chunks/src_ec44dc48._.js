@@ -1262,7 +1262,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icon$2f$Lock$2f$Lock$
 ;
 ;
 ;
-function DetailHead({ title, release, update, download, member, author }) {
+function DetailHead({ title, text, release, update, download, member, author }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "bl_detailHead",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1273,8 +1273,16 @@ function DetailHead({ title, release, update, download, member, author }) {
                     children: title
                 }, void 0, false, {
                     fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                    lineNumber: 34,
+                    lineNumber: 31,
                     columnNumber: 9
+                }, this),
+                text && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "bl_detailHead_text",
+                    children: text
+                }, void 0, false, {
+                    fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
+                    lineNumber: 32,
+                    columnNumber: 19
                 }, this),
                 author && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "bl_detailHead_author",
@@ -1288,12 +1296,12 @@ function DetailHead({ title, release, update, download, member, author }) {
                                 height: 76
                             }, void 0, false, {
                                 fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                lineNumber: 38,
+                                lineNumber: 36,
                                 columnNumber: 57
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                            lineNumber: 38,
+                            lineNumber: 36,
                             columnNumber: 15
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1304,7 +1312,7 @@ function DetailHead({ title, release, update, download, member, author }) {
                                     children: "寄稿"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                    lineNumber: 40,
+                                    lineNumber: 38,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1312,7 +1320,7 @@ function DetailHead({ title, release, update, download, member, author }) {
                                     children: author.name
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                    lineNumber: 41,
+                                    lineNumber: 39,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1320,19 +1328,19 @@ function DetailHead({ title, release, update, download, member, author }) {
                                     children: author.text
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                    lineNumber: 42,
+                                    lineNumber: 40,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                            lineNumber: 39,
+                            lineNumber: 37,
                             columnNumber: 15
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                    lineNumber: 37,
+                    lineNumber: 35,
                     columnNumber: 13
                 }, this),
                 download && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1341,12 +1349,12 @@ function DetailHead({ title, release, update, download, member, author }) {
                         url: '/assets/dummy_data_1766714548119.csv'
                     }, void 0, false, {
                         fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                        lineNumber: 47,
+                        lineNumber: 45,
                         columnNumber: 63
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                    lineNumber: 47,
+                    lineNumber: 45,
                     columnNumber: 23
                 }, this),
                 member && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1360,14 +1368,14 @@ function DetailHead({ title, release, update, download, member, author }) {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icon$2f$Lock$2f$Lock$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                             fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                            lineNumber: 53,
+                                            lineNumber: 51,
                                             columnNumber: 59
                                         }, this),
                                         "メンバー限定"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                    lineNumber: 53,
+                                    lineNumber: 51,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1379,20 +1387,20 @@ function DetailHead({ title, release, update, download, member, author }) {
                                             children: "ログイン"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                            lineNumber: 54,
+                                            lineNumber: 52,
                                             columnNumber: 69
                                         }, this),
                                         "が必要です"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                    lineNumber: 54,
+                                    lineNumber: 52,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                            lineNumber: 52,
+                            lineNumber: 50,
                             columnNumber: 15
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1407,13 +1415,13 @@ function DetailHead({ title, release, update, download, member, author }) {
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$toDateTimeFormat$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])(release)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                            lineNumber: 58,
+                                            lineNumber: 56,
                                             columnNumber: 22
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                    lineNumber: 57,
+                                    lineNumber: 55,
                                     columnNumber: 17
                                 }, this),
                                 update && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1425,26 +1433,26 @@ function DetailHead({ title, release, update, download, member, author }) {
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$toDateTimeFormat$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])(update)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                            lineNumber: 60,
+                                            lineNumber: 58,
                                             columnNumber: 71
                                         }, this),
                                         "）"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                    lineNumber: 60,
+                                    lineNumber: 58,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                            lineNumber: 56,
+                            lineNumber: 54,
                             columnNumber: 15
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                    lineNumber: 51,
+                    lineNumber: 49,
                     columnNumber: 13
                 }, this),
                 !member && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1459,13 +1467,13 @@ function DetailHead({ title, release, update, download, member, author }) {
                                     children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$toDateTimeFormat$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])(release)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                    lineNumber: 69,
+                                    lineNumber: 67,
                                     columnNumber: 20
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                            lineNumber: 68,
+                            lineNumber: 66,
                             columnNumber: 15
                         }, this),
                         update && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1477,31 +1485,31 @@ function DetailHead({ title, release, update, download, member, author }) {
                                     children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$toDateTimeFormat$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])(update)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                    lineNumber: 71,
+                                    lineNumber: 69,
                                     columnNumber: 69
                                 }, this),
                                 "）"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                            lineNumber: 71,
+                            lineNumber: 69,
                             columnNumber: 27
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                    lineNumber: 67,
+                    lineNumber: 65,
                     columnNumber: 13
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-            lineNumber: 33,
+            lineNumber: 30,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-        lineNumber: 32,
+        lineNumber: 29,
         columnNumber: 5
     }, this);
 }

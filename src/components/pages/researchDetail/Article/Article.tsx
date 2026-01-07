@@ -21,6 +21,7 @@ export default function Article(
     <article className='bl_article'>
       <DetailHead
         title={head.title}
+        text={head.text}
         release={head.release}
         update={head.update}
         download={head.download}

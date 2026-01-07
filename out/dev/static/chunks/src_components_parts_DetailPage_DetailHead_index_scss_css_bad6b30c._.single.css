@@ -24,6 +24,20 @@
   }
 }
 
+.bl_detailHead_text {
+  margin-top: 10px;
+  padding: 0 15px;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .bl_detailHead_text {
+    margin-top: 20px;
+    padding: 0;
+    font-size: 1.25rem;
+  }
+}
+
 .bl_detailHead_author {
   background-color: #f8f8f8;
   align-items: center;

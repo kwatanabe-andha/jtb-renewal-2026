@@ -1,10 +1,7 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/insights/detail/page": "app/insights/detail/page.js",
-  "/insights/page": "app/insights/page.js",
   "/insights/series/page": "app/insights/series/page.js",
   "/research-reports/category/page": "app/research-reports/category/page.js",
   "/research-reports/detail/page": "app/research-reports/detail/page.js",
-  "/research-reports/page": "app/research-reports/page.js",
   "/research-reports/series/page": "app/research-reports/series/page.js"
 }

@@ -6,10 +6,6 @@ import toDateTimeFormat from '@/lib/toDateTimeFormat'
 import { SITE_URL } from '@/config/site'
 import LockIcon from '@/icon/Lock/Lock'
 
-// type Img = {
-//   url: string
-// }
-
 type Author = {
   name: string
   img: string
@@ -18,6 +14,7 @@ type Author = {
 
 export type DetailHeadType = {
   title: string
+  text?: string
   release: string
   update?: string
   download?: string
@@ -26,12 +23,13 @@ export type DetailHeadType = {
 }
 
 export function DetailHead(
-  { title, release, update, download, member, author }: DetailHeadType
+  { title, text, release, update, download, member, author }: DetailHeadType
 ) {
   return (
     <div className='bl_detailHead'>
       <div className='bl_detailHead_inner'>
         <h1 className='bl_detailHead_title'>{title}</h1>
+        { text && <p className='bl_detailHead_text'>{text}</p> }
         {
           author && (
             <div className='bl_detailHead_author'>

@@ -1,6 +1,6 @@
 import './list.scss'
 import Card from './Card'
-import { CardType } from './Card'
+import { CardType } from '@/types/contentsType'
 import Pager from '../Pager/Pager'
 
 export type CardListType = {

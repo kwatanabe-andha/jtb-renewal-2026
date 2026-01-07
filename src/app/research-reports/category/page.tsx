@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import CategoryTop from "@/components/parts/PageHead/CategoryTop"
 import SideNav from "@/components/parts/SideNav/SideNav"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
@@ -20,7 +21,7 @@ export async function generateMetadata() {
 }
 
 export default async function Page() {
-  const jsonLd = {
+  const jsonLdBreadcrumb = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -47,7 +48,7 @@ export default async function Page() {
 
   return (
     <>
-      <Breadcrumb data={breadcrumb} jsonLd={jsonLd} />
+      <Breadcrumb data={breadcrumb} />
       <section>
         <CategoryTop
           title="インバウンドの調査・レポート"
@@ -61,6 +62,14 @@ export default async function Page() {
         </SideNav>
       </section>
       <Breadcrumb data={breadcrumb} footer />
+
+      <Script
+          id="jsonld-breadcrumbList"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLdBreadcrumb).replace(/</g, '\\u003c'),
+          }}
+        />
     </>
   )
 }

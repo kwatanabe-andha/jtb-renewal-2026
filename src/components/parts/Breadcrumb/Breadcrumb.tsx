@@ -1,5 +1,4 @@
 import './index.scss'
-import Script from 'next/script'
 import Link from "next/link"
 import clsx from 'clsx';
 import { Home05, ChevronRight } from "@untitledui/icons"
@@ -9,24 +8,12 @@ type Breadcrumb = {
   href?: string
 }
 
-type JsonLD = {
-  '@context': string
-  '@type': string
-  itemListElement: {
-      '@type': string
-      position: number
-      name: string
-      item: string
-  }[]
-}
-
 type Props = {
   data: Breadcrumb[]
   footer?: boolean
-  jsonLd?: JsonLD
 }
 
-export default function Breadcrumb ({ data, footer = false, jsonLd }: Props) {
+export default function Breadcrumb ({ data, footer = false }: Props) {
   return (
     <>
       <div className={clsx('ly_breadcrumb', footer && 'is_footer')}>
@@ -59,17 +46,6 @@ export default function Breadcrumb ({ data, footer = false, jsonLd }: Props) {
           }
         </ol>
       </div>
-      {
-        jsonLd && (
-          <Script
-            id="jsonld-breadcrumbList"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
-            }}
-          />
-        )
-      }
     </>
   )
 }

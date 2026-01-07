@@ -2174,12 +2174,12 @@ function FootCard({ card }) {
                                 height: 200
                             }, void 0, false, {
                                 fileName: "[project]/src/components/parts/Card/FootCard.tsx",
-                                lineNumber: 29,
+                                lineNumber: 15,
                                 columnNumber: 42
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/Card/FootCard.tsx",
-                            lineNumber: 29,
+                            lineNumber: 15,
                             columnNumber: 11
                         }, this),
                         card.logo?.url && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2191,18 +2191,18 @@ function FootCard({ card }) {
                                 height: 100
                             }, void 0, false, {
                                 fileName: "[project]/src/components/parts/Card/FootCard.tsx",
-                                lineNumber: 30,
+                                lineNumber: 16,
                                 columnNumber: 61
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/Card/FootCard.tsx",
-                            lineNumber: 30,
+                            lineNumber: 16,
                             columnNumber: 31
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/parts/Card/FootCard.tsx",
-                    lineNumber: 28,
+                    lineNumber: 14,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2213,7 +2213,7 @@ function FootCard({ card }) {
                             children: card.category
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/Card/FootCard.tsx",
-                            lineNumber: 33,
+                            lineNumber: 19,
                             columnNumber: 30
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2221,7 +2221,7 @@ function FootCard({ card }) {
                             children: card.subject
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/Card/FootCard.tsx",
-                            lineNumber: 34,
+                            lineNumber: 20,
                             columnNumber: 11
                         }, this),
                         card.auxiliary && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2229,7 +2229,7 @@ function FootCard({ card }) {
                             children: card.auxiliary
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/Card/FootCard.tsx",
-                            lineNumber: 35,
+                            lineNumber: 21,
                             columnNumber: 31
                         }, this),
                         card.summary && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2237,24 +2237,24 @@ function FootCard({ card }) {
                             children: card.summary
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/Card/FootCard.tsx",
-                            lineNumber: 36,
+                            lineNumber: 22,
                             columnNumber: 29
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/parts/Card/FootCard.tsx",
-                    lineNumber: 32,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/parts/Card/FootCard.tsx",
-            lineNumber: 27,
+            lineNumber: 13,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/parts/Card/FootCard.tsx",
-        lineNumber: 26,
+        lineNumber: 12,
         columnNumber: 5
     }, this);
 }
@@ -2458,20 +2458,20 @@ function FootSlider() {
                                     children: "調査・レポート"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/parts/FootSlider/FootSlider.tsx",
-                                    lineNumber: 42,
+                                    lineNumber: 43,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     children: "Reports"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/parts/FootSlider/FootSlider.tsx",
-                                    lineNumber: 43,
+                                    lineNumber: 44,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/parts/FootSlider/FootSlider.tsx",
-                            lineNumber: 41,
+                            lineNumber: 42,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2481,18 +2481,18 @@ function FootSlider() {
                                 href: "/"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/parts/FootSlider/FootSlider.tsx",
-                                lineNumber: 45,
+                                lineNumber: 46,
                                 columnNumber: 47
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/FootSlider/FootSlider.tsx",
-                            lineNumber: 45,
+                            lineNumber: 46,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/parts/FootSlider/FootSlider.tsx",
-                    lineNumber: 40,
+                    lineNumber: 41,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2507,23 +2507,23 @@ function FootSlider() {
                                             card: card
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/parts/FootSlider/FootSlider.tsx",
-                                            lineNumber: 57,
+                                            lineNumber: 58,
                                             columnNumber: 27
                                         }, this)
                                     }, card.topics_id, false, {
                                         fileName: "[project]/src/components/parts/FootSlider/FootSlider.tsx",
-                                        lineNumber: 56,
+                                        lineNumber: 57,
                                         columnNumber: 25
                                     }, this);
                                 })
                             }, void 0, false, {
                                 fileName: "[project]/src/components/parts/FootSlider/FootSlider.tsx",
-                                lineNumber: 52,
+                                lineNumber: 53,
                                 columnNumber: 17
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/FootSlider/FootSlider.tsx",
-                            lineNumber: 51,
+                            lineNumber: 52,
                             columnNumber: 15
                         }, this),
                         isPc && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$parts$2f$SliderWrap$2f$SliderWrap$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -2547,40 +2547,40 @@ function FootSlider() {
                                             card: card
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/parts/FootSlider/FootSlider.tsx",
-                                            lineNumber: 84,
+                                            lineNumber: 85,
                                             columnNumber: 27
                                         }, this)
                                     }, card.topics_id, false, {
                                         fileName: "[project]/src/components/parts/FootSlider/FootSlider.tsx",
-                                        lineNumber: 83,
+                                        lineNumber: 84,
                                         columnNumber: 25
                                     }, this);
                                 })
                             }, void 0, false, {
                                 fileName: "[project]/src/components/parts/FootSlider/FootSlider.tsx",
-                                lineNumber: 72,
+                                lineNumber: 73,
                                 columnNumber: 17
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/FootSlider/FootSlider.tsx",
-                            lineNumber: 71,
+                            lineNumber: 72,
                             columnNumber: 15
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/parts/FootSlider/FootSlider.tsx",
-                    lineNumber: 48,
+                    lineNumber: 49,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/parts/FootSlider/FootSlider.tsx",
-            lineNumber: 39,
+            lineNumber: 40,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/parts/FootSlider/FootSlider.tsx",
-        lineNumber: 38,
+        lineNumber: 39,
         columnNumber: 5
     }, this);
 }

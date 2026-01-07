@@ -3,39 +3,7 @@ import Link from "next/link"
 import './index.scss'
 import Download from '../Download/Download'
 import toDateTimeFormat from '@/lib/toDateTimeFormat'
-
-type Tag = {
-  name: string
-  slag: string
-}
-
-type Img = {
-  desc: string
-  url: string
-}
-
-type Download = {
-  url?: string
-}
-
-export type CardType = {
-  topics_id: number
-  thumb: Img
-  logo?: Img
-  contribution?: boolean
-  category?: string
-  shoulderSeries?: string
-  shoulderAnd?: string
-  shoulder?: string
-  subject: string
-  auxiliary?: string
-  summary?: string
-  author?: string
-  authorTitle?: string
-  tag?: Array<Tag>
-  download?: Download
-  ymd: string
-};
+import { CardType } from '@/types/contentsType'
 
 type Props = {
   card: CardType

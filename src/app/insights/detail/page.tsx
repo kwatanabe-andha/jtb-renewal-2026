@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import SideNav from "@/components/parts/SideNav/SideNav"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
 import AuthorProfile from "@/components/pages/insightsDetail/AuthorProfile/AuthorProfile"
@@ -55,6 +56,31 @@ const relArticles = [
 const nav = {sections, keywords}
 
 export default function Page() {
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'ホーム',
+        item: 'https://www.tourism.jp/'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'コラム',
+        item: 'https://www.tourism.jp/insights/'
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'スマートフォンの利用と旅行消費に関する調査 2024',
+        item: 'https://www.tourism.jp/insights/detail/'
+      }
+    ]
+  }
+
   return (
     <>
       <Breadcrumb data={breadcrumb} />
@@ -71,6 +97,14 @@ export default function Page() {
         <FootSlider />
       </SideNav>
       <Breadcrumb data={breadcrumb} footer />
+
+      <Script
+          id="jsonld-breadcrumbList"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLdBreadcrumb).replace(/</g, '\\u003c'),
+          }}
+        />
     </>
   )
 }

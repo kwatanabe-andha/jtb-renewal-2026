@@ -8,7 +8,8 @@ import './index.scss'
 import Inner from '@components/parts/Inner/Inner'
 import LinkButton from '@components/parts/LinkButton/LinkButton'
 import ScrollBar from '@components/parts/ScrollBar/ScrollBar'
-import FootCard, { FootCardType } from '@components/parts/Card/FootCard'
+import FootCard from '@components/parts/Card/FootCard'
+import { FootCardType } from '@/types/contentsType'
 import SliderWrap from "@/components/parts/SliderWrap/SliderWrap";
 
 const dummy = [

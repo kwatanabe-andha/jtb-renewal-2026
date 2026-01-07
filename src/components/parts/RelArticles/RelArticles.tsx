@@ -1,6 +1,7 @@
 import './index.scss'
 import Inner from "@/components/parts/Inner/Inner"
-import Card, { CardType } from '@/components/parts/Card/Card'
+import Card from '@/components/parts/Card/Card'
+import { CardType } from '@/types/contentsType'
 import ScrollBar from '@/components/parts/ScrollBar/ScrollBar'
 import LinkButton from '@/components/parts/LinkButton/LinkButton'
 

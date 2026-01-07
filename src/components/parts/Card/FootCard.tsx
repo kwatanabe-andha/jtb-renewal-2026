@@ -1,21 +1,7 @@
 import Image from 'next/image'
 import Link from "next/link"
 import './index.scss'
-
-type Img = {
-  desc: string
-  url: string
-}
-
-export type FootCardType = {
-  topics_id: number
-  thumb: Img
-  logo?: Img
-  category?: string
-  subject: string
-  auxiliary?: string
-  summary?: string
-};
+import { FootCardType } from '@/types/contentsType'
 
 type Props = {
   card: FootCardType

@@ -2,10 +2,11 @@
 
 import './index.scss'
 import Image from 'next/image'
-import Link from 'next/link'
+// import Link from 'next/link'
 import { DetailHead, DetailHeadType } from '@/components/parts/DetailPage/DetailHead/DetailHead'
 import { DetailNav, DetailNavType } from '@/components/parts/DetailPage/DetailNav/DetailNav'
-import Accordion from "@/components/parts/Accordion/Accordion"
+// import Accordion from "@/components/parts/Accordion/Accordion"
+import Content from '../Content/Content'
 
 type Props = {
   head: DetailHeadType
@@ -40,10 +41,7 @@ export default function Article(
             </div>
             <DetailNav sections={nav.sections} keywords={nav.keywords} className='hp_hidden_up-md' />
 
-            <div className='bl_article_content'>
-              <h2>H2H2H2H2H2H2H2H2-3階層</h2>
-              <p>兵庫県に至った背景には、大きく3つの要因があります。1つ目は「社会の潮流」です。人口減少と少子高齢化が進む中、旅行者数の減少と観光市場の縮小は避けられない状況にあります。県内では、高齢者や障害のある方の割合が3割を超えており（図1）、今後ますます多様なニーズに対応する必要があります。また、「2025年問題」（※1）により、消費活動全体の低下も懸念されていることから観光産業においても誰もが利用しやすいインフラの整備や、誰もが楽しめる観光コンテンツの開発、受け入れ体制の整備といった対応が求められています。</p>
-            </div>
+            <Content />
           </div>
         </div>
       </div>

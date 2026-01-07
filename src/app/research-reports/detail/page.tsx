@@ -1,19 +1,21 @@
 import Script from 'next/script'
 import SideNav from "@/components/parts/SideNav/SideNav"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
-import RelArticles from "@/components/parts/RelArticles/RelArticles"
 import Contact from "@/components/parts/Contact/Contact"
 import DetailTop from "@/components/parts/PageHead/DetailTop"
-import Article from "@/components/pages/researchDetail/Article/Article"
 import FootSlider from "@/components/parts/FootSlider/FootSlider"
+import Article from "@/components/pages/researchDetail/Article/Article"
+import Download from "@/components/pages/researchDetail/Download/Download"
+import SeriesSurvey from "@/components/pages/researchDetail/SeriesSurvey/SeriesSurvey"
+import Manager from "@/components/pages/researchDetail/Manager/Manager"
 
 const breadcrumb = [
   {
-    title:  'コラム',
-    href: '/insights/'
+    title:  '調査・レポート',
+    href: '/research-reports/'
   },
   {
-    title:  '持続可能な観光地の取組～ユニバーサルツーリズム先進県・ひょうご～'
+    title:  'スマートフォンの利用と旅行消費に関する調査 2024'
   }
 ]
 
@@ -67,8 +69,8 @@ export default function Page() {
       },
       {
         '@type': 'ListItem',
-        position: 2,
-        name: '調査・レポート',
+        position: 3,
+        name: 'スマートフォンの利用と旅行消費に関する調査 2024',
         item: 'https://www.tourism.jp/research-reports/detail/'
       }
     ]
@@ -85,7 +87,9 @@ export default function Page() {
           category='定点調査'
         />
         <Article head={head} nav={nav} />
-        <RelArticles list={relArticles} />
+        <Download />
+        <SeriesSurvey />
+        <Manager />
         <Contact />
         <FootSlider />
       </SideNav>

@@ -1,0 +1,78 @@
+@use "@styles/settings" as *;
+
+
+.un_manager_inner {
+  padding-block: 90px;
+}
+.un_manager_container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.un_manager_head {
+  flex-shrink: 0;
+  width: clamp(152px, 19.7917vw, 285px);
+}
+.un_manager_head>h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.un_manager_list {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.un_manager_item {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+}
+.un_manager_img {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 100vmax;
+  overflow: hidden;
+}
+.un_manager_img img {
+  height: 100%;
+  object-fit: cover;
+}
+.un_manager_name {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+.un_manager_company {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.un_manager_position {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (width < 768px) {
+  .un_manager_container {
+    flex-direction: column;
+  }
+  .un_manager_inner {
+    padding-block: 60px;
+  }
+  .un_manager_head>h2 {
+    font-size: 1.25rem;
+  }
+  .un_manager_list {
+    grid-template-columns: 1fr;
+  }
+  .un_manager_name {
+    font-size: 16px;
+  }
+  .un_manager_position {
+    font-size: 13px;
+  }
+}

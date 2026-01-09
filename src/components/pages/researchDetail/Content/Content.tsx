@@ -1,8 +1,33 @@
 import './index.scss'
+import { Details, Summary, DetailsBody } from '@/components/parts/DetailsSummary/DetailsSummary'
 
 export default function Content(){
   return (
     <div className="un_reportDetail_content">
+      <Details className='un_reportDetail_acc'>
+        <Summary className='un_reportDetail_acc__title'>
+          <span className="number">1</span>
+          <h3 className="text">情報検索手段の勢力図が変わる？キーワード検索は、まだ主流ではあるが、地図アプリや動画投稿サイトでの検索が増加し、生成AIの利用も急浮上</h3>
+        </Summary>
+        <DetailsBody>
+          <div className="un_reportDetail_acc__content">
+          <p>
+            　スマートフォンでよく使う機能として、電話は昨年度の4位から9位へと大きく順位を落とし、変わって「地図アプリ」が初めて電話を上回り、4位となりました。コミュニケーションの主流となっているメッセージ・チャットアプリも利用率は８割を超えていますが、やや減少傾向となり、落ち着きをみせています（図1）。　また、情報検索の方法でも、検索エンジンでのキーワード検索が81.7％で最も高いものの、地図アプリや動画投稿サイトの割合も4割を超えました。Chat
+            GPTなどの生成AIによる検索も、全体では9.7％、29歳以下の男性では、17.5％と存在感をみせています。情報収集手段の勢力図が大きく変わりつつあることが感じられます（図2）。　具体的に、地図アプリの使い方を聞いた結果でも、ルート案内機能よりも、「行きたい場所を検索し、場所を確認する」が高くなっています（図3）。
+          </p>
+          <p className="title">チャートタイトルチャートタイトルチャートタイトル</p>
+          <figure>
+            <img src="/assets/dummy_graph_01.png" alt="チャートタイトルチャートタイトルチャートタイトル" width="560" height="192" />
+            <figcaption>キャプション　@クレジット</figcaption>
+          </figure>
+          <p>
+            　スマートフォンでよく使う機能として、電話は昨年度の4位から9位へと大きく順位を落とし、変わって「地図アプリ」が初めて電話を上回り、4位となりました。コミュニケーションの主流となっているメッセージ・チャットアプリも利用率は８割を超えていますが、やや減少傾向となり、落ち着きをみせています（図1）。　また、情報検索の方法でも、検索エンジンでのキーワード検索が81.7％で最も高いものの、地図アプリや動画投稿サイトの割合も4割を超えました。Chat
+            GPTなどの生成AIによる検索も、全体では9.7％、29歳以下の男性では、17.5％と存在感をみせています。情報収集手段の勢力図が大きく変わりつつあることが感じられます（図2）。　具体的に、地図アプリの使い方を聞いた結果でも、ルート案内機能よりも、「行きたい場所を検索し、場所を確認する」が高くなっています（図3）。
+          </p>
+        </div>
+        </DetailsBody>
+      </Details>
+
       <details open className="un_reportDetail_acc">
         <summary className="un_reportDetail_acc__title">
           <span className="number">1</span>
@@ -24,6 +49,7 @@ export default function Content(){
           </p>
         </div>
       </details>
+
       <details open className="un_reportDetail_acc --secret">
         <summary className="un_reportDetail_acc__title">
           <span className="number">2</span>

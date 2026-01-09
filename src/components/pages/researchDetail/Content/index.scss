@@ -160,7 +160,8 @@
   transition: transform 0.3s ease;
 }
 /* 開いている時 - 180度回転 */
-.un_reportDetail_acc[open] .un_reportDetail_acc__title::before {
+// .un_reportDetail_acc[open] .un_reportDetail_acc__title::before {
+.un_reportDetail_acc.is_opened .un_reportDetail_acc__title::before {
   transform: translateY(-50%) rotate(180deg);
 }
 .un_reportDetail_acc.--secret .un_reportDetail_acc__title .text::after {
@@ -179,7 +180,8 @@
 }
 .un_reportDetail_acc__content {
   width: 77.78%;
-  margin: 35px auto 0;
+  padding-top: 35px;
+  margin: 0 auto;
   position: relative;
 }
 .un_reportDetail_acc.--secret .un_reportDetail_acc__content {
@@ -248,7 +250,8 @@
     height: 40px;
     font-size: 14px;
   }
-  .un_reportDetail_acc[open] .un_reportDetail_acc__title::before {
+  // .un_reportDetail_acc[open] .un_reportDetail_acc__title::before {
+  .un_reportDetail_acc.is_opened .un_reportDetail_acc__title::before {
     right: 0;
     transform: rotate(180deg);
   }

@@ -2,12 +2,13 @@
 :HL["/_next/static/chunks/1e77b33bdbb048b0.css","style"]
 :HL["/_next/static/chunks/7c091bf81fab0f09.css","style"]
 :HL["/_next/static/chunks/17001ad7dc572dfb.css","style"]
-:HL["/_next/static/chunks/d8a9064cfdab493e.css","style"]
+:HL["/_next/static/chunks/04efcacedb190b0a.css","style"]
 :HL["/_next/static/chunks/9bcd00edd43c07c6.css","style"]
 :HL["/_next/static/chunks/c39815b090e6e242.css","style"]
 :HL["/_next/static/chunks/71b62b81a38a59c0.css","style"]
 :HL["/_next/static/chunks/4aec2102a28890dd.css","style"]
 :HL["/_next/static/chunks/0f8ed03af7c230a7.css","style"]
+:HL["/_next/static/chunks/3bd67323fbe83b23.css","style"]
 :HL["/_next/static/chunks/79da919e8b2dbf7a.css","style"]
 :HL["/_next/static/chunks/2c4a95c67e12da90.css","style"]
-0:{"buildId":"sk9pnZLPEvv6exPmmX1ve","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"research-reports","paramType":null,"paramKey":"research-reports","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"CiO0Ra7A6V24cGf91MJdl","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"research-reports","paramType":null,"paramKey":"research-reports","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

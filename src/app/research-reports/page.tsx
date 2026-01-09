@@ -40,7 +40,7 @@ export default async function Page() {
           {'オリジナルの調査・研究結果を公開しています。'}
         </RegionTop>
 
-        <SideNav>
+        <SideNav offset={80}>
           <Recently />
           <Series />
           <ReportList />

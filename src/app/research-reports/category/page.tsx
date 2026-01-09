@@ -50,13 +50,12 @@ export default async function Page() {
     <>
       <Breadcrumb data={breadcrumb} />
       <section>
-        <CategoryTop
-          title="インバウンドの調査・レポート"
-          text="日本を訪れる外国人に関するインバウンド統計データ・グラフを掲載しています。"
-          slug="Reports"
-        />
-
-        <SideNav>
+        <SideNav offset={50}>
+          <CategoryTop
+            title="インバウンドの調査・レポート"
+            text="日本を訪れる外国人に関するインバウンド統計データ・グラフを掲載しています。"
+            slug="Reports"
+          />
           <ReportList />
           <FootSlider />
         </SideNav>

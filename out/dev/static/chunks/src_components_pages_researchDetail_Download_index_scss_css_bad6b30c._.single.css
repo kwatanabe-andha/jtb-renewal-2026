@@ -1,0 +1,147 @@
+/* [project]/src/components/pages/researchDetail/Download/index.scss.css [app-client] (css) */
+.un_download {
+  padding: 82px 0;
+}
+
+.un_download_container {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 56.11vw;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.un_download_ttl {
+  text-align: center;
+  font-size: 30px;
+}
+
+.un_download_content {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 50px 0;
+  display: flex;
+}
+
+.un_download_content_img {
+  gap: 20px;
+  display: flex;
+}
+
+.un_download_content_img .list {
+  flex-direction: column;
+  gap: 10px;
+  display: flex;
+}
+
+.un_download_content_img .list_item {
+  border: 1px solid #dadada;
+  border-radius: 4px;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.un_download_content_img .list_item img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.un_download_content_img .currentImage figure {
+  border: 1px solid #dadada;
+  border-radius: 4px;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.un_download_content_img .currentImage figcaption {
+  margin-top: 12px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.un_download_content_desc {
+  position: relative;
+}
+
+.un_download_content_desc:after {
+  content: "";
+  z-index: 0;
+  background: linear-gradient(#0000, #fff);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.un_download_content_desc dl {
+  grid-template-columns: 80px 1fr;
+  gap: 6px 8px;
+  margin-bottom: 24px;
+  display: grid;
+}
+
+.un_download_content_desc dt, .un_download_content_desc dd {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.un_download_content_desc dt {
+  font-weight: 600;
+}
+
+@media not (min-width: 768px) {
+  .un_download {
+    padding: 80px 0 40px;
+  }
+
+  .un_download_container {
+    width: 91.67vw;
+    padding: 40px 25px;
+  }
+
+  .un_download_ttl {
+    font-size: 28px;
+  }
+
+  .un_download_content {
+    margin-top: 30px;
+  }
+
+  .un_download_content_img .list {
+    display: none;
+  }
+
+  .un_download_content_img .currentImage figure {
+    width: 77.78vw;
+    height: 77.78vw;
+  }
+
+  .un_download_content_img {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .un_download_content_img .pagination {
+    justify-content: center;
+    gap: 10px;
+    display: flex;
+  }
+
+  .un_download_content_img .pagination_item {
+    background-color: #dadada;
+    border-radius: 100vmax;
+    width: 18px;
+    height: 18px;
+  }
+
+  .un_download_content_img .pagination_item.is-active {
+    background-color: #294b75;
+  }
+}
+
+/*# sourceMappingURL=src_components_pages_researchDetail_Download_index_scss_css_bad6b30c._.single.css.map*/

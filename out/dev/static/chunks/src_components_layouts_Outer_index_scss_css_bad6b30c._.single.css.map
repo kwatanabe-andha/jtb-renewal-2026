@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///turbopack:///[project]/src/styles/_partials/global/_fonts.scss","turbopack:///turbopack:///[project]/src/components/layouts/Outer/index.scss"],"sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;300;400;500;600&display=swap');","@use \"@styles/settings\" as *;\n\n.ly_outer {\n  margin-inline: auto;\n  max-width: 1920px;\n}"],"names":[],"mappings":"AAEA"}}]
+}

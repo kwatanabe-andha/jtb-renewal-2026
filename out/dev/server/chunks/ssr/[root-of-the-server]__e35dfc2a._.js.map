@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///Users/kouichiwatanabe/myworks/andha_projects/jtb/jtb-renewal-2026/src/app/page.tsx"],"sourcesContent":["import '@/styles/index.scss';\n\nexport default async function Home() {\n  const url = new URL(\n    `http://localhost:10028/wp-json/wp/v2/column?page=1`,\n  )\n  const response = await fetch(url, {credentials: 'omit'})\n  const data = await response.json()\n  const totalPages = await response.headers.get('x-wp-totalpages')\n  console.log(data)\n  console.log(totalPages)\n\n  return (\n    <div className=''>\n      <main className=''>\n      </main>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;;;AAEe,eAAe;IAC5B,MAAM,MAAM,IAAI,IACd,CAAC,kDAAkD,CAAC;IAEtD,MAAM,WAAW,MAAM,MAAM,KAAK;QAAC,aAAa;IAAM;IACtD,MAAM,OAAO,MAAM,SAAS,IAAI;IAChC,MAAM,aAAa,MAAM,SAAS,OAAO,CAAC,GAAG,CAAC;IAC9C,QAAQ,GAAG,CAAC;IACZ,QAAQ,GAAG,CAAC;IAEZ,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;YAAK,WAAU;;;;;;;;;;;AAItB"}}]
+}

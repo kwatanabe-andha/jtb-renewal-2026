@@ -1,0 +1,52 @@
+/* [project]/src/components/parts/RelArticles/index.scss.css [app-client] (css) */
+.bl_relArticles_inner {
+  padding-block: 60px;
+}
+
+@media (min-width: 768px) {
+  .bl_relArticles_inner.bl_inner {
+    padding-left: 255px;
+  }
+
+  .bl_relArticles_container {
+    max-width: 720px;
+    margin-inline: auto;
+  }
+}
+
+.bl_relArticles_heading {
+  text-align: center;
+  font-size: 1.625rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .bl_relArticles_heading {
+    font-size: 1.875rem;
+  }
+}
+
+.bl_relArticles_body {
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .bl_relArticles_body {
+    margin-top: 50px;
+  }
+}
+
+.bl_relArticles_btn {
+  justify-content: center;
+  margin-top: 50px;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .bl_relArticles_btn {
+    justify-content: flex-end;
+  }
+}
+
+/*# sourceMappingURL=src_components_parts_RelArticles_index_scss_css_bad6b30c._.single.css.map*/

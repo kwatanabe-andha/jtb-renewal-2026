@@ -10,7 +10,7 @@ export default function Content(){
           className: 'un_reportDetail_acc__title',
           children: (<>
           <span className="number">1</span>
-          <h3 className="text">情報検索手段の勢力図が変わる？キーワード検索は、まだ主流ではあるが、地図アプリや動画投稿サイトでの検索が増加し、生成AIの利用も急浮上</h3>
+          <h2 className="text">情報検索手段の勢力図が変わる？キーワード検索は、まだ主流ではあるが、地図アプリや動画投稿サイトでの検索が増加し、生成AIの利用も急浮上</h2>
           </>)
         }}
         body={{
@@ -40,7 +40,7 @@ export default function Content(){
           className: 'un_reportDetail_acc__title',
           children: (<>
           <span className="number">2</span>
-          <h3 className="text">情報検索手段の勢力図が変わる？キーワード検索は、まだ主流ではあるが、地図アプリや動画投稿サイトでの検索が増加し、生成AIの利用も急浮上</h3>
+          <h2 className="text">情報検索手段の勢力図が変わる？キーワード検索は、まだ主流ではあるが、地図アプリや動画投稿サイトでの検索が増加し、生成AIの利用も急浮上</h2>
           </>)
         }}
         body={{
@@ -83,7 +83,7 @@ export default function Content(){
           className: 'un_reportDetail_acc__title',
           children: (<>
           <span className="number">3</span>
-          <h3 className="text">利用する SNSの上位は「LINE」、「YouTube」、「X」、「Instagram」で前年と変わらずも、「LINE」は20代女性と30代男性で減少傾向。「TikTok」と「Ameba」の利用が伸びる</h3>
+          <h2 className="text">利用する SNSの上位は「LINE」、「YouTube」、「X」、「Instagram」で前年と変わらずも、「LINE」は20代女性と30代男性で減少傾向。「TikTok」と「Ameba」の利用が伸びる</h2>
           </>)
         }}
         body={{

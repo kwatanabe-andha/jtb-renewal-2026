@@ -1,0 +1,177 @@
+/* [project]/src/components/parts/DetailPage/DetailNav/index.scss.css [app-client] (css) */
+.bl_detailNav {
+  margin-top: 60px;
+}
+
+@media (min-width: 768px) {
+  .bl_detailNav {
+    margin-top: 0;
+  }
+}
+
+.bl_detailNav_inner {
+  background-color: var(--color-bg);
+  gap: 40px;
+  padding: 60px 15px;
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  .bl_detailNav_inner {
+    background-color: #0000;
+    padding: 0;
+  }
+}
+
+.bl_detailNav_member {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .bl_detailNav_member {
+    background-color: var(--color-01);
+    border-radius: 4px;
+    padding: 58px 10px 20px;
+    display: block;
+    position: relative;
+  }
+}
+
+.bl_detailNav_member > p {
+  letter-spacing: .04em;
+  color: var(--color-white);
+  text-align: center;
+  font-size: .75rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.bl_detailNav_member > p > a {
+  color: var(--color-pink);
+  text-underline-offset: 2px;
+  text-decoration: underline;
+}
+
+.bl_detailNav_member .icon_lock {
+  margin-inline: auto;
+  position: absolute;
+  inset: 20px 0 auto;
+}
+
+.bl_detailNav_title {
+  background-color: #e9e7e4;
+  place-content: center;
+  width: fit-content;
+  min-height: 30px;
+  padding: 5px 10px 3px;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1.2;
+  display: grid;
+}
+
+.bl_detailNav_list {
+  margin-top: 26px;
+  position: relative;
+}
+
+.bl_detailNav_list:before {
+  content: "";
+  background-color: #d9d9d9;
+  width: 2px;
+  position: absolute;
+  inset: 0 auto 0 0;
+}
+
+.bl_detailNav_list_item {
+  padding: 10px 0 10px 20px;
+  display: block;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .bl_detailNav_list_item {
+    max-width: 201px;
+  }
+
+  .bl_detailNav_list_item[data-current="true"]:before {
+    content: "";
+    background-color: var(--color-01);
+    width: 3px;
+    position: absolute;
+    inset: 0 auto 0 0;
+  }
+}
+
+.bl_detailNav_list_number {
+  background-color: #e9e7e4;
+  place-items: center;
+  width: fit-content;
+  min-height: 21px;
+  margin-bottom: 10px;
+  padding: 1px 6px;
+  font-size: .75rem;
+  line-height: 1.5;
+  display: grid;
+}
+
+.bl_detailNav_list_text {
+  letter-spacing: .04em;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .bl_detailNav_list_text {
+    color: #666;
+    font-size: .875rem;
+  }
+
+  [data-current="true"] .bl_detailNav_list_text {
+    color: var(--color-01);
+  }
+}
+
+.bl_detailNav_keyword {
+  padding: 2px 0 0 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  position: relative;
+}
+
+.bl_detailNav_keyword:before {
+  content: "";
+  background-color: #e9e7e4;
+  width: 4px;
+  position: absolute;
+  inset: 0 auto 0 0;
+}
+
+.bl_detailNav_rel_list {
+  flex-wrap: wrap;
+  gap: 0 10px;
+  margin-top: 12px;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .bl_detailNav_rel_list {
+    display: block;
+  }
+}
+
+.bl_detailNav_rel_list > li > a {
+  color: var(--color-03);
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.bl_detailNav_rel_list > li > a > svg {
+  vertical-align: inherit;
+  margin-right: 2px;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=src_components_parts_DetailPage_DetailNav_index_scss_css_bad6b30c._.single.css.map*/

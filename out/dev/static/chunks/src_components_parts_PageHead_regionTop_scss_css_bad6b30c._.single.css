@@ -2,13 +2,13 @@
 .bl_regionTop {
   text-align: center;
   background-color: var(--color-white);
-  padding: 80px 10px 60px;
+  padding: 70px 10px 44px;
   position: relative;
 }
 
 @media (min-width: 768px) {
   .bl_regionTop {
-    padding: 90px 20px;
+    padding: 80px 20px 64px;
   }
 }
 
@@ -20,7 +20,13 @@
   height: 30px;
   margin-inline: auto;
   position: absolute;
-  inset: 37px 0 auto;
+  inset: 28px 0 auto;
+}
+
+@media (min-width: 768px) {
+  .bl_regionTop:before {
+    top: 32px;
+  }
 }
 
 .bl_regionTop[data-page="reports"]:before {
@@ -34,27 +40,27 @@
 .bl_regionTop_heading p {
   letter-spacing: -.04em;
   color: var(--color-02);
-  font-size: 2.375rem;
+  font-size: 1.875rem;
   font-weight: 100;
   line-height: 1;
 }
 
 @media (min-width: 768px) {
   .bl_regionTop_heading p {
-    font-size: 4rem;
+    font-size: 3.125rem;
   }
 }
 
 .bl_regionTop_heading h1 {
   color: var(--color-01);
   margin-top: 10px;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
 @media (min-width: 768px) {
   .bl_regionTop_heading h1 {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
   }
 }
 

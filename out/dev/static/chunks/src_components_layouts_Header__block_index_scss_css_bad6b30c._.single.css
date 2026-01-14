@@ -4,13 +4,13 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px 40px;
-  margin-top: 28px;
+  margin-top: 20px;
   display: flex;
 }
 
 .bl_hdNav_contact > a {
-  width: 216px;
-  height: 62px;
+  width: 210px;
+  height: 52px;
   color: var(--color-white);
   background-color: var(--color-02);
   border-radius: 8px;
@@ -32,7 +32,7 @@
 .bl_hdNav_body {
   background-color: var(--color-white);
   border-radius: 8px;
-  padding: 20px 30px;
+  padding: 14px 30px;
 }
 
 .bl_hdNav_list {
@@ -43,7 +43,7 @@
 }
 
 .bl_hdNav_list > li {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1;
   position: relative;
@@ -68,7 +68,7 @@
   background-color: var(--color-02);
   height: 6px;
   position: absolute;
-  inset: auto 0 -23px;
+  inset: auto 0 -18px;
 }
 
 .bl_hdNav_home {

@@ -1,11 +1,11 @@
 /* [project]/src/components/layouts/Header/index.scss.css [app-client] (css) */
 .bl_hd_inner {
-  padding: 24px 20px 20px;
+  padding: 18px 20px 15px;
 }
 
 @media (min-width: 768px) {
   .bl_hd_inner {
-    padding: 26px 45px 54px;
+    padding: 20px 45px 36px;
   }
 }
 
@@ -22,7 +22,7 @@
 
 @media (min-width: 768px) {
   .bl_hdHead_logo {
-    width: 293px;
+    width: 220px;
   }
 }
 
@@ -40,7 +40,7 @@
 @media (min-width: 768px) {
   .bl_hdHead_nav {
     justify-content: flex-end;
-    gap: 32px;
+    gap: 30px;
   }
 
   .bl_hdHead_member {
@@ -72,7 +72,7 @@
 }
 
 .bl_hdHead_list {
-  gap: 24px;
+  gap: 20px;
   display: flex;
 }
 
@@ -83,17 +83,17 @@
 }
 
 .bl_hdHead_icons {
-  gap: 12px;
+  gap: 14px;
   display: flex;
 }
 
 .bl_hdHead_search {
-  width: 24px;
+  width: 20px;
   display: block;
 }
 
 .bl_hdHead_lang {
-  width: 20px;
+  width: 18px;
   display: block;
 }
 
@@ -103,7 +103,7 @@
   border-radius: 8px;
   align-items: center;
   gap: 32px;
-  padding: 8px 20px 6px;
+  padding: 7px 18px 5px;
   font-size: 1rem;
   font-weight: 500;
   display: flex;

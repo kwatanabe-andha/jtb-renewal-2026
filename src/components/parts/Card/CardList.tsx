@@ -1,13 +1,16 @@
 import './list.scss'
 import Card from './Card'
 import { CardType } from '@/types/contentsType'
+import { PagerType } from '@/types/pager' 
 import Pager from '../Pager/Pager'
 
 export type CardListType = {
   list: CardType[]
+  pageInfo: PagerType
+  pathname: string
 }
 
-export default function CardList({ list }: CardListType) {
+export default function CardList({ list, pageInfo, pathname }: CardListType) {
   return (
     <>
       <ul className='bl_cardList'>
@@ -23,7 +26,7 @@ export default function CardList({ list }: CardListType) {
           })
         }
       </ul>
-      <Pager />
+      <Pager pageInfo={pageInfo} pathname={pathname} />
     </>
   )
 }

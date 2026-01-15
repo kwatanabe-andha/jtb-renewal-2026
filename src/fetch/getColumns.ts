@@ -1,8 +1,21 @@
-export default async function getColumns() {
+type PropsType = {
+  pageID?: string
+}
+
+export default async function getColumns(params?: PropsType) {
+  const { pageID = '1' } = params || {}
+
   const url = new URL(
-    // `${process.env.NEXT_PUBLIC_BASE_URL}/rcms-api/3/columns/list`,
-    `https://tourism.g.kuroco.app/rcms-api/3/columns/list`,
+    `${process.env.NEXT_PUBLIC_BASE_URL}/rcms-api/7/insights/list`,
   )
-  const response = await fetch(url)
+  url.searchParams.append('pageID', String(pageID))
+  
+  const response = await fetch(url,
+    {
+      headers: {
+        'X-RCMS-API-ACCESS-TOKEN': process.env.INSIGHTS_ACCESS_TOKEN!,
+      }
+    }
+  )
   return await response.json()
 }

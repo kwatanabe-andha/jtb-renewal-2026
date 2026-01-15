@@ -1,0 +1,44 @@
+/* [project]/src/components/parts/Heading/level2.scss.css [app-client] (css) */
+.bl_hd_level2 {
+  padding-left: 27px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .bl_hd_level2 {
+    padding-left: 33px;
+  }
+}
+
+.bl_hd_level2:before {
+  content: "";
+  aspect-ratio: 1;
+  background-color: var(--color-03);
+  border-radius: 4px;
+  width: 17px;
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .bl_hd_level2:before {
+    width: 23px;
+    top: 1px;
+  }
+}
+
+.bl_hd_level2 > span {
+  font-size: 1.125rem;
+  line-height: 1.27778;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .bl_hd_level2 > span {
+    font-size: 1.5rem;
+    line-height: 1.20833;
+  }
+}
+
+/*# sourceMappingURL=src_components_parts_Heading_level2_scss_css_bad6b30c._.single.css.map*/

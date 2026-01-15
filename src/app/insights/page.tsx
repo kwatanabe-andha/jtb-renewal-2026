@@ -6,17 +6,13 @@ import SideNav from "@/components/parts/SideNav/SideNav"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
 import getColumns from '@/fetch/getColumns'
 import { CardType } from '@/types/contentsType'
+import { JsonLdCardType } from '@/types/jsonLd'
 
 const breadcrumb = [ { title: 'コラム' } ]
 
-export async function generateMetadata() {
-  const title = 'コラム'
-  const description = 'コラムページ。'
-
-  return {
-    title,
-    description
-  }
+export const metadata = {
+  title:  'コラム',
+  description: 'コラムページ。',
 }
 
 export default async function Page() {
@@ -43,8 +39,7 @@ export default async function Page() {
   }
 
   const pageList = list.map((item: CardType, index: number) => {
-    return (
-      {
+    const obj: JsonLdCardType = {
         "@type": "ListItem",
         position: index + 1,
         item: {
@@ -52,11 +47,13 @@ export default async function Page() {
           headline: item.subject,
           url: `https://www.tourism.jp/insights/${item.topics_id}/`,
           datePublished: item.ymd,
-          author: { "@type": "Person", "name": `${item.author}` },
           image: item.thumb.url
         }
       }
-    )
+    if (item.author_external_name && item.author_external_name.length > 0) {
+      obj.item.author = { "@type": "Person", "name": `${item.author_external_name[0]}` }
+    }
+    return obj
   })
 
   const jsonLdCards = {

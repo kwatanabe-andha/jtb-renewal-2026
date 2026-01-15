@@ -1,0 +1,79 @@
+/* [project]/src/components/parts/PageHead/regionTop.scss.css [app-client] (css) */
+.bl_regionTop {
+  text-align: center;
+  background-color: var(--color-white);
+  padding: 70px 10px 44px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .bl_regionTop {
+    padding: 80px 20px 64px;
+  }
+}
+
+.bl_regionTop:before {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+  margin-inline: auto;
+  position: absolute;
+  inset: 28px 0 auto;
+}
+
+@media (min-width: 768px) {
+  .bl_regionTop:before {
+    top: 32px;
+  }
+}
+
+.bl_regionTop[data-page="reports"]:before {
+  background-image: url("/assets/icon/icon_reports.svg");
+}
+
+.bl_regionTop[data-page="columns"]:before {
+  background-image: url("/assets/icon/icon_columns.svg");
+}
+
+.bl_regionTop_heading p {
+  letter-spacing: -.04em;
+  color: var(--color-02);
+  font-size: 1.875rem;
+  font-weight: 100;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .bl_regionTop_heading p {
+    font-size: 3.125rem;
+  }
+}
+
+.bl_regionTop_heading h1 {
+  color: var(--color-01);
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .bl_regionTop_heading h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.bl_regionTop_text {
+  white-space: pre-line;
+  margin-top: 10px;
+  font-size: .875rem;
+}
+
+@media (min-width: 768px) {
+  .bl_regionTop_text {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=src_components_parts_PageHead_regionTop_scss_css_bad6b30c._.single.css.map*/

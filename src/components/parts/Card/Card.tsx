@@ -16,33 +16,37 @@ export default function Card( { card }: Props ) {
         <div className='bl_card_img'>
           <div className='bl_card_thumb'>
             <Image src={`${card.thumb.url}`} alt={ card.thumb.desc } width={300} height={200} />
-            { card.contribution && <span className='bl_card_contribution'>寄稿</span> }
+            { card.article_type.key && <span className='bl_card_articleType'>{card.article_type.label}</span> }
           </div>
           { card.logo?.url && <div className='bl_card_logo'><Image src={ card.logo.url } alt={ card.logo.desc } width={100} height={100} /></div> }
         </div>
         <div className='bl_card_content'>
-          { card.category && <div className='bl_card_category'>{ card.category }</div> }
+          { card.content_type && <div className='bl_card_contentType'>{ card.content_type }</div> }
           {
-            card.shoulderSeries && (
-              <div className='bl_card_shoulderSeries'>
-                <div className='bl_card_shoulderTitle'>{ card.shoulderSeries }</div>
+            card.contents_type_nm && (
+              <div className='bl_card_series'>
+                <div className='bl_card_series_title'>
+                  {
+                    card.contents_type_slug === "xtourism" ? '✘ Tourism' : card.contents_type_nm
+                  }
+                </div>
                 {
-                  card.shoulderAnd && (
-                    <div className='bl_card_shoulderAnd'>× { card.shoulderAnd }</div>
+                  card.series_custom && (
+                    <div className='bl_card_series_custom'>{ card.series_custom }</div>
                   )
                 }
               </div>
             )
           }
-          { card.shoulder && <div className='bl_card_shoulder'>{ card.shoulder }</div> }
+          { card.organization && <div className='bl_card_organization'>{ card.organization }</div> }
           <h3 className='bl_card_title'>{ card.subject }</h3>
-          { card.auxiliary && <p className='bl_card_auxiliary'>{ card.auxiliary }</p> }
+          { card.excerpt && <p className='bl_card_excerpt'>{ card.excerpt }</p> }
           { card.summary && <p className='bl_card_summary'>{ card.summary }</p> }
           {
-            card.author && (
+            card.author_external_name && card.author_external_name.length > 0 && (
               <div className='bl_card_author'>
-                <p className='bl_card_author_name'>{ card.author }</p>
-                <p className='bl_card_author_pos'>{ card.authorTitle }</p>
+                <p className='bl_card_author_name'>{ card.author_external_name[0] }</p>
+                { card.author_external_title && card.author_external_title.length > 0 && <p className='bl_card_author_pos'>{ card.author_external_title[0] }</p>}
               </div>
             )
           }

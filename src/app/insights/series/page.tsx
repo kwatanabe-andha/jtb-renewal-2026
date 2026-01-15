@@ -5,6 +5,7 @@ import SideNav from "@/components/parts/SideNav/SideNav"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
 import getColumns from '@/fetch/getColumns'
 import { CardType } from '@/types/contentsType'
+import { JsonLdCardType } from '@/types/jsonLd'
 
 const breadcrumb = [
   {
@@ -46,21 +47,22 @@ export default async function Page() {
   }
 
   const pageList = list.map((item: CardType, index: number) => {
-    return (
-      {
-        "@type": "ListItem",
-        position: index + 1,
-        item: {
-          "@type": "BlogPosting",
-          headline: item.subject,
-          url: `https://www.tourism.jp/insights/${item.topics_id}/`,
-          datePublished: item.ymd,
-          author: { "@type": "Person", "name": `${item.author}` },
-          image: item.thumb.url
+      const obj: JsonLdCardType = {
+          "@type": "ListItem",
+          position: index + 1,
+          item: {
+            "@type": "BlogPosting",
+            headline: item.subject,
+            url: `https://www.tourism.jp/insights/${item.topics_id}/`,
+            datePublished: item.ymd,
+            image: item.thumb.url
+          }
         }
+      if (item.author_external_name && item.author_external_name.length > 0) {
+        obj.item.author = { "@type": "Person", "name": `${item.author_external_name[0]}` }
       }
-    )
-  })
+      return obj
+    })
 
   const jsonLdCards = {
     "@context": "https://schema.org",

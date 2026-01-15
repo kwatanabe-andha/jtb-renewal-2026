@@ -16,9 +16,9 @@ export default function FootCard( { card }: Props ) {
           { card.logo?.url && <div className='bl_card_logo'><Image src={ card.logo.url } alt={ card.logo.desc } width={100} height={100} /></div> }
         </div>
         <div className='bl_card_content'>
-          { card.category && <div className='bl_card_category'>{ card.category }</div> }
+          { card.group_nm && <div className='bl_card_contentType'>{ card.group_nm }</div> }
           <h3 className='bl_card_title'>{ card.subject }</h3>
-          { card.auxiliary && <p className='bl_card_auxiliary'>{ card.auxiliary }</p> }
+          { card.excerpt && <p className='bl_card_excerpt'>{ card.excerpt }</p> }
           { card.summary && <p className='bl_card_summary'>{ card.summary }</p> }
         </div>
       </Link>

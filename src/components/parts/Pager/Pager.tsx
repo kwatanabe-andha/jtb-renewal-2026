@@ -2,7 +2,7 @@
 
 import './index.scss'
 import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
+// import { useSearchParams } from 'next/navigation'
 import { ArrowNarrowRight, ArrowNarrowLeft } from "@untitledui/icons"
 import { PagerType } from '@/types/pager'
 
@@ -13,13 +13,14 @@ export default function Pager({ pageInfo, pathname }: { pageInfo: PagerType, pat
   const isFirstPage = `${currentPage}` === '1'
   const isLastPage = currentPage === pageInfo.totalPageCnt
 
-  const searchParams = useSearchParams()
+  // const searchParams = useSearchParams()
 
   const setPageID = (newPageID: number) => {
-    const params = new URLSearchParams(searchParams.toString())
+    // const params = new URLSearchParams(searchParams.toString())
     // params.set('pageID', newPageID.toString())
     // return `${pathname}?${params.toString()}`
-    const href = params.size > 0 ? `${pathname}${newPageID}/?${params.toString()}` : `${pathname}${newPageID}/`
+    // const href = params.size > 0 ? `${pathname}${newPageID}/?${params.toString()}` : `${pathname}${newPageID}/`
+    const href = `${pathname}${newPageID}/`
     return href
   }
 
@@ -32,6 +33,7 @@ export default function Pager({ pageInfo, pathname }: { pageInfo: PagerType, pat
   }
 
   return (
+    <>
     <ul className='bl_pager'>
       {
         !isFirstPage && (
@@ -101,5 +103,6 @@ export default function Pager({ pageInfo, pathname }: { pageInfo: PagerType, pat
         )
       }
     </ul>
+    </>
   )
 }

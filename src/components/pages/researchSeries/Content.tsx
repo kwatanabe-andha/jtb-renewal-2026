@@ -3,22 +3,22 @@ import './index.scss'
 export default function Content() {
   return (
     <>
-      <section className="un_series">
+      <article className="un_series">
         <div className="un_series_bg"><img src="/assets/dummy_series_bg.png" alt="" width="1440" height="730" /></div>
         <div className="bl_inner">
           <div className="un_series_icon">
             <img src="/assets/dummy_series_icon.png" alt="" width="230" height="230" />
             <p className="un_series_icon_text">スマートフォンの利用と<br />旅行消費に関する調査</p>
           </div>
-          <div className="un_series_title">
+          <header className="un_series_title">
             <h1 className="title">スマートフォンの利用と旅行消費に関する調査</h1>
             <div className="year">2016-2024</div>
             <div className="subTitle">今後の生活や旅行行動に関する変化の兆しをとらえる</div>
-          </div>
+          </header>
           <div className="un_series_mv">
             <img src="/assets/dummy_series_mv.jpg" alt="" width="974" height="470" />
           </div>
-          <div className="un_series_content">
+          <section className="un_series_content">
             <h2 className="un_series_content_copy">
               コピーが入ります。JTB総合研究所では、2013年から「スマートフォンの利用と旅行消費に関する調査」を定点実施しています。本調査では、スマホ利用と人々の意識を追うことで、旅行や暮らしの変化を捉えています。「SNS疲れ」や「デジタルデトックス」などの兆しをいち早く発見してきた調査では、ライフスタイルと旅行・消費の関係を探る研究を継続しています。
             </h2>
@@ -36,9 +36,9 @@ export default function Content() {
                   strokeLinecap="round" strokeLinejoin="round" />
               </svg><span>調査概要をみる</span>
             </a>
-          </div>
+          </section>
         </div>
-      </section>
+      </article>
       <section className="un_seriesLatest">
         <div className="bl_inner un_seriesLatest_inner">
           <div className="un_seriesLatest_title">
@@ -46,7 +46,7 @@ export default function Content() {
             <span className="un_seriesLatest_title_en">LATEST REPORTS</span>
           </div>
           <div className="un_seriesLatest__list">
-            <div className="un_recentlyCard">
+            <article className="un_recentlyCard">
               <a href="" className="un_recentlyCard_img">
                 <div className="un_recentlyCard_thumb">
                   <img alt="" loading="lazy" width="360" height="240" decoding="async" data-nimg="1" src="/assets/thumb.jpg" />
@@ -63,8 +63,8 @@ export default function Content() {
                   <time dateTime="2025-01-10" className="un_recentlyCard_time">2025.01.10</time>
                 </div>
               </div>
-            </div>
-            <div className="un_recentlyCard">
+            </article>
+            <article className="un_recentlyCard">
               <a href="" className="un_recentlyCard_img">
                 <div className="un_recentlyCard_thumb">
                   <img alt="" loading="lazy" width="360" height="240" decoding="async" data-nimg="1" src="/assets/thumb.jpg" />
@@ -81,7 +81,7 @@ export default function Content() {
                   <time dateTime="2025-01-10" className="un_recentlyCard_time">2025.01.10</time>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>

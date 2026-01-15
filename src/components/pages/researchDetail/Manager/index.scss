@@ -1,6 +1,5 @@
 @use "@styles/settings" as *;
 
-
 .un_manager_inner {
   padding-block: 90px;
 }
@@ -23,7 +22,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
-.un_manager_item {
+.un_manager_item a {
   background-color: #fff;
   display: flex;
   align-items: center;

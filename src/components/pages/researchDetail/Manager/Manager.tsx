@@ -1,4 +1,5 @@
 import './index.scss'
+import Link from 'next/link'
 
 export default function Manager() {
   return (
@@ -10,28 +11,34 @@ export default function Manager() {
           </div>
           <ul className="un_manager_list">
             <li className="un_manager_item">
-              <div className="un_manager_img"><img src="/assets/dummy_maneger_img01.jpg" alt="" width="50" height="50" /></div>
-              <div className="un_manager_info">
-                <p className="un_manager_name">勝野 裕子</p>
-                <p className="un_manager_company">JTB総合研究所</p>
-                <p className="un_manager_position">上席主任研究員</p>
-              </div>
+              <Link href="#">
+                <div className="un_manager_img"><img src="/assets/dummy_maneger_img01.jpg" alt="" width="50" height="50" /></div>
+                <div className="un_manager_info">
+                  <p className="un_manager_name">勝野 裕子</p>
+                  <p className="un_manager_company">JTB総合研究所</p>
+                  <p className="un_manager_position">上席主任研究員</p>
+                </div>
+              </Link>
             </li>
             <li className="un_manager_item">
-              <div className="un_manager_img"><img src="/assets/dummy_maneger_img01.jpg" alt="" width="50" height="50" /></div>
-              <div className="un_manager_info">
-                <p className="un_manager_name">勝野 裕子</p>
-                <p className="un_manager_company">JTB総合研究所</p>
-                <p className="un_manager_position">上席主任研究員</p>
-              </div>
+              <Link href="#">
+                <div className="un_manager_img"><img src="/assets/dummy_maneger_img01.jpg" alt="" width="50" height="50" /></div>
+                <div className="un_manager_info">
+                  <p className="un_manager_name">勝野 裕子</p>
+                  <p className="un_manager_company">JTB総合研究所</p>
+                  <p className="un_manager_position">上席主任研究員</p>
+                </div>
+              </Link>
             </li>
             <li className="un_manager_item">
-              <div className="un_manager_img"><img src="/assets/dummy_maneger_img01.jpg" alt="" width="50" height="50" /></div>
-              <div className="un_manager_info">
-                <p className="un_manager_name">勝野 裕子</p>
-                <p className="un_manager_company">JTB総合研究所</p>
-                <p className="un_manager_position">上席主任研究員</p>
-              </div>
+              <Link href="#">
+                <div className="un_manager_img"><img src="/assets/dummy_maneger_img01.jpg" alt="" width="50" height="50" /></div>
+                <div className="un_manager_info">
+                  <p className="un_manager_name">勝野 裕子</p>
+                  <p className="un_manager_company">JTB総合研究所</p>
+                  <p className="un_manager_position">上席主任研究員</p>
+                </div>
+              </Link>
             </li>
           </ul>
         </div>

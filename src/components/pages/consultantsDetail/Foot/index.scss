@@ -1,0 +1,36 @@
+@use "@styles/settings" as *;
+
+.bl_detailFoot_consulList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: min(1.39vw, 20px);
+  overflow: hidden;
+}
+.bl_detailFoot_consulList .image {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 100vmax;
+  margin-bottom: 18px;
+}
+.bl_detailFoot_consulList .position {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.bl_detailFoot_consulList .name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (width < 768px) {
+  .bl_detailFoot_consulList {
+    display: flex;
+    gap: 5.56vw;
+  }
+  .bl_detailFoot_consulList .item {
+    width: 38.89vw;
+    flex-shrink: 0;
+  }
+  .bl_detailFoot_title {
+    flex-direction: column;
+  }
+}

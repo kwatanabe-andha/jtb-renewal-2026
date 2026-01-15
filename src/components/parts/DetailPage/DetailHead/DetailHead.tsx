@@ -26,7 +26,7 @@ export function DetailHead(
   { title, text, release, update, download, member, author }: DetailHeadType
 ) {
   return (
-    <div className='bl_detailHead'>
+    <section className='bl_detailHead'>
       <div className='bl_detailHead_inner'>
         <h1 className='bl_detailHead_title'>{title}</h1>
         { text && <p className='bl_detailHead_text'>{text}</p> }
@@ -71,6 +71,6 @@ export function DetailHead(
           )
         }
       </div>
-    </div>
+    </section>
   )
 }

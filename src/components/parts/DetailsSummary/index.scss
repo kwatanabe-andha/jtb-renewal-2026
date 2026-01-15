@@ -1,8 +1,8 @@
 @use "@styles/settings" as *;
 
-// .bl_details {
-
-// }
+.bl_details {
+  overflow: hidden;
+}
 
 .bl_details_summary {
   cursor: pointer;

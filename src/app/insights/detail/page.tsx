@@ -8,6 +8,7 @@ import Contact from "@/components/parts/Contact/Contact"
 import DetailTop from "@/components/parts/PageHead/DetailTop"
 import Article from "@/components/parts/DetailPage/Article/Article"
 import FootSlider from "@/components/parts/FootSlider/FootSlider"
+import getColumns from '@/fetch/getColumns'
 
 const breadcrumb = [
   {
@@ -46,16 +47,13 @@ const keywords = [
   { name: 'ワーケーション', url: '/' }
 ]
 
-const relArticles = [
-  { topics_id: 1, thumb: { url: '/assets/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
-  { topics_id: 2, thumb: { url: '/assets/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
-  { topics_id: 3, thumb: { url: '/assets/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
-  { topics_id: 4, thumb: { url: '/assets/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' }
-]
-
 const nav = {sections, keywords}
 
-export default function Page() {
+export default async function Page() {
+  const columnsData = await getColumns()
+  const { list } = columnsData
+  console.log(list)
+
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -91,7 +89,7 @@ export default function Page() {
         />
         <Article head={head} nav={nav} />
         <AuthorProfile />
-        <RelArticles list={relArticles} />
+        <RelArticles list={list} />
         <Series />
         <Contact />
         <FootSlider />

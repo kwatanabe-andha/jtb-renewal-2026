@@ -22,7 +22,7 @@ export default async function ColumnsList({ data }: Props) {
         </div>
 
         <div className='un_columnsList_list'>
-          <CardList list={list} />
+          <CardList list={list} pageInfo={pageInfo} pathname='/insights/series/' />
         </div>
       </Inner>
     </section>

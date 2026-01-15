@@ -16,12 +16,12 @@ export default function Card( { card }: Props ) {
         <div className='bl_card_img'>
           <div className='bl_card_thumb'>
             <Image src={`${card.thumb.url}`} alt={ card.thumb.desc } width={300} height={200} />
-            { card.article_type.key && <span className='bl_card_articleType'>{card.article_type.label}</span> }
+            { card.article_type?.key && <span className='bl_card_articleType'>{card.article_type.label}</span> }
           </div>
           { card.logo?.url && <div className='bl_card_logo'><Image src={ card.logo.url } alt={ card.logo.desc } width={100} height={100} /></div> }
         </div>
         <div className='bl_card_content'>
-          { card.content_type && <div className='bl_card_contentType'>{ card.content_type }</div> }
+          { card.group_nm && <div className='bl_card_contentType'>{ card.group_nm }</div> }
           {
             card.contents_type_nm && (
               <div className='bl_card_series'>

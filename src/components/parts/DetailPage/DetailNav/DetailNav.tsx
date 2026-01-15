@@ -23,7 +23,7 @@ export type DetailNavType = {
 
 export function DetailNav({ sections, keywords, className }: DetailNavType) {
   return (
-    <div className={clsx('bl_detailNav', className !== undefined && className)}>
+    <aside className={clsx('bl_detailNav', className !== undefined && className)}>
       <div className='bl_detailNav_inner'>
         <div className='bl_detailNav_member'>
           <LockIcon />
@@ -68,6 +68,6 @@ export function DetailNav({ sections, keywords, className }: DetailNavType) {
           </ul>
         </div>
       </div>
-    </div>
+    </aside>
   )
 }

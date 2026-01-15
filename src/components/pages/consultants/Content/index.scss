@@ -1,0 +1,87 @@
+@use "@styles/settings" as *;
+
+.un_consultants {
+  margin: 40px 0 200px;
+}
+.un_consultants_block {
+  margin-top: 70px;
+}
+.un_consultants_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.36vw 1.67vw;
+  margin-top: 40px;
+}
+.un_consultants_list .item a {
+  display: grid;
+  grid-template-columns: 6.25vw 1fr;
+  gap: 16px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+.un_consultants_list .item_img {
+  width: 6.25vw;
+  height: 6.25vw;
+  border-radius: 100vmax;
+  overflow: hidden;
+}
+.un_consultants_list .item_img img {
+  height: 100%;
+  object-fit: cover;
+}
+.un_consultants_list .item_content_position {
+  font-size: 12px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.un_consultants_list .item_content_name {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dadada;
+}
+.un_consultants_list .item_content_list {
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 10px;
+}
+.un_consultants_list .item_content_list .item {
+  position: relative;
+  color: #555;
+}
+.un_consultants_list .item_content_list .item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -12px;
+  background-image: url("data:image/svg+xml;utf8,\<svg xmlns='http://www.w3.org/2000/svg' width='9' height='16' viewBox='0 0 9 16' fill='none'>\<path d='M0.5 15.5L8 0.5' \stroke='%23666666' stroke-opacity='0.4' \stroke-linecap='round' stroke-linejoin='round'/>\</svg>");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 8px;
+  height: 15px;
+}
+@media (width < 768px) {
+  .un_consultants {
+    margin-bottom: 70px;
+  }
+  .un_consultants_block {
+    margin-top: 60px;
+  }
+  .un_consultants_list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 30px;
+  }
+  .un_consultants_list .item a {
+    grid-template-columns: 90px 1fr;
+  }
+  .un_consultants_list .item_img {
+    width: 90px;
+    height: 90px;
+  }
+}

@@ -30,7 +30,7 @@ export default function Article(
         author={head.author}
       />
 
-      <div className='bl_article_wrap'>
+      <section className='bl_article_wrap'>
         <div className='bl_article_container'>
           <DetailNav sections={nav.sections} keywords={nav.keywords} className='hp_hidden_down-sm' />
           <div className='bl_article_body'>
@@ -46,7 +46,7 @@ export default function Article(
             <Content />
           </div>
         </div>
-      </div>
+      </section>
 
     </article>
   )

@@ -3,7 +3,7 @@ import DetailsSummary from '@/components/parts/DetailsSummary/DetailsSummary'
 
 export default function Content(){
   return (
-    <div className="un_reportDetail_content">
+    <section className="un_reportDetail_content">
       <DetailsSummary
         className='un_reportDetail_acc'
         summary={{
@@ -119,6 +119,6 @@ export default function Content(){
           </>)
         }}
       />
-    </div>
+    </section>
   )
 }

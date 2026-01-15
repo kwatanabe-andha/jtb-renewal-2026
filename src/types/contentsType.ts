@@ -11,7 +11,7 @@ export type PageInfoType = {
   endPageNo: number
 }
 
-// export type CardType = {
+// export type BeforeCardType = {
 //   topics_id: number
 //   thumb: { desc: string, url: string }
 //   logo?: { desc: string, url: string }
@@ -36,7 +36,7 @@ export type CardType = {
   subject: string
   thumb: { desc: string, url: string }
   logo?: { desc: string, url: string }
-  content_type?: string
+  group_nm?: string
   contents_type_nm?: string
   contents_type_slug?: string
   series_custom?: string
@@ -55,8 +55,8 @@ export type FootCardType = {
   topics_id: number
   thumb: { desc: string, url: string }
   logo?: { desc: string, url: string }
-  category?: string
+  group_nm?: string
   subject: string
-  auxiliary?: string
+  excerpt?: string
   summary?: string
 }

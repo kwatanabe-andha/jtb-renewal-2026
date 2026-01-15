@@ -19,7 +19,7 @@ type Props = {
 
 const DEFAULT_HEIGHT_PC = 240
 const DEFAULT_HEIGHT_SP = 400
-const HIDDEN_HEIGHT_PC = 200
+const HIDDEN_HEIGHT_PC = 239
 const HIDDEN_HEIGHT_SP = 600
 
 const closing = (content: HTMLElement, height: number) => gsap.to(content, {
@@ -55,6 +55,7 @@ export default function Accordion(
     setHRef.current = gsap.quickSetter(target, 'height')
     const setAccordion = () => {
       const maxContentHeight = isPc() ? HIDDEN_HEIGHT_PC : HIDDEN_HEIGHT_SP
+      setHRef.current?.('auto')
       const targetHeight = target.clientHeight as number
       const isOver = targetHeight > maxContentHeight
       setIsOpen(!isOver)

@@ -64,7 +64,7 @@ export default function Page() {
         />
         <Article head={head} nav={nav} />
         <AuthorProfile />
-        <RelArticles list={relArticles} />
+        {/* <RelArticles list={relArticles} /> */}
         <Series />
         <Contact />
         <FootSlider />

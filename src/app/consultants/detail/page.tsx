@@ -8,7 +8,11 @@ import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
 
 const breadcrumb = [
   {
-    title:  'コンサルタント'
+    title:  'コンサルタント',
+    href: '/consultants/'
+  },
+  {
+    title:  '河野 まゆ子'
   }
 ]
 

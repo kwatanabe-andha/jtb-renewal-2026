@@ -2,6 +2,7 @@
 import './index.scss'
 import Accordion from "@/components/parts/Accordion/Accordion"
 import DetailsSummary from '@/components/parts/DetailsSummary/DetailsSummary'
+import '@/components/parts/Heading/level2.scss'
 
 export default function Content() {
   return (
@@ -122,11 +123,11 @@ export default function Content() {
                       <p>
                         国立公園の優れた自然の活用による地域活性化を目指し、地域事業者等との連携において、アドベンチャートラベルの要素を備えた体験の磨き上げ、商品化、販売ルートの構築、各種ルールの策定等の伴走支援を実施。
                       </p>
-                      <div className="person">
+                      <ul className="person">
                         <li className="person_item">黒須 宏志</li>
                         <li className="person_item">黒須 宏志</li>
                         <li className="person_item">黒須 宏志</li>
-                      </div>
+                      </ul>
                       <a className="bl_btnBig" href="#">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
@@ -160,11 +161,11 @@ export default function Content() {
                       <p>
                         国立公園の優れた自然の活用による地域活性化を目指し、地域事業者等との連携において、アドベンチャートラベルの要素を備えた体験の磨き上げ、商品化、販売ルートの構築、各種ルールの策定等の伴走支援を実施。
                       </p>
-                      <div className="person">
+                      <ul className="person">
                         <li className="person_item">黒須 宏志</li>
                         <li className="person_item">黒須 宏志</li>
                         <li className="person_item">黒須 宏志</li>
-                      </div>
+                      </ul>
                       <a className="bl_btnBig" href="#">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
@@ -199,11 +200,11 @@ export default function Content() {
                       <p>
                         国立公園の優れた自然の活用による地域活性化を目指し、地域事業者等との連携において、アドベンチャートラベルの要素を備えた体験の磨き上げ、商品化、販売ルートの構築、各種ルールの策定等の伴走支援を実施。
                       </p>
-                      <div className="person">
+                      <ul className="person">
                         <li className="person_item">黒須 宏志</li>
                         <li className="person_item">黒須 宏志</li>
                         <li className="person_item">黒須 宏志</li>
-                      </div>
+                      </ul>
                       <a className="bl_btnBig" href="#">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                           xmlns="http://www.w3.org/2000/svg">

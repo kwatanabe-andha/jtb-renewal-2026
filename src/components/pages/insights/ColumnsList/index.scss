@@ -12,3 +12,9 @@
 .un_columnsList_list {
   margin-top: 30px;
 }
+
+body {
+  @include breakpoint-up(md) {
+    zoom: 80%;
+  }
+}

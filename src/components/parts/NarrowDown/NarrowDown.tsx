@@ -1,4 +1,7 @@
+"use client"
+
 import './index.scss'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { Calendar, ChevronDown } from "@untitledui/icons"
 
 type Item = {
@@ -13,6 +16,16 @@ type Props = {
 }
 
 export default function NarrowDown({ title, list, years }:Props) {
+  const pathname = usePathname()
+  const router = useRouter()
+  const params = useSearchParams()
+
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newParams = new URLSearchParams(params.toString())
+    newParams.set('year', e.target.value.toString())
+    router.push(pathname ? `${pathname}?${newParams.toString()}` : `?${newParams.toString()}`)
+  }
+
   return (
     <form method='get' className='bl_nd'>
       <div className='bl_nd_left'>
@@ -37,7 +50,7 @@ export default function NarrowDown({ title, list, years }:Props) {
 
       <div className='bl_nd_years'>
         <div className='bl_nd_form'>
-          <select className='bl_nd_select' defaultValue='年度' name="year" aria-label='年度を選択してください'>
+          <select className='bl_nd_select' onChange={handleChange} defaultValue='年度' name="year" aria-label='年度を選択してください'>
             <option value="年度" disabled>年度</option>
             {
               years.map((year: number) => {

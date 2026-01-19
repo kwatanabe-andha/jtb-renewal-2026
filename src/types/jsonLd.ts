@@ -13,3 +13,17 @@ export type JsonLdCardType = {
     image?: string
   }
 }
+
+export type jsonLdCollectionPageType = {
+  "@context": string
+  "@type": string
+  name: string
+  description: string
+  url: string
+  mainEntity: {
+      "@type": string
+      itemListOrder: string
+      numberOfItems: number
+      itemListElement: JsonLdCardType[]
+  }
+}

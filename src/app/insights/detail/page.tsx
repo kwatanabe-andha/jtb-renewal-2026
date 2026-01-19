@@ -8,7 +8,7 @@ import Contact from "@/components/parts/Contact/Contact"
 import DetailTop from "@/components/parts/PageHead/DetailTop"
 import Article from "@/components/parts/DetailPage/Article/Article"
 import FootSlider from "@/components/parts/FootSlider/FootSlider"
-import getColumns from '@/fetch/getColumns'
+import getInsights from '@/fetch/getInsights'
 
 const breadcrumb = [
   {
@@ -50,7 +50,7 @@ const keywords = [
 const nav = {sections, keywords}
 
 export default async function Page() {
-  const columnsData = await getColumns()
+  const columnsData = await getInsights()
   const { list } = columnsData
   console.log(list)
 

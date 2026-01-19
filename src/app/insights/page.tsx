@@ -4,9 +4,8 @@ import ColumnsList from "@/components/pages/insights/ColumnsList/ColumnsList"
 import Series from "@/components/pages/insights/Series/Series"
 import SideNav from "@/components/parts/SideNav/SideNav"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
-import getColumns from '@/fetch/getColumns'
+import getInsightsSeries from '@/fetch/getInsightsSeries'
 import { CardType } from '@/types/contentsType'
-import { JsonLdCardType } from '@/types/jsonLd'
 
 const breadcrumb = [ { title: 'コラム' } ]
 
@@ -16,8 +15,7 @@ export const metadata = {
 }
 
 export default async function Page() {
-  const columnsData = await getColumns()
-  const { list, pageInfo } = columnsData
+  const SeriesData = await getInsightsSeries()
 
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
@@ -38,38 +36,6 @@ export default async function Page() {
     ]
   }
 
-  const pageList = list.map((item: CardType, index: number) => {
-    const obj: JsonLdCardType = {
-        "@type": "ListItem",
-        position: index + 1,
-        item: {
-          "@type": "BlogPosting",
-          headline: item.subject,
-          url: `https://www.tourism.jp/insights/${item.topics_id}/`,
-          datePublished: item.ymd,
-          image: item.thumb.url
-        }
-      }
-    if (item.author_external_name && item.author_external_name.length > 0) {
-      obj.item.author = { "@type": "Person", "name": `${item.author_external_name[0]}` }
-    }
-    return obj
-  })
-
-  const jsonLdCards = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: "コラム",
-    description: "最新の記事",
-    url: "https://www.tourism.jp/insights/series/",
-    mainEntity: {
-      "@type": "ItemList",
-      itemListOrder: "https://schema.org/ItemListOrderDescending",
-      numberOfItems: pageInfo.totalCnt,
-      itemListElement: pageList
-    }
-  }
-
   return (
     <>
       <Breadcrumb data={breadcrumb} />
@@ -79,8 +45,8 @@ export default async function Page() {
         </RegionTop>
 
         <SideNav>
-          <ColumnsList data={columnsData} />
-          <Series />
+          <ColumnsList pathname='/insights/' />
+          <Series data={SeriesData.list} />
         </SideNav>
       </section>
       <Breadcrumb data={breadcrumb} footer />
@@ -92,13 +58,7 @@ export default async function Page() {
             __html: JSON.stringify(jsonLdBreadcrumb).replace(/</g, '\\u003c'),
           }}
         />
-      <Script
-        id="jsonld-collectionPage"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLdCards).replace(/</g, '\\u003c'),
-        }}
-      />
+      
     </>
   )
 }

@@ -7,10 +7,11 @@ type Props = {
   data: {
     list: CardType[]
     pageInfo: PageInfoType
-  }
+  },
+  pathname: string
 }
 
-export default async function ColumnsList({ data }: Props) {
+export default async function ColumnsList({ data, pathname }: Props) {
   const { list, pageInfo } = data
 
   return (
@@ -22,7 +23,7 @@ export default async function ColumnsList({ data }: Props) {
         </div>
 
         <div className='un_columnsList_list'>
-          <CardList list={list} pageInfo={pageInfo} pathname='/insights/series/' />
+          <CardList list={list} pageInfo={pageInfo} pathname={pathname} />
         </div>
       </Inner>
     </section>

@@ -4,12 +4,12 @@ import ColumnsList from "@/components/pages/insights/ColumnsList/ColumnsList"
 import Series from "@/components/pages/insights/Series/Series"
 import SideNav from "@/components/parts/SideNav/SideNav"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
-import getColumns from '@/fetch/getColumns'
+import getInsights from '@/fetch/getInsights'
 import { CardType } from '@/types/contentsType'
 import { JsonLdCardType } from '@/types/jsonLd'
 
 export async function generateStaticParams() {
-  const { pageInfo } = await getColumns()
+  const { pageInfo } = await getInsights()
   const paramsID = []
   for (let i: number = 0; i < pageInfo.totalPageCnt; i++) {
     paramsID.push({ pageID: String(i + 1) })
@@ -27,7 +27,7 @@ export const metadata = {
 
 export default async function Page({ params }: { params: { pageID: string }}) {
   const { pageID } = await params
-  const columnsData = await getColumns({ pageID: pageID })
+  const columnsData = await getInsights({ pageID: pageID })
   const { list, pageInfo } = columnsData
 
   const jsonLdBreadcrumb = {

@@ -9,41 +9,9 @@ import ViewMore from "@/components/parts/ViewMore/ViewMore"
 import { useState, useRef } from 'react'
 import toDateTimeFormat from '@/lib/toDateTimeFormat'
 import { opening, closing } from '@/lib/heightAnim'
+import { SeriesType } from '@/types/zodType'
 
-const data = [
-  {
-    id: 1,
-    logo: '/assets/series_logo_01.jpg',
-    title: 'ツーリズム×○。観光に様々な概念をクロスさせ、新しい価値や仕組みを考えます',
-    date: '2025-01-10'
-  },
-  {
-    id: 2,
-    logo: '/assets/series_logo_02.jpg',
-    title: '旅行者の日常と非日常の間にある "線" に着目し、"旅" への捉え方や視点を考えます',
-    date: '2025-01-10'
-  },
-  {
-    id: 3,
-    logo: '/assets/series_logo_03.jpg',
-    title: '"5年先の旅のカタチ" を探るために、異業種の第一人者へ取材、変化の"芽" を捉えます',
-    date: '2025-01-10'
-  },
-  {
-    id: 4,
-    logo: '/assets/series_logo_01.jpg',
-    title: 'JTB総研に在籍する各観光分野のエキスパートによるインサイト＆コラム',
-    date: '2025-01-10'
-  },
-  {
-    id: 5,
-    logo: '/assets/series_logo_02.jpg',
-    title: 'JTB総研の研究員が、日々のリサーチや現場での気づき、小さな "観光のヒント" をラフに綴ります',
-    date: '2025-01-10'
-  },
-]
-
-export default function Series() {
+export default function Series({data} : {data: SeriesType[]}) {
   const [isOpen, setIsOpen] = useState(false)
   const hiddenRef = useRef<HTMLElement>(null)
 
@@ -52,55 +20,68 @@ export default function Series() {
     if (isOpen) { closing(hiddenDom) } else { opening(hiddenDom) }
   }
 
+  const openSeries = data.filter(item => item.status.key === 'open' )
+  const closeSeries = data.filter(item => item.status.key === 'close' )
+
   return (
     <div className='un_series'>
       <Inner className='un_series_inner'>
-        <section className='un_series_sec'>
-          <div className='un_series_heading'><Level2>現在連載中のシリーズ</Level2></div>
-          <ul className='un_series_list'>
-            {
-              data.map(item => {
-                return (
-                  <li key={item.id}>
-                    <Link href=''>
-                      <div className="un_series_img"><Image src={item.logo} alt='' width={195} height={195} /></div>
-                      <p className='un_series_title'>{item.title}</p>
-                      <div className='un_series_date'><time dateTime={item.date}>{ toDateTimeFormat(item.date) }</time></div>
-                    </Link>
-                  </li>
-                )
-              })
-            }
-          </ul>
-        </section>
+        {
+          openSeries.length > 0 && (
+            <section className='un_series_sec'>
+              <div className='un_series_heading'><Level2>現在連載中のシリーズ</Level2></div>
+              <ul className='un_series_list'>
+                {
+                  data.map(item => {
+                    return (
+                      <li key={item.topics_id}>
+                        <Link href={`/insights/series/${item.slug}/`}>
+                          <div className="un_series_img"><Image src={item.series_logo.url} alt={item.series_logo.desc} width={195} height={195} /></div>
+                          <p className='un_series_title'>{item.subject}</p>
+                          <div className='un_series_date'><time dateTime={item.ymd}>{ toDateTimeFormat(item.ymd) }</time></div>
+                        </Link>
+                      </li>
+                    )
+                  })
+                }
+              </ul>
+            </section>
+          )
+        }
 
-        <section className='un_series_sec' ref={hiddenRef} aria-hidden='true'>
-          <div className='un_series_heading'><Level2>連載が終了したシリーズ</Level2></div>
-          <ul className='un_series_list'>
-            {
-              data.map(item => {
-                return (
-                  <li key={item.id}>
-                    <Link href=''>
-                      <div className="un_series_img"><Image src={item.logo} alt='' width={195} height={195} /></div>
-                      <p className='un_series_title'>{item.title}</p>
-                      <div className='un_series_date'><time dateTime={item.date}>{ toDateTimeFormat(item.date) }</time></div>
-                    </Link>
-                  </li>
-                )
-              })
-            }
-          </ul>
-        </section>
+        {
+          closeSeries.length > 0 && (
+            <>
+              <section className='un_series_sec' ref={hiddenRef} aria-hidden='true'>
+                <div className='un_series_heading'><Level2>連載が終了したシリーズ</Level2></div>
+                <ul className='un_series_list'>
+                  {
+                    data.map(item => {
+                      return (
+                        <li key={item.topics_id}>
+                          <Link href={`/insights/series/${item.slug}/`}>
+                            <div className="un_series_img"><Image src={item.series_logo.url} alt={item.series_logo.desc} width={195} height={195} /></div>
+                            <p className='un_series_title'>{item.subject}</p>
+                            <div className='un_series_date'><time dateTime={item.ymd}>{ toDateTimeFormat(item.ymd) }</time></div>
+                          </Link>
+                        </li>
+                      )
+                    })
+                  }
+                </ul>
+              </section>
 
-        <ViewMore
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          openedText='連載が終了したシリーズを閉じる'
-          closedText='連載が終了したシリーズをみる'
-          className='un_series_btn'
-          callback={handleClick}
-        />
+              <ViewMore
+                isOpen={isOpen}
+                setIsOpen={setIsOpen}
+                openedText='連載が終了したシリーズを閉じる'
+                closedText='連載が終了したシリーズをみる'
+                className='un_series_btn'
+                callback={handleClick}
+              />
+            </>
+          )
+        }
       </Inner>
     </div>
   )

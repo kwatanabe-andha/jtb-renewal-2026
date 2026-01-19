@@ -2,7 +2,8 @@ import './list.scss'
 import Card from './Card'
 import { CardType } from '@/types/contentsType'
 import { PagerType } from '@/types/pager' 
-import Pager from '../Pager/Pager'
+import PagerRouter from '../Pager/PagerRouter'
+// import Pager from '../Pager/Pager'
 
 export type CardListType = {
   list: CardType[]
@@ -26,7 +27,7 @@ export default function CardList({ list, pageInfo, pathname }: CardListType) {
           })
         }
       </ul>
-      <Pager pageInfo={pageInfo} pathname={pathname} />
+      <PagerRouter pageInfo={pageInfo} pathname={pathname} />
     </>
   )
 }

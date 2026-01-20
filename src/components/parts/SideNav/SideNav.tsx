@@ -1,14 +1,14 @@
-"use client";
+"use client"
 
 import './index.scss'
 import { ReactNode, useRef, CSSProperties } from 'react'
 import Image from 'next/image'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useGSAP } from '@gsap/react';
-import ScrollBar from '@components/parts/ScrollBar/ScrollBar';
+import { useGSAP } from '@gsap/react'
+import ScrollBar from '@components/parts/ScrollBar/ScrollBar'
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 type Props = {
   children: ReactNode;

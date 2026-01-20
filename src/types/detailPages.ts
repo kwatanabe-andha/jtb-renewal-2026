@@ -22,9 +22,9 @@ export type ArticleHead = {
   guest?: GuestType[]
 }
 
-const AuthorProfileSchema = z.object({
-  name: z.string(),
-  title: z.string(),
-  profile: z.string(),
-})
-export type AuthorProfileType = z.infer<typeof AuthorProfileSchema>
+export type AuthorProfileType = {
+  name?: string
+  img?: string
+  title?: string
+  profile?: string
+}

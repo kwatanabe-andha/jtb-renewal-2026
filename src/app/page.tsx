@@ -7,8 +7,6 @@ export default async function Home() {
   // const response = await fetch(url, {credentials: 'omit'})
   // const data = await response.json()
   // const totalPages = await response.headers.get('x-wp-totalpages')
-  // console.log(data)
-  // console.log(totalPages)
 
   return (
     <div className=''>

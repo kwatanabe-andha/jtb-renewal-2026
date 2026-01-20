@@ -31,7 +31,6 @@ export async function generateMetadata({ params }: { params: { seriesID: string 
 export default async function Page({ params }: { params: { seriesID: string }}) {
   const { seriesID } = await params
   const { details } = await getInsightsSeriesDetail(seriesID)
-  console.log(seriesID)
   const columnsData = await getInsightsStatic({ category: details.slug })
   const { list, pageInfo } = columnsData
 

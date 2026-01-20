@@ -5,12 +5,7 @@ import Download from '@/components/parts/Download/Download'
 import toDateTimeFormat from '@/lib/toDateTimeFormat'
 import { SITE_URL } from '@/config/site'
 import LockIcon from '@/icon/Lock/Lock'
-
-type Author = {
-  name: string
-  img?: string
-  text?: string
-}
+import { AuthorProfileType } from '@/types/detailPages'
 
 export type DetailHeadType = {
   title: string
@@ -19,7 +14,7 @@ export type DetailHeadType = {
   update?: string
   download?: string
   login?: boolean
-  author?: Author[]
+  author?: AuthorProfileType[]
 }
 
 export function DetailHead(
@@ -39,7 +34,7 @@ export function DetailHead(
                 <div className='bl_detailHead_author_content'>
                   <div className='bl_detailHead_author_tag'>寄稿</div>
                   <div className='bl_detailHead_author_name'>{item.name}</div>
-                  { item.text && <p className='bl_detailHead_author_text'>{item.text}</p> }
+                  { item.title && <p className='bl_detailHead_author_text'>{item.title}</p> }
                 </div>
               </div>
             )

@@ -1,4 +1,5 @@
 import './list.scss'
+import { Suspense } from 'react'
 import Card from './Card'
 import { CardType } from '@/types/contentsType'
 import { PagerType } from '@/types/pager' 
@@ -27,7 +28,9 @@ export default function CardList({ list, pageInfo, pathname }: CardListType) {
           })
         }
       </ul>
-      <PagerRouter pageInfo={pageInfo} pathname={pathname} />
+      <Suspense>
+        <PagerRouter pageInfo={pageInfo} pathname={pathname} />
+      </Suspense>
     </>
   )
 }

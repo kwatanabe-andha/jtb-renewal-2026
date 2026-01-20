@@ -10,11 +10,11 @@ import Inner from '@components/parts/Inner/Inner'
 import LinkButton from '@components/parts/LinkButton/LinkButton'
 import ScrollBar from '@components/parts/ScrollBar/ScrollBar'
 import FootCard from '@components/parts/Card/FootCard'
-import { FootCardType } from '@/types/contentsType'
+import { CardType } from '@/types/contentsType'
 import SliderWrap from "@/components/parts/SliderWrap/SliderWrap";
 
 type Props = {
-  list: FootCardType[]
+  list: CardType[]
   content?: string
 }
 
@@ -51,7 +51,7 @@ export default function FootSlider({ list, content }: Props) {
               <ul className='bl_detailFoot_list'>
                 <ScrollBar>
                   {
-                    list.map((card: FootCardType) => {
+                    list.map((card: CardType) => {
                       return (
                         <li key={card.topics_id}>
                           <FootCard
@@ -78,7 +78,7 @@ export default function FootSlider({ list, content }: Props) {
                   navigation={{ nextEl: ".bl_sliderWrap_next", prevEl: ".bl_sliderWrap_prev" }}
                 >
                   {
-                    list.map((card: FootCardType) => {
+                    list.map((card: CardType) => {
                       return (
                         <SwiperSlide key={card.topics_id}>
                           <FootCard

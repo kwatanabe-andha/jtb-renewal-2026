@@ -67,7 +67,6 @@ export default function ColumnsList({ pathname }: Props) {
       const queryParams = new URLSearchParams(window.location.search)
       const query = { pageID: queryParams.get('pageID') || '1', year: queryParams.get('year') || null }
       const { list, pageInfo } = await getInsights(query)
-      console.log(list)
       if (list) {
         setLoading(true)
         setData(list)
@@ -84,7 +83,9 @@ export default function ColumnsList({ pathname }: Props) {
         <h2 className='el_hidden'>コラム一覧</h2>
         <Inner className='un_columnsList_inner'>
           <div className='un_columnsList_nd'>
-            <NarrowDown title='注目キーワードで絞り込み' list={keywords} />
+            <Suspense>
+              <NarrowDown title='注目キーワードで絞り込み' list={keywords} />
+            </Suspense>
           </div>
 
           <Suspense fallback={<p>Loading...</p>}>

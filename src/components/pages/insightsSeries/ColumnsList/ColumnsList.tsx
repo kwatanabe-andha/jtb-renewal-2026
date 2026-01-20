@@ -1,4 +1,5 @@
 import './index.scss'
+import { Suspense } from 'react'
 import Inner from "@/components/parts/Inner/Inner"
 import CardList from '@/components/parts/Card/CardList'
 import { CardType, PageInfoType } from '@/types/contentsType'
@@ -23,7 +24,9 @@ export default async function ColumnsList({ data, pathname }: Props) {
         </div>
 
         <div className='un_columnsList_list'>
-          <CardList list={list} pageInfo={pageInfo} pathname={pathname} />
+          <Suspense fallback={<p>Loading...</p>}>
+            <CardList list={list} pageInfo={pageInfo} pathname={pathname} />
+          </Suspense>
         </div>
       </Inner>
     </section>

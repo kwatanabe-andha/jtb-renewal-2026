@@ -12,7 +12,7 @@ import getInsightsStatic from '@/fetch/static/getInsightsStatic'
 import getInsightsDetail from '@/fetch/static/getInsightsDetail'
 import { GlossaryType } from '@/types/zodType'
 import { CardType } from '@/types/contentsType'
-import { KeywordType, ArticleHead } from '@/types/detailPages'
+import { KeywordType, ArticleHead, AuthorProfileType } from '@/types/detailPages'
 import { getH2FromHtml } from '@/lib/getH2FromHtml'
 
 export async function generateStaticParams() {
@@ -38,8 +38,6 @@ export default async function Page({ params }: { params: { slug: string }}) {
   const { slug } = await params
   const { details, category, related_glossary } = await getInsightsDetail(slug)
   const { list } = await getInsightsStatic({ all: true })
-
-  // console.log(details)
 
   const breadcrumb = [
   {
@@ -83,17 +81,19 @@ export default async function Page({ params }: { params: { slug: string }}) {
     update: details.update_ymdhi.split('T')[0],
     // download: 'https://tourism.g.kuroco-img.app/v=1766049351/files/topics/4_ext_8_0.pdf',
     login: true,
-    author: [] as { name: string, img?: string, text?: string }[]
+    author: [] as AuthorProfileType[]
   }
 
+  const author: AuthorProfileType[] = []
+
   details.author_external_name?.forEach((item: string, index: number) => {
-    console.log(details.author_external_name[index])
-    head.author.push({
-      name: details.author_external_name[index],
+    author.push({
+      name: details.author_external_name[index] as string,
       // img: details,
-      text: details.author_external_title[index]
+      title: details.author_external_title[index] as string
     })
   })
+  head.author = author
 
   // nav
   const keywords = related_glossary.map((glossary: GlossaryType) => {
@@ -140,10 +140,6 @@ export default async function Page({ params }: { params: { slug: string }}) {
           contents_default={details.contents_default}
           article_type={details.article_type.key}
         />
-        {
-          details.author_external_name && details.author_external_name > 0 &&
-          <AuthorProfile name={details.author_external_name} title={details.author_external_title} profile={details.author_external_profile} />
-        }
         {
           details.related_posts > 0 &&
           <RelArticles list={details.related_posts} />

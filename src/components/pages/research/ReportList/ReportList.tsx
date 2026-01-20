@@ -1,4 +1,5 @@
 import './index.scss'
+import { Suspense } from 'react'
 import Level2 from "@/components/parts/Heading/Level2"
 import Inner from "@/components/parts/Inner/Inner"
 import NarrowDown from '@/components/parts/NarrowDown/NarrowDown'
@@ -42,11 +43,15 @@ export default async function ReportList() {
         <Level2>すべての調査</Level2>
 
         <div className='un_reportList_nd'>
-          <NarrowDown title='注目キーワードで絞り込み' list={keywords} />
+          <Suspense>
+            <NarrowDown title='注目キーワードで絞り込み' list={keywords} />
+          </Suspense>
         </div>
 
         <div className='un_reportList_list'>
-          <CardList list={list} pageInfo={pageInfo} pathname={'/research-reports/'} />
+          <Suspense fallback={<p>Loading...</p>}>
+            <CardList list={list} pageInfo={pageInfo} pathname={'/research-reports/'} />
+          </Suspense>
         </div>
       </Inner>
     </section>

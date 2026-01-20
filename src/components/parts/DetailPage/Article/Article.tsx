@@ -6,7 +6,8 @@ import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import { DetailHead, DetailHeadType } from '@/components/parts/DetailPage/DetailHead/DetailHead'
 import { DetailNav, DetailNavType } from '@/components/parts/DetailPage/DetailNav/DetailNav'
-import { ArticleHead, GuestType } from '@/types/detailPages'
+import { ArticleHead, GuestType, AuthorProfileType } from '@/types/detailPages'
+import AuthorProfile from "@/components/pages/insightsDetail/AuthorProfile/AuthorProfile"
 import Accordion from "@/components/parts/Accordion/Accordion"
 
 type Props = {
@@ -24,12 +25,12 @@ export default function Article(
   const contentRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (!contentRef.current) return
+    // if (!contentRef.current) return
 
-    const h2List = contentRef.current.querySelectorAll('h2')
-    h2List.forEach((h2, index) => {
-      h2.id = `section${index + 1}`
-    })
+    // const h2List = contentRef.current.querySelectorAll('h2')
+    // h2List.forEach((h2, index) => {
+    //   h2.id = `section${index + 1}`
+    // })
   }, [])
 
   return (
@@ -84,17 +85,19 @@ export default function Article(
 
             {
               contents_default && article_type === 'interview' && (
-                <div className='bl_article_talk' ref={contentRef} dangerouslySetInnerHTML={{ __html: contents_default }}></div>
+                <div className='bl_article_talk js_content' ref={contentRef} dangerouslySetInnerHTML={{ __html: contents_default }}></div>
               )
             }
 
             {
               contents_default && article_type !== 'interview' && (
-                <div className='bl_article_content' ref={contentRef} dangerouslySetInnerHTML={{ __html: contents_default }}></div>
+                <div className='bl_article_content js_content' ref={contentRef} dangerouslySetInnerHTML={{ __html: contents_default }}></div>
               )
             }
           </div>
         </div>
+
+        { head.author && <AuthorProfile author={head.author} /> }
       </div>
     </article>
   )

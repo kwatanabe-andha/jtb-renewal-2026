@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import Script from 'next/script'
 import RegionTop from "@/components/parts/PageHead/RegionTop"
 import ColumnsList from "@/components/pages/insights/ColumnsList/ColumnsList"
@@ -37,18 +38,20 @@ export default async function Page() {
 
   return (
     <>
-      <Breadcrumb data={breadcrumb} />
-      <section>
-        <RegionTop en='COLUMNS' jp='コラム' page="columns">
-          {'旬な話題をコラムとしてお届けします'}
-        </RegionTop>
+      <Suspense>
+        <Breadcrumb data={breadcrumb} />
+        <section>
+          <RegionTop en='COLUMNS' jp='コラム' page="columns">
+            {'旬な話題をコラムとしてお届けします'}
+          </RegionTop>
 
-        <SideNav>
-          <ColumnsList pathname='/insights/' />
-          <Series data={SeriesData.list} />
-        </SideNav>
-      </section>
-      <Breadcrumb data={breadcrumb} footer />
+          <SideNav>
+            <ColumnsList pathname='/insights/' />
+            <Series data={SeriesData.list} />
+          </SideNav>
+        </section>
+        <Breadcrumb data={breadcrumb} footer />
+      </Suspense>
 
       <Script
           id="jsonld-breadcrumbList"

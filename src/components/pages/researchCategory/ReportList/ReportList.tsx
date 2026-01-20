@@ -1,4 +1,5 @@
 import './index.scss'
+import { Suspense } from 'react'
 import Inner from "@/components/parts/Inner/Inner"
 import NarrowDown from '@/components/parts/NarrowDown/NarrowDown'
 import CardList from '@/components/parts/Card/CardList'
@@ -42,11 +43,15 @@ export default async function ReportList() {
       <Inner className='un_reportList_inner'>
 
         <div className='un_reportList_nd'>
-          <NarrowDown title='注目キーワードで絞り込み' list={keywords} />
+          <Suspense>
+            <NarrowDown title='注目キーワードで絞り込み' list={keywords} />
+          </Suspense>
         </div>
 
         <div className='un_reportList_list'>
-          <CardList list={list} pageInfo={pageInfo} pathname={'/research-reports/category/'} />
+          <Suspense fallback={<p>Loading...</p>}>
+            <CardList list={list} pageInfo={pageInfo} pathname={'/research-reports/category/'} />
+          </Suspense>
         </div>
       </Inner>
     </section>

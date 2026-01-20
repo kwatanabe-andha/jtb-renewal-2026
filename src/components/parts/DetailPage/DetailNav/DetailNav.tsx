@@ -1,10 +1,17 @@
+"use client"
+
 import Link from 'next/link'
-import clsx from 'clsx';
+import clsx from 'clsx'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
 import './index.scss'
 import { SITE_URL } from '@/config/site'
 import LockIcon from '@/icon/Lock/Lock'
 import { Hash01 } from "@untitledui/icons"
-import { KeywordType } from '@/types/detailPages';
+import { KeywordType } from '@/types/detailPages'
+
+gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 export type DetailNavType = {
   sections : string[]
@@ -14,9 +21,57 @@ export type DetailNavType = {
 }
 
 export function DetailNav({ sections, keywords, className, numbering }: DetailNavType) {
+  useGSAP(() => {
+    // const mm = gsap.matchMedia()
+    const wrap = document.querySelector('.bl_article_wrap') as HTMLElement
+    // const nav = document.querySelector('.js_detailNav') as HTMLElement
+    const h2List = document.querySelectorAll('.js_content h2')
+    const anchorList = document.querySelectorAll('.bl_detailNav_list_item')
+    const reset = () => {
+      anchorList.forEach(item => {
+        const target = item as HTMLLinkElement
+        target.dataset.current = 'false'
+      })
+    }
+
+    // mm.add('(min-width: 768px)', () => {
+    //   ScrollTrigger.create({
+    //     trigger: nav,
+    //     start: 'top-=50 top',
+    //     end: 'bottom bottom',
+    //     pin: true,
+    //     pinSpacing: false,
+    //     // markers: true,
+    //     onEnter: () => { console.log('onEnter') },
+    //     onLeave: () => { console.log('onLeave') },
+    //   })
+    // })
+
+    h2List.forEach((item, index: number) => {
+      ScrollTrigger.create({
+        trigger: item,
+        start: 'top top',
+        onEnter: () => {
+          reset()
+          const target = anchorList[index] as HTMLLinkElement
+          target.dataset.current = 'true'
+        },
+        onLeaveBack: () => {
+          reset()
+          const target = anchorList[index] as HTMLLinkElement
+          target.dataset.current = 'true'
+        }
+      })
+    })
+
+    const observer = new ResizeObserver(() => {
+      ScrollTrigger.refresh()
+    })
+    observer.observe(wrap)
+  }, [])
 
   return (
-    <aside className={clsx('bl_detailNav', className !== undefined && className)}>
+    <aside className={clsx('bl_detailNav js_detailNav', className !== undefined && className)}>
       <div className='bl_detailNav_inner'>
         <div className='bl_detailNav_member'>
           <LockIcon />

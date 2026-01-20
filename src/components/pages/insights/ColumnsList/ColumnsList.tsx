@@ -92,7 +92,7 @@ export default function ColumnsList({ pathname }: Props) {
             {
               data.length > 0 && info && (
                 <div className='un_columnsList_list'>
-                  <CardList list={data} pageInfo={info} pathname={pathname} />
+                  <CardList list={data} pageInfo={info} pathname={pathname} router />
                 </div>
               )
             }

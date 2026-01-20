@@ -50,7 +50,7 @@ export default async function ReportList() {
 
         <div className='un_reportList_list'>
           <Suspense fallback={<p>Loading...</p>}>
-            <CardList list={list} pageInfo={pageInfo} pathname={'/research-reports/'} />
+            <CardList list={list} pageInfo={pageInfo} pathname={'/research-reports/'} router />
           </Suspense>
         </div>
       </Inner>

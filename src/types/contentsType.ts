@@ -34,6 +34,8 @@ export type CardType = {
   topics_id: number
   ymd: string
   subject: string
+  topics_group_id: number
+  slug?: string
   thumb: { desc: string, url: string }
   logo?: { desc: string, url: string }
   group_nm?: string
@@ -42,6 +44,7 @@ export type CardType = {
   series_custom?: string
   organization?: string
   article_type: { key?: string, label?: string }
+  index_numbering?: boolean
   excerpt?: string
   summary?: string
   // author?: string

@@ -4,19 +4,22 @@ import './index.scss'
 import Download from '../Download/Download'
 import toDateTimeFormat from '@/lib/toDateTimeFormat'
 import { CardType } from '@/types/contentsType'
+import { TOPICS_GROUP_ID } from '@/config/site'
 
 type Props = {
   card: CardType
 }
 
 export default function Card( { card }: Props ) {
+  const groupID = card.topics_group_id.toString()
+  const pathname = TOPICS_GROUP_ID[groupID]
+
   return (
     <article className='bl_card'>
-      <Link href={'/'} className='bl_card_container'>
+      <Link href={`/${pathname}/${card.slug}/`} className='bl_card_container'>
         <div className='bl_card_img'>
           <div className='bl_card_thumb'>
             <Image src={`${card.thumb.url}`} alt={ card.thumb.desc } width={300} height={200} />
-            { card.article_type?.key && <span className='bl_card_articleType'>{card.article_type.label}</span> }
           </div>
           { card.logo?.url && <div className='bl_card_logo'><Image src={ card.logo.url } alt={ card.logo.desc } width={100} height={100} /></div> }
         </div>

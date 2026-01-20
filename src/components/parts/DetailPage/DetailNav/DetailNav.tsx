@@ -4,24 +4,17 @@ import './index.scss'
 import { SITE_URL } from '@/config/site'
 import LockIcon from '@/icon/Lock/Lock'
 import { Hash01 } from "@untitledui/icons"
-
-type Keyword = {
-  name: string,
-  url: string
-}
-
-type Section = {
-  title: string,
-  number?: number
-}
+import { KeywordType } from '@/types/detailPages';
 
 export type DetailNavType = {
-  sections : Section[]
-  keywords?: Keyword[]
+  sections : string[]
+  keywords?: KeywordType[]
   className?: string
+  numbering: boolean
 }
 
-export function DetailNav({ sections, keywords, className }: DetailNavType) {
+export function DetailNav({ sections, keywords, className, numbering }: DetailNavType) {
+
   return (
     <aside className={clsx('bl_detailNav', className !== undefined && className)}>
       <div className='bl_detailNav_inner'>
@@ -34,14 +27,14 @@ export function DetailNav({ sections, keywords, className }: DetailNavType) {
           <h2 className='bl_detailNav_title'>目次</h2>
           <ul className='bl_detailNav_list'>
             {
-              sections.map((section: Section, index: number) => {
+              sections.map((section: string, index: number) => {
                 let current = false
                 return (
                   <li key={index}>
                     { index === 0 && (current = true) }
-                    <Link href={`#section${index}`} className='bl_detailNav_list_item' data-current={`${current}`}>
-                      { section.number && <div className='bl_detailNav_list_number'>{section.number}</div> }
-                      <p className='bl_detailNav_list_text'>{section.title}</p>
+                    <Link href={`#section${index + 1}`} className='bl_detailNav_list_item' data-current={`${current}`}>
+                      { numbering && <div className='bl_detailNav_list_number'>{index + 1}</div> }
+                      <p className='bl_detailNav_list_text'>{section}</p>
                     </Link>
                   </li>
                 )
@@ -54,12 +47,12 @@ export function DetailNav({ sections, keywords, className }: DetailNavType) {
           <div className='bl_detailNav_keyword'>関連キーワード</div>
           <ul className='bl_detailNav_rel_list'>
             {
-              keywords?.map((keyword: Keyword, index: number) => {
+              keywords?.map((keyword: KeywordType, index: number) => {
                 return (
                   <li key={index}>
-                    <Link href={keyword.url}>
+                    <Link href={`/glossary/${keyword.slug}/`}>
                       <Hash01 width={10} height={10} />
-                      {keyword.name}
+                      {keyword.subject}
                     </Link>
                   </li>
                 )

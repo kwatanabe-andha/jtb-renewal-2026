@@ -4,8 +4,9 @@ import './index.scss'
 import Image from 'next/image'
 import Inner from "@/components/parts/Inner/Inner"
 import Accordion from "@/components/parts/Accordion/Accordion"
+import { AuthorProfileType } from '@/types/detailPages'
 
-export default function AuthorProfile() {
+export default function AuthorProfile({ name, title, profile }: AuthorProfileType) {
   return (
     <Inner className='un_authorProfile'>
       <section className='un_authorProfile_container'>
@@ -17,16 +18,16 @@ export default function AuthorProfile() {
         </div>
         <div className='un_authorProfile_body'>
           <div className='un_authorProfile_name'>
-            山下 真輝<span>さん</span>
+            { name }<span>さん</span>
           </div>
-          <p className='un_authorProfile_position'>JTB総合研究所 フェロー</p>
+          <p className='un_authorProfile_position'>{ title }</p>
 
           <Accordion
             openedText='閉じる'
             closedText='もっと見る'
             targetClassName='un_authorProfile_text'
           >
-            <p>観光による地域活性化のための計画・戦略の策定、人材育成、旅行商品開発を専門とする。近年はスポーツツーリズム、アドベンチャーツーリズム分野の調査研究も手掛ける。内閣府地域活性化伝道師として全国の観光振興政策を支援。観光による地域活性化のための計画・戦略の策定、人材育成、旅行商品開発を専門とする。近年はスポーツツーリズム、アドベンチャーツーリズム分野の調査研究も手掛ける。内閣府地域活性化伝道師として全国の観光振興政策を支援。</p>
+            <p>{ profile }</p>
           </Accordion>
         </div>
       </section>

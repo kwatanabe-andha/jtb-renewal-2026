@@ -4,8 +4,7 @@ import ColumnsList from "@/components/pages/insights/ColumnsList/ColumnsList"
 import Series from "@/components/pages/insights/Series/Series"
 import SideNav from "@/components/parts/SideNav/SideNav"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
-import getInsightsSeries from '@/fetch/getInsightsSeries'
-import { CardType } from '@/types/contentsType'
+import getInsightsSeries from '@/fetch/static/getInsightsSeries'
 
 const breadcrumb = [ { title: 'コラム' } ]
 

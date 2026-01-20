@@ -3,9 +3,9 @@ import Summary from "@/components/pages/insightsSeries/Summary/Summary"
 import ColumnsList from "@/components/pages/insightsSeries/ColumnsList/ColumnsList"
 import SideNav from "@/components/parts/SideNav/SideNav"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
-import getInsightsSeries from '@/fetch/getInsightsSeries'
-import getInsightsSeriesDetail from '@/fetch/getInsightsSeriesDetail'
-import getInsights from '@/fetch/getInsights'
+import getInsightsSeries from '@/fetch/static/getInsightsSeries'
+import getInsightsSeriesDetail from '@/fetch/static/getInsightsSeriesDetail'
+import getInsightsStatic from '@/fetch/static/getInsightsStatic'
 import { CardType } from '@/types/contentsType'
 import { JsonLdCardType } from '@/types/jsonLd'
 import { SeriesType } from '@/types/zodType'
@@ -31,7 +31,8 @@ export async function generateMetadata({ params }: { params: { seriesID: string 
 export default async function Page({ params }: { params: { seriesID: string }}) {
   const { seriesID } = await params
   const { details } = await getInsightsSeriesDetail(seriesID)
-  const columnsData = await getInsights({ category: details.slug })
+  console.log(seriesID)
+  const columnsData = await getInsightsStatic({ category: details.slug })
   const { list, pageInfo } = columnsData
 
   const breadcrumb = [

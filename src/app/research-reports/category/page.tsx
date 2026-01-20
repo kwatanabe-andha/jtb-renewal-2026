@@ -4,6 +4,7 @@ import SideNav from "@/components/parts/SideNav/SideNav"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
 import ReportList from "@/components/pages/researchCategory/ReportList/ReportList"
 import FootSlider from "@/components/parts/FootSlider/FootSlider"
+import getInsightsStatic from '@/fetch/static/getInsightsStatic'
 
 const breadcrumb = [
   { title:  '調査・レポート', href: '/research-reports/' },
@@ -21,6 +22,8 @@ export async function generateMetadata() {
 }
 
 export default async function Page() {
+  const { list } = await getInsightsStatic({ cnt: 5 })
+
   const jsonLdBreadcrumb = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -57,7 +60,7 @@ export default async function Page() {
             slug="Reports"
           />
           <ReportList />
-          <FootSlider />
+          <FootSlider list={list} content="reports" />
         </SideNav>
       </section>
       <Breadcrumb data={breadcrumb} footer />

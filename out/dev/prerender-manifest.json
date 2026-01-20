@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "f97383616a3bf9b0ed3e2c70bae410d9",
-    "previewModeSigningKey": "8a04538b3a18ce9606e20a56ced9dd4b3d1187e8ffb30db9208abd495ad3d5db",
-    "previewModeEncryptionKey": "2eb690dbb5bff76ffd33d2937306e765d7cc8b45f2baaa5fca57a6ce2177c31a"
-  }
-}
+{"version":4,"routes":{"/insights/osaka-ir":{},"/insights/inn-management-dx":{},"/insights/disaster-response":{},"/insights/tourism-growth-strategy":{},"/insights/high-value-traveler":{},"/insights/5years-ahead-19":{},"/insights/5years-ahead-20":{},"/insights/tourism-astrophysics":{},"/insights/tourism-peace":{},"/insights/tourism-from-space":{},"/insights/series/insight":{},"/insights/series/xtourism":{},"/insights/series/exploring":{},"/insights/series/perspectives_journeys":{},"/insights/series/short_takes":{}},"dynamicRoutes":{"/insights/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/insights/[slug]","routeRegex":"^\\/insights\\/([^/]+?)(?:\\/)?$","allowHeader":[]},"/insights/series/[seriesID]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/insights/series/[seriesID]","routeRegex":"^\\/insights\\/series\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"db08dd7d7955c69a59b5a9baa5a36f92","previewModeSigningKey":"b67dd14013bab752d23bd5dbd6af280ece09e3842442d36b8c3bd842d0e5bc53","previewModeEncryptionKey":"285047c67d06feda82ed81ab8a8f475c3773358579f50a6922b40e5dbda76ca5"}}

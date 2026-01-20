@@ -8,8 +8,8 @@ import LockIcon from '@/icon/Lock/Lock'
 
 type Author = {
   name: string
-  img: string
-  text: string
+  img?: string
+  text?: string
 }
 
 export type DetailHeadType = {
@@ -18,34 +18,36 @@ export type DetailHeadType = {
   release: string
   update?: string
   download?: string
-  member?: boolean
-  author?: Author
+  login?: boolean
+  author?: Author[]
 }
 
 export function DetailHead(
-  { title, text, release, update, download, member, author }: DetailHeadType
+  { title, text, release, update, download, login, author }: DetailHeadType
 ) {
+  // console.log(author.length)
   return (
     <section className='bl_detailHead'>
       <div className='bl_detailHead_inner'>
         <h1 className='bl_detailHead_title'>{title}</h1>
         { text && <p className='bl_detailHead_text'>{text}</p> }
         {
-          author && (
-            <div className='bl_detailHead_author'>
-              <div className='bl_detailHead_author_img'><Image src={author.img} alt='' width={76} height={76} /></div>
-              <div className='bl_detailHead_author_content'>
-                <div className='bl_detailHead_author_tag'>寄稿</div>
-                <div className='bl_detailHead_author_name'>{author.name}</div>
-                <p className='bl_detailHead_author_text'>{author.text}</p>
+          author && author.length > 0 && author.map((item) => {
+            return (
+              <div className='bl_detailHead_author' key={item.name}>
+                { item.img && <div className='bl_detailHead_author_img'><Image src={item.img} alt='' width={76} height={76} /></div> }
+                <div className='bl_detailHead_author_content'>
+                  <div className='bl_detailHead_author_tag'>寄稿</div>
+                  <div className='bl_detailHead_author_name'>{item.name}</div>
+                  { item.text && <p className='bl_detailHead_author_text'>{item.text}</p> }
+                </div>
               </div>
-            </div>
-          )
+            )
+          })
         }
         { download && <div className='bl_detailHead_download'><Download url={'/assets/dummy_data_1766714548119.csv'} /></div> }
-
         {
-          member && (
+          login && (
             <div className='bl_detailHead_btm'>
               <div className='bl_detailHead_member'>
                 <div className='bl_detailHead_memberLock'><LockIcon />メンバー限定</div>
@@ -61,7 +63,7 @@ export function DetailHead(
           )
         }
         {
-          !member && (
+          !login && (
             <div className='bl_detailHead_date'>
               <div className='bl_detailHead_release'>
                 公開日<time dateTime={release}>{ toDateTimeFormat(release) }</time>

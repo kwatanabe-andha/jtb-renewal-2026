@@ -8,6 +8,15 @@ export const SITE_URL = {
   contact: '/contact/',
 }
 
+export const CONTENT_MAP: { [key: string]: { jp: string, en: string, url: string } } = {
+  'insights': { jp: 'コラム', en: 'COLUMNS', url: '/insights/' },
+  'reports': { jp: '調査・レポート', en: 'Reports', url: '/research-reports/' }
+}
+
+export const TOPICS_GROUP_ID: { [key: string]: string } = {
+  '13': 'insights',
+}
+
 export const COLORS = {
   bg: '#f3f3f3',
   white: '#fff',

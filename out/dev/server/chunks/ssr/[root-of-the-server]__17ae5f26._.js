@@ -914,7 +914,7 @@ const getLastDayOfYear = (year)=>{
     return `${yyyy}-${mm}-${dd}`;
 };
 async function getInsights(params) {
-    const { pageID = '1', category = null, year = null } = params || {};
+    const { pageID = '1', category = null, year = null, cnt = null } = params || {};
     // const url = new URL(
     //   `${process.env.NEXT_PUBLIC_BASE_URL}/rcms-api/7/insights/list`,
     // )
@@ -936,6 +936,7 @@ async function getInsights(params) {
         const query = `ymd > "${start}" AND ymd < "${end}"`;
         url.searchParams.append('filter', query);
     }
+    if (cnt) url.searchParams.append('cnt', cnt);
     const response = await fetch(url);
     return await response.json();
 }

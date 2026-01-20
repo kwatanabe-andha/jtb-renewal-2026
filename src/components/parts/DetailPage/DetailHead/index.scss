@@ -74,20 +74,21 @@
 }
 
 .bl_detailHead_download {
-  margin-block: 20px;
+  margin-top: 20px;
 
   @include breakpoint-up(md) {
-    margin-block: 40px 20px;
+    margin-top: 40px;
   }
 
   .bl_detailHead_author + & {
     @include breakpoint-up(md) {
-      margin-block: 20px;
+      margin-top: 20px;
     }
   }
 }
 
 .bl_detailHead_btm {
+  margin-top: 20px;
   @include breakpoint-up(md) {
     display: flex;
     justify-content: space-between;

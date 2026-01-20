@@ -8,6 +8,7 @@ import Article from "@/components/pages/researchDetail/Article/Article"
 import Download from "@/components/pages/researchDetail/Download/Download"
 import SeriesSurvey from "@/components/pages/researchDetail/SeriesSurvey/SeriesSurvey"
 import Manager from "@/components/pages/researchDetail/Manager/Manager"
+import getInsightsStatic from '@/fetch/static/getInsightsStatic'
 
 const breadcrumb = [
   {
@@ -29,29 +30,24 @@ const head = {
 }
 
 const sections = [
-  { title: '情報検索手段の勢力図が変わる？キーワード検索は、まだ主流ではあるが、地図アプリや動画投稿サイトでの検索が増加し、生成AIの利用も急浮上', number: 1 },
-  { title: '情報検索手段の勢力図が変わる？キーワード検索は、まだ主流ではあるが、地図アプリや動画投稿サイトでの検索が増加し、生成AIの利用も急浮上', number: 2 },
-  { title: '利用する SNSの上位は「LINE」、「YouTube」、「X」、「Instagram」で前年と変わらずも、「LINE」は20代女性と30代男性で減少傾向。「TikTok」と「Ameba」の利用が伸びる', number: 3 },
-  { title: 'PDFダウンロード' }
+  '情報検索手段の勢力図が変わる？キーワード検索は、まだ主流ではあるが、地図アプリや動画投稿サイトでの検索が増加し、生成AIの利用も急浮上',
+  '情報検索手段の勢力図が変わる？キーワード検索は、まだ主流ではあるが、地図アプリや動画投稿サイトでの検索が増加し、生成AIの利用も急浮上',
+  '利用する SNSの上位は「LINE」、「YouTube」、「X」、「Instagram」で前年と変わらずも、「LINE」は20代女性と30代男性で減少傾向。「TikTok」と「Ameba」の利用が伸びる',
+  'PDFダウンロード'
 ]
 
 const keywords = [
-  { name: '関係人口', url: '/' },
-  { name: 'まちづくり', url: '/' },
-  { name: '地域資源', url: '/' },
-  { name: 'ワーケーション', url: '/' }
+  { subject: '関係人口', slug: '/' },
+  { subject: 'まちづくり', slug: '/' },
+  { subject: '地域資源', slug: '/' },
+  { subject: 'ワーケーション', slug: '/' }
 ]
 
-const relArticles = [
-  { topics_id: 1, thumb: { url: '/assets/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
-  { topics_id: 2, thumb: { url: '/assets/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
-  { topics_id: 3, thumb: { url: '/assets/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' },
-  { topics_id: 4, thumb: { url: '/assets/thumb.jpg', desc: '' }, category: '研究員コラム', subject: 'デジタルテクノロジーが観光を変える未来2025', ymd: '2025-01-10' }
-]
+const nav = {sections, keywords, numbering: false}
 
-const nav = {sections, keywords}
+export default async function Page() {
+  const { list } = await getInsightsStatic({ cnt: 5 })
 
-export default function Page() {
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -87,12 +83,19 @@ export default function Page() {
           logo='/assets/series_logo_01.jpg'
           category='定点調査'
         />
-        <Article head={head} nav={nav} />
+        <Article head={head} nav={nav}/>
         <Download />
         <SeriesSurvey />
         <Manager />
-        <Contact />
-        <FootSlider />
+        <Contact
+          contact_default={true}
+          contact_department={'経営企画部　広報担当　○○事務局'}
+          contact_custom_office_address={''}
+          contact_custom_url={''}
+          related_contact_person={'山田、森川'}
+          contact_note={''}
+        />
+        <FootSlider list={list} content="reports" />
       </SideNav>
       <Breadcrumb data={breadcrumb} footer />
 

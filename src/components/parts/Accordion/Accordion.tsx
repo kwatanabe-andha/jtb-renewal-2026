@@ -42,6 +42,14 @@ const opening = (content: HTMLElement, height: number) => gsap.fromTo(
   }
 )
 
+const heightByMedia = (isOpen: boolean): string => {
+  let height = 'auto'
+  if (isOpen) {
+    if (isPc()) { height = `${DEFAULT_HEIGHT_PC}px` } else { height = `${DEFAULT_HEIGHT_SP}px` }
+  }
+  return height
+}
+
 export default function Accordion(
   { openedText, closedText, id = 'accordion_target', className, children, targetClassName, section } : Props
 ) {
@@ -60,7 +68,7 @@ export default function Accordion(
       const isOver = targetHeight > maxContentHeight
       setIsOpen(!isOver)
       setShowAccordion(isOver)
-      const setHeight = isOpen ? 'auto' : (isPc() ? `${DEFAULT_HEIGHT_PC}px` : `${DEFAULT_HEIGHT_SP}px`)
+      const setHeight = heightByMedia(isOver)
       setHRef.current?.(setHeight)
     }
     setAccordion()

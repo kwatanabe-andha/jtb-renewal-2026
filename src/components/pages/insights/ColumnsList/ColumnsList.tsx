@@ -9,9 +9,8 @@ import NarrowDown from '@/components/parts/NarrowDown/NarrowDown'
 import CardList from '@/components/parts/Card/CardList'
 import { CardType, PageInfoType } from '@/types/contentsType'
 import { JsonLdCardType, jsonLdCollectionPageType } from '@/types/jsonLd'
-import getInsights from '@/fetch/getInsights'
+import getInsights from '@/fetch/public/getInsights'
 
-const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
 const keywords = [{ name: 'すべて', slug: 'all' },{ name: 'インバウンド', slug: 'xxx' },{ name: '消費者行動', slug: 'yyy' },{ name: '日本人海外旅行', slug: 'zzzz' },{ name: 'xxx', slug: 'xxxxx' },{ name: 'xxxxx', slug: 'xx' }]
 
 type Props = {
@@ -61,12 +60,14 @@ export default function ColumnsList({ pathname }: Props) {
   const [loading, setLoading] = useState(false)
   const searchParams = useSearchParams()
   const page = searchParams.get('pageID')
+  const year = searchParams.get('year')
 
   useEffect(() => {
     const fetchData = async () => {
       const queryParams = new URLSearchParams(window.location.search)
       const query = { pageID: queryParams.get('pageID') || '1', year: queryParams.get('year') || null }
       const { list, pageInfo } = await getInsights(query)
+      console.log(list)
       if (list) {
         setLoading(true)
         setData(list)
@@ -75,7 +76,7 @@ export default function ColumnsList({ pathname }: Props) {
       }
     }
     fetchData()
-  }, [page])
+  }, [page, year])
 
   return (
     <>
@@ -83,7 +84,7 @@ export default function ColumnsList({ pathname }: Props) {
         <h2 className='el_hidden'>コラム一覧</h2>
         <Inner className='un_columnsList_inner'>
           <div className='un_columnsList_nd'>
-            <NarrowDown title='注目キーワードで絞り込み' list={keywords} years={years} />
+            <NarrowDown title='注目キーワードで絞り込み' list={keywords} />
           </div>
 
           <Suspense fallback={<p>Loading...</p>}>

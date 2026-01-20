@@ -3,6 +3,7 @@
 import './index.scss'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { Calendar, ChevronDown } from "@untitledui/icons"
+import { getYears } from '@/lib/getYears'
 
 type Item = {
   name: string
@@ -12,13 +13,13 @@ type Item = {
 type Props = {
   title: string
   list: Item[]
-  years: number[]
 }
 
-export default function NarrowDown({ title, list, years }:Props) {
+export default function NarrowDown({ title, list }:Props) {
   const pathname = usePathname()
   const router = useRouter()
   const params = useSearchParams()
+  const years = getYears()
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newParams = new URLSearchParams(params.toString())

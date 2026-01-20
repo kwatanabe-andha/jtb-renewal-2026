@@ -2,8 +2,8 @@ import './index.scss'
 import Inner from "@/components/parts/Inner/Inner"
 import NarrowDown from '@/components/parts/NarrowDown/NarrowDown'
 import CardList from '@/components/parts/Card/CardList'
-import getInsights from '@/fetch/getInsights'
-const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+import getInsightsStatic from '@/fetch/static/getInsightsStatic'
+
 const keywords = [
   {
     name: 'すべて',
@@ -33,7 +33,7 @@ const keywords = [
 
 
 export default async function ReportList() {
-  const columnsData = await getInsights()
+  const columnsData = await getInsightsStatic()
   const { list, pageInfo } = columnsData
 
   return (
@@ -42,7 +42,7 @@ export default async function ReportList() {
       <Inner className='un_reportList_inner'>
 
         <div className='un_reportList_nd'>
-          <NarrowDown title='注目キーワードで絞り込み' list={keywords} years={years} />
+          <NarrowDown title='注目キーワードで絞り込み' list={keywords} />
         </div>
 
         <div className='un_reportList_list'>

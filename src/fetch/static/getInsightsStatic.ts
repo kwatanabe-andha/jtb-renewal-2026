@@ -2,6 +2,8 @@ type PropsType = {
   pageID?: string
   category?: string
   year?: string | null
+  all?: boolean
+  cnt?: number
 }
 
 const getLastDayOfYear = (year: number): string => {
@@ -15,8 +17,8 @@ const getLastDayOfYear = (year: number): string => {
   return `${yyyy}-${mm}-${dd}`;
 }
 
-export default async function getInsights(params?: PropsType) {
-  const { pageID = '1', category = null, year = null } = params || {}
+export default async function getInsightsStatic(params?: PropsType) {
+  const { pageID = '1', category = null, year = null, all = false, cnt = null } = params || {}
 
   // const url = new URL(
   //   `${process.env.NEXT_PUBLIC_BASE_URL}/rcms-api/7/insights/list`,
@@ -41,6 +43,11 @@ export default async function getInsights(params?: PropsType) {
     const end = getLastDayOfYear(parseInt(year))
     const query = `ymd > "${start}" AND ymd < "${end}"`
     url.searchParams.append('filter', query)
+  }
+  if (!all && cnt) {
+    url.searchParams.append('cnt', cnt.toString())
+  } else if (!all) {
+    url.searchParams.append('cnt', '3')
   }
 
   const response = await fetch(url)

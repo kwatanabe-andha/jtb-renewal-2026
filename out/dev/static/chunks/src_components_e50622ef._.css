@@ -4233,6 +4233,7 @@
 }
 
 .bl_card_img {
+  margin-bottom: 18px;
   display: block;
   position: relative;
 }
@@ -4295,7 +4296,7 @@
 
 .bl_card_contentType {
   color: var(--color-02);
-  margin-top: 18px;
+  margin-top: 8px;
   font-size: .9375rem;
   font-weight: 700;
   line-height: 1.1;
@@ -4304,7 +4305,7 @@
 .bl_card_series {
   align-items: center;
   gap: 4px;
-  margin-top: 18px;
+  margin-top: 8px;
   display: flex;
 }
 

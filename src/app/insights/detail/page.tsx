@@ -8,7 +8,7 @@ import Contact from "@/components/parts/Contact/Contact"
 import DetailTop from "@/components/parts/PageHead/DetailTop"
 import Article from "@/components/parts/DetailPage/Article/Article"
 import FootSlider from "@/components/parts/FootSlider/FootSlider"
-import getInsights from '@/fetch/getInsights'
+import getInsightsStatic from '@/fetch/static/getInsightsStatic'
 
 const breadcrumb = [
   {
@@ -50,9 +50,8 @@ const keywords = [
 const nav = {sections, keywords}
 
 export default async function Page() {
-  const columnsData = await getInsights()
+  const columnsData = await getInsightsStatic({ cnt: 5 })
   const { list } = columnsData
-  console.log(list)
 
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
@@ -87,12 +86,12 @@ export default async function Page() {
         <DetailTop
           title="スマートフォンの利用と旅行消費に関する調査"
         />
-        <Article head={head} nav={nav} />
+        {/* <Article head={head} nav={nav} />
         <AuthorProfile />
         <RelArticles list={list} />
-        <Series />
+        <Series /> */}
         <Contact />
-        <FootSlider />
+        <FootSlider list={list} content="insights" />
       </SideNav>
       <Breadcrumb data={breadcrumb} footer />
 

@@ -4,6 +4,7 @@ import Contact from "@/components/parts/Contact/Contact"
 import FootSlider from "@/components/parts/FootSlider/FootSlider"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
 import Content from '@/components/pages/researchSeries/Content'
+import getInsightsStatic from '@/fetch/static/getInsightsStatic'
 
 const breadcrumb = [
   {
@@ -26,6 +27,8 @@ export async function generateMetadata() {
 }
 
 export default async function Page() {
+  const { list } = await getInsightsStatic({ cnt: 5 })
+
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -56,8 +59,8 @@ export default async function Page() {
       <Breadcrumb data={breadcrumb} />
       <SideNav offset={100}>
         <Content />
-        <Contact />
-        <FootSlider />
+        {/* <Contact /> */}
+        <FootSlider list={list} content="reports" />
       </SideNav>
       <Breadcrumb data={breadcrumb} footer />
 

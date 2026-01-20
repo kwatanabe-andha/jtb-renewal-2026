@@ -62,12 +62,12 @@ export default function Page() {
           category='定点調査'
           facility='愛知県東三河総局'
         />
-        <Article head={head} nav={nav} />
+        {/* <Article head={head} nav={nav} />
         <AuthorProfile />
-        {/* <RelArticles list={relArticles} /> */}
+        <RelArticles list={relArticles} />
         <Series />
         <Contact />
-        <FootSlider />
+        <FootSlider content="insights" /> */}
       </SideNav>
       <Breadcrumb data={breadcrumb} footer />
     </>

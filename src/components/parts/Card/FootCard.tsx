@@ -1,16 +1,20 @@
 import Image from 'next/image'
 import Link from "next/link"
 import './index.scss'
-import { FootCardType } from '@/types/contentsType'
+import { CardType } from '@/types/contentsType'
+import { TOPICS_GROUP_ID } from '@/config/site'
 
 type Props = {
-  card: FootCardType
+  card: CardType
 }
 
 export default function FootCard( { card }: Props ) {
+  const groupID = card.topics_group_id.toString()
+  const pathname = TOPICS_GROUP_ID[groupID]
+
   return (
     <article className='bl_card'>
-      <Link href={'/'} className='bl_card_container'>
+      <Link href={`/${pathname}/${card.slug}/`} className='bl_card_container'>
         <div className='bl_card_img'>
           <div className='bl_card_thumb'><Image src={`${card.thumb.url}`} alt={ card.thumb.desc } width={300} height={200} /></div>
           { card.logo?.url && <div className='bl_card_logo'><Image src={ card.logo.url } alt={ card.logo.desc } width={100} height={100} /></div> }

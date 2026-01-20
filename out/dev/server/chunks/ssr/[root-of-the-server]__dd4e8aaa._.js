@@ -725,10 +725,14 @@ __turbopack_context__.s([
     ()=>AREA_TAG_CATEGORY_ID,
     "COLORS",
     ()=>COLORS,
+    "CONTENT_MAP",
+    ()=>CONTENT_MAP,
     "KEYWORD_TAG_CATEGORY_ID",
     ()=>KEYWORD_TAG_CATEGORY_ID,
     "SITE_URL",
-    ()=>SITE_URL
+    ()=>SITE_URL,
+    "TOPICS_GROUP_ID",
+    ()=>TOPICS_GROUP_ID
 ]);
 const AREA_TAG_CATEGORY_ID = 9;
 const KEYWORD_TAG_CATEGORY_ID = 10;
@@ -737,6 +741,21 @@ const SITE_URL = {
     login: '/login/',
     signup: '/signup/',
     contact: '/contact/'
+};
+const CONTENT_MAP = {
+    'insights': {
+        jp: 'コラム',
+        en: 'COLUMNS',
+        url: '/insights/'
+    },
+    'reports': {
+        jp: '調査・レポート',
+        en: 'Reports',
+        url: '/research-reports/'
+    }
+};
+const TOPICS_GROUP_ID = {
+    '13': 'insights'
 };
 const COLORS = {
     bg: '#f3f3f3',

@@ -3,12 +3,12 @@ import Summary from "@/components/pages/insightsSeries/Summary/Summary"
 import ColumnsList from "@/components/pages/insightsSeries/ColumnsList/ColumnsList"
 import SideNav from "@/components/parts/SideNav/SideNav"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
-import getInsightsSeries from '@/fetch/static/getInsightsSeries'
-import getInsightsSeriesDetail from '@/fetch/static/getInsightsSeriesDetail'
-import getInsightsStatic from '@/fetch/static/getInsightsStatic'
+import getInsightsSeries from '@/fetch/static/insights/getInsightsSeries'
+import getInsightsSeriesDetail from '@/fetch/static/insights/getInsightsSeriesDetail'
+import getInsightsStatic from '@/fetch/static/insights/getInsightsStatic'
 import { CardType } from '@/types/contentsType'
 import { JsonLdCardType } from '@/types/jsonLd'
-import { SeriesType } from '@/types/zodType'
+import { SeriesType } from '@/types/insights'
 
 export async function generateStaticParams() {
   const { list } = await getInsightsSeries()
@@ -64,7 +64,7 @@ export default async function Page({ params }: { params: { seriesID: string }}) 
         '@type': 'ListItem',
         position: 3,
         name: details.subject,
-        item: 'https://www.tourism.jp/insights/series/'
+        item: `https://www.tourism.jp/insights/series/${details.slug}`
       }
     ]
   }

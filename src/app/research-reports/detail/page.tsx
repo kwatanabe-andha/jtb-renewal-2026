@@ -8,7 +8,7 @@ import Article from "@/components/pages/researchDetail/Article/Article"
 import Download from "@/components/pages/researchDetail/Download/Download"
 import SeriesSurvey from "@/components/pages/researchDetail/SeriesSurvey/SeriesSurvey"
 import Manager from "@/components/pages/researchDetail/Manager/Manager"
-import getInsightsStatic from '@/fetch/static/getInsightsStatic'
+import getInsightsStatic from '@/fetch/static/insights/getInsightsStatic'
 
 const breadcrumb = [
   {

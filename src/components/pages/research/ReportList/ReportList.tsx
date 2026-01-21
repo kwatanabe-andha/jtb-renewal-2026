@@ -4,7 +4,7 @@ import Level2 from "@/components/parts/Heading/Level2"
 import Inner from "@/components/parts/Inner/Inner"
 import NarrowDown from '@/components/parts/NarrowDown/NarrowDown'
 import CardList from '@/components/parts/Card/CardList'
-import getInsightsStatic from '@/fetch/static/getInsightsStatic'
+import { CardType, PageInfoType } from '@/types/contentsType'
 
 const keywords = [
   {
@@ -33,9 +33,12 @@ const keywords = [
   },
 ]
 
-export default async function ReportList() {
-  const columnsData = await getInsightsStatic()
-  const { list, pageInfo } = columnsData
+type Props = {
+  data: CardType[]
+  pageInfo: PageInfoType
+}
+
+export default async function ReportList({ data, pageInfo }: Props) {
 
   return (
     <section className='un_reportList'>
@@ -50,7 +53,7 @@ export default async function ReportList() {
 
         <div className='un_reportList_list'>
           <Suspense fallback={<p>Loading...</p>}>
-            <CardList list={list} pageInfo={pageInfo} pathname={'/research-reports/'} router />
+            <CardList list={data} pageInfo={pageInfo} pathname={'/research-reports/'} router />
           </Suspense>
         </div>
       </Inner>

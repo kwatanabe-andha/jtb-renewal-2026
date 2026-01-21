@@ -1,0 +1,4 @@
+{
+  "/research-reports/page": "app/research-reports/page.js",
+  "/research-reports/series/[seriesID]/page": "app/research-reports/series/[seriesID]/page.js"
+}

@@ -5,45 +5,11 @@ import Level2 from "@/components/parts/Heading/Level2"
 import Inner from "@/components/parts/Inner/Inner"
 import Slide from './_block/Slide';
 import { useRef } from 'react'
+import { ReportsSeriesSlide } from "@/types/reports"
 
-const data = [
-  {
-    id: 1,
-    logo: '/assets/series_logo_01.jpg',
-    title: '1988年以来発行、日本における海外旅行市場の実態と今後の展望を分析',
-    date: '年1回'
-  },
-  {
-    id: 2,
-    logo: '/assets/series_logo_02.jpg',
-    title: '1981年から続く動向見通し、各種指標・JTBグループのアンケート等から需要予測',
-    date: '年4回（年間・GW・夏休み・年末年始）'
-  },
-  {
-    id: 3,
-    logo: '/assets/series_logo_03.jpg',
-    title: 'スマホの利用実態を継続的に調べ、生活や旅行行動の変化の兆しをとらえる',
-    date: '年1回（2013-2025年）'
-  },
-  {
-    id: 4,
-    logo: '/assets/series_logo_01.jpg',
-    title: '1988年以来発行、日本における海外旅行市場の実態と今後の展望を分析',
-    date: '年1回'
-  },
-  {
-    id: 5,
-    logo: '/assets/series_logo_02.jpg',
-    title: '1981年から続く動向見通し、各種指標・JTBグループのアンケート等から需要予測',
-    date: '年4回（年間・GW・夏休み・年末年始）'
-  },
-  {
-    id: 6,
-    logo: '/assets/series_logo_03.jpg',
-    title: 'スマホの利用実態を継続的に調べ、生活や旅行行動の変化の兆しをとらえる',
-    date: '年1回（2013-2025年）'
-  }
-]
+type Props = {
+  data: ReportsSeriesSlide[]
+}
 
 const isScrollXMax = (el: HTMLElement, threshold = 1): boolean => {
   return el.scrollLeft + el.clientWidth >= el.scrollWidth - threshold
@@ -53,7 +19,7 @@ const isScrollXMax = (el: HTMLElement, threshold = 1): boolean => {
 //   return el.scrollLeft <= threshold
 // }
 
-export default function Recently() {
+export default function Series({ data }: Props) {
   const containerRef = useRef<HTMLDivElement>(null)
 
   const handleScroll = () => {

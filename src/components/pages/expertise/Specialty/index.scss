@@ -1,0 +1,42 @@
+@use "@styles/settings" as *;
+// @include breakpoint-up(md) 
+
+.un_specialty {
+  padding-bottom: 80px;
+}
+
+.un_specialty_list {
+  margin-top: 40px;
+
+  > ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px 15px;
+
+    @include breakpoint-up(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.un_specialty_img {
+  overflow: hidden;
+
+  img {
+    aspect-ratio: 314/120;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.un_specialty_title {
+  margin-top: 14px;
+  font-size: rem(18);
+  font-weight: 500;
+}
+
+.un_specialty_desc {
+  margin-top: 6px;
+  font-size: rem(14);
+  color: #555;
+}

@@ -3,9 +3,9 @@ import Summary from "@/components/pages/insightsSeries/Summary/Summary"
 import ColumnsList from "@/components/pages/insightsSeries/ColumnsList/ColumnsList"
 import SideNav from "@/components/parts/SideNav/SideNav"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
-import getInsightsSeries from '@/fetch/static/getInsightsSeries'
-import getInsightsSeriesDetail from '@/fetch/static/getInsightsSeriesDetail'
-import getInsightsStatic from '@/fetch/static/getInsightsStatic'
+import getInsightsSeries from '@/fetch/static/insights/getInsightsSeries'
+import getInsightsSeriesDetail from '@/fetch/static/insights/getInsightsSeriesDetail'
+import getInsightsStatic from '@/fetch/static/insights/getInsightsStatic'
 import { CardType } from '@/types/contentsType'
 import { JsonLdCardType } from '@/types/jsonLd'
 import { SeriesType } from '@/types/zodType'

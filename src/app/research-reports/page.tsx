@@ -5,6 +5,8 @@ import Series from "@/components/pages/research/Series/Series"
 import ReportList from "@/components/pages/research/ReportList/ReportList"
 import SideNav from "@/components/parts/SideNav/SideNav"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
+import getReportsSeries from '@/fetch/static/reports/getReportsSeries'
+import getReportsStatic from '@/fetch/static/reports/getReportsStatic'
 
 const breadcrumb = [
   {
@@ -12,7 +14,15 @@ const breadcrumb = [
   }
 ]
 
+export const metadata = {
+  title:  '調査レポート',
+  description: '調査レポートページ。',
+}
+
 export default async function Page() {
+  const series = await getReportsSeries()
+  const { list, pageInfo } = await getReportsStatic()
+
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -32,6 +42,15 @@ export default async function Page() {
     ]
   }
 
+  const newReport = list[0]
+  const recentlyData = {
+    thumb: newReport.thumb,
+    series_logo: newReport.category_details.series_logo,
+    subject: newReport.subject,
+    ymd: newReport.ymd,
+    reports_type: newReport.reports_type,
+  }
+
   return (
     <>
       <Breadcrumb data={breadcrumb} />
@@ -41,9 +60,9 @@ export default async function Page() {
         </RegionTop>
 
         <SideNav offset={80}>
-          <Recently />
-          <Series />
-          <ReportList />
+          <Recently data={recentlyData} />
+          <Series data={series.list} />
+          <ReportList data={list} pageInfo={pageInfo} />
         </SideNav>
       </section>
       <Breadcrumb data={breadcrumb} footer />

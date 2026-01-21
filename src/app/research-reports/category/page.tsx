@@ -4,7 +4,7 @@ import SideNav from "@/components/parts/SideNav/SideNav"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
 import ReportList from "@/components/pages/researchCategory/ReportList/ReportList"
 import FootSlider from "@/components/parts/FootSlider/FootSlider"
-import getInsightsStatic from '@/fetch/static/getInsightsStatic'
+import getInsightsStatic from '@/fetch/static/insights/getInsightsStatic'
 
 const breadcrumb = [
   { title:  '調査・レポート', href: '/research-reports/' },

@@ -70,15 +70,19 @@ export default function Card( { card }: Props ) {
             )
           }
 
-          <div className='bl_card_btm'>
-            {
-              card.download?.url && (
-                <Download url={card.download.url} />
-              )
-            }
+          {
+            card.download?.url || card.ymd && (
+              <div className='bl_card_btm'>
+                {
+                  card.download?.url && (
+                    <Download url={card.download.url} />
+                  )
+                }
 
-            <time dateTime={card.ymd} className='bl_card_time'>{ toDateTimeFormat(card.ymd) }</time>
-          </div>
+                { card.ymd && <time dateTime={card.ymd} className='bl_card_time'>{ toDateTimeFormat(card.ymd) }</time> }
+              </div>
+            )
+          }
         </div>
       </Link>
     </article>

@@ -1,5 +1,6 @@
 export const AREA_TAG_CATEGORY_ID = 9
 export const KEYWORD_TAG_CATEGORY_ID = 10
+export const STATIC_API_CNT = '3'
 
 export const SITE_URL = {
   home: 'https://www.tourism.jp/',
@@ -10,7 +11,8 @@ export const SITE_URL = {
 
 export const CONTENT_MAP: { [key: string]: { jp: string, en: string, url: string } } = {
   'insights': { jp: 'コラム', en: 'COLUMNS', url: '/insights/' },
-  'reports': { jp: '調査・レポート', en: 'Reports', url: '/research-reports/' }
+  'reports': { jp: '調査・レポート', en: 'Reports', url: '/research-reports/' },
+  'expertise': { jp: '専門領域', en: 'Expertise', url: '/expertise/' },
 }
 
 export const TOPICS_GROUP_ID: { [key: string]: string } = {

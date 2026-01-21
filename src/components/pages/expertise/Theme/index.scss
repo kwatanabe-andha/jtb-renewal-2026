@@ -1,0 +1,16 @@
+@use "@styles/settings" as *;
+// @include breakpoint-up(md) 
+
+.un_theme {
+  padding: 40px 0 60px;
+}
+
+.un_theme_list {
+  margin-top: 40px;
+
+  .bl_cardList {
+    @include breakpoint-up(md) {
+      gap: 15px;
+    }
+  }
+}

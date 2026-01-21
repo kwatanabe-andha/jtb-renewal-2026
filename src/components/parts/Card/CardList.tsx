@@ -9,14 +9,15 @@ import Pager from '../Pager/Pager'
 
 export type CardListType = {
   list: CardType[]
-  pageInfo: PagerType
-  pathname: string
+  pageInfo?: PagerType
+  pathname?: string
   router?: boolean
+  noPager?: boolean
 }
 
-export default function CardList({ list, pageInfo, pathname, router }: CardListType) {
+export default function CardList({ list, pageInfo, pathname, router = false, noPager = false }: CardListType) {
   return (
-    <>
+    <> 
       <ul className='bl_cardList'>
         {
           list.map((card: CardType) => {
@@ -30,10 +31,14 @@ export default function CardList({ list, pageInfo, pathname, router }: CardListT
           })
         }
       </ul>
-      <Suspense>
-        { router && <PagerRouter pageInfo={pageInfo} pathname={pathname} /> }
-        { !router && <Pager pageInfo={pageInfo} pathname={pathname} /> }
-      </Suspense>
+      {
+        !noPager && pageInfo !== undefined && pathname !== undefined && (
+          <Suspense>
+            { router && <PagerRouter pageInfo={pageInfo} pathname={pathname} /> }
+            { !router && <Pager pageInfo={pageInfo} pathname={pathname} /> }
+          </Suspense>
+        )
+      }
     </>
   )
 }

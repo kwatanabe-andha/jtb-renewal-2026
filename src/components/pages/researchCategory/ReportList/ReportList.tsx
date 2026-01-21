@@ -3,7 +3,7 @@ import { Suspense } from 'react'
 import Inner from "@/components/parts/Inner/Inner"
 import NarrowDown from '@/components/parts/NarrowDown/NarrowDown'
 import CardList from '@/components/parts/Card/CardList'
-import getInsightsStatic from '@/fetch/static/getInsightsStatic'
+import getInsightsStatic from '@/fetch/static/insights/getInsightsStatic'
 
 const keywords = [
   {

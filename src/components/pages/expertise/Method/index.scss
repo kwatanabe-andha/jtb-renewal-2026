@@ -1,0 +1,20 @@
+@use "@styles/settings" as *;
+// @include breakpoint-up(md) 
+
+.un_specialty {
+  padding-bottom: 80px;
+}
+
+.un_method_list {
+  margin-top: 40px;
+
+  > ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+
+    @include breakpoint-up(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

@@ -53,6 +53,16 @@
   display: block;
 }
 
+.un_series_img {
+  border-radius: 4px;
+  overflow: hidden;
+
+  img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+}
+
 .un_series_title {
   margin-top: 18px;
   font-size: rem(13);

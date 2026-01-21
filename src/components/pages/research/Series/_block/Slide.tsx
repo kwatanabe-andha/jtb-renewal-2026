@@ -5,16 +5,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState, CSSProperties } from 'react'
 import SliderWrap from "@/components/parts/SliderWrap/SliderWrap"
-
-type Item = {
-  id: number
-  logo: string
-  title: string
-  date: string
-}
+import { ReportsSeriesSlide } from "@/types/reports"
 
 type Props = {
-  items: Item[]
+  items: ReportsSeriesSlide[]
 }
 
 export default function Slide({ items }: Props) {
@@ -38,13 +32,13 @@ export default function Slide({ items }: Props) {
     return (
       <ul className="un_series_list" style={{ '--slide-length': `${Math.round(slideLength / 2)}` } as CSSProperties}>
         {
-          items.map((item: Item) => {
+          items.map((item: ReportsSeriesSlide) => {
             return (
-              <li key={item.id}>
-                <Link href="">
-                  <div className="un_series_img"><Image src={item.logo} alt='' width={195} height={195} /></div>
-                  <p className="un_series_title">{item.title}</p>
-                  <div className="un_series_date">{item.date}</div>
+              <li key={item.topics_id}>
+                <Link href={`/research-reports/series/${item.slug}/`}>
+                  { item.series_logo.url && <div className="un_series_img"><Image src={item.series_logo.url} alt={item.series_logo.desc || ''} width={195} height={195} /></div> }
+                  <p className="un_series_title">{item.catch_text}</p>
+                  <div className="un_series_date">{item.heading_schedule}</div>
                 </Link>
               </li>
             )
@@ -66,13 +60,13 @@ export default function Slide({ items }: Props) {
           navigation={{ nextEl: ".bl_sliderWrap_next", prevEl: ".bl_sliderWrap_prev" }}
         >
           {
-            items.map((item: Item) => {
+            items.map((item: ReportsSeriesSlide) => {
               return (
-                <SwiperSlide key={item.id}>
-                  <Link href="" className="un_series_link">
-                    <div className="un_series_img"><Image src={item.logo} alt='' width={195} height={195} /></div>
-                    <p className="un_series_title">{item.title}</p>
-                    <div className="un_series_date">{item.date}</div>
+                <SwiperSlide key={item.topics_id}>
+                  <Link href={`/research-reports/series/${item.slug}/`} className="un_series_link">
+                    { item.series_logo.url && <div className="un_series_img"><Image src={item.series_logo.url} alt={item.series_logo.desc || ''} width={195} height={195} /></div> }
+                    <p className="un_series_title">{item.catch_text}</p>
+                    <div className="un_series_date">{item.heading_schedule}</div>
                   </Link>
                 </SwiperSlide>
                 

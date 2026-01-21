@@ -32,6 +32,12 @@
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
+
+  img {
+    aspect-ratio: 474/316;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
 .un_recentlyCard_logo {
@@ -46,6 +52,12 @@
   @include breakpoint-up(md) {
     right: 20px;
     width: 150px;
+  }
+
+  img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
   }
 }
 
@@ -88,6 +100,12 @@
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
+  min-height: 26px;
+
+  @include breakpoint-up(md) {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
 
 .un_recentlyCard_download {

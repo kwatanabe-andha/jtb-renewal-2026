@@ -1,3 +1,5 @@
+import { ImgType } from "./common"
+
 export type PageInfoType = {
   totalCnt: number
   perPage: number
@@ -11,40 +13,21 @@ export type PageInfoType = {
   endPageNo: number
 }
 
-// export type BeforeCardType = {
-//   topics_id: number
-//   thumb: { desc: string, url: string }
-//   logo?: { desc: string, url: string }
-//   contribution?: boolean
-//   category?: string
-//   shoulderSeries?: string
-//   shoulderAnd?: string
-//   shoulder?: string
-//   subject: string
-//   auxiliary?: string
-//   summary?: string
-//   author?: string
-//   authorTitle?: string
-//   tag?: [ { name: string, slag: string } ]
-//   download?: { url?: string }
-//   ymd: string
-// }
-
 export type CardType = {
   topics_id: number
-  ymd: string
+  ymd?: string
   subject: string
   topics_group_id: number
   slug?: string
-  thumb: { desc: string, url: string }
-  logo?: { desc: string, url: string }
+  thumb: ImgType
+  logo?: ImgType
   group_nm?: string
   contents_type_nm?: string
   contents_type_slug?: string
   series_custom?: string
   organization?: string
   article_type: { key?: string, label?: string }
-  index_numbering?: boolean
+  numbering?: boolean
   excerpt?: string
   summary?: string
   // author?: string
@@ -56,8 +39,8 @@ export type CardType = {
 
 export type FootCardType = {
   topics_id: number
-  thumb: { desc: string, url: string }
-  logo?: { desc: string, url: string }
+  thumb: ImgType
+  logo?: ImgType
   group_nm?: string
   subject: string
   excerpt?: string

@@ -1,15 +1,15 @@
 import Script from 'next/script'
 import SideNav from "@/components/parts/SideNav/SideNav"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
-import AuthorProfile from "@/components/pages/insightsDetail/AuthorProfile/AuthorProfile"
+// import AuthorProfile from "@/components/pages/insightsDetail/AuthorProfile/AuthorProfile"
 import Series from "@/components/pages/insightsDetail/Series/Series"
 import RelArticles from "@/components/parts/RelArticles/RelArticles"
 import Contact from "@/components/parts/Contact/Contact"
 import DetailTop from "@/components/parts/PageHead/DetailTop"
 import Article from "@/components/parts/DetailPage/Article/Article"
 import FootSlider from "@/components/parts/FootSlider/FootSlider"
-import getInsightsStatic from '@/fetch/static/getInsightsStatic'
-import getInsightsDetail from '@/fetch/static/getInsightsDetail'
+import getInsightsStatic from '@/fetch/static/insights/getInsightsStatic'
+import getInsightsDetail from '@/fetch/static/insights/getInsightsDetail'
 import { GlossaryType } from '@/types/zodType'
 import { CardType } from '@/types/contentsType'
 import { KeywordType, ArticleHead, AuthorProfileType } from '@/types/detailPages'
@@ -101,7 +101,7 @@ export default async function Page({ params }: { params: { slug: string }}) {
   }) as KeywordType[]
 
   const sections = getH2FromHtml(details.contents_default)
-  const nav = {sections, keywords, numbering: details.index_numbering}
+  const nav = {sections, keywords, numbering: details.numbering}
 
   // Article head
   const articleHead = {

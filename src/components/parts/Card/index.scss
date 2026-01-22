@@ -212,6 +212,42 @@
   }
 }
 
+:where(.bl_cardList_parallel) {
+  &.bl_cardList {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .bl_card_container {
+    padding: 40px 30px;
+    background-color: #fff;
+    
+    @include breakpoint-up(md) {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 18px;
+      padding: 60px 40px;
+    } 
+  }
+
+  .bl_card_thumb {
+    img {
+      aspect-ratio: 360/240;
+    }
+  }
+
+  .bl_card_series_title {
+    background-color: #f6f6f6;
+  }
+
+  .bl_card_title {
+    @include breakpoint-up(md) {
+      font-size: rem(24);
+    }
+  }
+}
+
+// コラムの関連
 :where([data-type="relArticles"]) {
   .bl_card_container {
     @include breakpoint-up(md) {

@@ -7,7 +7,8 @@ import { useSearchParams } from 'next/navigation'
 import Inner from "@/components/parts/Inner/Inner"
 import NarrowDown from '@/components/parts/NarrowDown/NarrowDown'
 import CardList from '@/components/parts/Card/CardList'
-import { CardType, PageInfoType } from '@/types/contentsType'
+import { PageInfoType } from '@/types/contentsType'
+import { InsightsCardType } from '@/types/insights'
 import { JsonLdCardType, jsonLdCollectionPageType } from '@/types/jsonLd'
 import getInsights from '@/fetch/public/getInsights'
 
@@ -17,8 +18,8 @@ type Props = {
   pathname: string
 }
 
-const jsonLD = (list: CardType[], pageInfo: PageInfoType) => {
-  const pageList = list.map((item: CardType, index: number) => {
+const jsonLD = (list: InsightsCardType[], pageInfo: PageInfoType) => {
+  const pageList = list.map((item: InsightsCardType, index: number) => {
     const obj: JsonLdCardType = {
         "@type": "ListItem",
         position: index + 1,
@@ -54,7 +55,7 @@ const jsonLD = (list: CardType[], pageInfo: PageInfoType) => {
 }
 
 export default function ColumnsList({ pathname }: Props) {
-  const [data, setData] = useState<CardType[]>([])
+  const [data, setData] = useState<InsightsCardType[]>([])
   const [info, setInfo] = useState<PageInfoType | null>(null)
   const [jsonLdCards, setJsonLdCards] = useState<jsonLdCollectionPageType>()
   const [loading, setLoading] = useState(false)

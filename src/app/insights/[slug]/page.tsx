@@ -11,13 +11,13 @@ import FootSlider from "@/components/parts/FootSlider/FootSlider"
 import getInsightsStatic from '@/fetch/static/insights/getInsightsStatic'
 import getInsightsDetail from '@/fetch/static/insights/getInsightsDetail'
 import { GlossaryType } from '@/types/zodType'
-import { CardType } from '@/types/contentsType'
+import { InsightsCardType } from '@/types/insights'
 import { KeywordType, ArticleHead, AuthorProfileType } from '@/types/detailPages'
 import { getH2FromHtml } from '@/lib/getH2FromHtml'
 
 export async function generateStaticParams() {
   const { list } = await getInsightsStatic({ all: true })
-  const paramSlug = list.map((item: CardType) => ({
+  const paramSlug = list.map((item: InsightsCardType) => ({
     slug: item.slug
   }))
 
@@ -121,7 +121,7 @@ export default async function Page({ params }: { params: { slug: string }}) {
   })
 
   // Series
-  const seriesItems = list.filter((item: CardType) => {
+  const seriesItems = list.filter((item: InsightsCardType) => {
     return item.contents_type_slug === details.contents_type_slug
   }).slice(0, 5)
 

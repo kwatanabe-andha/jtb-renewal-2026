@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import { DetailHead, DetailHeadType } from '@/components/parts/DetailPage/DetailHead/DetailHead'
 import { DetailNav, DetailNavType } from '@/components/parts/DetailPage/DetailNav/DetailNav'
-import { ArticleHead, GuestType, AuthorProfileType } from '@/types/detailPages'
+import { ArticleHead, GuestType } from '@/types/detailPages'
 import AuthorProfile from "@/components/pages/insightsDetail/AuthorProfile/AuthorProfile"
 import Accordion from "@/components/parts/Accordion/Accordion"
 

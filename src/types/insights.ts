@@ -1,4 +1,6 @@
 import { z } from "zod"
+import { selectType } from "@/types/common"
+import { CardType } from "./contentsType"
 
 const SeriesSchema = z.object({
   topics_id: z.number(),
@@ -22,3 +24,7 @@ const SeriesSchema = z.object({
   })
 })
 export type SeriesType = z.infer<typeof SeriesSchema>
+
+export type InsightsCardType = CardType & {
+  article_type: selectType[]
+}

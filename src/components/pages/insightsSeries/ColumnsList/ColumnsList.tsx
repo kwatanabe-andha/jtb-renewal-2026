@@ -2,11 +2,12 @@ import './index.scss'
 import { Suspense } from 'react'
 import Inner from "@/components/parts/Inner/Inner"
 import CardList from '@/components/parts/Card/CardList'
-import { CardType, PageInfoType } from '@/types/contentsType'
+import { PageInfoType } from '@/types/contentsType'
+import { InsightsCardType } from '@/types/insights'
 
 type Props = {
   data: {
-    list: CardType[]
+    list: InsightsCardType[]
     pageInfo: PageInfoType
   },
   pathname: string

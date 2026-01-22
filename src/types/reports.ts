@@ -1,4 +1,5 @@
 import { ImgType, selectType } from "@/types/common"
+import { CardType } from "./contentsType"
 
 export type ReportsSeriesSlide = {
   topics_id: number
@@ -24,4 +25,8 @@ export type SeriesType = {
   article: string
   overview_table: { '1': string, '2': string },
   status: selectType
+}
+
+export type ReportsCardType = CardType & {
+  reports_type: selectType[]
 }

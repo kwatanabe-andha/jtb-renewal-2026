@@ -224,206 +224,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 function Content() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
-                className: "un_series",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "un_series_bg",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                            src: "/assets/dummy_series_bg.png",
-                            alt: "",
-                            width: "1440",
-                            height: "730"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                            lineNumber: 7,
-                            columnNumber: 39
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                        lineNumber: 7,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "bl_inner",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "un_series_icon",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                        src: "/assets/dummy_series_icon.png",
-                                        alt: "",
-                                        width: "230",
-                                        height: "230"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 10,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "un_series_icon_text",
-                                        children: [
-                                            "スマートフォンの利用と",
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                                                fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                lineNumber: 11,
-                                                columnNumber: 59
-                                            }, this),
-                                            "旅行消費に関する調査"
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 11,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                lineNumber: 9,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
-                                className: "un_series_title",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                        className: "title",
-                                        children: "スマートフォンの利用と旅行消費に関する調査"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 14,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "year",
-                                        children: "2016-2024"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 15,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "subTitle",
-                                        children: "今後の生活や旅行行動に関する変化の兆しをとらえる"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 16,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                lineNumber: 13,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "un_series_mv",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "/assets/dummy_series_mv.jpg",
-                                    alt: "",
-                                    width: "974",
-                                    height: "470"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                    lineNumber: 19,
-                                    columnNumber: 13
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                lineNumber: 18,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                                className: "un_series_content",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "un_series_content_copy",
-                                        children: "コピーが入ります。JTB総合研究所では、2013年から「スマートフォンの利用と旅行消費に関する調査」を定点実施しています。本調査では、スマホ利用と人々の意識を追うことで、旅行や暮らしの変化を捉えています。「SNS疲れ」や「デジタルデトックス」などの兆しをいち早く発見してきた調査では、ライフスタイルと旅行・消費の関係を探る研究を継続しています。"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 22,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        children: "JTB総合研究所では、2013年から「スマートフォンの利用と旅行消費に関する調査」を定点実施しています。本調査では、スマホ利用と人々の意識を追うことで、旅行や暮らしの変化を捉えています。「SNS疲れ」や「デジタルデトックス」などの兆しをいち早く発見してきた調査では、ライフスタイルと旅行・消費の関係を探る研究を継続しています。JTB総合研究所では、2013年から「スマートフォンの利用と旅行消費に関する調査」を定点実施しています。本調査では、スマホ利用と人々の意識を追うことで、旅行や暮らしの変化を捉えています。「SNS疲れ」や「デジタルデトックス」などの兆しをいち早く発見してきた調査では、ライフスタイルと旅行・消費の関係を探る研究を継続しています。"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 25,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                        src: "/assets/dummy_series_img01.jpg",
-                                        alt: "",
-                                        width: "788",
-                                        height: "474"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 28,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        children: "JTB総合研究所では、2013年から「スマートフォンの利用と旅行消費に関する調査」を定点実施しています。本調査では、スマホ利用と人々の意識を追うことで、旅行や暮らしの変化を捉えています。「SNS疲れ」や「デジタルデトックス」などの兆しをいち早く発見してきた調査では、ライフスタイルと旅行・消費の関係を探る研究を継続しています。JTB総合研究所では、2013年から「スマートフォンの利用と旅行消費に関する調査」を定点実施しています。本調査では、スマホ利用と人々の意識を追うことで、旅行や暮らしの変化を捉えています。「SNS疲れ」や「デジタルデトックス」などの兆しをいち早く発見してきた調査では、ライフスタイルと旅行・消費の関係を探る研究を継続しています。"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 29,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                        className: "un_series_content_btn",
-                                        href: "#series_survey",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                width: "24",
-                                                height: "24",
-                                                viewBox: "0 0 24 24",
-                                                fill: "none",
-                                                xmlns: "http://www.w3.org/2000/svg",
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                    d: "M12 4V20M12 20L18 14M12 20L6 14",
-                                                    stroke: "currentColor",
-                                                    strokeWidth: "2",
-                                                    strokeLinecap: "round",
-                                                    strokeLinejoin: "round"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                    lineNumber: 35,
-                                                    columnNumber: 17
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                lineNumber: 33,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                children: "調査概要をみる"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                lineNumber: 37,
-                                                columnNumber: 21
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 32,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                lineNumber: 21,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                        lineNumber: 8,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                lineNumber: 6,
-                columnNumber: 7
-            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "un_seriesLatest",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -437,7 +237,7 @@ function Content() {
                                     children: "最新のレポート"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                    lineNumber: 45,
+                                    lineNumber: 9,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -445,13 +245,13 @@ function Content() {
                                     children: "LATEST REPORTS"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                    lineNumber: 46,
+                                    lineNumber: 10,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                            lineNumber: 44,
+                            lineNumber: 8,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -475,17 +275,17 @@ function Content() {
                                                     src: "/assets/thumb.jpg"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                    lineNumber: 52,
+                                                    lineNumber: 16,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                lineNumber: 51,
+                                                lineNumber: 15,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                            lineNumber: 50,
+                                            lineNumber: 14,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -500,7 +300,7 @@ function Content() {
                                                             children: "定点調査"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                            lineNumber: 57,
+                                                            lineNumber: 21,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -508,7 +308,7 @@ function Content() {
                                                             children: "スマートフォンの利用と旅行消費に関する調査 2024"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                            lineNumber: 58,
+                                                            lineNumber: 22,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -516,13 +316,13 @@ function Content() {
                                                             children: "｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                            lineNumber: 59,
+                                                            lineNumber: 23,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                    lineNumber: 56,
+                                                    lineNumber: 20,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -535,7 +335,7 @@ function Content() {
                                                             children: "CSVダウンロード"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                            lineNumber: 62,
+                                                            lineNumber: 26,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("time", {
@@ -544,25 +344,25 @@ function Content() {
                                                             children: "2025.01.10"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                            lineNumber: 63,
+                                                            lineNumber: 27,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                    lineNumber: 61,
+                                                    lineNumber: 25,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                            lineNumber: 55,
+                                            lineNumber: 19,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                    lineNumber: 49,
+                                    lineNumber: 13,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
@@ -583,17 +383,17 @@ function Content() {
                                                     src: "/assets/thumb.jpg"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                    lineNumber: 70,
+                                                    lineNumber: 34,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                lineNumber: 69,
+                                                lineNumber: 33,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                            lineNumber: 68,
+                                            lineNumber: 32,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -608,7 +408,7 @@ function Content() {
                                                             children: "定点調査"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                            lineNumber: 75,
+                                                            lineNumber: 39,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -616,7 +416,7 @@ function Content() {
                                                             children: "スマートフォンの利用と旅行消費に関する調査 2024"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                            lineNumber: 76,
+                                                            lineNumber: 40,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -624,13 +424,13 @@ function Content() {
                                                             children: "｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                            lineNumber: 77,
+                                                            lineNumber: 41,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                    lineNumber: 74,
+                                                    lineNumber: 38,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -643,7 +443,7 @@ function Content() {
                                                             children: "CSVダウンロード"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                            lineNumber: 80,
+                                                            lineNumber: 44,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("time", {
@@ -652,42 +452,42 @@ function Content() {
                                                             children: "2025.01.10"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                            lineNumber: 81,
+                                                            lineNumber: 45,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                    lineNumber: 79,
+                                                    lineNumber: 43,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                            lineNumber: 73,
+                                            lineNumber: 37,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                    lineNumber: 67,
+                                    lineNumber: 31,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                            lineNumber: 48,
+                            lineNumber: 12,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                    lineNumber: 43,
+                    lineNumber: 7,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                lineNumber: 42,
+                lineNumber: 6,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -703,7 +503,7 @@ function Content() {
                                 children: "調査概要"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                lineNumber: 91,
+                                lineNumber: 55,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -711,26 +511,26 @@ function Content() {
                                     "観光立国の実現に向け、国の政策が引き続き強く推進されることが見込まれるなかで、地方公共団体においても「観光政策」がますます重要な位置づけになっています。そのため、都道府県や市町村の観光行政のあり方や今後の方向性を検討していく必要があります。",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 93,
+                                        lineNumber: 57,
                                         columnNumber: 135
                                     }, this),
                                     "当財団では、自主研究として、地方公共団体を対象とする観光政策アンケート調査を2014年度から継続的に実施しています。2018年度からは、従前の成果を踏まえ、都道府県と市町村とで可能な限り統一の調査項目を利用する等の調査票の見直しを行い実施しています。",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 93,
+                                        lineNumber: 57,
                                         columnNumber: 266
                                     }, this),
                                     "2020年度は、2020年1月からの新型コロナウイルス感染症の流行をうけ、従来の調査項目を一部縮小し、新型コロナウイルス感染症対策として取り組んだ施策等についての項目を追加しています。",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 93,
+                                        lineNumber: 57,
                                         columnNumber: 364
                                     }, this),
                                     "主な調査項目としては、都道府県・市町村における観光行政に関わる基盤整備の状況（職員数、予算、職員の知識・技能）、前年度及び当年度の観光政策・重点施策、都道府県と市町村との役割分担、新型コロナウイルス感染症の影響や対策（自治体として取り組んだ施策、プロモーションの再開にあたっての条件、観光振興計画等の見直し状況）等です。"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                lineNumber: 92,
+                                lineNumber: 56,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -740,7 +540,7 @@ function Content() {
                                 height: "318"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                lineNumber: 95,
+                                lineNumber: 59,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("dl", {
@@ -750,49 +550,49 @@ function Content() {
                                         children: "調査目的"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 97,
+                                        lineNumber: 61,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("dd", {
                                         children: "費動向にフォーカスをあてた質問を毎月聴取することで、生活者の気持ちの変化を時系列で読み解く。"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 98,
+                                        lineNumber: 62,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("dt", {
                                         children: "調査時期"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 99,
+                                        lineNumber: 63,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("dd", {
                                         children: "年1回、毎年6月上旬に実査"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 100,
+                                        lineNumber: 64,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("dt", {
                                         children: "調査開始"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 101,
+                                        lineNumber: 65,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("dd", {
                                         children: "2012年4月"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 102,
+                                        lineNumber: 66,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("dt", {
                                         children: "調査地域"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 103,
+                                        lineNumber: 67,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("dd", {
@@ -800,55 +600,55 @@ function Content() {
                                             "①首都40ｋｍ圏（東京都、埼玉県、千葉県、神奈川県、茨城県）",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                lineNumber: 104,
+                                                lineNumber: 68,
                                                 columnNumber: 49
                                             }, this),
                                             "②名古屋40ｋｍ圏（愛知県、岐阜県、三重県）",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                lineNumber: 104,
+                                                lineNumber: 68,
                                                 columnNumber: 77
                                             }, this),
                                             "③阪神30ｋｍ圏（大阪府、京都府、兵庫県、奈良県）"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 104,
+                                        lineNumber: 68,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("dt", {
                                         children: "調査方法"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 105,
+                                        lineNumber: 69,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("dd", {
                                         children: "インターネット調査調査時期：毎月上旬に実査（）"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 106,
+                                        lineNumber: 70,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("dt", {
                                         children: "調査対象"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 71,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("dd", {
                                         children: "20歳～69歳の男女"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 108,
+                                        lineNumber: 72,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("dt", {
                                         children: "サンプル数"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 109,
+                                        lineNumber: 73,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("dd", {
@@ -856,36 +656,36 @@ function Content() {
                                             "1,500名（①～③の各地域500名）",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                                lineNumber: 110,
+                                                lineNumber: 74,
                                                 columnNumber: 38
                                             }, this),
                                             "※各地域ごとに、人口構成比（性年代10歳刻み）にあわせて割付"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                        lineNumber: 110,
+                                        lineNumber: 74,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                                lineNumber: 96,
+                                lineNumber: 60,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                        lineNumber: 90,
+                        lineNumber: 54,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                    lineNumber: 89,
+                    lineNumber: 53,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/pages/researchSeries/Content.tsx",
-                lineNumber: 88,
+                lineNumber: 52,
                 columnNumber: 7
             }, this)
         ]
@@ -1099,13 +899,14 @@ async function Page({ params }) {
             }
         ]
     };
+    console.log(details);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$parts$2f$Breadcrumb$2f$Breadcrumb$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                 data: breadcrumb
             }, void 0, false, {
                 fileName: "[project]/src/app/research-reports/series/[seriesID]/page.tsx",
-                lineNumber: 72,
+                lineNumber: 74,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$parts$2f$SideNav$2f$SideNav$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -1113,7 +914,7 @@ async function Page({ params }) {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$pages$2f$researchSeries$2f$Content$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/src/app/research-reports/series/[seriesID]/page.tsx",
-                        lineNumber: 74,
+                        lineNumber: 76,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$parts$2f$FootSlider$2f$FootSlider$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -1121,13 +922,13 @@ async function Page({ params }) {
                         content: "reports"
                     }, void 0, false, {
                         fileName: "[project]/src/app/research-reports/series/[seriesID]/page.tsx",
-                        lineNumber: 76,
+                        lineNumber: 78,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/research-reports/series/[seriesID]/page.tsx",
-                lineNumber: 73,
+                lineNumber: 75,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$parts$2f$Breadcrumb$2f$Breadcrumb$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -1135,7 +936,7 @@ async function Page({ params }) {
                 footer: true
             }, void 0, false, {
                 fileName: "[project]/src/app/research-reports/series/[seriesID]/page.tsx",
-                lineNumber: 78,
+                lineNumber: 80,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$script$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -1146,7 +947,7 @@ async function Page({ params }) {
                 }
             }, void 0, false, {
                 fileName: "[project]/src/app/research-reports/series/[seriesID]/page.tsx",
-                lineNumber: 80,
+                lineNumber: 82,
                 columnNumber: 7
             }, this)
         ]

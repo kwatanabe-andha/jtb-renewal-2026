@@ -6,11 +6,11 @@ import Link from 'next/link'
 import Inner from "@/components/parts/Inner/Inner"
 import LinkButton from '@/components/parts/LinkButton/LinkButton'
 import toDateTimeFormat from '@/lib/toDateTimeFormat'
-import { CardType } from '@/types/contentsType'
-import { SeriesType } from '@/types/zodType';
+import { InsightsCardType } from '@/types/insights'
+import { SeriesType } from '@/types/insights'
 
 type Props = {
-  list: CardType[]
+  list: InsightsCardType[]
   series: SeriesType
 }
 
@@ -31,7 +31,7 @@ export default function Series({ list, series }: Props) {
             <h3 className='un_series_back_title'>バックナンバー</h3>
             <ul className='un_series_list'>
               {
-                list.map((item: CardType, index: number) => {
+                list.map((item: InsightsCardType, index: number) => {
                   return (
                     <li className='un_series_item' key={index}>
                       <div className='un_series_item_date'><time dateTime={item.ymd}>{ toDateTimeFormat(item.ymd) }</time></div>

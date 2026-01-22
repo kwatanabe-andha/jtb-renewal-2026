@@ -4,6 +4,8 @@ import Contact from "@/components/parts/Contact/Contact"
 import FootSlider from "@/components/parts/FootSlider/FootSlider"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
 import Content from '@/components/pages/researchSeries/Content'
+import Article from '@/components/pages/researchSeries/Article/Article'
+import Latest from '@/components/pages/researchSeries/Latest/Latest'
 import getReportsStatic from '@/fetch/static/reports/getReportsStatic'
 import getReportsSeries from '@/fetch/static/reports/getReportsSeries'
 import getReportsSeriesDetail from '@/fetch/static/reports/getReportsSeriesDetail'
@@ -67,10 +69,14 @@ export default async function Page({ params }: { params: { seriesID: string }}) 
     ]
   }
 
+  console.log(details)
+
   return (
     <>
       <Breadcrumb data={breadcrumb} />
       <SideNav offset={100}>
+        <Article data={details} />
+        <Latest data={list} />
         <Content />
         {/* <Contact /> */}
         <FootSlider list={list} content="reports" />

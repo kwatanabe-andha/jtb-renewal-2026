@@ -1,4 +1,4 @@
-import { ImgType } from "./common"
+import { ImgType, selectType } from "./common"
 
 export type PageInfoType = {
   totalCnt: number
@@ -15,7 +15,7 @@ export type PageInfoType = {
 
 export type CardType = {
   topics_id: number
-  ymd?: string
+  ymd: string
   subject: string
   topics_group_id: number
   slug?: string
@@ -25,12 +25,9 @@ export type CardType = {
   contents_type_nm?: string
   contents_type_slug?: string
   series_custom?: string
-  organization?: string
-  article_type: { key?: string, label?: string }
   numbering?: boolean
   excerpt?: string
   summary?: string
-  // author?: string
   author_external_name?: string[]
   author_external_title?: string[]
   tag?: [ { name: string, slag: string } ]

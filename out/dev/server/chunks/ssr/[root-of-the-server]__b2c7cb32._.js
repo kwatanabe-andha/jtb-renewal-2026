@@ -1173,7 +1173,6 @@ async function getReportsStatic(params) {
     } else if (!all) {
         url.searchParams.append('cnt', __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$site$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["STATIC_API_CNT"]);
     }
-    console.log(url);
     const response = await fetch(url);
     return await response.json();
 }

@@ -4,6 +4,7 @@ import './index.scss'
 import Level2 from "@/components/parts/Heading/Level2"
 import Inner from "@/components/parts/Inner/Inner"
 import toDateTimeFormat from '@/lib/toDateTimeFormat'
+import { joinLabels } from '@/lib/joinLabels'
 import { ImgType, selectType } from '@/types/common'
 
 type Props = {
@@ -17,10 +18,6 @@ type Props = {
 }
 
 export default function Recently({ data }: Props) {
-  // console.log(data.reports_type)
-  // console.log(data)
-  // const categoryText = 
-
   return (
     <section className='un_recently'>
       <Inner className='un_recently_inner'>
@@ -34,9 +31,11 @@ export default function Recently({ data }: Props) {
             </div>
             <div className='un_recentlyCard_body'>
               <div className='un_recentlyCard_content'>
-                <div className='un_recentlyCard_category'>
-                  
-                </div>
+                { data.reports_type?.length > 0 && (
+                  <div className='un_recentlyCard_category'>
+                    { joinLabels(data.reports_type) }
+                  </div>
+                )}
                 <h3 className='un_recentlyCard_title'>{data.subject}</h3>
                 <p className='un_recentlyCard_summary'>ダミーテキスト（静的）ダミーテキスト（静的）ダミーテキスト（静的）ダミーテキスト（静的）</p>
               </div>

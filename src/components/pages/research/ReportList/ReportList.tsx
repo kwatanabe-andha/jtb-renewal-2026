@@ -25,7 +25,7 @@ const jsonLD = (list: ReportsType[], pageInfo: PageInfoType) => {
           headline: item.subject,
           url: `https://www.tourism.jp//research-reports//${item.slug}/`,
           datePublished: item.ymd,
-          image: item.thumb.url
+          image: item.thumb?.url
         }
       }
     if (item.related_consultant.length > 0) {
@@ -67,7 +67,13 @@ export default function ReportList() {
       const { list, pageInfo } = await getReports(query)
       if (list) {
         setLoading(true)
-        setData(list)
+        setData(list.map((item: ReportsType) => {
+          if (item.reports_type.length > 0) {
+            item.contents_name = item.reports_type[0].label
+          }
+          item.summary = '静的テキスト静的テキスト静的テキスト静的テキスト静的テキスト静的テキスト'
+          return item
+        }))
         setInfo(pageInfo)
         setJsonLdCards(jsonLD(list, pageInfo))
       }

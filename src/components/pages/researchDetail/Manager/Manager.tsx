@@ -8,7 +8,7 @@ type Props = {
 }
 
 export default function Manager({data}: Props) {
-  if ( !data[0] ) return
+  if ( data.length === 0 ) return
 
   return (
     <section className="un_manager">
@@ -23,11 +23,11 @@ export default function Manager({data}: Props) {
                 return (
                   <li className="un_manager_item" key={item.slug}>
                     <Link href={`/consultants/${item.slug}`}>
-                      { item.profile_img.url && <div className="un_manager_img"><Image src={item.profile_img.url} alt={item.profile_img.desc || ''} width="50" height="50" /></div> }
+                      { item.profile.profile_img.url && <div className="un_manager_img"><Image src={item.profile.profile_img.url} alt={item.profile.profile_img.desc || ''} width="50" height="50" /></div> }
                       <div className="un_manager_info">
                         <p className="un_manager_name">{item.subject}</p>
                         <p className="un_manager_company">JTB総合研究所（静的テキスト）</p>
-                        { item.profile_position && <p className="un_manager_position">{item.profile_position}</p> }
+                        { item.profile.profile_position && <p className="un_manager_position">{item.profile.profile_position}</p> }
                       </div>
                     </Link>
                   </li>

@@ -3,7 +3,7 @@
 import './index.scss'
 import Image from 'next/image'
 import Accordion from "@/components/parts/Accordion/Accordion"
-import { SeriesType } from '@/types/zodType'
+import { SeriesType } from '@/types/insights';
 
 export default function Summary({series} : {series: SeriesType}) {
   const seriesTitle = series.slug === "xtourism" ? '✘ Tourism' : series.subject
@@ -12,9 +12,7 @@ export default function Summary({series} : {series: SeriesType}) {
     <section className='un_summary'>
       <div className='un_summary_inner'>
         <div className='un_summaryHead'>
-          <div className='un_summaryHead_logo'>
-            <Image src={series.series_logo.url} alt={series.series_logo.desc} width={195} height={195} />
-          </div>
+          { series.series_logo.url && <div className='un_summaryHead_logo'><Image src={series.series_logo.url} alt={series.series_logo.desc || ''} width={195} height={195} /></div> }
           <div className='un_summaryHead_shoulder'>
             <div className='un_summaryHead_shoulder_series'>{seriesTitle}</div>
             <div className='un_summaryHead_shoulder_and'>{series.shoulder_text}</div>
@@ -23,7 +21,7 @@ export default function Summary({series} : {series: SeriesType}) {
         </div>
         <h1 className='un_summary_heading'>{series.subject}</h1>
         <p className='un_summary_text'>{series.lead_text}</p>
-        <div className='un_summary_img'><Image src={series.img_main.url} alt={series.img_main.desc} width={974} height={593} /></div>
+        { series.img_main.url && <div className='un_summary_img'><Image src={series.img_main.url} alt={series.img_main.desc || ''} width={974} height={593} /></div> }
 
         <Accordion
           openedText='閉じる'

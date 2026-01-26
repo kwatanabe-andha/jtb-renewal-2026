@@ -9,7 +9,7 @@ import ViewMore from "@/components/parts/ViewMore/ViewMore"
 import { useState, useRef } from 'react'
 import toDateTimeFormat from '@/lib/toDateTimeFormat'
 import { opening, closing } from '@/lib/heightAnim'
-import { SeriesType } from '@/types/zodType'
+import { SeriesType } from '@/types/insights';
 
 export default function Series({data} : {data: SeriesType[]}) {
   const [isOpen, setIsOpen] = useState(false)
@@ -36,7 +36,7 @@ export default function Series({data} : {data: SeriesType[]}) {
                     return (
                       <li key={item.topics_id}>
                         <Link href={`/insights/series/${item.slug}/`}>
-                          <div className="un_series_img"><Image src={item.series_logo.url} alt={item.series_logo.desc} width={195} height={195} /></div>
+                          { item.series_logo.url && <div className="un_series_img"><Image src={item.series_logo.url} alt={item.series_logo.desc || ''} width={195} height={195} /></div> }
                           <p className='un_series_title'>{item.subject}</p>
                           <div className='un_series_date'><time dateTime={item.ymd}>{ toDateTimeFormat(item.ymd) }</time></div>
                         </Link>
@@ -60,7 +60,7 @@ export default function Series({data} : {data: SeriesType[]}) {
                       return (
                         <li key={item.topics_id}>
                           <Link href={`/insights/series/${item.slug}/`}>
-                            <div className="un_series_img"><Image src={item.series_logo.url} alt={item.series_logo.desc} width={195} height={195} /></div>
+                            { item.series_logo.url && <div className="un_series_img"><Image src={item.series_logo.url} alt={item.series_logo.desc || ''} width={195} height={195} /></div> }
                             <p className='un_series_title'>{item.subject}</p>
                             <div className='un_series_date'><time dateTime={item.ymd}>{ toDateTimeFormat(item.ymd) }</time></div>
                           </Link>

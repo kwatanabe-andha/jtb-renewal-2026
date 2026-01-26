@@ -89,16 +89,9 @@ export default async function Page({ params }: { params: { slug: string }}) {
           glossaries={related_glossary}
         />
         {/* <Download /> */}
-        <Survey contents={details.overview_contents} title={details.overview_title} detail={details.overview_detail} />
+        <Survey contents={details.overview_contents} list={details.overview_table} />
         <Manager data={related_consultant} />
-        <Contact
-          contact_default={true}
-          contact_department={'経営企画部　広報担当　○○事務局'}
-          contact_custom_office_address={''}
-          contact_custom_url={''}
-          related_contact_person={'山田、森川'}
-          contact_note={''}
-        />
+        <Contact contact={details.contact} />
         <FootSlider list={list} content="reports" />
       </SideNav>
       <Breadcrumb data={breadcrumb} footer />

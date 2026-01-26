@@ -42,6 +42,15 @@ export default async function Page() {
     ]
   }
 
+  const contact = {
+    contact_default: true,
+    contact_department: '経営企画部　広報担当　○○事務局',
+    contact_custom_office_address: '',
+    contact_custom_url: '',
+    related_contact_person: '山田、森川',
+    contact_note: '',
+  }
+
   return (
     <>
       <Breadcrumb data={breadcrumb} />
@@ -49,14 +58,7 @@ export default async function Page() {
         <SideNav offset={60}>
           <div className='un_consulDetail'>
             <Content />
-            <Contact
-              contact_default={true}
-              contact_department={'経営企画部　広報担当　○○事務局'}
-              contact_custom_office_address={''}
-              contact_custom_url={''}
-              related_contact_person={'山田、森川'}
-              contact_note={''}
-            />
+            <Contact contact={contact} />
             <Foot />
           </div>
         </SideNav>

@@ -20,7 +20,7 @@ export default function Series({ list, series }: Props) {
       <Inner className='un_series_inner'>
         <div className='un_series_container'>
           <div className='un_series_top'>
-            <div className='un_series_top_img'><Image src={series.series_logo.url} alt={series.series_logo.desc} width={195} height={195} /></div>
+            { series.series_logo.url && <div className='un_series_top_img'><Image src={series.series_logo.url} alt={series.series_logo.desc || ''} width={195} height={195} /></div> }
             <div className='un_series_top_content'>
               <h3 className='un_series_top_title'>{ series.subject }</h3>
               { series.lead_text && <p className='un_series_top_text'>{ series.lead_text }</p> }

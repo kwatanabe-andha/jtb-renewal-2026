@@ -1,13 +1,13 @@
 import './index.scss'
 import { returnHtml } from '@/lib/returnHtml'
+import { ResultType } from '@/types/reports'
 
 type Props = {
-  title: string[]
-  contents: string[]
+  list: ResultType[]
 }
 
-export default function ResultSummary({ title, contents }: Props) {
-  if (!title[0]) return
+export default function ResultSummary({ list }: Props) {
+  if (list.length === 0) return
 
   return (
     <section className='un_resultSummary'>
@@ -17,11 +17,11 @@ export default function ResultSummary({ title, contents }: Props) {
       <div className='un_resultSummary_body'>
         <ul className='un_resultSummary_list'>
         {
-          title.map((item, index: number) => {
+          list.map((item, index: number) => {
             return (
               <li key={index}>
-                { returnHtml(title[index]) }                                                                               
-                { returnHtml(contents[index]) }
+                { returnHtml(item.result_title) }                                                                               
+                { returnHtml(item.result_contents) }
               </li>
             )
           })

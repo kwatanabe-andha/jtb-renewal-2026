@@ -10,6 +10,20 @@ type Props = {
 }
 
 export default function RelArticles({ list }: Props) {
+  const data = list.map((item: CardType) => {
+    const card = {
+      topics_id: item.topics_id,
+      subject: item.subject,
+      thumb: item.thumb,
+      ymd: item.ymd,
+      slug: item.slug,
+      update_ymdhi: item.update_ymdhi,
+      topics_group_id: item.topics_group_id,
+      contents_name: item.contents_type_nm
+    } as CardType
+    return card
+  })
+
   return (
     <section className='bl_relArticles'>
       <Inner className='bl_relArticles_inner'>
@@ -19,7 +33,7 @@ export default function RelArticles({ list }: Props) {
           <div className='bl_relArticles_body' data-type="relArticles">
             <ScrollBar>
               {
-                list.map((card: CardType) => {
+                data.map((card: CardType) => {
                   return (
                     <li key={card.topics_id}>
                       <Card

@@ -22,13 +22,14 @@ type Props = {
 export default function Article(
   { details, consultants, glossaries }: Props
 ) {
+  const { numbering, contents_default, contents_login } = details.article ?? {}
 
   const author = consultants.map(consultant => {
-    return { name: consultant.subject, profile: consultant.profile_position }
+    return { name: consultant.subject, title: consultant.profile.profile_position }
   })
 
-  const defaultSections = getH2FromHtml(details.contents_default)
-  const loginSections = getH2FromHtml(details.contents_login)
+  const defaultSections = getH2FromHtml(contents_default)
+  const loginSections = getH2FromHtml(contents_login)
   const sections = defaultSections.concat(loginSections)
   const keywords = glossaries.map(glossary => {
     return { subject: glossary.subject, slug: glossary.slug || glossary.topics_id.toString() }
@@ -48,18 +49,18 @@ export default function Article(
 
       <section className='bl_article_wrap'>
         <div className='bl_article_container'>
-          <DetailNav sections={sections} keywords={keywords} numbering={details.numbering || false} isPc scrollToDetail className='hp_hidden_down-sm' />
+          <DetailNav sections={sections} keywords={keywords} numbering={numbering || false} isPc scrollToDetail className='hp_hidden_down-sm' />
           <div className='bl_article_body'>
             <div className='bl_article_head'>
-              <ResultSummary title={details.result_title} contents={details.result_contents} />
+              <ResultSummary list={details.result} />
               { details.img_main.url && <div className='bl_article_thumb'><Image src={details.img_main.url} alt={details.img_main.desc || ''} width={974} height={593} /></div> }
               <p className='bl_article_abstract'>
                 静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。
               </p>
             </div>
-            <DetailNav sections={sections} keywords={keywords} numbering={details.numbering || false} className='hp_hidden_up-md' />
+            <DetailNav sections={sections} keywords={keywords} numbering={numbering || false} className='hp_hidden_up-md' />
 
-            <Content numbering={details.numbering || false} contents_default={details.contents_default} contents_login={details.contents_login} />
+            <Content numbering={numbering || false} contents_default={contents_default} contents_login={contents_login} />
           </div>
         </div>
       </section>

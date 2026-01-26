@@ -1,4 +1,3 @@
-import { z } from "zod"
 import { ImgType } from "./common"
 
 export type KeywordType = {
@@ -25,6 +24,7 @@ export type ArticleHead = {
 
 export type AuthorType = {
   name?: string
+  title?: string
   img?: ImgType
   profile?: string
 }

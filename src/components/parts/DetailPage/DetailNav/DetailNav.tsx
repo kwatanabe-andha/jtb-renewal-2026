@@ -33,41 +33,44 @@ export function DetailNav({ sections, keywords, className, numbering, isPc = fal
     const navInner = document.querySelector('.bl_detailNav_inner') as HTMLElement
     const h2List = scrollToDetail ? document.querySelectorAll('.js_content .bl_details') : document.querySelectorAll('.js_content h2')
     const anchorList = document.querySelectorAll('.bl_detailNav_list_item')
-    const reset = () => {
-      anchorList.forEach(item => {
-        const target = item as HTMLLinkElement
-        target.dataset.current = 'false'
-      })
-    }
 
-    anchorList.forEach((item, index) => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault()
-        const y = h2List[index].getBoundingClientRect().top + window.pageYOffset - 60 // 60は上部余白
-        window.scrollTo({
-          top: y,
-          behavior: 'smooth',
+    if (h2List.length > 0) {
+      const reset = () => {
+        anchorList.forEach(item => {
+          const target = item as HTMLLinkElement
+          target.dataset.current = 'false'
+        })
+      }
+
+      anchorList.forEach((item, index) => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault()
+          const y = h2List[index].getBoundingClientRect().top + window.pageYOffset - 60 // 60は上部余白
+          window.scrollTo({
+            top: y,
+            behavior: 'smooth',
+          })
         })
       })
-    })
 
-    h2List.forEach((item, index: number) => {
-      ScrollTrigger.create({
-        trigger: item,
-        start: 'top top',
-        end: 'bottom top',
-        onEnter: () => {
-          reset()
-          const target = anchorList[index] as HTMLLinkElement
-          target.dataset.current = 'true'
-        },
-        onEnterBack: () => {
-          reset()
-          const target = anchorList[index] as HTMLLinkElement
-          target.dataset.current = 'true'
-        }
+      h2List.forEach((item, index: number) => {
+        ScrollTrigger.create({
+          trigger: item,
+          start: 'top top',
+          end: 'bottom top',
+          onEnter: () => {
+            reset()
+            const target = anchorList[index] as HTMLLinkElement
+            target.dataset.current = 'true'
+          },
+          onEnterBack: () => {
+            reset()
+            const target = anchorList[index] as HTMLLinkElement
+            target.dataset.current = 'true'
+          }
+        })
       })
-    })
+    }
 
     mm.add('(min-width: 768px)', () => {
       ScrollTrigger.create({
@@ -94,26 +97,30 @@ export function DetailNav({ sections, keywords, className, numbering, isPc = fal
           <LockIcon />
           <p>この記事の全文を読むには<br /><Link href={SITE_URL.login}>ログイン</Link>が必要です</p>
         </div>
-        
-        <nav className='bl_detailNav_nav'>
-          <h2 className='bl_detailNav_title'>目次</h2>
-          <ul className='bl_detailNav_list'>
-            {
-              sections.map((section: string, index: number) => {
-                let current = false
-                return (
-                  <li key={index}>
-                    { index === 0 && (current = true) }
-                    <Link href={''} className='bl_detailNav_list_item' data-current={`${current}`}>
-                      { numbering && <div className='bl_detailNav_list_number'>{index + 1}</div> }
-                      <p className='bl_detailNav_list_text'>{section}</p>
-                    </Link>
-                  </li>
-                )
-              })
-            }
-          </ul>
-        </nav>
+
+        {
+          sections.length > 0 && (
+            <nav className='bl_detailNav_nav'>
+              <h2 className='bl_detailNav_title'>目次</h2>
+              <ul className='bl_detailNav_list'>
+                {
+                  sections.map((section: string, index: number) => {
+                    let current = false
+                    return (
+                      <li key={index}>
+                        { index === 0 && (current = true) }
+                        <Link href={''} className='bl_detailNav_list_item' data-current={`${current}`}>
+                          { numbering && <div className='bl_detailNav_list_number'>{index + 1}</div> }
+                          <p className='bl_detailNav_list_text'>{section}</p>
+                        </Link>
+                      </li>
+                    )
+                  })
+                }
+              </ul>
+            </nav>
+          )
+        }
 
         <div className='bl_detailNav_rel'>
           <div className='bl_detailNav_keyword'>関連キーワード</div>

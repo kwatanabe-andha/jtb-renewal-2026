@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///Users/kouichiwatanabe/myworks/andha_projects/jtb/jtb-renewal-2026/src/app/page.tsx"],"sourcesContent":["import '@/styles/index.scss';\n\nexport default async function Home() {\n  // const wp_url = new URL(\n  //   `http://localhost:10028/wp-json/wp/v2/column?page=1`,\n  // )\n  // const wp_response = await fetch(wp_url, {credentials: 'omit'})\n  // const wp_data = await wp_response.json()\n  // // const totalPages = await response.headers.get('x-wp-totalpages')\n  // console.log(wp_data)\n\n  return (\n    <div className=''>\n      <main className=''>\n      </main>\n    </div>\n  )\n}"],"names":[],"mappings":";;;;;;;AAEe,eAAe;IAC5B,0BAA0B;IAC1B,0DAA0D;IAC1D,IAAI;IACJ,iEAAiE;IACjE,2CAA2C;IAC3C,sEAAsE;IACtE,uBAAuB;IAEvB,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;YAAK,WAAU;;;;;;;;;;;AAItB"}}]
-}

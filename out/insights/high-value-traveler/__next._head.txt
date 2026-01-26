@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
-2:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"ViewportBoundary"]
-4:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"MetadataBoundary"]
+2:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/e308b2b9ce476a3e.js"],"ViewportBoundary"]
+4:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/e308b2b9ce476a3e.js"],"MetadataBoundary"]
 5:"$Sreact.suspense"
-0:{"buildId":"TvtmHKd7uU-60nakM-owS","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],null]}],"loading":null,"isPartial":false}
+0:{"buildId":"FYThcBgnjQ-xLP3p58p08","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],null]}],"loading":null,"isPartial":false}
 3:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-6:[["$","title","0",{"children":"観光が日本の成長戦略であるべき理由 ―外貨・地方・人材を支える「統合型産業」として再定義する―のコピー"}],["$","meta","1",{"name":"description","content":"undefined"}]]
+6:[["$","title","0",{"children":"観光が日本の成長戦略であるべき理由 ―外貨・地方・人材を支える「統合型産業」として再定義する―のコピー"}],["$","meta","1",{"name":"description","content":"訪日観光は旅行者数・消費額ともに過去最高を記録しましたが、一方でオーバーツーリズムや地域経済への恩恵の偏りなど課題も出ています。 観光庁やJNTOが掲げる「高付加価値旅行者」の概念が「高額消費者」と混同されている現状も踏まえ、本稿ではその定義を再考し、世界の観光動向や旅行者の価値観の変化を視野に入れ、今後の日本の観光政策のあるべき姿を考察します。"}]]

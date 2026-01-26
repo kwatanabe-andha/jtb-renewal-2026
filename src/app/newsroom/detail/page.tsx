@@ -58,7 +58,7 @@ export default function Page() {
         <DetailTop
           title="スマートフォンの利用と旅行消費に関する調査"
           pressRelease
-          logo='/assets/series_logo.png'
+          logo={ {url: '/assets/series_logo.png', desc: ''} }
           category='定点調査'
           facility='愛知県東三河総局'
         />

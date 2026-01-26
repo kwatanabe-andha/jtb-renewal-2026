@@ -7,6 +7,8 @@ import { useEffect, useRef } from 'react'
 import { DetailHead, DetailHeadType } from '@/components/parts/DetailPage/DetailHead/DetailHead'
 import { DetailNav, DetailNavType } from '@/components/parts/DetailPage/DetailNav/DetailNav'
 import { ArticleHead, GuestType } from '@/types/detailPages'
+import { ArticleType } from '@/types/contentsType'
+import { selectType } from '@/types/common'
 import AuthorProfile from "@/components/pages/insightsDetail/AuthorProfile/AuthorProfile"
 import Accordion from "@/components/parts/Accordion/Accordion"
 
@@ -14,24 +16,26 @@ type Props = {
   head: DetailHeadType
   nav: DetailNavType
   articleHead?: ArticleHead
-  contents_default?: string
-  contents_login?: string
-  article_type?: string
+  article_type?: selectType
+  article: ArticleType
 }
 
 export default function Article(
-  { head, nav, articleHead, contents_default, contents_login, article_type }: Props
+  { head, nav, articleHead, article, article_type }: Props
 ) {
   const contentRef = useRef<HTMLDivElement>(null)
+  const articleType = article_type?.key ? article_type?.key : null
+  const { contents_default, contents_login } = article ?? {}
+  // const charaList = 
 
-  useEffect(() => {
-    // if (!contentRef.current) return
+  // useEffect(() => {
+  //   // if (!contentRef.current) return
 
-    // const h2List = contentRef.current.querySelectorAll('h2')
-    // h2List.forEach((h2, index) => {
-    //   h2.id = `section${index + 1}`
-    // })
-  }, [])
+  //   // const h2List = contentRef.current.querySelectorAll('h2')
+  //   // h2List.forEach((h2, index) => {
+  //   //   h2.id = `section${index + 1}`
+  //   // })
+  // }, [])
 
   return (
     <article className='bl_article'>
@@ -64,7 +68,7 @@ export default function Article(
                   <div className='bl_articleChara' key={guest.guest_name}>
                     <div className='bl_articleChara_title'>{guest.guest_heading || '本記事の登場人物'}</div>
                     <div className='bl_articleChara_head'>
-                      <div className='bl_articleChara_img'><Image src='/assets/dummy_article_chara.jpg' alt='' width={196} height={196} /></div>
+                      {/* <div className='bl_articleChara_img'><Image src='/assets/dummy_article_chara.jpg' alt='' width={196} height={196} /></div> */}
                       <div className='bl_articleChara_profile'>
                         <div className='bl_articleChara_name'><span>{guest.guest_name}</span>{guest.guest_honorific}</div>
                         <div className='bl_articleChara_about'>{guest.guest_title}</div>
@@ -84,13 +88,13 @@ export default function Article(
             }
 
             {
-              contents_default && article_type === 'interview' && (
+              contents_default && articleType === 'interview' && (
                 <div className='bl_article_talk js_content' ref={contentRef} dangerouslySetInnerHTML={{ __html: contents_default }}></div>
               )
             }
 
             {
-              contents_default && article_type !== 'interview' && (
+              contents_default && articleType !== 'interview' && (
                 <div className='bl_article_content js_content' ref={contentRef} dangerouslySetInnerHTML={{ __html: contents_default }}></div>
               )
             }
@@ -102,13 +106,3 @@ export default function Article(
     </article>
   )
 }
-
-{/* <div className='bl_article_talk'>
-    <p className='bl_article_talk_lead'>まずはお互いの作品に出会ったきっかけを教えてください</p>
-    <p><span style={{ 'color': '#C2BD30' }}>上田さん :</span>&emsp;私は、「わきまえる」という言葉を悪者にしすぎないことも大切だと思っています。もともとの意味である「道理を心得ている」という中にある「理」は大切にしたい。また、配慮や分別、謙虚さも、それ自体が悪いものではないはずです。</p>
-    <p><span style={{ 'color': '#305CC2' }}>清田さん :</span>&emsp;ただ、わきまえることを一方的に求める構造、特定の人にだけ強いる構造こそが変わるべきだったんです。だから今後は、「上に立つ人こそ、わきまえることが求められる」「声の大きな人こそ、自分の発言の影響をわきまえる」という方向へ、意味を転換していけたらいいなと感じています。</p>
-    <p><span style={{ 'color': '#DF752A' }}>清田さん :</span>&emsp;ただ、わきまえることを一方的に求める構造、特定の人にだけ強いる構造こそが変わるべきだったんです。だから今後は、「上に立つ人こそ、わきまえることが求められる」「声の大きな人こそ、自分の発言の影響をわきまえる」という方向へ、意味を転換していけたらいいなと感じています。</p>
-    <p><span style={{ 'color': '#30B5C2' }}>清田さん :</span>&emsp;ただ、わきまえることを一方的に求める構造、特定の人にだけ強いる構造こそが変わるべきだったんです。だから今後は、「上に立つ人こそ、わきまえることが求められる」「声の大きな人こそ、自分の発言の影響をわきまえる」という方向へ、意味を転換していけたらいいなと感じています。</p>
-    <p><span style={{ 'color': '#87C230' }}>清田さん :</span>&emsp;ただ、わきまえることを一方的に求める構造、特定の人にだけ強いる構造こそが変わるべきだったんです。だから今後は、「上に立つ人こそ、わきまえることが求められる」「声の大きな人こそ、自分の発言の影響をわきまえる」という方向へ、意味を転換していけたらいいなと感じています。</p>
-    <p><span style={{ 'color': '#C230A2' }}>清田さん :</span>&emsp;ただ、わきまえることを一方的に求める構造、特定の人にだけ強いる構造こそが変わるべきだったんです。だから今後は、「上に立つ人こそ、わきまえることが求められる」「声の大きな人こそ、自分の発言の影響をわきまえる」という方向へ、意味を転換していけたらいいなと感じています。</p>
-  </div> */}

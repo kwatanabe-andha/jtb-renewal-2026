@@ -3,6 +3,10 @@
 .bl_seriesSurvey {
   background-color: #fff;
   padding: 136px 0 80px;
+
+  .bl_article + & {
+    padding-top: 56px;
+  }
 }
 .bl_seriesSurvey_container {
   width: 76.59%;
@@ -41,6 +45,10 @@
 @media (width < 768px) {
   .bl_seriesSurvey {
     padding: 100px 0;
+
+    .bl_article + & {
+      padding-top: 40px;
+    }
   }
   .bl_seriesSurvey_container {
     width: 100%;

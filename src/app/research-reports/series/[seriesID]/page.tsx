@@ -2,7 +2,7 @@ import Script from 'next/script'
 import SideNav from "@/components/parts/SideNav/SideNav"
 import FootSlider from "@/components/parts/FootSlider/FootSlider"
 import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
-// import Content from '@/components/pages/researchSeries/Survey/Survey'
+import Contact from '@/components/parts/Contact/Contact'
 import Article from '@/components/pages/researchSeries/Article/Article'
 import Latest from '@/components/pages/researchSeries/Latest/Latest'
 import Survey from '@/components/parts/Survey/Survey'
@@ -75,8 +75,8 @@ export default async function Page({ params }: { params: { seriesID: string }}) 
       <SideNav offset={100}>
         <Article data={details} />
         <Latest data={list} />
-        <Survey contents={details.overview_contents} title={details.overview_title} detail={details.overview_detail} />
-        {/* <Contact /> */}
+        <Survey contents={details.overview_contents} list={details.overview_table} />
+        <Contact contact={details.contact} />
         <FootSlider list={list} content="reports" />
       </SideNav>
       <Breadcrumb data={breadcrumb} footer />

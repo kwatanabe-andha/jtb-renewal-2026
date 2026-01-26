@@ -4,6 +4,6 @@
 :HL["/_next/static/chunks/7583ff10c87c6c42.css","style"]
 :HL["/_next/static/chunks/c14d0a88e0929c43.css","style"]
 :HL["/_next/static/chunks/8dcacb2cac09e45f.css","style"]
-:HL["/_next/static/chunks/10756689776842d2.css","style"]
+:HL["/_next/static/chunks/3b1c6c8a41921780.css","style"]
 :HL["/assets/img/consultants/dummy_icon.jpg","image"]
-0:{"buildId":"TvtmHKd7uU-60nakM-owS","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"consultants","paramType":null,"paramKey":"consultants","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"FYThcBgnjQ-xLP3p58p08","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"consultants","paramType":null,"paramKey":"consultants","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

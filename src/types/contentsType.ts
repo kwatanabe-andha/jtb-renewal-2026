@@ -1,4 +1,5 @@
 import { ImgType, selectType } from "./common"
+import { InsightsAuthorType } from "./insights"
 
 export type PageInfoType = {
   totalCnt: number
@@ -17,21 +18,27 @@ export type ContentsCommonType = {
   topics_id: number
   ymd: string
   subject: string
-  slug?: string
+  slug: string
   topics_group_id: number
-  group_nm: string
+  group_nm?: string
   contents_type_nm?: string
   contents_type_slug?: string
   update_ymdhi: string
+  thumb?: ImgType
+  excerpt?: string
+  summary?: string
 }
 
 export type CardType = ContentsCommonType & {
-  thumb: ImgType
-  logo?: ImgType
+  download?: { url?: string }
+  tag?: { name: string, slag: string }[]
+  category_details?: { subject: string, series_logo: ImgType }
   series_custom?: string
-  numbering?: boolean
-  excerpt?: string
-  summary?: string
+  reports_type?: selectType[]
+  author: InsightsAuthorType[]
+  show_series?: boolean
+  contents_name?: string
+  series_title?: string
 }
 
 export type FootCardType = {
@@ -45,10 +52,29 @@ export type FootCardType = {
 }
 
 export type ContactType = {
-  contact_default: boolean
-  contact_department: string
-  contact_custom_office_address: string
-  contact_custom_url: string
-  related_contact_person: string
-  contact_note: string
+  contact: {
+    contact_default: boolean
+    contact_department: string
+    contact_custom_office_address: string
+    contact_custom_url: string
+    related_contact_person: string
+    contact_note: string
+  }
+}
+
+export type ArticleType = {
+  numbering: boolean
+  contents_default: string
+  contents_login: string
+}
+
+export type SidebarExternalType = {
+  sidebar_external_image: ImgType
+  sidebar_external_title: string
+  sidebar_external_url: string
+}
+
+export type SidebarExternalNoImgType = {
+  sidebar_external_title_noimg: string
+  sidebar_external_url_noimg: string
 }

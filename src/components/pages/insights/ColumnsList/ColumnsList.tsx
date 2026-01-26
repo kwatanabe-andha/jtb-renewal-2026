@@ -28,11 +28,11 @@ const jsonLD = (list: InsightsType[], pageInfo: PageInfoType) => {
           headline: item.subject,
           url: `https://www.tourism.jp/insights/${item.slug}/`,
           datePublished: item.ymd,
-          image: item.thumb.url
+          image: item.thumb?.url
         }
       }
-    if (item.author_external_name && item.author_external_name.length > 0) {
-      obj.item.author = { "@type": "Person", "name": `${item.author_external_name[0]}` }
+    if (item.author && item.author.length > 0) {
+      obj.item.author = { "@type": "Person", "name": `${item.author[0].author_external_name}` }
     }
     return obj
   })
@@ -70,7 +70,11 @@ export default function ColumnsList({ pathname }: Props) {
       const { list, pageInfo } = await getInsights(query)
       if (list) {
         setLoading(true)
-        setData(list)
+        setData(list.map((item: InsightsType) => {
+          // item.series_title = item.contents_type_nm
+          item.show_series = true
+          return item
+        }))
         setInfo(pageInfo)
         setJsonLdCards(jsonLD(list, pageInfo))
       }

@@ -88,11 +88,11 @@ export default async function Page({ params }: { params: { seriesID: string, pag
             headline: item.subject,
             url: `https://www.tourism.jp/insights/${item.topics_id}/`,
             datePublished: item.ymd,
-            image: item.thumb.url
+            image: item.thumb?.url
           }
         }
-      if (item.author_external_name && item.author_external_name.length > 0) {
-        obj.item.author = { "@type": "Person", "name": `${item.author_external_name[0]}` }
+      if (item.author && item.author.length > 0) {
+        obj.item.author = { "@type": "Person", "name": `${item.author[0].author_external_name}` }
       }
       return obj
     })

@@ -11,10 +11,12 @@ type Props = {
 }
 
 export default function Article({ data }: Props) {
-  const fontc = !!data.heading_color ? data.heading_color : '#000'
-  const bgc = !!data.background_color ? data.background_color : 'transparent'
-  const headingBgc = !!data.heading_bg_color ? data.heading_bg_color : '#fff'
-  const headingOpacity = data.heading_bg_opacity ? data.heading_bg_opacity : '0.9'
+  const { background_img, background_color } = data.background
+  const { heading_color, heading_bg_color, heading_bg_opacity, heading_schedule, heading_title } = data.heading
+  const fontc = heading_color ? heading_color : '#000'
+  const bgc = background_color ? background_color : 'transparent'
+  const headingBgc = heading_bg_color ? heading_bg_color : '#fff'
+  const headingOpacity = heading_bg_opacity ? heading_bg_opacity : '0.9'
 
   return (
     <article className="un_series">
@@ -25,13 +27,13 @@ export default function Article({ data }: Props) {
           <header className="un_series_header" style={{ '--font-color': fontc, '--bg-color': headingBgc, '--bg-opacity': headingOpacity } as CSSProperties}>
             <div className='un_series_title'>
               <h1 className="title">{data.subject}</h1>
-              <div className="year">{data.heading_schedule}</div>
-              <div className="subTitle">{data.heading_title}</div>
+              { heading_schedule && <div className="year">{heading_schedule}</div> }
+              { heading_title && <div className="subTitle">{heading_title}</div> }
             </div>
           </header>
         </Inner>
         <div className="un_series_bg" style={{ '--bg-color': bgc } as CSSProperties}>
-          { data.background_img.url && <Image src={data.background_img.url} alt={data.background_img.desc || ''} width="1440" height="730" priority={true} /> }
+          { background_img.url && <Image src={background_img.url} alt={background_img.desc || ''} width="1440" height="730" priority={true} /> }
         </div>
       </div>
       <Inner className='un_series_body'>

@@ -15,6 +15,10 @@ type Props = {
 
 export default async function ColumnsList({ data, pathname }: Props) {
   const { list, pageInfo } = data
+  const filterList = list.map((item: InsightsType) => {
+    item.show_series = true
+    return item
+  })
 
   return (
     <section className='un_columnsList'>
@@ -26,7 +30,7 @@ export default async function ColumnsList({ data, pathname }: Props) {
 
         <div className='un_columnsList_list'>
           <Suspense fallback={<p>Loading...</p>}>
-            <CardList list={list} pageInfo={pageInfo} pathname={pathname} />
+            <CardList list={filterList} pageInfo={pageInfo} pathname={pathname} />
           </Suspense>
         </div>
       </Inner>

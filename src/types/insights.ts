@@ -1,36 +1,42 @@
-import { z } from "zod"
-import { selectType } from "@/types/common"
-import { CardType } from "./contentsType"
+import { selectType, ImgType } from "@/types/common"
+import { CardType, ContentsCommonType, ContactType, SidebarExternalType, SidebarExternalNoImgType, ArticleType } from "./contentsType"
 
-const SeriesSchema = z.object({
-  topics_id: z.number(),
-  subject: z.string(),
-  ymd: z.string(),
-  slug: z.string(),
-  shoulder_text: z.string(),
-  lead_text: z.string(),
-  series_logo: z.object({
-    url: z.string(),
-    desc: z.string()
-  }),
-  img_main: z.object({
-    url: z.string(),
-    desc: z.string()
-  }),
-  series_description_title: z.string(),
-  series_description_text: z.string(),
-  status: z.object({
-    key: z.string(),
-  })
-})
-export type SeriesType = z.infer<typeof SeriesSchema>
+export type SeriesType = ContentsCommonType & {
+  shoulder_text: string
+  lead_text: string
+  series_logo: ImgType
+  img_main: ImgType
+  series_description_title: string
+  series_description_text: string
+  status: selectType
+}
 
-export type AuthorProfileType = {
+export type InsightsAuthorType = {
+  author_consultant: { module_id?: number }
   author_external_name?: string
   author_external_title?: string
   author_external_profile?: string
 }
 
-export type InsightsType = CardType & AuthorProfileType & {
+export type GuestsType = {
+  guest_heading: string
+  guest_honorific: string
+  guest_name: string
+  guest_profile: string
+  guest_title: string
+}
+
+export type InsightsType =
+  CardType & ContactType &
+{
+  series_custom: string
+  img_main: ImgType
   article_type: selectType[]
+  author: InsightsAuthorType[]
+  guests: GuestsType[]
+  article: ArticleType
+  related_promotion_display: boolean
+  sidebar_external_contents: SidebarExternalType[]
+  sidebar_external_contents_noimg: SidebarExternalNoImgType[]
+  meta_description: string
 }

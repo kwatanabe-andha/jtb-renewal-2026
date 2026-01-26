@@ -11,9 +11,10 @@ import FootSlider from "@/components/parts/FootSlider/FootSlider"
 import getInsightsStatic from '@/fetch/static/insights/getInsightsStatic'
 import getInsightsDetail from '@/fetch/static/insights/getInsightsDetail'
 import { GlossaryType } from '@/types/glossary'
-import { InsightsType } from '@/types/insights'
+import { InsightsType, InsightsAuthorType, GuestsType } from '@/types/insights'
 import { KeywordType, ArticleHead, AuthorType } from '@/types/detailPages'
 import { getH2FromHtml } from '@/lib/getH2FromHtml'
+import { ConsultantType } from '@/types/consultant'
 
 export async function generateStaticParams() {
   const { list } = await getInsightsStatic({ all: true })
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }: { params: { slug: string }}) 
 
 export default async function Page({ params }: { params: { slug: string }}) {
   const { slug } = await params
-  const { details, category, related_glossary } = await getInsightsDetail(slug)
+  const { details, category, related_glossary, related_posts, related_consultant } = await getInsightsDetail(slug)
   const { list } = await getInsightsStatic({ all: true })
 
   const breadcrumb = [
@@ -86,21 +87,33 @@ export default async function Page({ params }: { params: { slug: string }}) {
 
   const author: AuthorType[] = []
 
-  details.author_external_name?.forEach((item: string, index: number) => {
-    author.push({
-      name: details.author_external_name[index] as string,
-      // img: details,
-      profile: details.author_external_title[index] as string
+  if (details.author && details.author.length > 0) {
+    details.author?.forEach((item: InsightsAuthorType, index: number) => {
+      if (item.author_consultant.module_id) {
+        const consultant = related_consultant[index] as ConsultantType
+        author.push({
+          name: consultant.subject,
+          img: consultant.profile.profile_img,
+          title: consultant.profile.profile_position,
+          profile: consultant.history
+        })
+      } else {
+        author.push({
+          name: item.author_external_name,
+          title: item.author_external_title,
+          profile: item.author_external_profile
+        })
+      }
     })
-  })
-  head.author = author
+    head.author = author
+  }
 
   // nav
   const keywords = related_glossary.map((glossary: GlossaryType) => {
     return { subject: glossary.subject, slug: glossary.slug }
   }) as KeywordType[]
 
-  const sections = getH2FromHtml(details.contents_default)
+  const sections = details.article ? getH2FromHtml(details.article.contents_default) : []
   const nav = {sections, keywords, numbering: details.numbering}
 
   // Article head
@@ -110,15 +123,17 @@ export default async function Page({ params }: { params: { slug: string }}) {
     guest: []
   } as ArticleHead
 
-  details.guest_name?.forEach((guest: string, index: number) => {
-    articleHead.guest?.push({
-      guest_heading: details.guest_heading[index],
-      guest_name: details.guest_name[index],
-      guest_honorific: details.guest_honorific[index],
-      guest_title: details.guest_title[index],
-      guest_profile: details.guest_profile[index]
+  if (details.guests && details.guests.length > 0) {
+    details.guests.forEach((guest: GuestsType) => {
+      articleHead.guest?.push({
+        guest_heading: guest.guest_heading,
+        guest_name: guest.guest_name,
+        guest_honorific: guest.guest_honorific,
+        guest_title: guest.guest_title,
+        guest_profile: guest.guest_profile
+      })
     })
-  })
+  }
 
   // Series
   const seriesItems = list.filter((item: InsightsType) => {
@@ -137,22 +152,12 @@ export default async function Page({ params }: { params: { slug: string }}) {
           head={head}
           nav={nav}
           articleHead={articleHead}
-          contents_default={details.contents_default}
-          article_type={details.article_type.key}
+          article={details.article}
+          article_type={details.article_type}
         />
-        {
-          details.related_posts > 0 &&
-          <RelArticles list={details.related_posts} />
-        }
+        { related_posts.length > 0 && <RelArticles list={related_posts} /> }
         <Series list={seriesItems} series={category} />
-        <Contact
-          contact_default={details.contact_default}
-          contact_department={details.contact_department}
-          contact_custom_office_address={details.contact_custom_office_address}
-          contact_custom_url={details.contact_custom_url}
-          related_contact_person={details.related_contact_person}
-          contact_note={details.contact_note}
-        />
+        <Contact contact={details.contact} />
         <FootSlider list={list.slice(5)} content="insights" />
       </SideNav>
       <Breadcrumb data={breadcrumb} footer />

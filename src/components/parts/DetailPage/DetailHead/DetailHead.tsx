@@ -1,4 +1,4 @@
-// import Image from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import './index.scss'
 import Download from '@/components/parts/Download/Download'
@@ -30,11 +30,11 @@ export function DetailHead(
           author && author.length > 0 && author.map((item) => {
             return (
               <div className='bl_detailHead_author' key={item.name}>
-                {/* { item.img && <div className='bl_detailHead_author_img'><Image src={item.img} alt='' width={76} height={76} /></div> } */}
+                { item.img?.url && <div className='bl_detailHead_author_img'><Image src={item.img.url} alt={item.img.desc || ''} width={76} height={76} /></div> }
                 <div className='bl_detailHead_author_content'>
                   <div className='bl_detailHead_author_tag'>寄稿</div>
                   <div className='bl_detailHead_author_name'>{item.name}</div>
-                  { item.profile && <p className='bl_detailHead_author_profile'>{item.profile}</p> }
+                  { item.title && <p className='bl_detailHead_author_profile'>{item.title}</p> }
                 </div>
               </div>
             )

@@ -1,15 +1,15 @@
 import './index.scss'
 import React from 'react'
 import Wysiwyg from '@/components/parts/Wysiwyg/Wysiwyg'
+import { OverviewType } from '@/types/reports'
 
 type Props = {
   contents: string
-  title: string[]
-  detail: string[]
+  list: OverviewType[]
 }
 
-export default function Survey({ contents, title, detail }: Props) {
-  if (!contents && !title[0]) return
+export default function Survey({ contents, list }: Props) {
+  if (!contents && list.length === 0) return
 
   return (
     <>
@@ -19,14 +19,14 @@ export default function Survey({ contents, title, detail }: Props) {
             <h2 className="bl_seriesSurvey_title">調査概要</h2>
             { !!contents && <Wysiwyg html={contents} /> }
             {
-              title.length > 0 && (
+              list.length > 0 && (
                 <dl className="bl_seriesSurvey_contents">
                   {
-                    title.map((item, index: number) => {
+                    list.map((item, index: number) => {
                       return (
                         <React.Fragment key={index}>
-                          <dt>{title[index]}</dt>
-                          <dd>{detail[index]}</dd>
+                          <dt>{item.overview_title}</dt>
+                          <dd>{item.overview_detail}</dd>
                         </React.Fragment>
                       )
                     })

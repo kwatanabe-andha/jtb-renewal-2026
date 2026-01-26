@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import Script from 'next/script'
 import RegionTop from "@/components/parts/PageHead/RegionTop"
 import Recently from "@/components/pages/research/Recently/Recently"
@@ -54,19 +55,21 @@ export default async function Page() {
 
   return (
     <>
-      <Breadcrumb data={breadcrumb} />
-      <section>
-        <RegionTop en='Reports' jp='調査・レポート' page="reports">
-          {'オリジナルの調査・研究結果を公開しています。'}
-        </RegionTop>
+      <Suspense>
+        <Breadcrumb data={breadcrumb} />
+        <section>
+          <RegionTop en='Reports' jp='調査・レポート' page="reports">
+            {'オリジナルの調査・研究結果を公開しています。'}
+          </RegionTop>
 
-        <SideNav offset={80}>
-          <Recently data={recentlyData} />
-          <Series data={series.list} />
-          <ReportList />
-        </SideNav>
-      </section>
-      <Breadcrumb data={breadcrumb} footer />
+          <SideNav offset={80}>
+            <Recently data={recentlyData} />
+            <Series data={series.list} />
+            <ReportList />
+          </SideNav>
+        </section>
+        <Breadcrumb data={breadcrumb} footer />
+      </Suspense>
 
       <Script
           id="jsonld-breadcrumbList"

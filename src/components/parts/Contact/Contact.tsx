@@ -6,13 +6,10 @@ import { SITE_URL, COLORS } from "@/config/site"
 import { MessageSquare01 } from "@untitledui/icons"
 import { ContactType } from '@/types/contentsType'
 
-type Props = ContactType
-
 export default function Contact(
-  {
-    contact_default, contact_department, contact_custom_office_address, contact_custom_url, related_contact_person, contact_note
-  }: Props
+  { contact }: ContactType
 ) {
+  const { contact_default, contact_department, contact_custom_office_address, contact_custom_url, related_contact_person, contact_note } = contact ?? {}
   const contactUrl = contact_custom_url ? contact_custom_url : SITE_URL.contact
 
   return (

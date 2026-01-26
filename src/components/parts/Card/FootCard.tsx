@@ -11,13 +11,14 @@ type Props = {
 export default function FootCard( { card }: Props ) {
   const groupID = card.topics_group_id.toString()
   const pathname = TOPICS_GROUP_ID[groupID]
+  const logo = card.category_details?.series_logo
 
   return (
     <article className='bl_card'>
       <Link href={`/${pathname}/${card.slug}/`} className='bl_card_container'>
         <div className='bl_card_img'>
-          <div className='bl_card_thumb'><Image src={`${card.thumb.url}`} alt={ card.thumb.desc || '' } width={300} height={200} /></div>
-          { card.logo?.url && <div className='bl_card_logo'><Image src={ card.logo.url } alt={ card.logo.desc || '' } width={100} height={100} /></div> }
+          { card.thumb?.url && <div className='bl_card_thumb'><Image src={card.thumb.url} alt={ card.thumb.desc || '' } width={300} height={200} /></div> }
+          { logo?.url && <div className='bl_card_logo'><Image src={ logo.url } alt={ logo.desc || '' } width={100} height={100} /></div> }
         </div>
         <div className='bl_card_content'>
           { card.group_nm && <div className='bl_card_contentType'>{ card.group_nm }</div> }

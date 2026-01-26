@@ -37,8 +37,8 @@ export default function Slide({ items }: Props) {
               <li key={item.topics_id}>
                 <Link href={`/research-reports/series/${item.slug}/`}>
                   { item.series_logo.url && <div className="un_series_img"><Image src={item.series_logo.url} alt={item.series_logo.desc || ''} width={195} height={195} /></div> }
-                  <p className="un_series_title">{item.catch_text}</p>
-                  <div className="un_series_date">{item.heading_schedule}</div>
+                  { item.catch_text && <p className="un_series_title">{item.catch_text}</p> }
+                  { item.heading.heading_schedule && <div className="un_series_date">{item.heading.heading_schedule}</div> }
                 </Link>
               </li>
             )
@@ -65,8 +65,8 @@ export default function Slide({ items }: Props) {
                 <SwiperSlide key={item.topics_id}>
                   <Link href={`/research-reports/series/${item.slug}/`} className="un_series_link">
                     { item.series_logo.url && <div className="un_series_img"><Image src={item.series_logo.url} alt={item.series_logo.desc || ''} width={195} height={195} /></div> }
-                    <p className="un_series_title">{item.catch_text}</p>
-                    <div className="un_series_date">{item.heading_schedule}</div>
+                    { item.catch_text && <p className="un_series_title">{item.catch_text}</p> }
+                    { item.heading.heading_schedule && <div className="un_series_date">{item.heading.heading_schedule}</div> }
                   </Link>
                 </SwiperSlide>
                 

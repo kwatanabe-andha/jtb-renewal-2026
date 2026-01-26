@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
-2:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"ViewportBoundary"]
-4:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"MetadataBoundary"]
+2:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/e308b2b9ce476a3e.js"],"ViewportBoundary"]
+4:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/e308b2b9ce476a3e.js"],"MetadataBoundary"]
 5:"$Sreact.suspense"
-0:{"buildId":"TvtmHKd7uU-60nakM-owS","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],null]}],"loading":null,"isPartial":false}
+0:{"buildId":"FYThcBgnjQ-xLP3p58p08","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],null]}],"loading":null,"isPartial":false}
 3:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-6:[["$","title","0",{"children":"大阪から日本各地へ！ ～大阪IRにおける「送客施設」の役割と意義について～"}],["$","meta","1",{"name":"description","content":"undefined"}]]
+6:[["$","title","0",{"children":"大阪から日本各地へ！ ～大阪IRにおける「送客施設」の役割と意義について～"}],["$","meta","1",{"name":"description","content":"2030年秋頃に誕生する大阪IRは、日本の観光産業を牽引する重要な役割を担います。その中核のひとつをなす送客施設は、国内外の訪問客を大阪・関西から日本各地へ誘うハブとして、周遊観光を活性化し、広範な経済効果をもたらすでしょう。本稿は、大阪IRにおける送客施設の意義、戦略的なポジショニング、具体的な戦略方針を考えます。"}]]

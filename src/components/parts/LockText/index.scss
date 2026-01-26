@@ -1,0 +1,15 @@
+@use "@styles/settings" as *;
+
+.bl_lockText {
+  display: block;
+
+  > * {
+    display: inline;
+  }
+
+  .icon_lock {
+    display: inline-block;
+    vertical-align: sub;
+    margin-left: 4px;
+  }
+}

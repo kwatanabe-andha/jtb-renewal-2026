@@ -1,7 +1,15 @@
 import './index.scss'
+import Image from 'next/image'
 import Link from 'next/link'
+import { ConsultantType } from '@/types/consultant'
 
-export default function Manager() {
+type Props = {
+  data: ConsultantType[]
+}
+
+export default function Manager({data}: Props) {
+  if ( !data[0] ) return
+
   return (
     <section className="un_manager">
       <div className="un_manager_inner bl_inner">
@@ -10,36 +18,22 @@ export default function Manager() {
             <h2>担当者</h2>
           </div>
           <ul className="un_manager_list">
-            <li className="un_manager_item">
-              <Link href="#">
-                <div className="un_manager_img"><img src="/assets/dummy_maneger_img01.jpg" alt="" width="50" height="50" /></div>
-                <div className="un_manager_info">
-                  <p className="un_manager_name">勝野 裕子</p>
-                  <p className="un_manager_company">JTB総合研究所</p>
-                  <p className="un_manager_position">上席主任研究員</p>
-                </div>
-              </Link>
-            </li>
-            <li className="un_manager_item">
-              <Link href="#">
-                <div className="un_manager_img"><img src="/assets/dummy_maneger_img01.jpg" alt="" width="50" height="50" /></div>
-                <div className="un_manager_info">
-                  <p className="un_manager_name">勝野 裕子</p>
-                  <p className="un_manager_company">JTB総合研究所</p>
-                  <p className="un_manager_position">上席主任研究員</p>
-                </div>
-              </Link>
-            </li>
-            <li className="un_manager_item">
-              <Link href="#">
-                <div className="un_manager_img"><img src="/assets/dummy_maneger_img01.jpg" alt="" width="50" height="50" /></div>
-                <div className="un_manager_info">
-                  <p className="un_manager_name">勝野 裕子</p>
-                  <p className="un_manager_company">JTB総合研究所</p>
-                  <p className="un_manager_position">上席主任研究員</p>
-                </div>
-              </Link>
-            </li>
+            {
+              data.map(item => {
+                return (
+                  <li className="un_manager_item" key={item.slug}>
+                    <Link href={`/consultants/${item.slug}`}>
+                      { item.profile_img.url && <div className="un_manager_img"><Image src={item.profile_img.url} alt={item.profile_img.desc || ''} width="50" height="50" /></div> }
+                      <div className="un_manager_info">
+                        <p className="un_manager_name">{item.subject}</p>
+                        <p className="un_manager_company">JTB総合研究所（静的テキスト）</p>
+                        { item.profile_position && <p className="un_manager_position">{item.profile_position}</p> }
+                      </div>
+                    </Link>
+                  </li>
+                )
+              })
+            }
           </ul>
         </div>
       </div>

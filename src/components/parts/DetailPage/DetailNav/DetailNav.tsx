@@ -1,5 +1,6 @@
 "use client"
 
+import { useRef } from 'react'
 import Link from 'next/link'
 import clsx from 'clsx'
 import { gsap } from 'gsap'
@@ -18,14 +19,19 @@ export type DetailNavType = {
   keywords?: KeywordType[]
   className?: string
   numbering: boolean
+  isPc?: boolean
+  scrollToDetail?: boolean
 }
 
-export function DetailNav({ sections, keywords, className, numbering }: DetailNavType) {
+export function DetailNav({ sections, keywords, className, numbering, isPc = false, scrollToDetail = false }: DetailNavType) {
+  const targetRef = useRef<HTMLElement>(null)
+
   useGSAP(() => {
-    // const mm = gsap.matchMedia()
-    const wrap = document.querySelector('.bl_article_wrap') as HTMLElement
-    // const nav = document.querySelector('.js_detailNav') as HTMLElement
-    const h2List = document.querySelectorAll('.js_content h2')
+    const mm = gsap.matchMedia()
+    const wrap = document.querySelector('.bl_article_container') as HTMLElement
+    const nav = targetRef.current as HTMLElement
+    const navInner = document.querySelector('.bl_detailNav_inner') as HTMLElement
+    const h2List = scrollToDetail ? document.querySelectorAll('.js_content .bl_details') : document.querySelectorAll('.js_content h2')
     const anchorList = document.querySelectorAll('.bl_detailNav_list_item')
     const reset = () => {
       anchorList.forEach(item => {
@@ -34,33 +40,44 @@ export function DetailNav({ sections, keywords, className, numbering }: DetailNa
       })
     }
 
-    // mm.add('(min-width: 768px)', () => {
-    //   ScrollTrigger.create({
-    //     trigger: nav,
-    //     start: 'top-=50 top',
-    //     end: 'bottom bottom',
-    //     pin: true,
-    //     pinSpacing: false,
-    //     // markers: true,
-    //     onEnter: () => { console.log('onEnter') },
-    //     onLeave: () => { console.log('onLeave') },
-    //   })
-    // })
+    anchorList.forEach((item, index) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault()
+        const y = h2List[index].getBoundingClientRect().top + window.pageYOffset - 60 // 60は上部余白
+        window.scrollTo({
+          top: y,
+          behavior: 'smooth',
+        })
+      })
+    })
 
     h2List.forEach((item, index: number) => {
       ScrollTrigger.create({
         trigger: item,
         start: 'top top',
+        end: 'bottom top',
         onEnter: () => {
           reset()
           const target = anchorList[index] as HTMLLinkElement
           target.dataset.current = 'true'
         },
-        onLeaveBack: () => {
+        onEnterBack: () => {
           reset()
           const target = anchorList[index] as HTMLLinkElement
           target.dataset.current = 'true'
         }
+      })
+    })
+
+    mm.add('(min-width: 768px)', () => {
+      ScrollTrigger.create({
+        trigger: nav,
+        start: 'top-=50 top',
+        endTrigger: wrap,
+        end: () => {
+          return '+=' + String(wrap?.clientHeight - navInner.clientHeight)
+        },
+        pin: true,
       })
     })
 
@@ -71,7 +88,7 @@ export function DetailNav({ sections, keywords, className, numbering }: DetailNa
   }, [])
 
   return (
-    <aside className={clsx('bl_detailNav js_detailNav', className !== undefined && className)}>
+    <aside ref={ isPc ? (el) => { targetRef.current = el } : null } className={clsx('bl_detailNav', className !== undefined && className)} >
       <div className='bl_detailNav_inner'>
         <div className='bl_detailNav_member'>
           <LockIcon />
@@ -87,7 +104,7 @@ export function DetailNav({ sections, keywords, className, numbering }: DetailNa
                 return (
                   <li key={index}>
                     { index === 0 && (current = true) }
-                    <Link href={`#section${index + 1}`} className='bl_detailNav_list_item' data-current={`${current}`}>
+                    <Link href={''} className='bl_detailNav_list_item' data-current={`${current}`}>
                       { numbering && <div className='bl_detailNav_list_number'>{index + 1}</div> }
                       <p className='bl_detailNav_list_text'>{section}</p>
                     </Link>

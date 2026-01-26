@@ -16,6 +16,8 @@ export const CONTENT_MAP: { [key: string]: { jp: string, en: string, url: string
 }
 
 export const TOPICS_GROUP_ID: { [key: string]: string } = {
+  '9': 'expertise',
+  '10': 'research-reports',
   '13': 'insights',
 }
 

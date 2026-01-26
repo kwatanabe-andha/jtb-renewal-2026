@@ -1,13 +1,9 @@
 import Image from 'next/image'
 import './detailTop.scss'
-import Inner from '@/components/parts/Inner/Inner'
-
-// type Logo = {
-//   url: string
-// }
+import { ImgType } from '@/types/common'
 
 type Props = {
-  logo?: string
+  logo?: ImgType
   pressRelease?: boolean
   category?: string
   title: string
@@ -21,7 +17,7 @@ export default function DetailTop(
     <div className='bl_detailTop'>
       <div className='bl_detailTop_inner'>
         <div className='bl_detailTop_container'>
-          { logo && <div className='bl_detailTop_logo'><Image src={logo} alt='' width={110} height={110} /></div> }
+          { logo && logo.url && <div className='bl_detailTop_logo'><Image src={logo.url} alt={logo.desc || ''} width={110} height={110} /></div> }
           <div className='bl_detailTop_content'>
             {
               (pressRelease || category) && (

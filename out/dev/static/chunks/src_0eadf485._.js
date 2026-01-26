@@ -933,12 +933,12 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+// import Image from 'next/image'
 __turbopack_context__.s([
     "DetailHead",
     ()=>DetailHead
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$parts$2f$Download$2f$Download$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/parts/Download/Download.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$toDateTimeFormat$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/toDateTimeFormat.ts [app-client] (ecmascript)");
@@ -951,8 +951,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icon$2f$Lock$2f$Lock$
 ;
 ;
 ;
-;
-function DetailHead({ title, text, release, update, download, login, author }) {
+function DetailHead({ subject, text, release, update, download, login, author }) {
     // console.log(author.length)
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         className: "bl_detailHead",
@@ -961,7 +960,7 @@ function DetailHead({ title, text, release, update, download, login, author }) {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                     className: "bl_detailHead_title",
-                    children: title
+                    children: subject
                 }, void 0, false, {
                     fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
                     lineNumber: 27,
@@ -978,59 +977,40 @@ function DetailHead({ title, text, release, update, download, login, author }) {
                 author && author.length > 0 && author.map((item)=>{
                     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "bl_detailHead_author",
-                        children: [
-                            item.img && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "bl_detailHead_author_img",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    src: item.img,
-                                    alt: "",
-                                    width: 76,
-                                    height: 76
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "bl_detailHead_author_content",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "bl_detailHead_author_tag",
+                                    children: "寄稿"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                    lineNumber: 33,
-                                    columnNumber: 73
+                                    lineNumber: 35,
+                                    columnNumber: 19
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "bl_detailHead_author_name",
+                                    children: item.name
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
+                                    lineNumber: 36,
+                                    columnNumber: 19
+                                }, this),
+                                item.profile && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "bl_detailHead_author_profile",
+                                    children: item.profile
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
+                                    lineNumber: 37,
+                                    columnNumber: 37
                                 }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                lineNumber: 33,
-                                columnNumber: 31
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "bl_detailHead_author_content",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "bl_detailHead_author_tag",
-                                        children: "寄稿"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                        lineNumber: 35,
-                                        columnNumber: 19
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "bl_detailHead_author_name",
-                                        children: item.name
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                        lineNumber: 36,
-                                        columnNumber: 19
-                                    }, this),
-                                    item.title && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "bl_detailHead_author_text",
-                                        children: item.title
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                        lineNumber: 37,
-                                        columnNumber: 35
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
-                                lineNumber: 34,
-                                columnNumber: 17
-                            }, this)
-                        ]
-                    }, item.name, true, {
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
+                            lineNumber: 34,
+                            columnNumber: 17
+                        }, this)
+                    }, item.name, false, {
                         fileName: "[project]/src/components/parts/DetailPage/DetailHead/DetailHead.tsx",
                         lineNumber: 32,
                         columnNumber: 15
@@ -1221,6 +1201,7 @@ __turbopack_context__.s([
     ()=>DetailNav
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/clsx/dist/clsx.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/gsap/index.js [app-client] (ecmascript) <locals>");
@@ -1241,15 +1222,18 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+;
 __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["gsap"].registerPlugin(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$gsap$2f$react$2f$src$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useGSAP"], __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$ScrollTrigger$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ScrollTrigger"]);
-function DetailNav({ sections, keywords, className, numbering }) {
+function DetailNav({ sections, keywords, className, numbering, isPc = false, scrollToDetail = false }) {
     _s();
+    const targetRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$gsap$2f$react$2f$src$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useGSAP"])({
         "DetailNav.useGSAP": ()=>{
-            // const mm = gsap.matchMedia()
-            const wrap = document.querySelector('.bl_article_wrap');
-            // const nav = document.querySelector('.js_detailNav') as HTMLElement
-            const h2List = document.querySelectorAll('.js_content h2');
+            const mm = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["gsap"].matchMedia();
+            const wrap = document.querySelector('.bl_article_container');
+            const nav = targetRef.current;
+            const navInner = document.querySelector('.bl_detailNav_inner');
+            const h2List = scrollToDetail ? document.querySelectorAll('.js_content .bl_details') : document.querySelectorAll('.js_content h2');
             const anchorList = document.querySelectorAll('.bl_detailNav_list_item');
             const reset = {
                 "DetailNav.useGSAP.reset": ()=>{
@@ -1261,23 +1245,27 @@ function DetailNav({ sections, keywords, className, numbering }) {
                     }["DetailNav.useGSAP.reset"]);
                 }
             }["DetailNav.useGSAP.reset"];
-            // mm.add('(min-width: 768px)', () => {
-            //   ScrollTrigger.create({
-            //     trigger: nav,
-            //     start: 'top-=50 top',
-            //     end: 'bottom bottom',
-            //     pin: true,
-            //     pinSpacing: false,
-            //     // markers: true,
-            //     onEnter: () => { console.log('onEnter') },
-            //     onLeave: () => { console.log('onLeave') },
-            //   })
-            // })
+            anchorList.forEach({
+                "DetailNav.useGSAP": (item, index)=>{
+                    item.addEventListener('click', {
+                        "DetailNav.useGSAP": (e)=>{
+                            e.preventDefault();
+                            const y = h2List[index].getBoundingClientRect().top + window.pageYOffset - 60 // 60は上部余白
+                            ;
+                            window.scrollTo({
+                                top: y,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }["DetailNav.useGSAP"]);
+                }
+            }["DetailNav.useGSAP"]);
             h2List.forEach({
                 "DetailNav.useGSAP": (item, index)=>{
                     __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$ScrollTrigger$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ScrollTrigger"].create({
                         trigger: item,
                         start: 'top top',
+                        end: 'bottom top',
                         onEnter: {
                             "DetailNav.useGSAP": ()=>{
                                 reset();
@@ -1285,13 +1273,29 @@ function DetailNav({ sections, keywords, className, numbering }) {
                                 target.dataset.current = 'true';
                             }
                         }["DetailNav.useGSAP"],
-                        onLeaveBack: {
+                        onEnterBack: {
                             "DetailNav.useGSAP": ()=>{
                                 reset();
                                 const target = anchorList[index];
                                 target.dataset.current = 'true';
                             }
                         }["DetailNav.useGSAP"]
+                    });
+                }
+            }["DetailNav.useGSAP"]);
+            console.log(nav);
+            mm.add('(min-width: 768px)', {
+                "DetailNav.useGSAP": ()=>{
+                    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$ScrollTrigger$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ScrollTrigger"].create({
+                        trigger: nav,
+                        start: 'top-=50 top',
+                        endTrigger: wrap,
+                        end: {
+                            "DetailNav.useGSAP": ()=>{
+                                return '+=' + String(wrap?.clientHeight - navInner.clientHeight);
+                            }
+                        }["DetailNav.useGSAP"],
+                        pin: true
                     });
                 }
             }["DetailNav.useGSAP"]);
@@ -1304,7 +1308,10 @@ function DetailNav({ sections, keywords, className, numbering }) {
         }
     }["DetailNav.useGSAP"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])('bl_detailNav js_detailNav', className !== undefined && className),
+        ref: isPc ? (el)=>{
+            targetRef.current = el;
+        } : null,
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])('bl_detailNav', className !== undefined && className),
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "bl_detailNav_inner",
             children: [
@@ -1313,7 +1320,7 @@ function DetailNav({ sections, keywords, className, numbering }) {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$icon$2f$Lock$2f$Lock$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                            lineNumber: 77,
+                            lineNumber: 96,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1321,7 +1328,7 @@ function DetailNav({ sections, keywords, className, numbering }) {
                                 "この記事の全文を読むには",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                     fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                                    lineNumber: 78,
+                                    lineNumber: 97,
                                     columnNumber: 26
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1329,20 +1336,20 @@ function DetailNav({ sections, keywords, className, numbering }) {
                                     children: "ログイン"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                                    lineNumber: 78,
+                                    lineNumber: 97,
                                     columnNumber: 32
                                 }, this),
                                 "が必要です"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                            lineNumber: 78,
+                            lineNumber: 97,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                    lineNumber: 76,
+                    lineNumber: 95,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -1353,7 +1360,7 @@ function DetailNav({ sections, keywords, className, numbering }) {
                             children: "目次"
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                            lineNumber: 82,
+                            lineNumber: 101,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1364,7 +1371,7 @@ function DetailNav({ sections, keywords, className, numbering }) {
                                     children: [
                                         index === 0 && (current = true),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                            href: `#section${index + 1}`,
+                                            href: '',
                                             className: "bl_detailNav_list_item",
                                             "data-current": `${current}`,
                                             children: [
@@ -1373,7 +1380,7 @@ function DetailNav({ sections, keywords, className, numbering }) {
                                                     children: index + 1
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                                                    lineNumber: 91,
+                                                    lineNumber: 110,
                                                     columnNumber: 38
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1381,31 +1388,31 @@ function DetailNav({ sections, keywords, className, numbering }) {
                                                     children: section
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                                                    lineNumber: 92,
+                                                    lineNumber: 111,
                                                     columnNumber: 23
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                                            lineNumber: 90,
+                                            lineNumber: 109,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, index, true, {
                                     fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                                    lineNumber: 88,
+                                    lineNumber: 107,
                                     columnNumber: 19
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                            lineNumber: 83,
+                            lineNumber: 102,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                    lineNumber: 81,
+                    lineNumber: 100,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1416,7 +1423,7 @@ function DetailNav({ sections, keywords, className, numbering }) {
                             children: "関連キーワード"
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                            lineNumber: 102,
+                            lineNumber: 121,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1431,46 +1438,46 @@ function DetailNav({ sections, keywords, className, numbering }) {
                                                 height: 10
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                                                lineNumber: 109,
+                                                lineNumber: 128,
                                                 columnNumber: 23
                                             }, this),
                                             keyword.subject
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                                        lineNumber: 108,
+                                        lineNumber: 127,
                                         columnNumber: 21
                                     }, this)
                                 }, index, false, {
                                     fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                                    lineNumber: 107,
+                                    lineNumber: 126,
                                     columnNumber: 19
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                            lineNumber: 103,
+                            lineNumber: 122,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-                    lineNumber: 101,
+                    lineNumber: 120,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-            lineNumber: 75,
+            lineNumber: 94,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/parts/DetailPage/DetailNav/DetailNav.tsx",
-        lineNumber: 74,
+        lineNumber: 93,
         columnNumber: 5
     }, this);
 }
-_s(DetailNav, "VFzjMmoc5axVjyj8E2Q2cQd9phs=", false, function() {
+_s(DetailNav, "L5Y6BYpcZxItsDrXYJHzCU2Ca3g=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$gsap$2f$react$2f$src$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useGSAP"]
     ];
@@ -1822,7 +1829,7 @@ function Article({ head, nav, articleHead, contents_default, contents_login, art
         className: "bl_article",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$parts$2f$DetailPage$2f$DetailHead$2f$DetailHead$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DetailHead"], {
-                title: head.title,
+                subject: head.subject,
                 release: head.release,
                 update: head.update,
                 download: head.download,
@@ -1843,6 +1850,7 @@ function Article({ head, nav, articleHead, contents_default, contents_login, art
                                 sections: nav.sections,
                                 keywords: nav.keywords,
                                 numbering: nav.numbering,
+                                isPc: true,
                                 className: "hp_hidden_down-sm"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/parts/DetailPage/Article/Article.tsx",
@@ -2085,7 +2093,7 @@ function FootCard({ card }) {
                             className: "bl_card_thumb",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 src: `${card.thumb.url}`,
-                                alt: card.thumb.desc,
+                                alt: card.thumb.desc || '',
                                 width: 300,
                                 height: 200
                             }, void 0, false, {
@@ -2102,7 +2110,7 @@ function FootCard({ card }) {
                             className: "bl_card_logo",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 src: card.logo.url,
-                                alt: card.logo.desc,
+                                alt: card.logo.desc || '',
                                 width: 100,
                                 height: 100
                             }, void 0, false, {

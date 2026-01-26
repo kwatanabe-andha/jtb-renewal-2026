@@ -3,11 +3,11 @@ import { Suspense } from 'react'
 import Inner from "@/components/parts/Inner/Inner"
 import CardList from '@/components/parts/Card/CardList'
 import { PageInfoType } from '@/types/contentsType'
-import { InsightsCardType } from '@/types/insights'
+import { InsightsType } from '@/types/insights'
 
 type Props = {
   data: {
-    list: InsightsCardType[]
+    list: InsightsType[]
     pageInfo: PageInfoType
   },
   pathname: string

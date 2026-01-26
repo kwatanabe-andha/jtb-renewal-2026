@@ -40,6 +40,10 @@
   margin-top: 30px;
   padding: 20px;
   background-color: #F8F8F8;
+
+  & + & {
+    margin-top: 15px;
+  }
 }
 
 .bl_detailHead_author_img {
@@ -69,7 +73,7 @@
   letter-spacing: 0.04em;
 }
 
-.bl_detailHead_author_text {
+.bl_detailHead_author_profile {
   font-size: rem(14);
 }
 
@@ -146,8 +150,9 @@
   display: flex;
   justify-content: flex-end;
   gap: 8px;
-  margin-top: 6px;
-  padding-top: 8px;
+  margin-top: 20px;
+  // margin-top: 12px;
+  // padding-top: 8px;
   font-size: rem(12);
   line-height: 1.2;
 

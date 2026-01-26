@@ -2,12 +2,14 @@
 
 .bl_sideNav_wrap {
   position: relative;
+  z-index: 10;
 }
 
 // コンテンツ部分
 .bl_sideNav_content {
   @include breakpoint-up(md) {
     position: absolute;
+    z-index: 10;
     top: var(--sidenav-offset);
     // top: 50px;
     right: 45px;
@@ -18,7 +20,7 @@
 
 .bl_sideNav_nav {
   padding: 50px 30px;
-  background-color: var(--color-subnav);
+  background-color: #EDE9DE;
   
   @include breakpoint-up(md) {
     border-radius: 12px;

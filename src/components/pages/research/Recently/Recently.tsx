@@ -10,6 +10,7 @@ import { ImgType, selectType } from '@/types/common'
 type Props = {
   data: {
     thumb: ImgType
+    slug: string
     series_logo: ImgType
     subject: string
     ymd: string
@@ -24,7 +25,7 @@ export default function Recently({ data }: Props) {
         <Level2>最近公開した調査</Level2>
 
         <article>
-          <Link href="#" className='un_recentlyCard'>
+          <Link href={`/research-reports/${data.slug}`} className='un_recentlyCard'>
             <div className='un_recentlyCard_img'>
               { data.thumb.url && <div className='un_recentlyCard_thumb'><Image src={data.thumb.url} alt={data.thumb.desc || ''} width={474} height={316} /></div> }
               { data.series_logo.url && <div className='un_recentlyCard_logo'><Image src={data.series_logo.url} alt={data.series_logo.desc || ''} width={150} height={150} /></div> }

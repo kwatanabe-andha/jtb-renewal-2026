@@ -1,0 +1,118 @@
+@use "@styles/settings" as *;
+
+.bl_login_content {
+  position: relative;
+  max-height: 300px;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, 10%, #fff);
+    z-index: 0;
+  }
+}
+
+.bl_login {
+  position: relative;
+  width: min(100%, 454px);
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 20px 20px 30px;
+  margin: 0 auto;
+  z-index: 1;
+}
+.bl_login_icon {
+  width: 38px;
+  height: 38px;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 10V8C17 5.23858 14.7614 3 12 3C9.23858 3 7 5.23858 7 8V10M12 14.5V16.5M8.8 21H15.2C16.8802 21 17.7202 21 18.362 20.673C18.9265 20.3854 19.3854 19.9265 19.673 19.362C20 18.7202 20 17.8802 20 16.2V14.8C20 13.1198 20 12.2798 19.673 11.638C19.3854 11.0735 18.9265 10.6146 18.362 10.327C17.7202 10 16.8802 10 15.2 10H8.8C7.11984 10 6.27976 10 5.63803 10.327C5.07354 10.6146 4.6146 11.0735 4.32698 11.638C4 12.2798 4 13.1198 4 14.8V16.2C4 17.8802 4 18.7202 4.32698 19.362C4.6146 19.9265 5.07354 20.3854 5.63803 20.673C6.27976 21 7.11984 21 8.8 21Z' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto 8px;
+}
+.bl_login_text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 13px;
+}
+.bl_login_text a {
+  color: #fc948d;
+  text-decoration: underline;
+}
+.bl_login_link {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.bl_login_link_btn {
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  min-height: 50px;
+  border-radius: 8px;
+  padding: 12px 10px;
+}
+.bl_login_link_login {
+  background-color: #294b75;
+}
+.bl_login_link_new {
+  background-color: #fc948d;
+}
+.bl_login_link_login svg {
+  width: 22px;
+  height: 22px;
+}
+.bl_login_link_new .icon {
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 100vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bl_login_link_new .icon svg {
+  color: #fc948d;
+  ;
+  width: 16px;
+  height: 16px;
+}
+.bl_download--normal {
+  width: min(100%, 270px);
+  min-height: 90px;
+  color: #fff;
+  background-color: #294b75;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 32px;
+  border-radius: 8px;
+}
+.bl_download--normal svg {
+  width: 24px;
+  height: 24px;
+}
+@media (width < 768px) {
+  .bl_login_text {
+    margin-bottom: 23px;
+  }
+  .bl_login_link {
+    grid-template-columns: 200px;
+    justify-content: center;
+  }
+}

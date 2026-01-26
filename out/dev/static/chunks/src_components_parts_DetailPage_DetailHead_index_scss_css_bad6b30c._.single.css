@@ -690,6 +690,10 @@
   display: flex;
 }
 
+.bl_detailHead_author + .bl_detailHead_author {
+  margin-top: 15px;
+}
+
 .bl_detailHead_author_img {
   width: 76px;
 }
@@ -717,7 +721,7 @@
   line-height: 1.4;
 }
 
-.bl_detailHead_author_text {
+.bl_detailHead_author_profile {
   font-size: .875rem;
 }
 
@@ -800,8 +804,7 @@
 .bl_detailHead_date {
   justify-content: flex-end;
   gap: 8px;
-  margin-top: 6px;
-  padding-top: 8px;
+  margin-top: 20px;
   font-size: .75rem;
   line-height: 1.2;
   display: flex;

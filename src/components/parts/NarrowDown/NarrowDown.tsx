@@ -24,7 +24,7 @@ export default function NarrowDown({ title, list }:Props) {
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newParams = new URLSearchParams(params.toString())
     newParams.set('year', e.target.value.toString())
-    router.push(pathname ? `${pathname}?${newParams.toString()}` : `?${newParams.toString()}`)
+    router.push(pathname ? `${pathname}?${newParams.toString()}` : `?${newParams.toString()}`, { scroll: false })
   }
 
   return (

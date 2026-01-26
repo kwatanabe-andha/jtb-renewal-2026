@@ -1,5 +1,12 @@
 @use "@styles/settings" as *;
 
+// scroll関連 ----------
+// scroll-behavior 無効化 (jsで制御するため)
+html {
+  scroll-behavior: inherit;
+}
+// scroll関連 ----------
+
 .bl_detailNav_wrap {
   position: relative;
 }
@@ -8,7 +15,11 @@
   margin-top: 60px;
 
   @include breakpoint-up(md) {
+    position: absolute;
+    top: 0;
+    left: lq(80);
     margin-top: 0;
+    width: 201px;
   }
 }
 

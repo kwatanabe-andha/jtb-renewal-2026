@@ -30,7 +30,7 @@ export default  function Header() {
         <div className='bl_hd_inner'>
           <div className='bl_hdHead'>
             <p className='bl_hdHead_logo'>
-              <Link href='/'><Image src='/assets/common/logo.svg'alt='株式会社JTB総合研究所' width={293} height={27} /></Link>
+              <Link href='/'><Image src='/assets/common/logo.svg'alt='株式会社JTB総合研究所' width={293} height={27} priority={true} /></Link>
             </p>
 
             <div className='bl_hdHead_nav'>

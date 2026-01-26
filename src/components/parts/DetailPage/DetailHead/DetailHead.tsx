@@ -1,40 +1,40 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import Link from 'next/link'
 import './index.scss'
 import Download from '@/components/parts/Download/Download'
 import toDateTimeFormat from '@/lib/toDateTimeFormat'
 import { SITE_URL } from '@/config/site'
 import LockIcon from '@/icon/Lock/Lock'
-import { AuthorProfileType } from '@/types/detailPages'
+import { AuthorType } from '@/types/detailPages'
 
 export type DetailHeadType = {
-  title: string
+  subject: string
   text?: string
   release: string
   update?: string
   download?: string
   login?: boolean
-  author?: AuthorProfileType[]
+  author?: AuthorType[]
 }
 
 export function DetailHead(
-  { title, text, release, update, download, login, author }: DetailHeadType
+  { subject, text, release, update, download, login, author }: DetailHeadType
 ) {
   // console.log(author.length)
   return (
     <section className='bl_detailHead'>
       <div className='bl_detailHead_inner'>
-        <h1 className='bl_detailHead_title'>{title}</h1>
+        <h1 className='bl_detailHead_title'>{subject}</h1>
         { text && <p className='bl_detailHead_text'>{text}</p> }
         {
           author && author.length > 0 && author.map((item) => {
             return (
               <div className='bl_detailHead_author' key={item.name}>
-                { item.img && <div className='bl_detailHead_author_img'><Image src={item.img} alt='' width={76} height={76} /></div> }
+                {/* { item.img && <div className='bl_detailHead_author_img'><Image src={item.img} alt='' width={76} height={76} /></div> } */}
                 <div className='bl_detailHead_author_content'>
                   <div className='bl_detailHead_author_tag'>寄稿</div>
                   <div className='bl_detailHead_author_name'>{item.name}</div>
-                  { item.title && <p className='bl_detailHead_author_text'>{item.title}</p> }
+                  { item.profile && <p className='bl_detailHead_author_profile'>{item.profile}</p> }
                 </div>
               </div>
             )

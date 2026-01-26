@@ -324,6 +324,8 @@ const CONTENT_MAP = {
     }
 };
 const TOPICS_GROUP_ID = {
+    '9': 'expertise',
+    '10': 'research-reports',
     '13': 'insights'
 };
 const COLORS = {
@@ -375,7 +377,7 @@ function Card({ card }) {
                             className: "bl_card_thumb",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                 src: `${card.thumb.url}`,
-                                alt: card.thumb.desc,
+                                alt: card.thumb.desc || '',
                                 width: 300,
                                 height: 200
                             }, void 0, false, {
@@ -447,20 +449,12 @@ function Card({ card }) {
                             lineNumber: 30,
                             columnNumber: 15
                         }, this),
-                        card.organization && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "bl_card_organization",
-                            children: card.organization
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/parts/Card/Card.tsx",
-                            lineNumber: 44,
-                            columnNumber: 34
-                        }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                             className: "bl_card_title",
                             children: card.subject
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/Card/Card.tsx",
-                            lineNumber: 45,
+                            lineNumber: 44,
                             columnNumber: 11
                         }, this),
                         card.excerpt && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -468,7 +462,7 @@ function Card({ card }) {
                             children: card.excerpt
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/Card/Card.tsx",
-                            lineNumber: 46,
+                            lineNumber: 45,
                             columnNumber: 29
                         }, this),
                         card.summary && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -476,7 +470,7 @@ function Card({ card }) {
                             children: card.summary
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/Card/Card.tsx",
-                            lineNumber: 47,
+                            lineNumber: 46,
                             columnNumber: 29
                         }, this),
                         card.author_external_name && card.author_external_name.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -487,7 +481,7 @@ function Card({ card }) {
                                     children: card.author_external_name[0]
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/parts/Card/Card.tsx",
-                                    lineNumber: 51,
+                                    lineNumber: 50,
                                     columnNumber: 17
                                 }, this),
                                 card.author_external_title && card.author_external_title.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -495,13 +489,13 @@ function Card({ card }) {
                                     children: card.author_external_title[0]
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/parts/Card/Card.tsx",
-                                    lineNumber: 52,
+                                    lineNumber: 51,
                                     columnNumber: 90
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/parts/Card/Card.tsx",
-                            lineNumber: 50,
+                            lineNumber: 49,
                             columnNumber: 15
                         }, this),
                         card.tag && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -513,18 +507,18 @@ function Card({ card }) {
                                         children: item.name
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/parts/Card/Card.tsx",
-                                        lineNumber: 64,
+                                        lineNumber: 63,
                                         columnNumber: 25
                                     }, this)
                                 }, item.name, false, {
                                     fileName: "[project]/src/components/parts/Card/Card.tsx",
-                                    lineNumber: 63,
+                                    lineNumber: 62,
                                     columnNumber: 23
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/Card/Card.tsx",
-                            lineNumber: 59,
+                            lineNumber: 58,
                             columnNumber: 15
                         }, this),
                         card.download?.url || card.ymd && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -534,7 +528,7 @@ function Card({ card }) {
                                     url: card.download.url
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/parts/Card/Card.tsx",
-                                    lineNumber: 78,
+                                    lineNumber: 77,
                                     columnNumber: 21
                                 }, this),
                                 card.ymd && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("time", {
@@ -543,13 +537,13 @@ function Card({ card }) {
                                     children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$toDateTimeFormat$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"])(card.ymd)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/parts/Card/Card.tsx",
-                                    lineNumber: 82,
+                                    lineNumber: 81,
                                     columnNumber: 31
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/parts/Card/Card.tsx",
-                            lineNumber: 75,
+                            lineNumber: 74,
                             columnNumber: 15
                         }, this)
                     ]
@@ -807,12 +801,12 @@ function Contact({ contact_default, contact_department, contact_custom_office_ad
                             children: "お問い合わせ"
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                            lineNumber: 29,
+                            lineNumber: 23,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                        lineNumber: 28,
+                        lineNumber: 22,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -825,7 +819,7 @@ function Contact({ contact_default, contact_department, contact_custom_office_ad
                                         children: "株式会社JTB総合研究所"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                                        lineNumber: 36,
+                                        lineNumber: 30,
                                         columnNumber: 17
                                     }, this),
                                     contact_department === null && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -833,7 +827,7 @@ function Contact({ contact_default, contact_department, contact_custom_office_ad
                                         children: "経営企画部　広報担当　○○事務局"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                                        lineNumber: 37,
+                                        lineNumber: 31,
                                         columnNumber: 50
                                     }, this),
                                     contact_department && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -841,7 +835,7 @@ function Contact({ contact_default, contact_department, contact_custom_office_ad
                                         children: contact_department
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                                        lineNumber: 38,
+                                        lineNumber: 32,
                                         columnNumber: 41
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -849,7 +843,7 @@ function Contact({ contact_default, contact_department, contact_custom_office_ad
                                         children: "〒140-0002　東京都品川区東品川2-3-14　東京フロントテラス７F"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                                        lineNumber: 39,
+                                        lineNumber: 33,
                                         columnNumber: 17
                                     }, this),
                                     related_contact_person && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("dl", {
@@ -859,20 +853,20 @@ function Contact({ contact_default, contact_department, contact_custom_office_ad
                                                 children: "担当者："
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                                                lineNumber: 40,
+                                                lineNumber: 34,
                                                 columnNumber: 79
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("dd", {
                                                 children: related_contact_person
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                                                lineNumber: 40,
+                                                lineNumber: 34,
                                                 columnNumber: 92
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                                        lineNumber: 40,
+                                        lineNumber: 34,
                                         columnNumber: 45
                                     }, this)
                                 ]
@@ -885,7 +879,7 @@ function Contact({ contact_default, contact_department, contact_custom_office_ad
                                         children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$returnHtml$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["returnHtml"])(contact_note)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                                        lineNumber: 52,
+                                        lineNumber: 46,
                                         columnNumber: 33
                                     }, this),
                                     !contact_note && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -893,7 +887,7 @@ function Contact({ contact_default, contact_department, contact_custom_office_ad
                                             "執筆、講演等のご依頼は",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                                                lineNumber: 55,
+                                                lineNumber: 49,
                                                 columnNumber: 48
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -901,14 +895,14 @@ function Contact({ contact_default, contact_department, contact_custom_office_ad
                                                 children: "お問い合わせ"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                                                lineNumber: 55,
+                                                lineNumber: 49,
                                                 columnNumber: 54
                                             }, this),
                                             "よりご連絡ください。"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                                        lineNumber: 55,
+                                        lineNumber: 49,
                                         columnNumber: 34
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -919,42 +913,42 @@ function Contact({ contact_default, contact_department, contact_custom_office_ad
                                                 stroke: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$site$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["COLORS"].c02
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                                                lineNumber: 58,
+                                                lineNumber: 52,
                                                 columnNumber: 17
                                             }, this),
                                             "お問い合わせ"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                                        lineNumber: 57,
+                                        lineNumber: 51,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                                lineNumber: 50,
+                                lineNumber: 44,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                        lineNumber: 32,
+                        lineNumber: 26,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-                lineNumber: 27,
+                lineNumber: 21,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-            lineNumber: 26,
+            lineNumber: 20,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/parts/Contact/Contact.tsx",
-        lineNumber: 25,
+        lineNumber: 19,
         columnNumber: 5
     }, this);
 }
@@ -1445,7 +1439,7 @@ async function Page({ params }) {
     };
     // head
     const head = {
-        title: details.subject,
+        subject: details.subject,
         release: details.ymd,
         update: details.update_ymdhi.split('T')[0],
         // download: 'https://tourism.g.kuroco-img.app/v=1766049351/files/topics/4_ext_8_0.pdf',
@@ -1457,7 +1451,7 @@ async function Page({ params }) {
         author.push({
             name: details.author_external_name[index],
             // img: details,
-            title: details.author_external_title[index]
+            profile: details.author_external_title[index]
         });
     });
     head.author = author;

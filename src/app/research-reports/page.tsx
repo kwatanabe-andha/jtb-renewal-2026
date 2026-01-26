@@ -21,7 +21,7 @@ export const metadata = {
 
 export default async function Page() {
   const series = await getReportsSeries()
-  const { list, pageInfo } = await getReportsStatic()
+  const { list, pageInfo } = await getReportsStatic({ cnt: 1 })
 
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
@@ -45,6 +45,7 @@ export default async function Page() {
   const newReport = list[0]
   const recentlyData = {
     thumb: newReport.thumb,
+    slug: newReport.slug,
     series_logo: newReport.category_details.series_logo,
     subject: newReport.subject,
     ymd: newReport.ymd,
@@ -62,7 +63,7 @@ export default async function Page() {
         <SideNav offset={80}>
           <Recently data={recentlyData} />
           <Series data={series.list} />
-          <ReportList data={list} pageInfo={pageInfo} />
+          <ReportList />
         </SideNav>
       </section>
       <Breadcrumb data={breadcrumb} footer />

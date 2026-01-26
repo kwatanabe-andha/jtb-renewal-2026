@@ -649,16 +649,15 @@
 
 @media (min-width: 768px) {
   .bl_article_wrap {
-    border-radius: 50px;
+    border-radius: 50px 50px 0 0;
     padding-block: 80px;
   }
 
   .bl_article_container {
-    grid-template-columns: 201px minmax(0, 1fr);
     gap: 54px;
     max-width: calc(100% - 305px);
-    padding-inline: clamp(42.6667px, 5.55556vw, 80px);
-    display: grid;
+    padding-inline: calc(255px + clamp(42.6667px, 5.55556vw, 80px)) clamp(42.6667px, 5.55556vw, 80px);
+    position: relative;
   }
 }
 

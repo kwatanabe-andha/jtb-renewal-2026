@@ -7,16 +7,15 @@
   @include breakpoint-up(md) {
     // padding-top: 80px;
     padding-block: 80px;
-    border-radius: 50px;
+    border-radius: 50px 50px 0 0;
   }
 }
 
 .bl_article_container {
   @include breakpoint-up(md) {
-    display: grid;
-    grid-template-columns: 201px minmax(0, 1fr);
+    position: relative;
     gap: 54px;
-    padding-inline: lq(80);
+    padding-inline: calc(255px + lq(80)) lq(80);
     max-width: calc(100% - 305px);
   }
 }

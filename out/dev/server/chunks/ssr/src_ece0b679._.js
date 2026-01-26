@@ -287,7 +287,7 @@ function Card({ card }) {
                             className: "bl_card_thumb",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 src: `${card.thumb.url}`,
-                                alt: card.thumb.desc,
+                                alt: card.thumb.desc || '',
                                 width: 300,
                                 height: 200
                             }, void 0, false, {
@@ -359,20 +359,12 @@ function Card({ card }) {
                             lineNumber: 30,
                             columnNumber: 15
                         }, this),
-                        card.organization && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "bl_card_organization",
-                            children: card.organization
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/parts/Card/Card.tsx",
-                            lineNumber: 44,
-                            columnNumber: 34
-                        }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                             className: "bl_card_title",
                             children: card.subject
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/Card/Card.tsx",
-                            lineNumber: 45,
+                            lineNumber: 44,
                             columnNumber: 11
                         }, this),
                         card.excerpt && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -380,7 +372,7 @@ function Card({ card }) {
                             children: card.excerpt
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/Card/Card.tsx",
-                            lineNumber: 46,
+                            lineNumber: 45,
                             columnNumber: 29
                         }, this),
                         card.summary && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -388,7 +380,7 @@ function Card({ card }) {
                             children: card.summary
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/Card/Card.tsx",
-                            lineNumber: 47,
+                            lineNumber: 46,
                             columnNumber: 29
                         }, this),
                         card.author_external_name && card.author_external_name.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -399,7 +391,7 @@ function Card({ card }) {
                                     children: card.author_external_name[0]
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/parts/Card/Card.tsx",
-                                    lineNumber: 51,
+                                    lineNumber: 50,
                                     columnNumber: 17
                                 }, this),
                                 card.author_external_title && card.author_external_title.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -407,13 +399,13 @@ function Card({ card }) {
                                     children: card.author_external_title[0]
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/parts/Card/Card.tsx",
-                                    lineNumber: 52,
+                                    lineNumber: 51,
                                     columnNumber: 90
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/parts/Card/Card.tsx",
-                            lineNumber: 50,
+                            lineNumber: 49,
                             columnNumber: 15
                         }, this),
                         card.tag && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -425,18 +417,18 @@ function Card({ card }) {
                                         children: item.name
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/parts/Card/Card.tsx",
-                                        lineNumber: 64,
+                                        lineNumber: 63,
                                         columnNumber: 25
                                     }, this)
                                 }, item.name, false, {
                                     fileName: "[project]/src/components/parts/Card/Card.tsx",
-                                    lineNumber: 63,
+                                    lineNumber: 62,
                                     columnNumber: 23
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/Card/Card.tsx",
-                            lineNumber: 59,
+                            lineNumber: 58,
                             columnNumber: 15
                         }, this),
                         card.download?.url || card.ymd && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -446,7 +438,7 @@ function Card({ card }) {
                                     url: card.download.url
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/parts/Card/Card.tsx",
-                                    lineNumber: 78,
+                                    lineNumber: 77,
                                     columnNumber: 21
                                 }, this),
                                 card.ymd && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("time", {
@@ -455,13 +447,13 @@ function Card({ card }) {
                                     children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$toDateTimeFormat$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])(card.ymd)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/parts/Card/Card.tsx",
-                                    lineNumber: 82,
+                                    lineNumber: 81,
                                     columnNumber: 31
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/parts/Card/Card.tsx",
-                            lineNumber: 75,
+                            lineNumber: 74,
                             columnNumber: 15
                         }, this)
                     ]
@@ -1201,53 +1193,79 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$parts$2
 ;
 ;
 ;
-function CardList({ list, pageInfo, pathname, router = false, noPager = false }) {
+function CardList({ list, pageInfo, pathname, router = false, noPager = false, parallel = false }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                className: "bl_cardList",
+            !parallel && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                        className: "bl_cardList",
+                        children: list.map((card)=>{
+                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$parts$2f$Card$2f$Card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    card: card
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/parts/Card/CardList.tsx",
+                                    lineNumber: 29,
+                                    columnNumber: 23
+                                }, this)
+                            }, card.topics_id, false, {
+                                fileName: "[project]/src/components/parts/Card/CardList.tsx",
+                                lineNumber: 28,
+                                columnNumber: 21
+                            }, this);
+                        })
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/parts/Card/CardList.tsx",
+                        lineNumber: 24,
+                        columnNumber: 13
+                    }, this),
+                    !noPager && pageInfo !== undefined && pathname !== undefined && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Suspense"], {
+                        children: [
+                            router && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$parts$2f$Pager$2f$PagerRouter$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                pageInfo: pageInfo,
+                                pathname: pathname
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/parts/Card/CardList.tsx",
+                                lineNumber: 40,
+                                columnNumber: 31
+                            }, this),
+                            !router && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$parts$2f$Pager$2f$Pager$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                pageInfo: pageInfo,
+                                pathname: pathname
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/parts/Card/CardList.tsx",
+                                lineNumber: 41,
+                                columnNumber: 32
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/parts/Card/CardList.tsx",
+                        lineNumber: 39,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true),
+            parallel && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                className: "bl_cardList bl_cardList_parallel",
                 children: list.map((card)=>{
                     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$parts$2f$Card$2f$Card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                             card: card
                         }, void 0, false, {
                             fileName: "[project]/src/components/parts/Card/CardList.tsx",
-                            lineNumber: 26,
-                            columnNumber: 17
+                            lineNumber: 55,
+                            columnNumber: 21
                         }, this)
                     }, card.topics_id, false, {
                         fileName: "[project]/src/components/parts/Card/CardList.tsx",
-                        lineNumber: 25,
-                        columnNumber: 15
+                        lineNumber: 54,
+                        columnNumber: 19
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "[project]/src/components/parts/Card/CardList.tsx",
-                lineNumber: 21,
-                columnNumber: 7
-            }, this),
-            !noPager && pageInfo !== undefined && pathname !== undefined && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Suspense"], {
-                children: [
-                    router && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$parts$2f$Pager$2f$PagerRouter$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        pageInfo: pageInfo,
-                        pathname: pathname
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/parts/Card/CardList.tsx",
-                        lineNumber: 37,
-                        columnNumber: 25
-                    }, this),
-                    !router && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$parts$2f$Pager$2f$Pager$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        pageInfo: pageInfo,
-                        pathname: pathname
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/parts/Card/CardList.tsx",
-                        lineNumber: 38,
-                        columnNumber: 26
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/parts/Card/CardList.tsx",
-                lineNumber: 36,
+                lineNumber: 50,
                 columnNumber: 11
             }, this)
         ]
@@ -1422,7 +1440,7 @@ function ColumnsList({ pathname }) {
                         children: "コラム一覧"
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/insights/ColumnsList/ColumnsList.tsx",
-                        lineNumber: 83,
+                        lineNumber: 84,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$parts$2f$Inner$2f$Inner$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1436,17 +1454,17 @@ function ColumnsList({ pathname }) {
                                         list: keywords
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/insights/ColumnsList/ColumnsList.tsx",
-                                        lineNumber: 87,
+                                        lineNumber: 88,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/pages/insights/ColumnsList/ColumnsList.tsx",
-                                    lineNumber: 86,
+                                    lineNumber: 87,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/insights/ColumnsList/ColumnsList.tsx",
-                                lineNumber: 85,
+                                lineNumber: 86,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Suspense"], {
@@ -1454,7 +1472,7 @@ function ColumnsList({ pathname }) {
                                     children: "Loading..."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/pages/insights/ColumnsList/ColumnsList.tsx",
-                                    lineNumber: 91,
+                                    lineNumber: 92,
                                     columnNumber: 31
                                 }, void 0),
                                 children: data.length > 0 && info && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1466,29 +1484,29 @@ function ColumnsList({ pathname }) {
                                         router: true
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/pages/insights/ColumnsList/ColumnsList.tsx",
-                                        lineNumber: 95,
+                                        lineNumber: 96,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/pages/insights/ColumnsList/ColumnsList.tsx",
-                                    lineNumber: 94,
+                                    lineNumber: 95,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/pages/insights/ColumnsList/ColumnsList.tsx",
-                                lineNumber: 91,
+                                lineNumber: 92,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/pages/insights/ColumnsList/ColumnsList.tsx",
-                        lineNumber: 84,
+                        lineNumber: 85,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/pages/insights/ColumnsList/ColumnsList.tsx",
-                lineNumber: 82,
+                lineNumber: 83,
                 columnNumber: 7
             }, this),
             loading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$script$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1499,7 +1517,7 @@ function ColumnsList({ pathname }) {
                 }
             }, void 0, false, {
                 fileName: "[project]/src/components/pages/insights/ColumnsList/ColumnsList.tsx",
-                lineNumber: 106,
+                lineNumber: 107,
                 columnNumber: 11
             }, this)
         ]

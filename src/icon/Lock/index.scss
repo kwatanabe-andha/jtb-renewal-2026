@@ -1,8 +1,9 @@
 @use "@styles/settings" as *;
 
 .icon_lock {
-  display: grid;
+  display: block;
   place-items: center;
+  padding: 5px;
   width: 28px;
   height: 28px;
   background-color: #FC948D;

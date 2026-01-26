@@ -400,7 +400,8 @@ function Header() {
                                     src: "/assets/common/logo.svg",
                                     alt: "株式会社JTB総合研究所",
                                     width: 293,
-                                    height: 27
+                                    height: 27,
+                                    priority: true
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/layouts/Header/Header.tsx",
                                     lineNumber: 33,
@@ -790,6 +791,8 @@ const CONTENT_MAP = {
     }
 };
 const TOPICS_GROUP_ID = {
+    '9': 'expertise',
+    '10': 'research-reports',
     '13': 'insights'
 };
 const COLORS = {

@@ -2,17 +2,27 @@
 
 .un_series {
   position: relative;
-  padding: 103px 0 160px 0;
+  background-color: #fff;
+  padding-bottom: 160px;
 }
+
 .un_series .bl_inner {
   position: relative;
   z-index: 1;
 }
+
+.un_series_head {
+  position: relative;
+  z-index: 1;
+  padding-top: 103px;
+  padding-bottom: 50px;
+}
+
 .un_series_bg {
   position: absolute;
-  width: 100%;
-  height: 730px;
+  width: 100vw;
   top: 0;
+  bottom: 0;
   left: 0;
   z-index: 0;
   overflow: hidden;
@@ -26,6 +36,7 @@
 }
 .un_series_icon {
   position: relative;
+  z-index: 2;
   width: 230px;
   height: 230px;
   border-radius: 4px;
@@ -44,6 +55,7 @@
 } 
 .un_series_icon_text {
   position: relative;
+  z-index: 2;
   width: 100%;
   height: 100%;
   color: #fff;
@@ -56,12 +68,26 @@
   filter: drop-shadow(0 2px 2px #000);
   z-index: 2;
 }
+.un_series_header {
+  position: relative;
+  z-index: 2;
+  color: var(--font-color);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: var(--bg-color);
+    opacity: var(--bg-opacity);
+    border-radius: 8px;
+  }
+}
 .un_series_title {
-  background-color: rgba(255,255,255,0.9);
-  border-radius: 8px;
+  position: relative;
+  z-index: 2;
   padding: 40px 20px;
   text-align: center;
-  margin-bottom: 50px;
 }
 .un_series_title .title {
   font-size: rem(40);
@@ -74,6 +100,12 @@
 .un_series_title .subTitle {
   font-size: rem(22);
 }
+
+.un_series_body {
+  position: relative;
+  z-index: 2;
+}
+
 .un_series_mv {
   position: relative;
   width: 100%;
@@ -135,17 +167,17 @@
 
 @media (width < 768px) {
   .un_series {
-    padding: 60px 0 100px 0;
+    padding-bottom: 100px;
   }
-  .un_series_bg {
-    height: 600px;
+  .un_series_head {
+    padding-top: 60px;
+    padding-bottom: 40px;
   }
   .un_series_icon {
     width: 200px;
     height: 200px;
   }
   .un_series_title {
-    margin-bottom: 30px;
     padding: 30px 18px;
   }
   .un_series_title .title {
@@ -171,5 +203,23 @@
   .un_series_content_btn {
     padding: 24px;
     font-size: rem(17);
+  }
+}
+
+:where(.un_series:has(.un_series_mv)) {
+  .un_series_head {
+    padding-bottom: 137px;
+
+    @media (width < 768px) {
+      padding-bottom: 90px;
+    }
+  }
+
+  .un_series_body {
+    margin-top: -87px;
+
+    @media (width < 768px) {
+      margin-top: -60px;
+    }
   }
 }

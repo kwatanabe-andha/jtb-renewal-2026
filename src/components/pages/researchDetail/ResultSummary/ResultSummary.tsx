@@ -1,6 +1,14 @@
 import './index.scss'
+import { returnHtml } from '@/lib/returnHtml'
 
-export default function ResultSummary() {
+type Props = {
+  title: string[]
+  contents: string[]
+}
+
+export default function ResultSummary({ title, contents }: Props) {
+  if (!title[0]) return
+
   return (
     <section className='un_resultSummary'>
       <div className='un_resultSummary_head'>
@@ -8,20 +16,16 @@ export default function ResultSummary() {
       </div>
       <div className='un_resultSummary_body'>
         <ul className='un_resultSummary_list'>
-          <li>
-            スマートフォンでよく使う機能は「メッセージ・チャット」、「メール」などのコミュニケーション手段が減少し、「動画や画像投稿サイト」、「テレビ・映画」などの映像コンテンツ系が上昇。情報検索手段は、生成AIのみが上昇し、昨年の調査で注目された地図アプリや動画投稿も微減に                                                                
-            <ul>
-              <li>スマートフォンでよく使う機能は、「メッセージ・チャット」、「メール」、「ニュース」、「カメラ」、「電話」など、これまで主流だった機能が軒並み減少</li>
-              <li>情報検索の方法は、生成AIが昨年の9.7％から28.8％へ約20ポイントの急上昇</li>
-            </ul>
-          </li>
-          <li>
-            スマートフォンでよく使う機能は「メッセージ・チャット」、「メール」などのコミュニケーション手段が減少し、「動画や画像投稿サイト」、「テレビ・映画」などの映像コンテンツ系が上昇。情報検索手段は、生成AIのみが上昇し、昨年の調査で注目された地図アプリや動画投稿も微減に                                                                
-            <ul>
-              <li>スマートフォンでよく使う機能は、「メッセージ・チャット」、「メール」、「ニュース」、「カメラ」、「電話」など、これまで主流だった機能が軒並み減少</li>
-              <li>情報検索の方法は、生成AIが昨年の9.7％から28.8％へ約20ポイントの急上昇</li>
-            </ul>
-          </li>
+        {
+          title.map((item, index: number) => {
+            return (
+              <li key={index}>
+                { returnHtml(title[index]) }                                                                               
+                { returnHtml(contents[index]) }
+              </li>
+            )
+          })
+        }
         </ul>
       </div>
     </section>

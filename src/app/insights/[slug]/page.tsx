@@ -10,14 +10,14 @@ import Article from "@/components/parts/DetailPage/Article/Article"
 import FootSlider from "@/components/parts/FootSlider/FootSlider"
 import getInsightsStatic from '@/fetch/static/insights/getInsightsStatic'
 import getInsightsDetail from '@/fetch/static/insights/getInsightsDetail'
-import { GlossaryType } from '@/types/zodType'
-import { InsightsCardType } from '@/types/insights'
-import { KeywordType, ArticleHead, AuthorProfileType } from '@/types/detailPages'
+import { GlossaryType } from '@/types/glossary'
+import { InsightsType } from '@/types/insights'
+import { KeywordType, ArticleHead, AuthorType } from '@/types/detailPages'
 import { getH2FromHtml } from '@/lib/getH2FromHtml'
 
 export async function generateStaticParams() {
   const { list } = await getInsightsStatic({ all: true })
-  const paramSlug = list.map((item: InsightsCardType) => ({
+  const paramSlug = list.map((item: InsightsType) => ({
     slug: item.slug
   }))
 
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: { slug: string }}) 
 
   return {
     title: `${details.subject}`,
-    description: `${details.lead_text}`,
+    description: `${details.meta_description}`,
   }
 }
 
@@ -40,14 +40,14 @@ export default async function Page({ params }: { params: { slug: string }}) {
   const { list } = await getInsightsStatic({ all: true })
 
   const breadcrumb = [
-  {
-    title:  'コラム',
-    href: '/insights/'
-  },
-  {
-    title: details.subject
-  }
-]
+    {
+      title:  'コラム',
+      href: '/insights/'
+    },
+    {
+      title: details.subject
+    }
+  ]
 
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
@@ -76,21 +76,21 @@ export default async function Page({ params }: { params: { slug: string }}) {
 
   // head
   const head = {
-    title: details.subject,
+    subject: details.subject,
     release: details.ymd,
     update: details.update_ymdhi.split('T')[0],
     // download: 'https://tourism.g.kuroco-img.app/v=1766049351/files/topics/4_ext_8_0.pdf',
     login: true,
-    author: [] as AuthorProfileType[]
+    author: [] as AuthorType[]
   }
 
-  const author: AuthorProfileType[] = []
+  const author: AuthorType[] = []
 
   details.author_external_name?.forEach((item: string, index: number) => {
     author.push({
       name: details.author_external_name[index] as string,
       // img: details,
-      title: details.author_external_title[index] as string
+      profile: details.author_external_title[index] as string
     })
   })
   head.author = author
@@ -121,7 +121,7 @@ export default async function Page({ params }: { params: { slug: string }}) {
   })
 
   // Series
-  const seriesItems = list.filter((item: InsightsCardType) => {
+  const seriesItems = list.filter((item: InsightsType) => {
     return item.contents_type_slug === details.contents_type_slug
   }).slice(0, 5)
 

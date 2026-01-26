@@ -643,11 +643,13 @@
 }
 
 .bl_sideNav_wrap {
+  z-index: 10;
   position: relative;
 }
 
 @media (min-width: 768px) {
   .bl_sideNav_content {
+    z-index: 10;
     top: var(--sidenav-offset);
     width: 260px;
     margin-top: 0;
@@ -657,7 +659,7 @@
 }
 
 .bl_sideNav_nav {
-  background-color: var(--color-subnav);
+  background-color: #ede9de;
   padding: 50px 30px;
 }
 

@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/parts/Breadcrumb/Breadcrumb"
 import getInsightsSeries from '@/fetch/static/insights/getInsightsSeries'
 import getInsightsSeriesDetail from '@/fetch/static/insights/getInsightsSeriesDetail'
 import getInsightsStatic from '@/fetch/static/insights/getInsightsStatic'
-import { InsightsCardType } from '@/types/insights'
+import { InsightsType } from '@/types/insights'
 import { JsonLdCardType } from '@/types/jsonLd'
 import { SeriesType } from '@/types/insights'
 type paramsType = {
@@ -79,7 +79,7 @@ export default async function Page({ params }: { params: { seriesID: string, pag
     ]
   }
 
-  const pageList = list.map((item: InsightsCardType, index: number) => {
+  const pageList = list.map((item: InsightsType, index: number) => {
       const obj: JsonLdCardType = {
           "@type": "ListItem",
           position: index + 1,

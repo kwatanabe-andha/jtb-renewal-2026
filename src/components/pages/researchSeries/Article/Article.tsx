@@ -11,21 +11,30 @@ type Props = {
 }
 
 export default function Article({ data }: Props) {
+  const fontc = !!data.heading_color ? data.heading_color : '#000'
   const bgc = !!data.background_color ? data.background_color : 'transparent'
+  const headingBgc = !!data.heading_bg_color ? data.heading_bg_color : '#fff'
+  const headingOpacity = data.heading_bg_opacity ? data.heading_bg_opacity : '0.9'
 
   return (
     <article className="un_series">
-      <div className="un_series_bg" style={{ '--bg-color': bgc } as CSSProperties}>
-        { data.background_img.url && <Image src={data.background_img.url} alt={data.background_img.desc || ''} width="1440" height="730" /> }
+      <div className='un_series_head'>
+        <Inner>
+          { data.series_logo.url && <div className="un_series_icon"><Image src={data.series_logo.url} alt={data.series_logo.desc || ''} width="230" height="230" priority={true} /></div> }
+          {/* <p className="un_series_icon_text">スマートフォンの利用と<br />旅行消費に関する調査</p> */}
+          <header className="un_series_header" style={{ '--font-color': fontc, '--bg-color': headingBgc, '--bg-opacity': headingOpacity } as CSSProperties}>
+            <div className='un_series_title'>
+              <h1 className="title">{data.subject}</h1>
+              <div className="year">{data.heading_schedule}</div>
+              <div className="subTitle">{data.heading_title}</div>
+            </div>
+          </header>
+        </Inner>
+        <div className="un_series_bg" style={{ '--bg-color': bgc } as CSSProperties}>
+          { data.background_img.url && <Image src={data.background_img.url} alt={data.background_img.desc || ''} width="1440" height="730" priority={true} /> }
+        </div>
       </div>
-      <Inner>
-        { data.series_logo.url && <div className="un_series_icon"><Image src={data.series_logo.url} alt={data.series_logo.desc || ''} width="230" height="230" /></div> }
-        {/* <p className="un_series_icon_text">スマートフォンの利用と<br />旅行消費に関する調査</p> */}
-        <header className="un_series_title">
-          <h1 className="title">{data.subject}</h1>
-          <div className="year">{data.heading_schedule}</div>
-          <div className="subTitle">{data.heading_title}</div>
-        </header>
+      <Inner className='un_series_body'>
         {
           data.img_main.url && (
             <div className="un_series_mv">

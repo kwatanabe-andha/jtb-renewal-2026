@@ -25,6 +25,12 @@ const SeriesSchema = z.object({
 })
 export type SeriesType = z.infer<typeof SeriesSchema>
 
-export type InsightsCardType = CardType & {
+export type AuthorProfileType = {
+  author_external_name?: string
+  author_external_title?: string
+  author_external_profile?: string
+}
+
+export type InsightsType = CardType & AuthorProfileType & {
   article_type: selectType[]
 }

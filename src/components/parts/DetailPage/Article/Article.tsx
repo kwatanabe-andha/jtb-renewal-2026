@@ -36,7 +36,7 @@ export default function Article(
   return (
     <article className='bl_article'>
       <DetailHead
-        title={head.title}
+        subject={head.subject}
         release={head.release}
         update={head.update}
         download={head.download}
@@ -46,7 +46,7 @@ export default function Article(
 
       <div className='bl_article_wrap'>
         <div className='bl_article_container'>
-          <DetailNav sections={nav.sections} keywords={nav.keywords} numbering={nav.numbering} className='hp_hidden_down-sm' />
+          <DetailNav sections={nav.sections} keywords={nav.keywords} numbering={nav.numbering} isPc className='hp_hidden_down-sm' />
           <div className='bl_article_body'>
             <div className='bl_article_head'>
               {/* <p className='bl_article_lead'>｢冬支度消費｣の意欲は高まるも､年末年始に備えた節約意識や物価上昇の影響で､11月の消費意欲は例年を下回る</p> */}

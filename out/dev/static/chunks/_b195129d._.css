@@ -7064,6 +7064,39 @@
   .bl_card_time {
     font-size: .875rem;
   }
+}
+
+:where(.bl_cardList_parallel).bl_cardList {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+:where(.bl_cardList_parallel) .bl_card_container {
+  background-color: #fff;
+  padding: 40px 30px;
+}
+
+@media (min-width: 768px) {
+  :where(.bl_cardList_parallel) .bl_card_container {
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 18px;
+    padding: 60px 40px;
+    display: grid;
+  }
+}
+
+:where(.bl_cardList_parallel) .bl_card_thumb img {
+  aspect-ratio: 360 / 240;
+}
+
+:where(.bl_cardList_parallel) .bl_card_series_title {
+  background-color: #f6f6f6;
+}
+
+@media (min-width: 768px) {
+  :where(.bl_cardList_parallel) .bl_card_title {
+    font-size: 1.5rem;
+  }
 
   :where([data-type="relArticles"]) .bl_card_container {
     grid-template-columns: 260px minmax(0, 1fr);

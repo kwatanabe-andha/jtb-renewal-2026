@@ -4,15 +4,9 @@ import Inner from "@/components/parts/Inner/Inner"
 import { returnHtml } from '@/lib/returnHtml'
 import { SITE_URL, COLORS } from "@/config/site"
 import { MessageSquare01 } from "@untitledui/icons"
+import { ContactType } from '@/types/contentsType'
 
-type Props = {
-  contact_default: boolean
-  contact_department?: string
-  contact_custom_office_address?: string
-  contact_custom_url?: string
-  related_contact_person?: string
-  contact_note?: string
-};
+type Props = ContactType
 
 export default function Contact(
   {

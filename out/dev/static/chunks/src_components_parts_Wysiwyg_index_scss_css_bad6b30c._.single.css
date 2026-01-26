@@ -768,8 +768,11 @@
 }
 
 .bl_wysiwyg figure {
-  border-radius: 4px;
   margin: 40px auto;
+}
+
+.bl_wysiwyg figure img {
+  border-radius: 4px;
   overflow: hidden;
 }
 

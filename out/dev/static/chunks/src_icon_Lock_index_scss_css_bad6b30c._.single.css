@@ -648,7 +648,8 @@
   place-items: center;
   width: 28px;
   height: 28px;
-  display: grid;
+  padding: 5px;
+  display: block;
 }
 
 .icon_lock > svg {

@@ -642,6 +642,10 @@
   }
 }
 
+html {
+  scroll-behavior: inherit;
+}
+
 .bl_detailNav_wrap {
   position: relative;
 }
@@ -652,7 +656,11 @@
 
 @media (min-width: 768px) {
   .bl_detailNav {
+    width: 201px;
     margin-top: 0;
+    position: absolute;
+    top: 0;
+    left: clamp(42.6667px, 5.55556vw, 80px);
   }
 }
 

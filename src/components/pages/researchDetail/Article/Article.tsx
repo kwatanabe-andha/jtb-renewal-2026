@@ -3,47 +3,63 @@
 import './index.scss'
 import Image from 'next/image'
 // import Link from 'next/link'
-import { DetailHead, DetailHeadType } from '@/components/parts/DetailPage/DetailHead/DetailHead'
-import { DetailNav, DetailNavType } from '@/components/parts/DetailPage/DetailNav/DetailNav'
+import { DetailHead } from '@/components/parts/DetailPage/DetailHead/DetailHead'
+import { DetailNav } from '@/components/parts/DetailPage/DetailNav/DetailNav'
 // import Accordion from "@/components/parts/Accordion/Accordion"
 import Content from '../Content/Content'
 import ResultSummary from '../ResultSummary/ResultSummary'
+import { ReportsType } from '@/types/reports'
+import { ConsultantType } from '@/types/consultant'
+import { GlossaryType } from '@/types/glossary'
+import { getH2FromHtml } from '@/lib/getH2FromHtml'
 
 type Props = {
-  head: DetailHeadType
-  nav: DetailNavType
+  details: ReportsType
+  consultants: ConsultantType[]
+  glossaries: GlossaryType[]
 }
 
 export default function Article(
-  { head, nav }: Props
+  { details, consultants, glossaries }: Props
 ) {
+
+  const author = consultants.map(consultant => {
+    return { name: consultant.subject, profile: consultant.profile_position }
+  })
+
+  const defaultSections = getH2FromHtml(details.contents_default)
+  const loginSections = getH2FromHtml(details.contents_login)
+  const sections = defaultSections.concat(loginSections)
+  const keywords = glossaries.map(glossary => {
+    return { subject: glossary.subject, slug: glossary.slug || glossary.topics_id.toString() }
+  })
 
   return (
     <article className='bl_article'>
       <DetailHead
-        title={head.title}
-        text={head.text}
-        release={head.release}
-        update={head.update}
-        download={head.download}
+        subject={details.subject}
+        text={''}
+        release={details.ymd}
+        update={details.update_ymdhi.split('T')[0]}
+        download={undefined}
         login={false}
-        author={head.author}
+        author={author}
       />
 
       <section className='bl_article_wrap'>
         <div className='bl_article_container'>
-          <DetailNav sections={nav.sections} keywords={nav.keywords} numbering={nav.numbering} className='hp_hidden_down-sm' />
+          <DetailNav sections={sections} keywords={keywords} numbering={details.numbering || false} isPc scrollToDetail className='hp_hidden_down-sm' />
           <div className='bl_article_body'>
             <div className='bl_article_head'>
-              <ResultSummary />
-              <div className='bl_article_thumb'><Image src='/assets/dummy_thumb_01.jpg' alt='' width={974} height={593} /></div>
+              <ResultSummary title={details.result_title} contents={details.result_contents} />
+              { details.img_main.url && <div className='bl_article_thumb'><Image src={details.img_main.url} alt={details.img_main.desc || ''} width={974} height={593} /></div> }
               <p className='bl_article_abstract'>
-                「旅の魅力とは何ですか？」という問いを投げかけると、多くの人は、リフレッシュや楽しみ、といったことと合わせて、「非日常」という言葉を口にします。しかしながら、気軽に旅行ができなかった時代から、旅はより身近な存在となりました。インターネットを介せば、世界中の情景が目に入る現代において、旅先で体験する「非日常」の意味合いが、徐々に変化してきているようにも感じます。では、今の旅行者は、旅にどのようなことを求めているのでしょうか？<br />株式会社JTB総合研究所（東京都品川区 代表取締役社長執行役員　風間 欣人）は、アンケート調査とインタビュー調査を交え、「旅に求めることについての調査」をまとめました。
+                静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。静的テキスト。
               </p>
             </div>
-            <DetailNav sections={nav.sections} keywords={nav.keywords} numbering={nav.numbering} className='hp_hidden_up-md' />
+            <DetailNav sections={sections} keywords={keywords} numbering={details.numbering || false} className='hp_hidden_up-md' />
 
-            <Content />
+            <Content numbering={details.numbering || false} contents_default={details.contents_default} contents_login={details.contents_login} />
           </div>
         </div>
       </section>

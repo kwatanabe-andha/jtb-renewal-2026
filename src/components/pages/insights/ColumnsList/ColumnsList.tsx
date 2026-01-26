@@ -8,7 +8,7 @@ import Inner from "@/components/parts/Inner/Inner"
 import NarrowDown from '@/components/parts/NarrowDown/NarrowDown'
 import CardList from '@/components/parts/Card/CardList'
 import { PageInfoType } from '@/types/contentsType'
-import { InsightsCardType } from '@/types/insights'
+import { InsightsType } from '@/types/insights'
 import { JsonLdCardType, jsonLdCollectionPageType } from '@/types/jsonLd'
 import getInsights from '@/fetch/public/getInsights'
 
@@ -18,15 +18,15 @@ type Props = {
   pathname: string
 }
 
-const jsonLD = (list: InsightsCardType[], pageInfo: PageInfoType) => {
-  const pageList = list.map((item: InsightsCardType, index: number) => {
+const jsonLD = (list: InsightsType[], pageInfo: PageInfoType) => {
+  const pageList = list.map((item: InsightsType, index: number) => {
     const obj: JsonLdCardType = {
         "@type": "ListItem",
         position: index + 1,
         item: {
           "@type": "BlogPosting",
           headline: item.subject,
-          url: `https://www.tourism.jp/insights/${item.topics_id}/`,
+          url: `https://www.tourism.jp/insights/${item.slug}/`,
           datePublished: item.ymd,
           image: item.thumb.url
         }
@@ -55,7 +55,7 @@ const jsonLD = (list: InsightsCardType[], pageInfo: PageInfoType) => {
 }
 
 export default function ColumnsList({ pathname }: Props) {
-  const [data, setData] = useState<InsightsCardType[]>([])
+  const [data, setData] = useState<InsightsType[]>([])
   const [info, setInfo] = useState<PageInfoType | null>(null)
   const [jsonLdCards, setJsonLdCards] = useState<jsonLdCollectionPageType>()
   const [loading, setLoading] = useState(false)
